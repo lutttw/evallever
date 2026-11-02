@@ -1,0 +1,9 @@
+{
+ "note": "修订 40(二轮 R2'-W'4):解析/审计代码版本哈希钉定;supplement MANIFEST 对同一文件集再行哈希",
+ "files": {
+  "src/jcip_audit/d5_llm_hook.py": "c79a7e9b388c893bfd4537349687436c8c9a9d0d6f39a0a356a1b9ae6cb64863",
+  "src/jcip_audit/p15_hacred_icl.py": "f0aa764621d11d96d8c02daf81ac4f009f39897782f2472acdcf8c48eb3a3a4d",
+  "src/jcip_audit/hacred_runtime.py": "64b85465b06b04ff7855ff2aee472c0eeb205342578df7e0ad5dbbbabf98a0ce",
+  "src/jcip_audit/r24_violation_cis.py": "02a9d96c8c89635f4b0c1c488a894b6a83647fa9e2cfa7ae2f389b88fdfee4f0"
+ }
+}

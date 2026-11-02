@@ -1,0 +1,36 @@
+{
+ "stage": "4.5 FINAL INTEGRITY",
+ "date": "2026-10-12",
+ "integrity_numbers": "26/26 PASS (载值 vs 冻结件)",
+ "failure_mode_checklist": {
+  "Mode 1 (citation hallucination)": {
+   "status": "PASS",
+   "evidence": "42 条参考文献全部经 Zotero/CrossRef/arXiv 官方元数据核验(修订56/64 两轮:venue 全称化+页码补全+3 处转录错误修正);bib 升级脚本带 key 锚点断言,无凭记忆条目。"
+  },
+  "Mode 2 (implementation bug corrupting results)": {
+   "status": "PASS",
+   "evidence": "评估管线经 675 故障注入验收(100% 检出/0 误报);官方评分器复现门 (RAMS/BC5CDR 双口径);TTM-RE 接入的 rel2id 列置换双射断言+签名→vertex 唯一性断言+行覆盖断言;transformers 5.11 三处适配均 py-spy/最小复现定位后修复。"
+  },
+  "Mode 3 (hallucinated results)": {
+   "status": "PASS",
+   "evidence": "论文全部载值经 stage45_integrity.py 26/26 项与冻结统计件核对一致;数字零手抄纪律(gen_appendix 直读冻结件;数字来源=管线日志)。"
+  },
+  "Mode 4 (shortcut reliance)": {
+   "status": "PASS (declared)",
+   "evidence": "PE8 切片/998-doc 评估协议/6-epoch cap 的偏差已在 A7 题注与 §4.1 如实披露(dev F1 0.622 vs 发表口径不可直接比);BC5CDR/RAMS 替代 H3 原方案记为 failed sub-hypothesis。"
+  },
+  "Mode 5 (bug as insight)": {
+   "status": "PASS",
+   "evidence": "关键 insight 均有多重独立证据:H-G1 七臂(13 run 全过完整性门)、TTM-RE 双 checkpoint 互证(0.038/0.046)、温度采样 5/5 同号;B1 经 r36 机制性证实(rescue rate 三模型一致)。C3 方向反转按 种子数问题命题如实处理,未被当作 insight。"
+  },
+  "Mode 6 (methodology fabrication)": {
+   "status": "PASS",
+   "evidence": "64 条修订全程登记+sha256;每条带验证记录;4 次缺陷发射中止并从原始产物重推导(修订22b/28 等有案);BNB prefill 停滞按续跑协议修复并披露(r5 1360+140 拼回,seed 连续性说明在案)。"
+  },
+  "Mode 7 (pipeline frame-lock)": {
+   "status": "PASS (monitored)",
+   "evidence": "反向证据持续被接纳:负结果 B1-B5 保留、H1/H-X1/H3 按失败报告、BF16 符号翻转被如实当作新契约轴而非忽略、弱训练混杂被判定为支持而非遮掩;外部评审(模拟3人+专家批注22条)意见逐条整改。"
+  }
+ },
+ "blocking": false
+}

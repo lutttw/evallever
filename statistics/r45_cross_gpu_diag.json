@@ -1,0 +1,22 @@
+{
+ "meta": {
+  "amendment": 77,
+  "purpose": "cross-GPU inference consistency: 5060-trained model re-inferred on 5090",
+  "model": "docunet_pe8_s20260917 (roberta-base, trained+inferred on 5060)",
+  "comparison": "all 189,556 evaluation candidates x 97 relation columns",
+  "ts": "2026-10-15T15:38:46"
+ },
+ "old_sha256": "c11f0ab26bcf4f3a",
+ "new_sha256": "f0933e89afeb0f4b",
+ "old_gpu": "RTX 5060 8GB",
+ "new_gpu": "RTX 5090 24GB",
+ "linf_max_abs_diff": 0.000648,
+ "rmse": 4.3e-05,
+ "mean_abs_diff": 2.9e-05,
+ "native_decode_flips": 0,
+ "total_decode_cells": 18386932,
+ "flip_rate": 0.0,
+ "arm_impact": 0.0,
+ "verdict": "NEGLIGIBLE: L∞ < 0.001 and zero prediction flips across 18.4M cells. Cross-hardware fp32 inference noise is fully absorbed by the deterministic decode (logit > NA + top-4); contract arms computed from frozen logits are hardware-independent.",
+ "conclusion": "No experiments need re-running. The frozen-logits → CPU-scoring pipeline provides complete hardware independence for all reported numbers."
+}

@@ -1,0 +1,25 @@
+{
+ "upos_ren": {
+  "PRT": "PART",
+  "CONJ": "CCONJ"
+ },
+ "deprel_ren": {
+  "dobj": "obj",
+  "neg": "advmod",
+  "auxpass": "aux:pass",
+  "nsubjpass": "nsubj:pass",
+  "mwe": "fixed",
+  "name": "flat",
+  "remnant": "orphan",
+  "poss": "nmod:poss",
+  "nmod:tmod": "obl:tmod",
+  "nmod:npmod": "obl:npmod",
+  "det:predet": "det",
+  "vmod": "advcl"
+ },
+ "context_rules": [
+  "nmod->obl iff case child else nmod",
+  "dative->obl iff case child else iobj"
+ ],
+ "source": "UD v1.4->v2.0 official migration; doc-driven, no fitting; same map as EN/ZH suite"
+}

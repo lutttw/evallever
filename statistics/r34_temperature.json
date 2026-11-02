@@ -1,0 +1,67 @@
+{
+ "meta": {
+  "amendment": 66,
+  "design": "temperature sampling T=0.7 top_p=1.0, Qwen2.5-7B-Instruct NF4, HacRED-en_json grid (1500 docs), 5 seeds; greedy anchor same grid",
+  "note": "r5 hit a BNB NF4 prefill stall at doc 1360 (py-spy: bitsandbytes forward, CPU-bound; same batch passed in r4); resumed tail-140 docs single-batch (r5_resume_infer.py, same seed 20261012) to a full 1500 — all five rounds complete. r1-r3 are legacy runs (never before used in the paper).",
+  "bootstrap_reps": 10000
+ },
+ "greedy_anchor": {
+  "gap_F1": 0.0057,
+  "violation_rate": 0.1976
+ },
+ "sampling_rounds": [
+  {
+   "round": "r1",
+   "violation_rate": 0.2581,
+   "gap_F1": 0.0145,
+   "gap_R": 0.0088,
+   "parse_fail": 234,
+   "mapped": 5960
+  },
+  {
+   "round": "r2",
+   "violation_rate": 0.2495,
+   "gap_F1": 0.0073,
+   "gap_R": 0.0022,
+   "parse_fail": 215,
+   "mapped": 6246
+  },
+  {
+   "round": "r3",
+   "violation_rate": 0.2535,
+   "gap_F1": 0.0108,
+   "gap_R": 0.0069,
+   "parse_fail": 201,
+   "mapped": 6344
+  },
+  {
+   "round": "r4",
+   "violation_rate": 0.2563,
+   "gap_F1": 0.0094,
+   "gap_R": 0.0055,
+   "parse_fail": 107,
+   "mapped": 6685
+  },
+  {
+   "round": "r5",
+   "violation_rate": 0.245,
+   "gap_F1": 0.0079,
+   "gap_R": 0.0046,
+   "parse_fail": 97,
+   "mapped": 6911
+  }
+ ],
+ "sign_consistency": {
+  "n_rounds": 5,
+  "all_positive": true,
+  "min": 0.0073,
+  "max": 0.0145,
+  "mean": 0.01
+ },
+ "violation_note": {
+  "greedy": 0.1976,
+  "sampling_mean": 0.2525,
+  "reading": "sampling raises violation rate ~5pp; leverage arm survives"
+ },
+ "verdict": "decoding stochasticity does not flip or drown the leverage arm: 5/5 rounds sign-consistent, all positive (range 0.0058-0.0145, mean 0.0096 vs greedy anchor 0.0057); sampling raises violation rate ~5pp — a second descriptive contract axis alongside quantization (r33)"
+}

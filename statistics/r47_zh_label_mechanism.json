@@ -1,0 +1,241 @@
+{
+ "meta": {
+  "amendment": 77,
+  "design": "Chinese H-XI1 label-lexicon interface decomposition (frozen predictions, CPU only, p15 dedup semantics)",
+  "seed": 20260926,
+  "reps": 10000,
+  "categories": {
+   "action_lexicalization": "词表要角色名词,模型吐动作/动词",
+   "role_paraphrase": "词表码的同义改写(汉字重叠>=0.5)",
+   "off_inventory": "词表外真实世界关系",
+   "parse_fail": "解析失败哨兵(<<VIOLATION>>/<<PARSE_FAIL>>)",
+   "entity_map": "实体名未能唯一映射到文档实体",
+   "same_entity": "头尾解析为同一实体"
+  }
+ },
+ "arms": {
+  "qwen-7b_zh-hacred_json": {
+   "n_docs": 1500,
+   "triples": 9210,
+   "viol_full": 2040,
+   "viol_relname": 1324,
+   "rate_full_pct": 22.15,
+   "rate_relname_pct": 14.38,
+   "triples_per_doc": 6.14,
+   "viol_full_per_doc": 1.36,
+   "viol_relname_per_doc": 0.883,
+   "category_counts": {
+    "off_inventory": 597,
+    "role_paraphrase": 423,
+    "parse_fail": 292,
+    "same_entity": 259,
+    "entity_map": 165,
+    "action_lexicalization": 304
+   },
+   "category_per_doc": {
+    "off_inventory": 0.398,
+    "role_paraphrase": 0.282,
+    "parse_fail": 0.1947,
+    "same_entity": 0.1727,
+    "entity_map": 0.11,
+    "action_lexicalization": 0.2027
+   },
+   "top_relname_unmapped": [
+    [
+     "出生日期",
+     218
+    ],
+    [
+     "主持",
+     91
+    ],
+    [
+     "出演",
+     81
+    ],
+    [
+     "出生时间",
+     56
+    ],
+    [
+     "饰演",
+     30
+    ],
+    [
+     "演唱",
+     29
+    ],
+    [
+     "主演作品",
+     27
+    ],
+    [
+     "代表作品",
+     27
+    ]
+   ]
+  },
+  "qwen-14b_zh-hacred_json": {
+   "n_docs": 1500,
+   "triples": 7021,
+   "viol_full": 2027,
+   "viol_relname": 1584,
+   "rate_full_pct": 28.87,
+   "rate_relname_pct": 22.56,
+   "triples_per_doc": 4.681,
+   "viol_full_per_doc": 1.351,
+   "viol_relname_per_doc": 1.056,
+   "category_counts": {
+    "off_inventory": 704,
+    "parse_fail": 80,
+    "role_paraphrase": 812,
+    "same_entity": 137,
+    "entity_map": 226,
+    "action_lexicalization": 68
+   },
+   "category_per_doc": {
+    "off_inventory": 0.4693,
+    "parse_fail": 0.0533,
+    "role_paraphrase": 0.5413,
+    "same_entity": 0.0913,
+    "entity_map": 0.1507,
+    "action_lexicalization": 0.0453
+   },
+   "top_relname_unmapped": [
+    [
+     "出生时间",
+     276
+    ],
+    [
+     "成员",
+     85
+    ],
+    [
+     "参与",
+     69
+    ],
+    [
+     "就职机构",
+     54
+    ],
+    [
+     "参与节目",
+     50
+    ],
+    [
+     "主持",
+     48
+    ],
+    [
+     "参与作品",
+     47
+    ],
+    [
+     "就职单位",
+     36
+    ]
+   ]
+  },
+  "qwen-7b_en-hacred_json": {
+   "n_docs": 1500,
+   "triples": 9994,
+   "viol_full": 1975,
+   "viol_relname": 1376,
+   "rate_full_pct": 19.76,
+   "rate_relname_pct": 13.77,
+   "triples_per_doc": 6.663,
+   "viol_full_per_doc": 1.317,
+   "viol_relname_per_doc": 0.917,
+   "category_counts": {
+    "off_inventory": 515,
+    "role_paraphrase": 485,
+    "parse_fail": 266,
+    "action_lexicalization": 376,
+    "entity_map": 139,
+    "same_entity": 194
+   },
+   "category_per_doc": {
+    "off_inventory": 0.3433,
+    "role_paraphrase": 0.3233,
+    "parse_fail": 0.1773,
+    "action_lexicalization": 0.2507,
+    "entity_map": 0.0927,
+    "same_entity": 0.1293
+   },
+   "top_relname_unmapped": [
+    [
+     "出演",
+     252
+    ],
+    [
+     "出生日期",
+     225
+    ],
+    [
+     "主持",
+     72
+    ],
+    [
+     "出品",
+     48
+    ],
+    [
+     "任职机构",
+     41
+    ],
+    [
+     "导师",
+     39
+    ],
+    [
+     "制作人",
+     32
+    ],
+    [
+     "饰演",
+     27
+    ]
+   ]
+  }
+ },
+ "scale_effect_zh": {
+  "delta_point": 0.06720694129802313,
+  "delta_ci95": [
+   0.038129702719274634,
+   0.09700345304861238
+  ],
+  "rate_a": 0.22149837133550487,
+  "rate_b": 0.288705312633528,
+  "n_docs": 1500,
+  "excludes_zero": true
+ },
+ "prompt_language_effect_7b": {
+  "delta_point": -0.023879800192819267,
+  "delta_ci95": [
+   -0.04793932489059457,
+   -3.28916387098369e-05
+  ],
+  "rate_a": 0.22149837133550487,
+  "rate_b": 0.1976185711426856,
+  "n_docs": 1500,
+  "excludes_zero": true
+ },
+ "mechanism_signature": {
+  "qwen-7b": {
+   "action_lexicalization": 0.23,
+   "role_paraphrase": 0.319,
+   "off_inventory": 0.451
+  },
+  "qwen-14b": {
+   "action_lexicalization": 0.043,
+   "role_paraphrase": 0.513,
+   "off_inventory": 0.444
+  },
+  "shift": {
+   "action_lexicalization": -0.187,
+   "role_paraphrase": 0.194,
+   "off_inventory": -0.007
+  },
+  "reading": "规模上升时,越界名的构成从'动作形态滑移'转向'角色名词同义改写'与'词表外关系导入';两臂都非因关系知识缺失而失败,而是在标签词表接口的不同层次失败。"
+ }
+}

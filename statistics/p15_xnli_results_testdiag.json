@@ -1,0 +1,335 @@
+{
+ "seed": 20260926,
+ "n_per_lang": 1000,
+ "langs": [
+  "en",
+  "zh",
+  "fr"
+ ],
+ "split": "test",
+ "split_purpose": "contamination_diagnostic(非主结果;评测集污染对照)",
+ "models": {
+  "joeddav/xlm-roberta-large-xnli": {
+   "en": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "gap_acc_minus_mf1": 0.0,
+    "pred_label_counts": [
+     333,
+     334,
+     333
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "contradiction",
+      "1": "neutral",
+      "2": "entailment"
+     }
+    }
+   },
+   "zh": {
+    "accuracy": 0.992,
+    "macro_f1": 0.9920038902416173,
+    "gap_acc_minus_mf1": -3.890241617288126e-06,
+    "pred_label_counts": [
+     331,
+     336,
+     333
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "contradiction",
+      "1": "neutral",
+      "2": "entailment"
+     }
+    }
+   },
+   "fr": {
+    "accuracy": 0.995,
+    "macro_f1": 0.995000989012965,
+    "gap_acc_minus_mf1": -9.89012964969227e-07,
+    "pred_label_counts": [
+     333,
+     334,
+     333
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "contradiction",
+      "1": "neutral",
+      "2": "entailment"
+     }
+    }
+   }
+  },
+  "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli": {
+   "en": {
+    "accuracy": 0.888,
+    "macro_f1": 0.8882496744451264,
+    "gap_acc_minus_mf1": -0.0002496744451263577,
+    "pred_label_counts": [
+     300,
+     359,
+     341
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   },
+   "zh": {
+    "accuracy": 0.81,
+    "macro_f1": 0.8102290511346238,
+    "gap_acc_minus_mf1": -0.00022905113462379223,
+    "pred_label_counts": [
+     332,
+     338,
+     330
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   },
+   "fr": {
+    "accuracy": 0.844,
+    "macro_f1": 0.8439374195865224,
+    "gap_acc_minus_mf1": 6.258041347761978e-05,
+    "pred_label_counts": [
+     338,
+     328,
+     334
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   }
+  },
+  "typeform/distilbert-base-uncased-mnli": {
+   "en": {
+    "accuracy": 0.824,
+    "macro_f1": 0.824678755332576,
+    "gap_acc_minus_mf1": -0.0006787553325759976,
+    "pred_label_counts": [
+     281,
+     382,
+     337
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   },
+   "zh": {
+    "accuracy": 0.363,
+    "macro_f1": 0.24931933673268325,
+    "gap_acc_minus_mf1": 0.11368066326731674,
+    "pred_label_counts": [
+     80,
+     8,
+     912
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   },
+   "fr": {
+    "accuracy": 0.428,
+    "macro_f1": 0.3602872821450427,
+    "gap_acc_minus_mf1": 0.0677127178549573,
+    "pred_label_counts": [
+     522,
+     19,
+     459
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   }
+  }
+ },
+ "pairs": {
+  "xlm-roberta-large-xnli__vs__mDeBERTa-v3-base-mnli-xnli": {
+   "en": {
+    "err_n_model_a": 0,
+    "err_n_model_b": 112,
+    "err_intersection": 0,
+    "err_union": 112,
+    "jaccard_distance_accuracy": 1.0,
+    "jaccard_distance_macro_f1": 1.0,
+    "rank_volatility": 0.0002496744451263577,
+    "gap_a": 0.0,
+    "gap_b": -0.0002496744451263577,
+    "flip": false,
+    "acc_margin": 0.11199999999999999,
+    "mf1_margin": 0.11175032555487363,
+    "pred_agreement": 0.888
+   },
+   "zh": {
+    "err_n_model_a": 8,
+    "err_n_model_b": 190,
+    "err_intersection": 6,
+    "err_union": 192,
+    "jaccard_distance_accuracy": 0.96875,
+    "jaccard_distance_macro_f1": 0.96875,
+    "rank_volatility": 0.0002251608930065041,
+    "gap_a": -3.890241617288126e-06,
+    "gap_b": -0.00022905113462379223,
+    "flip": false,
+    "acc_margin": 0.18199999999999994,
+    "mf1_margin": 0.18177483910699344,
+    "pred_agreement": 0.813
+   },
+   "fr": {
+    "err_n_model_a": 5,
+    "err_n_model_b": 156,
+    "err_intersection": 2,
+    "err_union": 159,
+    "jaccard_distance_accuracy": 0.9874213836477987,
+    "jaccard_distance_macro_f1": 0.9874213836477987,
+    "rank_volatility": 6.3569426442589e-05,
+    "gap_a": -9.89012964969227e-07,
+    "gap_b": 6.258041347761978e-05,
+    "flip": false,
+    "acc_margin": 0.15100000000000002,
+    "mf1_margin": 0.1510635694264426,
+    "pred_agreement": 0.843
+   }
+  },
+  "xlm-roberta-large-xnli__vs__distilbert-base-uncased-mnli": {
+   "en": {
+    "err_n_model_a": 0,
+    "err_n_model_b": 176,
+    "err_intersection": 0,
+    "err_union": 176,
+    "jaccard_distance_accuracy": 1.0,
+    "jaccard_distance_macro_f1": 1.0,
+    "rank_volatility": 0.0006787553325759976,
+    "gap_a": 0.0,
+    "gap_b": -0.0006787553325759976,
+    "flip": false,
+    "acc_margin": 0.17600000000000005,
+    "mf1_margin": 0.17532124466742405,
+    "pred_agreement": 0.824
+   },
+   "zh": {
+    "err_n_model_a": 8,
+    "err_n_model_b": 637,
+    "err_intersection": 5,
+    "err_union": 640,
+    "jaccard_distance_accuracy": 0.9921875,
+    "jaccard_distance_macro_f1": 0.9921875,
+    "rank_volatility": 0.11368455350893403,
+    "gap_a": -3.890241617288126e-06,
+    "gap_b": 0.11368066326731674,
+    "flip": false,
+    "acc_margin": 0.629,
+    "mf1_margin": 0.742684553508934,
+    "pred_agreement": 0.364
+   },
+   "fr": {
+    "err_n_model_a": 5,
+    "err_n_model_b": 572,
+    "err_intersection": 3,
+    "err_union": 574,
+    "jaccard_distance_accuracy": 0.9947735191637631,
+    "jaccard_distance_macro_f1": 0.9947735191637631,
+    "rank_volatility": 0.06771370686792227,
+    "gap_a": -9.89012964969227e-07,
+    "gap_b": 0.0677127178549573,
+    "flip": false,
+    "acc_margin": 0.567,
+    "mf1_margin": 0.6347137068679223,
+    "pred_agreement": 0.429
+   }
+  },
+  "mDeBERTa-v3-base-mnli-xnli__vs__distilbert-base-uncased-mnli": {
+   "en": {
+    "err_n_model_a": 112,
+    "err_n_model_b": 176,
+    "err_intersection": 77,
+    "err_union": 211,
+    "jaccard_distance_accuracy": 0.6350710900473934,
+    "jaccard_distance_macro_f1": 0.6350710900473934,
+    "rank_volatility": 0.0004290808874496399,
+    "gap_a": -0.0002496744451263577,
+    "gap_b": -0.0006787553325759976,
+    "flip": false,
+    "acc_margin": 0.06400000000000006,
+    "mf1_margin": 0.06357091911255042,
+    "pred_agreement": 0.857
+   },
+   "zh": {
+    "err_n_model_a": 190,
+    "err_n_model_b": 637,
+    "err_intersection": 139,
+    "err_union": 688,
+    "jaccard_distance_accuracy": 0.7979651162790697,
+    "jaccard_distance_macro_f1": 0.7979651162790697,
+    "rank_volatility": 0.11390971440194053,
+    "gap_a": -0.00022905113462379223,
+    "gap_b": 0.11368066326731674,
+    "flip": false,
+    "acc_margin": 0.44700000000000006,
+    "mf1_margin": 0.5609097144019406,
+    "pred_agreement": 0.361
+   },
+   "fr": {
+    "err_n_model_a": 156,
+    "err_n_model_b": 572,
+    "err_intersection": 108,
+    "err_union": 620,
+    "jaccard_distance_accuracy": 0.8258064516129032,
+    "jaccard_distance_macro_f1": 0.8258064516129032,
+    "rank_volatility": 0.06765013744147969,
+    "gap_a": 6.258041347761978e-05,
+    "gap_b": 0.0677127178549573,
+    "flip": false,
+    "acc_margin": 0.416,
+    "mf1_margin": 0.48365013744147967,
+    "pred_agreement": 0.43
+   }
+  }
+ },
+ "deviations": [],
+ "contracts_note": "accuracy 与 macro-F1 的逐样本误差集合按定义恒同(均以预测≠金标为罚),契约差异体现于聚合(micro 命中 vs 类对称调和平均);因此力臂的逐样本 Jaccard 两契约相同,排名波动与翻转才是本设计的契约敏感量。"
+}

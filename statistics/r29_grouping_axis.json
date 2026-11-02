@@ -1,0 +1,172 @@
+{
+ "meta": {
+  "boot": 10000,
+  "seed": 20260926,
+  "note": "revision60 frozen design; ESS gate passed for all 13 runs; grouping-rule axis (gR, atlop_native) on 5 generators with stored pair-level logits; X2/P3M excluded (pair-level scores not retained), LLM settings have no per-doc",
+  "h_g1": "PASS iff >=1 generator arm_grp 95% CI excludes 0"
+ },
+ "arms": {
+  "atlop_pe8": {
+   "arm_grp": 0.0303,
+   "ci95": [
+    0.0198,
+    0.0412
+   ],
+   "excludes_zero": true
+  },
+  "atlop_full": {
+   "arm_grp": 0.0277,
+   "ci95": [
+    0.017,
+    0.0387
+   ],
+   "excludes_zero": true
+  },
+  "dreeam": {
+   "arm_grp": 0.0211,
+   "ci95": [
+    0.0088,
+    0.033
+   ],
+   "excludes_zero": true
+  },
+  "docunet": {
+   "arm_grp": 0.0294,
+   "ci95": [
+    0.0182,
+    0.0403
+   ],
+   "excludes_zero": true
+  },
+  "kddocre": {
+   "arm_grp": 0.0204,
+   "ci95": [
+    0.0084,
+    0.0326
+   ],
+   "excludes_zero": true
+  }
+ },
+ "grouping_dim_flips": {
+  "atlop_pe8|atlop_full": {
+   "D1_ess": -0.0201,
+   "D2_ass": -0.0227,
+   "flip_delta": -0.0026,
+   "ci95": [
+    -0.0064,
+    0.0012
+   ],
+   "flip": false,
+   "ci_excludes_zero": false
+  },
+  "atlop_pe8|dreeam": {
+   "D1_ess": -0.0645,
+   "D2_ass": -0.0737,
+   "flip_delta": -0.0092,
+   "ci95": [
+    -0.0164,
+    -0.0021
+   ],
+   "flip": false,
+   "ci_excludes_zero": true
+  },
+  "atlop_pe8|docunet": {
+   "D1_ess": 0.0026,
+   "D2_ass": 0.0016,
+   "flip_delta": -0.001,
+   "ci95": [
+    -0.0089,
+    0.0071
+   ],
+   "flip": false,
+   "ci_excludes_zero": false
+  },
+  "atlop_pe8|kddocre": {
+   "D1_ess": -0.0536,
+   "D2_ass": -0.0636,
+   "flip_delta": -0.0099,
+   "ci95": [
+    -0.0173,
+    -0.0028
+   ],
+   "flip": false,
+   "ci_excludes_zero": true
+  },
+  "atlop_full|dreeam": {
+   "D1_ess": -0.0444,
+   "D2_ass": -0.051,
+   "flip_delta": -0.0066,
+   "ci95": [
+    -0.0129,
+    -0.0002
+   ],
+   "flip": false,
+   "ci_excludes_zero": true
+  },
+  "atlop_full|docunet": {
+   "D1_ess": 0.0227,
+   "D2_ass": 0.0244,
+   "flip_delta": 0.0016,
+   "ci95": [
+    -0.0064,
+    0.0098
+   ],
+   "flip": false,
+   "ci_excludes_zero": false
+  },
+  "atlop_full|kddocre": {
+   "D1_ess": -0.0335,
+   "D2_ass": -0.0409,
+   "flip_delta": -0.0073,
+   "ci95": [
+    -0.0141,
+    -0.0005
+   ],
+   "flip": false,
+   "ci_excludes_zero": true
+  },
+  "dreeam|docunet": {
+   "D1_ess": 0.0671,
+   "D2_ass": 0.0754,
+   "flip_delta": 0.0083,
+   "ci95": [
+    0.0004,
+    0.0164
+   ],
+   "flip": false,
+   "ci_excludes_zero": true
+  },
+  "dreeam|kddocre": {
+   "D1_ess": 0.0108,
+   "D2_ass": 0.0101,
+   "flip_delta": -0.0007,
+   "ci95": [
+    -0.0077,
+    0.0063
+   ],
+   "flip": false,
+   "ci_excludes_zero": false
+  },
+  "docunet|kddocre": {
+   "D1_ess": -0.0562,
+   "D2_ass": -0.0652,
+   "flip_delta": -0.009,
+   "ci95": [
+    -0.0176,
+    -0.0006
+   ],
+   "flip": false,
+   "ci_excludes_zero": true
+  }
+ },
+ "summary": {
+  "n_pairs": 10,
+  "n_flips": 0,
+  "n_flips_ci_excl": 0,
+  "H_G1": "PASS",
+  "max_arm": [
+   0.0303,
+   "atlop_pe8"
+  ]
+ }
+}

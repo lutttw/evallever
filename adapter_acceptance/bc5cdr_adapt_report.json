@@ -1,0 +1,90 @@
+{
+ "dataset": "bc5cdr",
+ "official_eval": "bc5cdr_eval.jar (BC5CDR_Evaluation-0.0.3) relation CID bioc",
+ "acceptance_split": "dev",
+ "splits": {
+  "train": {
+   "n_docs": 500,
+   "n_relations_raw": 1038,
+   "n_concept_pairs": 1038,
+   "n_candidates": 44209,
+   "n_intra": 4828,
+   "n_inter": 39381,
+   "inter_ratio": 0.8907914678006741,
+   "n_gold_mention_pairs": 14805,
+   "gold_inter_ratio": 0.8732185072610604
+  },
+  "dev": {
+   "n_docs": 500,
+   "n_relations_raw": 1012,
+   "n_concept_pairs": 1012,
+   "n_candidates": 47502,
+   "n_intra": 5192,
+   "n_inter": 42310,
+   "inter_ratio": 0.890699338975201,
+   "n_gold_mention_pairs": 16089,
+   "gold_inter_ratio": 0.8742619180806762
+  },
+  "test": {
+   "n_docs": 500,
+   "n_relations_raw": 1066,
+   "n_concept_pairs": 1066,
+   "n_candidates": 48618,
+   "n_intra": 5127,
+   "n_inter": 43491,
+   "inter_ratio": 0.8945452301616685,
+   "n_gold_mention_pairs": 16053,
+   "gold_inter_ratio": 0.8800847193670965
+  }
+ },
+ "acceptance": {
+  "A_gold_vs_gold": {
+   "official": {
+    "TP": 1012,
+    "FP": 0,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "fscore": 1.0
+   },
+   "mirror": {
+    "TP": 1012,
+    "FP": 0,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "fscore": 1.0
+   },
+   "n_gold_pairs": 1012,
+   "pass": true
+  },
+  "B_deterministic_corruption": {
+   "n_pairs_dropped": 253,
+   "n_fp_added": 239,
+   "official": {
+    "TP": 759,
+    "FP": 239,
+    "FN": 253,
+    "precision": 0.7605210420841684,
+    "recall": 0.75,
+    "fscore": 0.755223880597015
+   },
+   "mirror": {
+    "TP": 759,
+    "FP": 239,
+    "FN": 253,
+    "precision": 0.7605210420841684,
+    "recall": 0.75,
+    "fscore": 0.755223880597015
+   },
+   "pass": true
+  },
+  "warnings": [
+   "train 金标提及对跨句占比 0.873 与预登记 0.854 偏差 >1pp",
+   "dev 金标提及对跨句占比 0.874 与预登记 0.846 偏差 >1pp",
+   "test 金标提及对跨句占比 0.880 与预登记 0.858 偏差 >1pp"
+  ],
+  "pass": true,
+  "failures": []
+ }
+}

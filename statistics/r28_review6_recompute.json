@@ -1,0 +1,104 @@
+{
+ "meta": {
+  "seed": 20260926,
+  "reps": 20000,
+  "note": "scipy spearmanr (tie-corrected) + one-sided permutation; supersedes the in-paper 0.534/0.418/0.60 variants flagged by review A-W1 (r28)"
+ },
+ "dedup14": {
+  "n": 14,
+  "rho": 0.5876,
+  "p_one_sided": 0.0167,
+  "paper_old": [
+   0.534,
+   0.025
+  ]
+ },
+ "stricter13": {
+  "n": 13,
+  "rho": 0.4925,
+  "p_one_sided": 0.0441,
+  "dropped_sd": 0.0467,
+  "paper_old": [
+   0.418,
+   0.076
+  ]
+ },
+ "noncalib6": {
+  "n": 6,
+  "rho": 0.3586,
+  "p_one_sided": 0.2665,
+  "indices": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "levels": [
+   1.0,
+   2.0,
+   4.0,
+   1.0,
+   2.0,
+   4.0
+  ],
+  "sds": [
+   0.0015,
+   0.0053,
+   0.0189,
+   0.024,
+   0.0233,
+   0.0307
+  ],
+  "paper_old": [
+   0.6,
+   0.12
+  ]
+ },
+ "h2_verdict_note": "pooled 0.656 passes the registered rho>0.5; dedup14 0.588 passes; stricter13 0.493 falls below 0.5 — the pass is not robust to the strictest de-duplication",
+ "density_arm11": {
+  "n": 11,
+  "rho": 0.6364,
+  "p_one_sided": 0.0209,
+  "paper_old": [
+   0.6364,
+   0.039
+  ]
+ },
+ "encoder_within7": {
+  "n": 7,
+  "rho": 0.6786,
+  "p_one_sided": 0.0575,
+  "paper_old": [
+   0.679,
+   0.09
+  ]
+ },
+ "h1_binomial": {
+  "observed": "13/15",
+  "cp95": [
+   0.595,
+   0.983
+  ],
+  "P(X>=13|p=0.8)": 0.398
+ },
+ "mw_note": {
+  "p_reported": 0.029,
+  "exact_complete_separation": 0.0286,
+  "is_minimum_attainable_for_3v4": true
+ },
+ "label_inventory_probe": {
+  "note": "same model (Qwen2.5-7B), format (json), instruction language (English); dataset-borne label inventory differs (DocRED 96 EN relations vs HacRED 26 ZH relations). Review-6 item C-(g).",
+  "docred_en": {
+   "n": 10091,
+   "rel_unmapped": 174,
+   "share": 0.017
+  },
+  "hacred_enInstr": {
+   "n": 9994,
+   "rel_unmapped": 1376,
+   "share": 0.138
+  }
+ }
+}

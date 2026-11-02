@@ -1,0 +1,335 @@
+{
+ "seed": 20260926,
+ "n_per_lang": 1000,
+ "langs": [
+  "en",
+  "zh",
+  "fr"
+ ],
+ "split": "validation",
+ "split_purpose": "primary(修订 17:验证集前 1000)",
+ "models": {
+  "joeddav/xlm-roberta-large-xnli": {
+   "en": {
+    "accuracy": 0.999,
+    "macro_f1": 0.999000499750125,
+    "gap_acc_minus_mf1": -4.997501249492942e-07,
+    "pred_label_counts": [
+     334,
+     333,
+     333
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "contradiction",
+      "1": "neutral",
+      "2": "entailment"
+     }
+    }
+   },
+   "zh": {
+    "accuracy": 0.991,
+    "macro_f1": 0.9910027794244557,
+    "gap_acc_minus_mf1": -2.7794244557011183e-06,
+    "pred_label_counts": [
+     338,
+     330,
+     332
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "contradiction",
+      "1": "neutral",
+      "2": "entailment"
+     }
+    }
+   },
+   "fr": {
+    "accuracy": 0.996,
+    "macro_f1": 0.9960034885083234,
+    "gap_acc_minus_mf1": -3.4885083234348357e-06,
+    "pred_label_counts": [
+     334,
+     334,
+     332
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "contradiction",
+      "1": "neutral",
+      "2": "entailment"
+     }
+    }
+   }
+  },
+  "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli": {
+   "en": {
+    "accuracy": 0.995,
+    "macro_f1": 0.9949964799690111,
+    "gap_acc_minus_mf1": 3.520030988912737e-06,
+    "pred_label_counts": [
+     334,
+     331,
+     335
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   },
+   "zh": {
+    "accuracy": 0.99,
+    "macro_f1": 0.99000197802593,
+    "gap_acc_minus_mf1": -1.9780259300494762e-06,
+    "pred_label_counts": [
+     335,
+     332,
+     333
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   },
+   "fr": {
+    "accuracy": 0.998,
+    "macro_f1": 0.9979994987491239,
+    "gap_acc_minus_mf1": 5.012508761392809e-07,
+    "pred_label_counts": [
+     334,
+     332,
+     334
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   }
+  },
+  "typeform/distilbert-base-uncased-mnli": {
+   "en": {
+    "accuracy": 0.828,
+    "macro_f1": 0.8279638916707731,
+    "gap_acc_minus_mf1": 3.610832922684715e-05,
+    "pred_label_counts": [
+     298,
+     348,
+     354
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   },
+   "zh": {
+    "accuracy": 0.355,
+    "macro_f1": 0.2365087761279245,
+    "gap_acc_minus_mf1": 0.11849122387207547,
+    "pred_label_counts": [
+     65,
+     8,
+     927
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   },
+   "fr": {
+    "accuracy": 0.378,
+    "macro_f1": 0.31191240374111007,
+    "gap_acc_minus_mf1": 0.06608759625888994,
+    "pred_label_counts": [
+     504,
+     9,
+     487
+    ],
+    "infer_meta": {
+     "effective_batch": 16,
+     "oom_retries": 0,
+     "id2label": {
+      "0": "entailment",
+      "1": "neutral",
+      "2": "contradiction"
+     }
+    }
+   }
+  }
+ },
+ "pairs": {
+  "xlm-roberta-large-xnli__vs__mDeBERTa-v3-base-mnli-xnli": {
+   "en": {
+    "err_n_model_a": 1,
+    "err_n_model_b": 5,
+    "err_intersection": 0,
+    "err_union": 6,
+    "jaccard_distance_accuracy": 1.0,
+    "jaccard_distance_macro_f1": 1.0,
+    "rank_volatility": 4.019781113862031e-06,
+    "gap_a": -4.997501249492942e-07,
+    "gap_b": 3.520030988912737e-06,
+    "flip": false,
+    "acc_margin": 0.0040000000000000036,
+    "mf1_margin": 0.004004019781113866,
+    "pred_agreement": 0.994
+   },
+   "zh": {
+    "err_n_model_a": 9,
+    "err_n_model_b": 10,
+    "err_intersection": 3,
+    "err_union": 16,
+    "jaccard_distance_accuracy": 0.8125,
+    "jaccard_distance_macro_f1": 0.8125,
+    "rank_volatility": 8.01398525651642e-07,
+    "gap_a": -2.7794244557011183e-06,
+    "gap_b": -1.9780259300494762e-06,
+    "flip": false,
+    "acc_margin": 0.0010000000000000009,
+    "mf1_margin": 0.0010008013985256525,
+    "pred_agreement": 0.987
+   },
+   "fr": {
+    "err_n_model_a": 4,
+    "err_n_model_b": 2,
+    "err_intersection": 0,
+    "err_union": 6,
+    "jaccard_distance_accuracy": 1.0,
+    "jaccard_distance_macro_f1": 1.0,
+    "rank_volatility": 3.989759199574117e-06,
+    "gap_a": -3.4885083234348357e-06,
+    "gap_b": 5.012508761392809e-07,
+    "flip": false,
+    "acc_margin": -0.0020000000000000018,
+    "mf1_margin": -0.0019960102408004277,
+    "pred_agreement": 0.994
+   }
+  },
+  "xlm-roberta-large-xnli__vs__distilbert-base-uncased-mnli": {
+   "en": {
+    "err_n_model_a": 1,
+    "err_n_model_b": 172,
+    "err_intersection": 0,
+    "err_union": 173,
+    "jaccard_distance_accuracy": 1.0,
+    "jaccard_distance_macro_f1": 1.0,
+    "rank_volatility": 3.660807935179644e-05,
+    "gap_a": -4.997501249492942e-07,
+    "gap_b": 3.610832922684715e-05,
+    "flip": false,
+    "acc_margin": 0.17100000000000004,
+    "mf1_margin": 0.17103660807935184,
+    "pred_agreement": 0.827
+   },
+   "zh": {
+    "err_n_model_a": 9,
+    "err_n_model_b": 645,
+    "err_intersection": 7,
+    "err_union": 647,
+    "jaccard_distance_accuracy": 0.9891808346213292,
+    "jaccard_distance_macro_f1": 0.9891808346213292,
+    "rank_volatility": 0.11849400329653118,
+    "gap_a": -2.7794244557011183e-06,
+    "gap_b": 0.11849122387207547,
+    "flip": false,
+    "acc_margin": 0.636,
+    "mf1_margin": 0.7544940032965312,
+    "pred_agreement": 0.354
+   },
+   "fr": {
+    "err_n_model_a": 4,
+    "err_n_model_b": 622,
+    "err_intersection": 4,
+    "err_union": 622,
+    "jaccard_distance_accuracy": 0.9935691318327974,
+    "jaccard_distance_macro_f1": 0.9935691318327974,
+    "rank_volatility": 0.06609108476721337,
+    "gap_a": -3.4885083234348357e-06,
+    "gap_b": 0.06608759625888994,
+    "flip": false,
+    "acc_margin": 0.618,
+    "mf1_margin": 0.6840910847672134,
+    "pred_agreement": 0.379
+   }
+  },
+  "mDeBERTa-v3-base-mnli-xnli__vs__distilbert-base-uncased-mnli": {
+   "en": {
+    "err_n_model_a": 5,
+    "err_n_model_b": 172,
+    "err_intersection": 4,
+    "err_union": 173,
+    "jaccard_distance_accuracy": 0.976878612716763,
+    "jaccard_distance_macro_f1": 0.976878612716763,
+    "rank_volatility": 3.258829823793441e-05,
+    "gap_a": 3.520030988912737e-06,
+    "gap_b": 3.610832922684715e-05,
+    "flip": false,
+    "acc_margin": 0.16700000000000004,
+    "mf1_margin": 0.16703258829823797,
+    "pred_agreement": 0.83
+   },
+   "zh": {
+    "err_n_model_a": 10,
+    "err_n_model_b": 645,
+    "err_intersection": 6,
+    "err_union": 649,
+    "jaccard_distance_accuracy": 0.9907550077041603,
+    "jaccard_distance_macro_f1": 0.9907550077041603,
+    "rank_volatility": 0.11849320189800552,
+    "gap_a": -1.9780259300494762e-06,
+    "gap_b": 0.11849122387207547,
+    "flip": false,
+    "acc_margin": 0.635,
+    "mf1_margin": 0.7534932018980055,
+    "pred_agreement": 0.354
+   },
+   "fr": {
+    "err_n_model_a": 2,
+    "err_n_model_b": 622,
+    "err_intersection": 2,
+    "err_union": 622,
+    "jaccard_distance_accuracy": 0.9967845659163987,
+    "jaccard_distance_macro_f1": 0.9967845659163987,
+    "rank_volatility": 0.0660870950080138,
+    "gap_a": 5.012508761392809e-07,
+    "gap_b": 0.06608759625888994,
+    "flip": false,
+    "acc_margin": 0.62,
+    "mf1_margin": 0.6860870950080138,
+    "pred_agreement": 0.378
+   }
+  }
+ },
+ "deviations": [],
+ "contracts_note": "accuracy 与 macro-F1 的逐样本误差集合按定义恒同(均以预测≠金标为罚),契约差异体现于聚合(micro 命中 vs 类对称调和平均);因此力臂的逐样本 Jaccard 两契约相同,排名波动与翻转才是本设计的契约敏感量。"
+}

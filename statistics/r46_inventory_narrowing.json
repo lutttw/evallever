@@ -1,0 +1,73 @@
+{
+ "meta": {
+  "amendment": 77,
+  "design": "controlled inventory narrowing on English DocRED predictions; accepted set = top-W relations by training frequency",
+  "widths": [
+   96,
+   64,
+   48,
+   40,
+   32,
+   26,
+   16,
+   10
+  ],
+  "ts": "2026-10-15T15:45:00"
+ },
+ "per_width": {
+  "96": {
+   "inventory_width": 96,
+   "rate_Qwen_7B": 2.85,
+   "rate_Qwen_14B": 0.11,
+   "delta_14B_minus_7B_pt": -2.74
+  },
+  "64": {
+   "inventory_width": 64,
+   "rate_Qwen_7B": 19.52,
+   "rate_Qwen_14B": 2.54,
+   "delta_14B_minus_7B_pt": -16.98
+  },
+  "48": {
+   "inventory_width": 48,
+   "rate_Qwen_7B": 24.49,
+   "rate_Qwen_14B": 10.18,
+   "delta_14B_minus_7B_pt": -14.31
+  },
+  "40": {
+   "inventory_width": 40,
+   "rate_Qwen_7B": 25.7,
+   "rate_Qwen_14B": 10.95,
+   "delta_14B_minus_7B_pt": -14.75
+  },
+  "32": {
+   "inventory_width": 32,
+   "rate_Qwen_7B": 27.75,
+   "rate_Qwen_14B": 11.25,
+   "delta_14B_minus_7B_pt": -16.5
+  },
+  "26": {
+   "inventory_width": 26,
+   "rate_Qwen_7B": 35.24,
+   "rate_Qwen_14B": 12.53,
+   "delta_14B_minus_7B_pt": -22.71
+  },
+  "16": {
+   "inventory_width": 16,
+   "rate_Qwen_7B": 36.14,
+   "rate_Qwen_14B": 13.05,
+   "delta_14B_minus_7B_pt": -23.09
+  },
+  "10": {
+   "inventory_width": 10,
+   "rate_Qwen_7B": 36.81,
+   "rate_Qwen_14B": 13.99,
+   "delta_14B_minus_7B_pt": -22.82
+  }
+ },
+ "summary": {
+  "delta_monotonically_increasing_as_W_narrows": false,
+  "delta_at_96": -2.74,
+  "delta_at_26": -22.71,
+  "mechanism_confirmed": false
+ }
+}

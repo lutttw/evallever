@@ -1,0 +1,994 @@
+{
+ "experiment": "R2 种子数收敛分析（修订5，预注册冻结）",
+ "generated_at": "2026-10-06T03:02:28",
+ "prereg": "docs/ACL_主会执行方案_20261003/预注册_v1_20261003.md 修订5 R2 节",
+ "frozen_protocol": {
+  "bootstrap": "10000 次文档配对, seed 20260926, percentile 95%, 同一重采样索引跨种子/跨侧共用（hacred_bootstrap/eval_bootstrap_fast 口径）",
+  "enumeration": "C(N,n) ≤ 10000 全组合枚举，否则随机 10000 组（seed 20260926）",
+  "grid": {
+   "hacred": [
+    2,
+    3,
+    5,
+    8,
+    12,
+    15
+   ],
+   "x2": [
+    2,
+    3,
+    5,
+    8,
+    10
+   ]
+  },
+  "criterion": "最小 n：≥95% 子集的池化估计 95% CI 排除 0（符号判定所需最小种子数）"
+ },
+ "gamma_definition": {
+  "hacred": "Γ = ΔIIG_F1(multi@cal_τ) − ΔIIG_F1(top1@cal_τ)，ΔIIG=F1(intra)−F1(inter)，金标承载校准（τ 由 calibration 分片 gold_bearing_only 选出）；次要量 Γ_fixed 两侧均 fixed 0.5",
+  "x2": "Δ = ΔIIG_F1(D臂@gR) − ΔIIG_F1(R臂@gR)，同金标 gR、同 ρ、fixed_0.5 / sigmoid_multilabel / earliest_mention；r025 主报、r100 次报"
+ },
+ "verification": {
+  "known_5seed_gamma": {
+   "expected": [
+    0.0291,
+    0.0281,
+    -0.0204,
+    -0.02,
+    -0.0848
+   ],
+   "got": [
+    0.02905479681203879,
+    0.02810645950248411,
+    -0.02042260843814278,
+    -0.019995676270181006,
+    -0.08476416993194702
+   ],
+   "max_abs_diff": 4.52031879612097e-05,
+   "tolerance": 0.002,
+   "pass": true
+  },
+  "x2_delta_vs_e43": {
+   "X2_r025_Delta_5seed": {
+    "expected": [
+     -0.002065960430739866,
+     -0.00283896569237696,
+     -0.008069470504779575,
+     0.019445704998985847,
+     0.010085579722464322
+    ],
+    "got": [
+     -0.002065960430739866,
+     -0.00283896569237696,
+     -0.008069470504779575,
+     0.019445704998985847,
+     0.010085579722464322
+    ],
+    "max_abs_diff": 0.0,
+    "tolerance": 0.002,
+    "pass": true
+   },
+   "X2_r100_Delta_5seed": {
+    "expected": [
+     0.005761085731024906,
+     -0.0028444030812104226,
+     0.021235570435817863,
+     0.023909794209026225,
+     -0.002623248639256559
+    ],
+    "got": [
+     0.005761085731024906,
+     -0.0028444030812104226,
+     0.021235570435817863,
+     0.023909794209026225,
+     -0.002623248639256559
+    ],
+    "max_abs_diff": 0.0,
+    "tolerance": 0.002,
+    "pass": true
+   }
+  },
+  "hacred_scoreeval_vs_perdoc_point_maxdiff": 0.0,
+  "x2_archived_sd_calibration": {
+   "r025": {
+    "per_seed_frozen_over_archived": [
+     0.7835988031577994,
+     0.7672690812105971,
+     0.7794446194935908,
+     0.7096148877166949,
+     0.7362589466496794
+    ],
+    "median_ratio": 0.7672690812105971,
+    "ratio_iqr": [
+     0.7362589466496794,
+     0.7794446194935908
+    ],
+    "exact": [
+     0.006733276110081773,
+     0.006750513910776071,
+     0.007571970546461037,
+     0.005971846282002666,
+     0.006338430568106368
+    ],
+    "archived": [
+     0.008592759563883409,
+     0.008798104962244941,
+     0.009714571577106512,
+     0.008415615829620042,
+     0.008608969163565584
+    ]
+   },
+   "r100": {
+    "per_seed_frozen_over_archived": [
+     0.7025611082722991,
+     0.7315198885638291,
+     0.714776604314109,
+     0.7127412043002119,
+     0.669987602953748
+    ],
+    "median_ratio": 0.7127412043002119,
+    "ratio_iqr": [
+     0.7025611082722991,
+     0.714776604314109
+    ],
+    "exact": [
+     0.008332844292002034,
+     0.007936216184016253,
+     0.007983524119413641,
+     0.007334993734240139,
+     0.006632897469546017
+    ],
+    "archived": [
+     0.011860668337440029,
+     0.010848941099328395,
+     0.011169257739030972,
+     0.010291244128984838,
+     0.009900030150265202
+    ]
+   }
+  },
+  "hacred_new10_pooled_point": {
+   "archived_gapA_minus_gapB": -0.03561440210937933,
+   "mean_of_10_seed_points": -0.035614402109379314,
+   "abs_diff": 1.3877787807814457e-17
+  },
+  "verdict": "VERIFIED"
+ },
+ "seed_gamma_table": {
+  "hacred": {
+   "20260917": {
+    "gamma_cal": 0.02905479681203879,
+    "gamma_fixed": -0.002039996706062863,
+    "sigma_doc_boot_cal": 0.009526048235289962,
+    "sigma_source": "exact_doc_bootstrap",
+    "has_per_doc": true,
+    "score_eval": "out\\jcip_revision_v4\\E04\\recovered\\out\\jcip_audit_v1\\runs\\hacred_s20260917\\score_eval.json"
+   },
+   "20260918": {
+    "gamma_cal": 0.02810645950248411,
+    "gamma_fixed": -0.002509976695871552,
+    "sigma_doc_boot_cal": 0.00720760769223405,
+    "sigma_source": "exact_doc_bootstrap",
+    "has_per_doc": true,
+    "score_eval": "out\\jcip_revision_v4\\E04\\recovered\\out\\jcip_audit_v1\\runs\\hacred_s20260918\\score_eval.json"
+   },
+   "20260919": {
+    "gamma_cal": -0.02042260843814278,
+    "gamma_fixed": -0.003001814327501573,
+    "sigma_doc_boot_cal": 0.008055313583382441,
+    "sigma_source": "exact_doc_bootstrap",
+    "has_per_doc": true,
+    "score_eval": "out\\jcip_revision_v4\\E04\\recovered\\out\\jcip_audit_v1\\runs\\hacred_s20260919\\score_eval.json"
+   },
+   "20261001": {
+    "gamma_cal": -0.019995676270181006,
+    "gamma_fixed": -0.001561602080789315,
+    "sigma_doc_boot_cal": 0.008826382835530848,
+    "sigma_source": "exact_doc_bootstrap",
+    "has_per_doc": true,
+    "score_eval": "out\\jcip_audit_v1\\runs\\hacred_s20261001\\score_eval.json"
+   },
+   "20261002": {
+    "gamma_cal": -0.08476416993194702,
+    "gamma_fixed": -0.0005148161626065129,
+    "sigma_doc_boot_cal": 0.00944814541397859,
+    "sigma_source": "exact_doc_bootstrap",
+    "has_per_doc": true,
+    "score_eval": "out\\jcip_audit_v1\\runs\\hacred_s20261002\\score_eval.json"
+   },
+   "20261003": {
+    "gamma_cal": -0.05018024255273065,
+    "gamma_fixed": -0.003989829623825991,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261003\\score_eval.json"
+   },
+   "20261004": {
+    "gamma_cal": -0.061338723989252025,
+    "gamma_fixed": -0.001917734754446121,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261004\\score_eval.json"
+   },
+   "20261005": {
+    "gamma_cal": -0.040468553838002436,
+    "gamma_fixed": -0.00308467994799555,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261005\\score_eval.json"
+   },
+   "20261006": {
+    "gamma_cal": -0.0432649989865313,
+    "gamma_fixed": -0.002744202089689174,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261006\\score_eval.json"
+   },
+   "20261007": {
+    "gamma_cal": -0.03574093544702164,
+    "gamma_fixed": -0.0018997786732360966,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261007\\score_eval.json"
+   },
+   "20261008": {
+    "gamma_cal": -0.038737274683787626,
+    "gamma_fixed": -0.0007174727491678912,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261008\\score_eval.json"
+   },
+   "20261009": {
+    "gamma_cal": -0.021476957024243626,
+    "gamma_fixed": -0.0029257602685632267,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261009\\score_eval.json"
+   },
+   "20261010": {
+    "gamma_cal": -0.038175337671614684,
+    "gamma_fixed": 0.00010812716030406122,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261010\\score_eval.json"
+   },
+   "20261011": {
+    "gamma_cal": -0.011938420262882998,
+    "gamma_fixed": -0.0003831436927419496,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261011\\score_eval.json"
+   },
+   "20261012": {
+    "gamma_cal": -0.014822576637726154,
+    "gamma_fixed": -0.0030610666138073395,
+    "sigma_doc_boot_cal": 0.010803642695409383,
+    "sigma_source": "implied_from_pooled_ci_equal_sigma_rho",
+    "has_per_doc": false,
+    "score_eval": "out\\e50_pull\\jcip_audit_v1\\runs\\hacred_s20261012\\score_eval.json"
+   }
+  },
+  "x2_r025": {
+   "20260917": {
+    "delta": -0.002065960430739866,
+    "sigma_doc_boot": 0.006733276110081773,
+    "sigma_archived_raw": 0.008592759563883409,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r025_s20260917\\per_doc\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r025_s20260917\\per_doc\\evaluation__gR.json"
+    ]
+   },
+   "20260918": {
+    "delta": -0.00283896569237696,
+    "sigma_doc_boot": 0.006750513910776071,
+    "sigma_archived_raw": 0.008798104962244941,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r025_s20260918\\per_doc\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r025_s20260918\\per_doc\\evaluation__gR.json"
+    ]
+   },
+   "20260919": {
+    "delta": -0.008069470504779575,
+    "sigma_doc_boot": 0.007571970546461037,
+    "sigma_archived_raw": 0.009714571577106512,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r025_s20260919\\per_doc\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r025_s20260919\\per_doc\\evaluation__gR.json"
+    ]
+   },
+   "20261001": {
+    "delta": 0.019445704998985847,
+    "sigma_doc_boot": 0.005971846282002666,
+    "sigma_archived_raw": 0.008415615829620042,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r025_s20261001\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r025_s20261001\\evaluation__gR.json"
+    ]
+   },
+   "20261002": {
+    "delta": 0.010085579722464322,
+    "sigma_doc_boot": 0.006338430568106368,
+    "sigma_archived_raw": 0.008608969163565584,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r025_s20261002\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r025_s20261002\\evaluation__gR.json"
+    ]
+   },
+   "20261003": {
+    "delta": 0.005889403212501865,
+    "sigma_doc_boot": 0.006861969838562606,
+    "sigma_archived_raw": 0.008943368117656704,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r025_s20261003_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   },
+   "20261004": {
+    "delta": 0.028194294394412317,
+    "sigma_doc_boot": 0.006581953455146905,
+    "sigma_archived_raw": 0.008578416120667731,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r025_s20261004_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   },
+   "20261005": {
+    "delta": 0.010035739129809235,
+    "sigma_doc_boot": 0.006684328139045395,
+    "sigma_archived_raw": 0.008711843475432194,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r025_s20261005_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   },
+   "20261006": {
+    "delta": 0.004695335105781684,
+    "sigma_doc_boot": 0.006530879935250352,
+    "sigma_archived_raw": 0.008511850790267646,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r025_s20261006_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   },
+   "20261007": {
+    "delta": 0.0038374106219594417,
+    "sigma_doc_boot": 0.007138597334436586,
+    "sigma_archived_raw": 0.009303903297097946,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r025_s20261007_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   }
+  },
+  "x2_r100": {
+   "20260917": {
+    "delta": 0.005761085731024906,
+    "sigma_doc_boot": 0.008332844292002034,
+    "sigma_archived_raw": 0.011860668337440029,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r100_s20260917\\per_doc\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r100_s20260917\\per_doc\\evaluation__gR.json"
+    ]
+   },
+   "20260918": {
+    "delta": -0.0028444030812104226,
+    "sigma_doc_boot": 0.007936216184016253,
+    "sigma_archived_raw": 0.010848941099328395,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r100_s20260918\\per_doc\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r100_s20260918\\per_doc\\evaluation__gR.json"
+    ]
+   },
+   "20260919": {
+    "delta": 0.021235570435817863,
+    "sigma_doc_boot": 0.007983524119413641,
+    "sigma_archived_raw": 0.011169257739030972,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r100_s20260919\\per_doc\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r100_s20260919\\per_doc\\evaluation__gR.json"
+    ]
+   },
+   "20261001": {
+    "delta": 0.023909794209026225,
+    "sigma_doc_boot": 0.007334993734240139,
+    "sigma_archived_raw": 0.010291244128984838,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r100_s20261001\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r100_s20261001\\evaluation__gR.json"
+    ]
+   },
+   "20261002": {
+    "delta": -0.002623248639256559,
+    "sigma_doc_boot": 0.006632897469546017,
+    "sigma_archived_raw": 0.009900030150265202,
+    "sigma_source": "exact_doc_bootstrap",
+    "point_source": "per_doc_recount",
+    "files": [
+     "out\\jcip_audit_v1\\runs\\ml_D_r100_s20261002\\evaluation__gR.json",
+     "out\\jcip_audit_v1\\runs\\ml_R_r100_s20261002\\evaluation__gR.json"
+    ]
+   },
+   "20261003": {
+    "delta": 0.0753995342436099,
+    "sigma_doc_boot": 0.00778443488324248,
+    "sigma_archived_raw": 0.010921825251965674,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r100_s20261003_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   },
+   "20261004": {
+    "delta": 0.0807959351260108,
+    "sigma_doc_boot": 0.007909705149516102,
+    "sigma_archived_raw": 0.011097583669632316,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r100_s20261004_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   },
+   "20261005": {
+    "delta": 0.051139697897320896,
+    "sigma_doc_boot": 0.0072637367025006816,
+    "sigma_archived_raw": 0.01019126810499529,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r100_s20261005_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   },
+   "20261006": {
+    "delta": 0.06915573389814408,
+    "sigma_doc_boot": 0.0069302654059702285,
+    "sigma_archived_raw": 0.009723396604767008,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r100_s20261006_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   },
+   "20261007": {
+    "delta": 0.08299729412757884,
+    "sigma_doc_boot": 0.007538084847913601,
+    "sigma_archived_raw": 0.010576187825866881,
+    "sigma_source": "archived_sd_calibrated_to_frozen",
+    "point_source": "archived_bootstrap_point",
+    "files": [
+     "out\\e50_pull\\jcip_audit_v1\\qa\\boot_r100_s20261007_sigmoid_multilabel_fixed_0.5_earliest_mention.json"
+    ]
+   }
+  }
+ },
+ "sigma_inference_hacred_new10": {
+  "assumption": "HacRED 新 10 种子（20261003..12）per_doc 未随 e50_pull 拉回，文档级复制分布不可本地复算 ⇒ 逐种子 σ 由该批次池化 bootstrap CI 反推：σ̄ = SD(mean_n)·√(n/(1+(n−1)ρ))；假设：批次内等 σ、跨种子相关 ρ 取精确池经验值。",
+  "rho_cal_exact_pool": {
+   "mean_pairwise_rho": 0.3385424306757302,
+   "rho_min": 0.13591516146349578,
+   "rho_max": 0.5623409312575888,
+   "n_seeds": 5
+  },
+  "new10_pooled_ci_archived_4000reps": [
+   -0.04925150211254446,
+   -0.022310821292290818
+  ],
+  "new10_sd_of_mean": 0.0068727488923913,
+  "new10_sigma_implied": 0.010803642695409383,
+  "validation": {
+   "old3_implied_sigma_vs_exact": {
+    "implied": 0.008046375226173534,
+    "exact_mean": 0.008262989836968817,
+    "rel_diff": -0.02621504020568244
+   },
+   "old5_pooled_sd_predicted_vs_exact": {
+    "predicted": 0.005918445987152942,
+    "exact": 0.005913382863952924,
+    "rel_diff": 0.0008562143389838628
+   },
+   "old5_pooled_ci_exact_vs_e43_archived": {
+    "exact_reps10000": [
+     -0.024999428348328554,
+     -0.0018886069823332494
+    ],
+    "e43_archived": [
+     -0.0226,
+     -0.0041
+    ],
+    "width_diff": 0.0046108213659953046
+   }
+  },
+  "new10_pooled_point_check": {
+   "archived_gapA_minus_gapB": -0.03561440210937933,
+   "mean_of_10_seed_points": -0.035614402109379314,
+   "abs_diff": 1.3877787807814457e-17
+  }
+ },
+ "tracks": {
+  "A_exact_perdoc_5seed_pool": {
+   "hacred_cal": {
+    "2": {
+     "n_subsets": 10,
+     "frac_sign_positive": 0.5,
+     "frac_sign_negative": 0.5,
+     "gamma_pooled_mean_across_subsets": -0.013604239665149582,
+     "gamma_pooled_sd_across_subsets": 0.026942302717088893,
+     "gamma_abs_mean_across_subsets": 0.022668959617841693,
+     "gamma_abs_max_across_subsets": 0.0525933891850449,
+     "within_subset_sd_of_seed_gamma__mean": 0.0390559118900234,
+     "within_subset_sd_of_seed_gamma__max": 0.0804821632123185,
+     "frac_ci95_excludes_zero": 0.6,
+     "ci95_width_mean": 0.027528379108096728
+    },
+    "3": {
+     "n_subsets": 10,
+     "frac_sign_positive": 0.2,
+     "frac_sign_negative": 0.8,
+     "gamma_pooled_mean_across_subsets": -0.013604239665149582,
+     "gamma_pooled_sd_across_subsets": 0.017961535144725926,
+     "gamma_abs_mean_across_subsets": 0.018531188193197715,
+     "gamma_abs_max_across_subsets": 0.04172748488009027,
+     "within_subset_sd_of_seed_gamma__mean": 0.044281832710562984,
+     "within_subset_sd_of_seed_gamma__max": 0.0654413675530062,
+     "frac_ci95_excludes_zero": 0.6,
+     "ci95_width_mean": 0.025217672234524213
+    },
+    "5": {
+     "n_subsets": 1,
+     "frac_sign_positive": 0.0,
+     "frac_sign_negative": 1.0,
+     "gamma_pooled_mean_across_subsets": -0.013604239665149582,
+     "gamma_pooled_sd_across_subsets": 0.0,
+     "gamma_abs_mean_across_subsets": 0.013604239665149582,
+     "gamma_abs_max_across_subsets": 0.013604239665149582,
+     "within_subset_sd_of_seed_gamma__mean": 0.04666543717889897,
+     "within_subset_sd_of_seed_gamma__max": 0.04666543717889897,
+     "frac_ci95_excludes_zero": 1.0,
+     "ci95_width_mean": 0.023110821365995304
+    }
+   },
+   "hacred_fix": {
+    "2": {
+     "n_subsets": 10,
+     "frac_sign_positive": 0.0,
+     "frac_sign_negative": 1.0,
+     "gamma_pooled_mean_across_subsets": -0.001925641194566363,
+     "gamma_pooled_sd_across_subsets": 0.0005504260107945851,
+     "gamma_abs_mean_across_subsets": 0.001925641194566363,
+     "gamma_abs_max_across_subsets": 0.0027558955116865624,
+     "within_subset_sd_of_seed_gamma__mean": 0.000837549731164285,
+     "within_subset_sd_of_seed_gamma__max": 0.0017585732671957966,
+     "frac_ci95_excludes_zero": 0.3,
+     "ci95_width_mean": 0.004741652437641172
+    },
+    "3": {
+     "n_subsets": 10,
+     "frac_sign_positive": 0.0,
+     "frac_sign_negative": 1.0,
+     "gamma_pooled_mean_across_subsets": -0.0019256411945663629,
+     "gamma_pooled_sd_across_subsets": 0.0003669506738630567,
+     "gamma_abs_mean_across_subsets": 0.0019256411945663629,
+     "gamma_abs_max_across_subsets": 0.0025172625764786627,
+     "within_subset_sd_of_seed_gamma__mean": 0.0009061605194259491,
+     "within_subset_sd_of_seed_gamma__max": 0.0013170503458851564,
+     "frac_ci95_excludes_zero": 0.4,
+     "ci95_width_mean": 0.004399124241802705
+    },
+    "5": {
+     "n_subsets": 1,
+     "frac_sign_positive": 0.0,
+     "frac_sign_negative": 1.0,
+     "gamma_pooled_mean_across_subsets": -0.001925641194566363,
+     "gamma_pooled_sd_across_subsets": 0.0,
+     "gamma_abs_mean_across_subsets": 0.001925641194566363,
+     "gamma_abs_max_across_subsets": 0.001925641194566363,
+     "within_subset_sd_of_seed_gamma__mean": 0.0009533658165036767,
+     "within_subset_sd_of_seed_gamma__max": 0.0009533658165036767,
+     "frac_ci95_excludes_zero": 0.0,
+     "ci95_width_mean": 0.004082090573931871
+    }
+   },
+   "x2_r025": {
+    "2": {
+     "n_subsets": 10,
+     "frac_sign_positive": 0.7,
+     "frac_sign_negative": 0.3,
+     "gamma_pooled_mean_across_subsets": 0.0033113776187107535,
+     "gamma_pooled_sd_across_subsets": 0.0064709126449871675,
+     "gamma_abs_mean_across_subsets": 0.005906256944290034,
+     "gamma_abs_max_across_subsets": 0.014765642360725084,
+     "within_subset_sd_of_seed_gamma__mean": 0.009610273615017756,
+     "within_subset_sd_of_seed_gamma__max": 0.019456167184250507,
+     "frac_ci95_excludes_zero": 0.1,
+     "ci95_width_mean": 0.021997453519944764
+    },
+    "3": {
+     "n_subsets": 10,
+     "frac_sign_positive": 0.7,
+     "frac_sign_negative": 0.3,
+     "gamma_pooled_mean_across_subsets": 0.0033113776187107527,
+     "gamma_pooled_sd_across_subsets": 0.004313941763324778,
+     "gamma_abs_mean_across_subsets": 0.004234517906420336,
+     "gamma_abs_max_across_subsets": 0.009155108096903434,
+     "within_subset_sd_of_seed_gamma__mean": 0.010680379505679658,
+     "within_subset_sd_of_seed_gamma__max": 0.014611922138092487,
+     "frac_ci95_excludes_zero": 0.0,
+     "ci95_width_mean": 0.020396991835092044
+    },
+    "5": {
+     "n_subsets": 1,
+     "frac_sign_positive": 1.0,
+     "frac_sign_negative": 0.0,
+     "gamma_pooled_mean_across_subsets": 0.0033113776187107535,
+     "gamma_pooled_sd_across_subsets": 0.0,
+     "gamma_abs_mean_across_subsets": 0.0033113776187107535,
+     "gamma_abs_max_across_subsets": 0.0033113776187107535,
+     "within_subset_sd_of_seed_gamma__mean": 0.011207949472457684,
+     "within_subset_sd_of_seed_gamma__max": 0.011207949472457684,
+     "frac_ci95_excludes_zero": 0.0,
+     "ci95_width_mean": 0.0191242250373755
+    }
+   },
+   "x2_r100": {
+    "2": {
+     "n_subsets": 10,
+     "frac_sign_positive": 0.9,
+     "frac_sign_negative": 0.1,
+     "gamma_pooled_mean_across_subsets": 0.009087759731080402,
+     "gamma_pooled_sd_across_subsets": 0.007404126086825465,
+     "gamma_abs_mean_across_subsets": 0.009634524903127101,
+     "gamma_abs_max_across_subsets": 0.022572682322422044,
+     "within_subset_sd_of_seed_gamma__mean": 0.01094137628346925,
+     "within_subset_sd_of_seed_gamma__max": 0.01891807432912909,
+     "frac_ci95_excludes_zero": 0.4,
+     "ci95_width_mean": 0.02456666376253984
+    },
+    "3": {
+     "n_subsets": 10,
+     "frac_sign_positive": 1.0,
+     "frac_sign_negative": 0.0,
+     "gamma_pooled_mean_across_subsets": 0.009087759731080402,
+     "gamma_pooled_sd_across_subsets": 0.004936084057883643,
+     "gamma_abs_mean_across_subsets": 0.009087759731080402,
+     "gamma_abs_max_across_subsets": 0.01696881679195633,
+     "within_subset_sd_of_seed_gamma__mean": 0.012479585020839247,
+     "within_subset_sd_of_seed_gamma__max": 0.015383098651447049,
+     "frac_ci95_excludes_zero": 0.3,
+     "ci95_width_mean": 0.022574001615063052
+    },
+    "5": {
+     "n_subsets": 1,
+     "frac_sign_positive": 1.0,
+     "frac_sign_negative": 0.0,
+     "gamma_pooled_mean_across_subsets": 0.009087759731080402,
+     "gamma_pooled_sd_across_subsets": 0.0,
+     "gamma_abs_mean_across_subsets": 0.009087759731080402,
+     "gamma_abs_max_across_subsets": 0.009087759731080402,
+     "within_subset_sd_of_seed_gamma__mean": 0.012824322568027837,
+     "within_subset_sd_of_seed_gamma__max": 0.012824322568027837,
+     "frac_ci95_excludes_zero": 0.0,
+     "ci95_width_mean": 0.02081563750487001
+    }
+   },
+   "pool_note": "仅含本地具备 per-doc 计数的 5 种子（HacRED 20260917-19/20261001-02；X2 同左）；文档配对 bootstrap 10000 次 percentile 95%（hacred_bootstrap 口径）"
+  },
+  "B_full_pool_normal_approx": {
+   "hacred_cal": {
+    "2": {
+     "n_subsets": 105,
+     "frac_sign_positive": 0.10476190476190476,
+     "frac_sign_negative": 0.8952380952380953,
+     "gamma_pooled_mean_across_subsets": -0.028277681294636075,
+     "gamma_pooled_sd_across_subsets": 0.019756740427721197,
+     "gamma_abs_mean_across_subsets": 0.029855348538643547,
+     "gamma_abs_max_across_subsets": 0.07305144696059952,
+     "within_subset_sd_of_seed_gamma__mean": 0.023612369803651834,
+     "within_subset_sd_of_seed_gamma__max": 0.0804821632123185,
+     "frac_ci95_excludes_zero": 0.7619047619047619,
+     "ci95_width_mean": 0.03236400926849154
+    },
+    "3": {
+     "n_subsets": 455,
+     "frac_sign_positive": 0.02857142857142857,
+     "frac_sign_negative": 0.9714285714285714,
+     "gamma_pooled_mean_across_subsets": -0.02827768129463607,
+     "gamma_pooled_sd_across_subsets": 0.015441461512422979,
+     "gamma_abs_mean_across_subsets": 0.028713123785713272,
+     "gamma_abs_max_across_subsets": 0.06542771215797656,
+     "within_subset_sd_of_seed_gamma__mean": 0.0263044660622887,
+     "within_subset_sd_of_seed_gamma__max": 0.0654413675530062,
+     "frac_ci95_excludes_zero": 0.8021978021978022,
+     "ci95_width_mean": 0.029580432549032074
+    },
+    "5": {
+     "n_subsets": 3003,
+     "frac_sign_positive": 0.002997002997002997,
+     "frac_sign_negative": 0.997002997002997,
+     "gamma_pooled_mean_across_subsets": -0.02827768129463607,
+     "gamma_pooled_sd_across_subsets": 0.0109085733377373,
+     "gamma_abs_mean_across_subsets": 0.02828359659490436,
+     "gamma_abs_max_across_subsets": 0.05600333785969269,
+     "within_subset_sd_of_seed_gamma__mean": 0.028163124784509025,
+     "within_subset_sd_of_seed_gamma__max": 0.05298262706602156,
+     "frac_ci95_excludes_zero": 0.9134199134199135,
+     "ci95_width_mean": 0.027138333993007385
+    },
+    "8": {
+     "n_subsets": 6435,
+     "frac_sign_positive": 0.0,
+     "frac_sign_negative": 1.0,
+     "gamma_pooled_mean_across_subsets": -0.028277681294636068,
+     "gamma_pooled_sd_across_subsets": 0.007214702201393435,
+     "gamma_abs_mean_across_subsets": 0.028277681294636068,
+     "gamma_abs_max_across_subsets": 0.04908377963761092,
+     "within_subset_sd_of_seed_gamma__mean": 0.029166498473831768,
+     "within_subset_sd_of_seed_gamma__max": 0.04117186127875176,
+     "frac_ci95_excludes_zero": 0.9912975912975913,
+     "ci95_width_mean": 0.025658686313572168
+    },
+    "12": {
+     "n_subsets": 455,
+     "frac_sign_positive": 0.0,
+     "frac_sign_negative": 1.0,
+     "gamma_pooled_mean_across_subsets": -0.02827768129463607,
+     "gamma_pooled_sd_across_subsets": 0.003860365378105744,
+     "gamma_abs_mean_across_subsets": 0.02827768129463607,
+     "gamma_abs_max_across_subsets": 0.039115671289265075,
+     "within_subset_sd_of_seed_gamma__mean": 0.02968297331893953,
+     "within_subset_sd_of_seed_gamma__max": 0.03346987535025563,
+     "frac_ci95_excludes_zero": 1.0,
+     "ci95_width_mean": 0.02479730184511733
+    },
+    "15": {
+     "n_subsets": 1,
+     "frac_sign_positive": 0.0,
+     "frac_sign_negative": 1.0,
+     "gamma_pooled_mean_across_subsets": -0.028277681294636075,
+     "gamma_pooled_sd_across_subsets": 0.0,
+     "gamma_abs_mean_across_subsets": 0.028277681294636075,
+     "gamma_abs_max_across_subsets": 0.028277681294636075,
+     "within_subset_sd_of_seed_gamma__mean": 0.029869383936574945,
+     "within_subset_sd_of_seed_gamma__max": 0.029869383936574945,
+     "frac_ci95_excludes_zero": 1.0,
+     "ci95_width_mean": 0.024444005679498983
+    }
+   },
+   "x2_r025": {
+    "2": {
+     "n_subsets": 45,
+     "frac_sign_positive": 0.8666666666666667,
+     "frac_sign_negative": 0.13333333333333333,
+     "gamma_pooled_mean_across_subsets": 0.006920907055801831,
+     "gamma_pooled_sd_across_subsets": 0.006893344444737946,
+     "gamma_abs_mean_across_subsets": 0.007715019407577132,
+     "gamma_abs_max_across_subsets": 0.023819999696699082,
+     "within_subset_sd_of_seed_gamma__mean": 0.008845329671487693,
+     "within_subset_sd_of_seed_gamma__max": 0.025642354071573285,
+     "frac_ci95_excludes_zero": 0.28888888888888886,
+     "ci95_width_mean": 0.022126401586391637
+    },
+    "3": {
+     "n_subsets": 120,
+     "frac_sign_positive": 0.8916666666666667,
+     "frac_sign_negative": 0.10833333333333334,
+     "gamma_pooled_mean_across_subsets": 0.0069209070558018315,
+     "gamma_pooled_sd_across_subsets": 0.0052278798810619954,
+     "gamma_abs_mean_across_subsets": 0.007200817629272586,
+     "gamma_abs_max_across_subsets": 0.019241859705287495,
+     "within_subset_sd_of_seed_gamma__mean": 0.009764527991066712,
+     "within_subset_sd_of_seed_gamma__max": 0.01960221950388415,
+     "frac_ci95_excludes_zero": 0.275,
+     "ci95_width_mean": 0.020531331990281936
+    },
+    "5": {
+     "n_subsets": 252,
+     "frac_sign_positive": 0.9880952380952381,
+     "frac_sign_negative": 0.011904761904761904,
+     "gamma_pooled_mean_across_subsets": 0.006920907055801831,
+     "gamma_pooled_sd_across_subsets": 0.0034149431255535044,
+     "gamma_abs_mean_across_subsets": 0.006936905297076756,
+     "gamma_abs_max_across_subsets": 0.014730144291634717,
+     "within_subset_sd_of_seed_gamma__mean": 0.010367123347390221,
+     "within_subset_sd_of_seed_gamma__max": 0.015891484741982452,
+     "frac_ci95_excludes_zero": 0.23015873015873015,
+     "ci95_width_mean": 0.019158138158189533
+    },
+    "8": {
+     "n_subsets": 45,
+     "frac_sign_positive": 1.0,
+     "frac_sign_negative": 0.0,
+     "gamma_pooled_mean_across_subsets": 0.006920907055801831,
+     "gamma_pooled_sd_across_subsets": 0.0017233361111844865,
+     "gamma_abs_mean_across_subsets": 0.006920907055801831,
+     "gamma_abs_max_across_subsets": 0.010014688344396856,
+     "within_subset_sd_of_seed_gamma__mean": 0.010680591618331101,
+     "within_subset_sd_of_seed_gamma__max": 0.012177597167513918,
+     "frac_ci95_excludes_zero": 0.1111111111111111,
+     "ci95_width_mean": 0.018339863150362064
+    },
+    "10": {
+     "n_subsets": 1,
+     "frac_sign_positive": 1.0,
+     "frac_sign_negative": 0.0,
+     "gamma_pooled_mean_across_subsets": 0.006920907055801831,
+     "gamma_pooled_sd_across_subsets": 0.0,
+     "gamma_abs_mean_across_subsets": 0.006920907055801831,
+     "gamma_abs_max_across_subsets": 0.006920907055801831,
+     "within_subset_sd_of_seed_gamma__mean": 0.01077755047383005,
+     "within_subset_sd_of_seed_gamma__max": 0.01077755047383005,
+     "frac_ci95_excludes_zero": 0.0,
+     "ci95_width_mean": 0.018058748444004534
+    }
+   },
+   "x2_r100": {
+    "2": {
+     "n_subsets": 45,
+     "frac_sign_positive": 0.9777777777777777,
+     "frac_sign_negative": 0.022222222222222223,
+     "gamma_pooled_mean_across_subsets": 0.04049269939480665,
+     "gamma_pooled_sd_across_subsets": 0.022536446038223423,
+     "gamma_abs_mean_across_subsets": 0.040614202766372585,
+     "gamma_abs_max_across_subsets": 0.08189661462679482,
+     "within_subset_sd_of_seed_gamma__mean": 0.029473659389678393,
+     "within_subset_sd_of_seed_gamma__max": 0.060699246204897216,
+     "frac_ci95_excludes_zero": 0.8444444444444444,
+     "ci95_width_mean": 0.02432950658147985
+    },
+    "3": {
+     "n_subsets": 120,
+     "frac_sign_positive": 1.0,
+     "frac_sign_negative": 0.0,
+     "gamma_pooled_mean_across_subsets": 0.04049269939480666,
+     "gamma_pooled_sd_across_subsets": 0.017091534273150116,
+     "gamma_abs_mean_across_subsets": 0.04049269939480666,
+     "gamma_abs_max_across_subsets": 0.07973092116573317,
+     "within_subset_sd_of_seed_gamma__mean": 0.03324287703155392,
+     "within_subset_sd_of_seed_gamma__max": 0.04949700871881071,
+     "frac_ci95_excludes_zero": 0.9416666666666667,
+     "ci95_width_mean": 0.02226695471279415
+    },
+    "5": {
+     "n_subsets": 252,
+     "frac_sign_positive": 1.0,
+     "frac_sign_negative": 0.0,
+     "gamma_pooled_mean_across_subsets": 0.04049269939480665,
+     "gamma_pooled_sd_across_subsets": 0.011164490921585493,
+     "gamma_abs_mean_across_subsets": 0.04049269939480665,
+     "gamma_abs_max_across_subsets": 0.0718976390585329,
+     "within_subset_sd_of_seed_gamma__mean": 0.034848117381919716,
+     "within_subset_sd_of_seed_gamma__max": 0.0452523762272276,
+     "frac_ci95_excludes_zero": 0.996031746031746,
+     "ci95_width_mean": 0.020465094267339896
+    },
+    "8": {
+     "n_subsets": 45,
+     "frac_sign_positive": 1.0,
+     "frac_sign_negative": 0.0,
+     "gamma_pooled_mean_across_subsets": 0.040492699394806646,
+     "gamma_pooled_sd_across_subsets": 0.005634111509555856,
+     "gamma_abs_mean_across_subsets": 0.040492699394806646,
+     "gamma_abs_max_across_subsets": 0.05129933070856669,
+     "within_subset_sd_of_seed_gamma__mean": 0.03517777265406001,
+     "within_subset_sd_of_seed_gamma__max": 0.039244390146346224,
+     "frac_ci95_excludes_zero": 1.0,
+     "ci95_width_mean": 0.019376953997972082
+    },
+    "10": {
+     "n_subsets": 1,
+     "frac_sign_positive": 1.0,
+     "frac_sign_negative": 0.0,
+     "gamma_pooled_mean_across_subsets": 0.04049269939480665,
+     "gamma_pooled_sd_across_subsets": 0.0,
+     "gamma_abs_mean_across_subsets": 0.04049269939480665,
+     "gamma_abs_max_across_subsets": 0.04049269939480665,
+     "within_subset_sd_of_seed_gamma__mean": 0.03523510055603114,
+     "within_subset_sd_of_seed_gamma__max": 0.03523510055603114,
+     "frac_ci95_excludes_zero": 1.0,
+     "ci95_width_mean": 0.019000218670378207
+    }
+   },
+   "note": "全种子池；正态近似 95% CI，SE 含精确池经验跨种子相关 ρ；σ 来源：精确池=文档级 bootstrap SD；HacRED 新10=池化 CI 反推（见 sigma_inference_hacred_new10）；X2 新5=归档 sd_of_replicates 经冻结口径中位比例校准（见 verification.x2_archived_sd_calibration）"
+  }
+ },
+ "headline": {
+  "hacred_gamma_cal": {
+   "min_n_95pct_trackB_full_pool": 8,
+   "min_n_90pct_trackB_full_pool": 5,
+   "min_n_95pct_trackA_exact_5seed_pool": 5,
+   "curve_trackB": {
+    "2": 0.7619047619047619,
+    "3": 0.8021978021978022,
+    "5": 0.9134199134199135,
+    "8": 0.9912975912975913,
+    "12": 1.0,
+    "15": 1.0
+   },
+   "curve_trackA": {
+    "2": 0.6,
+    "3": 0.6,
+    "5": 1.0
+   }
+  },
+  "hacred_gamma_fixed": {
+   "note": "次要量；全池轨道不可算（新 10 种子 fixed 侧无池化 CI 锚点），仅精确池轨道",
+   "min_n_95pct_trackA_exact_5seed_pool": null,
+   "curve_trackA": {
+    "2": 0.3,
+    "3": 0.4,
+    "5": 0.0
+   }
+  },
+  "x2_delta_r025": {
+   "min_n_95pct_trackB_full_pool": null,
+   "min_n_90pct_trackB_full_pool": null,
+   "min_n_95pct_trackA_exact_5seed_pool": null,
+   "curve_trackB": {
+    "2": 0.28888888888888886,
+    "3": 0.275,
+    "5": 0.23015873015873015,
+    "8": 0.1111111111111111,
+    "10": 0.0
+   },
+   "curve_trackA": {
+    "2": 0.1,
+    "3": 0.0,
+    "5": 0.0
+   },
+   "within_grid_note": "若 min_n 为 null：在冻结网格 n ≤ 10 内不存在满足 95% 判据的种子数；曲线随 n 非增（池化均值 |Δ| 收敛到 ≈0.007 的量级，而 SE 因正的跨种子相关 ρ 收敛更慢），与 e43 五种子 CI 含 0 一致，属描述性结论，不构成方向主张。"
+  },
+  "x2_delta_r100": {
+   "min_n_95pct_trackB_full_pool": 5,
+   "min_n_95pct_trackA_exact_5seed_pool": null,
+   "curve_trackB": {
+    "2": 0.8444444444444444,
+    "3": 0.9416666666666667,
+    "5": 0.996031746031746,
+    "8": 1.0,
+    "10": 1.0
+   },
+   "curve_trackA": {
+    "2": 0.4,
+    "3": 0.3,
+    "5": 0.0
+   }
+  },
+  "hacred_gamma_fixed_trackB_unavailable": "新 10 种子 fixed 侧无池化 CI 锚点，σ 不做外推，fixed 全池轨道不报告",
+  "tracks_B_sigma_sources": {
+   "hacred_cal": "老5=精确文档级 bootstrap SD；新10=由该批池化 CI 反推（等σ+ρ 假设）",
+   "x2": "老5=精确文档级 bootstrap SD；新5=归档 sd_of_replicates × 冻结口径校准比例（中位）"
+  }
+ },
+ "interpretation_freeze": "结论句式（预冻结）：交互符号判定至少需要 N 种子（95% 子集 CI 排除 0）；N 由数据给出，描述性分析，无接受/拒绝门槛。",
+ "notes": []
+}

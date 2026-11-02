@@ -1,0 +1,100 @@
+{
+ "meta": {
+  "amendment": 76,
+  "design_source": "prereg 修订11 (R4)",
+  "n_triples": 47630,
+  "n_docs": 498,
+  "n_violations": 4500,
+  "inference": "doc-cluster bootstrap 500 reps (seed 20260926); substitutes the frozen mixed-effects appendix item, disclosed",
+  "ts": "2026-10-13T20:58:53"
+ },
+ "arm_rates": {
+  "qwen7b_json": {
+   "n_triples": 10091,
+   "n_violations": 1150,
+   "rate": 0.114
+  },
+  "qwen7b_freetext": {
+   "n_triples": 8917,
+   "n_violations": 1038,
+   "rate": 0.1164
+  },
+  "mistral7b_json": {
+   "n_triples": 3715,
+   "n_violations": 700,
+   "rate": 0.1884
+  },
+  "mistral7b_freetext": {
+   "n_triples": 19107,
+   "n_violations": 1347,
+   "rate": 0.0705
+  },
+  "qwen14b_json": {
+   "n_triples": 5800,
+   "n_violations": 265,
+   "rate": 0.0457
+  }
+ },
+ "coef": {
+  "log_doc_tokens": {
+   "beta": 0.7575,
+   "OR": 2.1329,
+   "ci95_OR": [
+    1.1112,
+    4.2465
+   ],
+   "AME": 0.029,
+   "ci_excludes_zero": true
+  },
+  "n_ents": {
+   "beta": -0.0298,
+   "OR": 0.9706,
+   "ci95_OR": [
+    0.9258,
+    1.0147
+   ],
+   "AME": -0.0011,
+   "ci_excludes_zero": false
+  },
+  "log_rel_freq": {
+   "beta": -0.8513,
+   "OR": 0.4268,
+   "ci95_OR": [
+    0.3916,
+    0.4607
+   ],
+   "AME": -0.0326,
+   "ci_excludes_zero": true
+  },
+  "fmt_json": {
+   "beta": 0.0203,
+   "OR": 1.0205,
+   "ci95_OR": [
+    0.759,
+    1.3633
+   ],
+   "AME": 0.0008,
+   "ci_excludes_zero": false
+  },
+  "model_mistral": {
+   "beta": -1.0614,
+   "OR": 0.346,
+   "ci95_OR": [
+    0.2402,
+    0.4807
+   ],
+   "AME": -0.0441,
+   "ci_excludes_zero": true
+  },
+  "model_qwen14b": {
+   "beta": -0.3883,
+   "OR": 0.6782,
+   "ci95_OR": [
+    0.4265,
+    1.0026
+   ],
+   "AME": -0.0141,
+   "ci_excludes_zero": false
+  }
+ }
+}

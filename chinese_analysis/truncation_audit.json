@@ -1,0 +1,44 @@
+{
+ "tokenizer": {
+  "vocab_before": 21128,
+  "vocab_after": 21128,
+  "marker_token_lens": {
+   "[unused1]": 1,
+   "[unused2]": 1,
+   "[unused3]": 1,
+   "[unused4]": 1
+  }
+ },
+ "max_length": 512,
+ "n_candidates": 253732,
+ "char": {
+  "mean_tokens": 328.7180489650497,
+  "p95_tokens": 575.0,
+  "max_tokens": 635,
+  "over_512": 28650,
+  "over_512_rate": 0.112914,
+  "visible_exact": 249664,
+  "visible_exact_rate": 0.983967
+ },
+ "word": {
+  "mean_tokens": 328.7956347642394,
+  "p95_tokens": 575.0,
+  "max_tokens": 635,
+  "over_512": 28650,
+  "over_512_rate": 0.112914,
+  "visible_exact": 249606,
+  "visible_exact_rate": 0.983739
+ },
+ "docs_truncated_exact_char": 51,
+ "n_docs": 1500,
+ "crosscheck": {
+  "e07_V_conservative": 248972,
+  "V_cons_subset_of_V_exact_violations": 0,
+  "e07_truncated_doc_candidates": 28650,
+  "e07_truncated_docs": 51,
+  "preflight_reference": {
+   "cand_truncated_rate_eval": 0.1129,
+   "entity_loss_rate_eval": 0.03077
+  }
+ }
+}

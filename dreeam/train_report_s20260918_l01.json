@@ -1,0 +1,102 @@
+{
+ "args": {
+  "smoke": false,
+  "seed": 20260918,
+  "epochs": 30.0,
+  "train_batch_size": 2,
+  "grad_accum": 2,
+  "eval_every": 3,
+  "lr_transformer": 5e-05,
+  "lr_added": 0.0001,
+  "evi_lambda": 0.1,
+  "device": "cuda:0",
+  "n_gpu": 1,
+  "max_seq_length": 1024,
+  "num_labels": 4,
+  "evi_thresh": 0.2,
+  "max_grad_norm": 1.0,
+  "warmup_ratio": 0.06,
+  "transformer_type": "bert",
+  "test_batch_size": 4
+ },
+ "seed": 20260918,
+ "deterministic": true,
+ "train_file": "data\\docred_local\\train_annotated_pe8.json",
+ "train_sha256": "f5be147b18573bf8cb77392b2d09034561fa5103f95c71aaf149544010d677ff",
+ "bert_dir": ".hf_cache\\hub\\models--google-bert--bert-base-cased\\snapshots\\cd5ef92a9fb2f889e972770a36d4ed042daf221e",
+ "best_dev_F1": 0.6133124100954622,
+ "history": [
+  {
+   "epoch": 3,
+   "steps": 2061,
+   "dev_P": 0.5177928828468612,
+   "dev_R": 0.3164969450101833,
+   "dev_F1": 0.3928607543735463
+  },
+  {
+   "epoch": 6,
+   "steps": 4122,
+   "dev_P": 0.6614237288135594,
+   "dev_R": 0.3973930753564155,
+   "dev_F1": 0.49648854961832073
+  },
+  {
+   "epoch": 9,
+   "steps": 6183,
+   "dev_P": 0.6971140375455309,
+   "dev_R": 0.4053767820773931,
+   "dev_F1": 0.5126461649410189
+  },
+  {
+   "epoch": 12,
+   "steps": 8244,
+   "dev_P": 0.6265630920803335,
+   "dev_R": 0.5388187372708758,
+   "dev_F1": 0.5793876746528842
+  },
+  {
+   "epoch": 15,
+   "steps": 10305,
+   "dev_P": 0.6288943768996961,
+   "dev_R": 0.5393890020366598,
+   "dev_F1": 0.580713064070517
+  },
+  {
+   "epoch": 18,
+   "steps": 12366,
+   "dev_P": 0.6072801845680594,
+   "dev_R": 0.5789816700610998,
+   "dev_F1": 0.592793393944449
+  },
+  {
+   "epoch": 21,
+   "steps": 14427,
+   "dev_P": 0.6517874211431849,
+   "dev_R": 0.5555193482688391,
+   "dev_F1": 0.5998152790605622
+  },
+  {
+   "epoch": 24,
+   "steps": 16488,
+   "dev_P": 0.6479686917629519,
+   "dev_R": 0.5665173116089613,
+   "dev_F1": 0.6045116703611945
+  },
+  {
+   "epoch": 27,
+   "steps": 18549,
+   "dev_P": 0.6492578339747114,
+   "dev_R": 0.5772708757637475,
+   "dev_F1": 0.6111518392341196
+  },
+  {
+   "epoch": 30,
+   "steps": 20610,
+   "dev_P": 0.65957247327958,
+   "dev_R": 0.5731160896130346,
+   "dev_F1": 0.6133124100954622
+  }
+ ],
+ "wall_hours": 3.0048995026614933,
+ "generated": "2026-10-08T11:42:44"
+}

@@ -1,0 +1,191 @@
+{
+ "meta": {
+  "amendment": 73,
+  "carrier": "atlop_D_s20260917",
+  "flip_partner": "atlop_R_s20260917",
+  "levels": [
+   0.0,
+   0.01,
+   0.02,
+   0.05,
+   0.1
+  ],
+  "seed_injection": 20260926,
+  "boot": 10000,
+  "seed_boot": 20260926,
+  "n_docs": 498,
+  "n_eligible": 2233,
+  "note": "revision73 frozen design; nested injection via one permutation; unmodified e3 run_score; gate G1 = sham == frozen per_doc (tp/fp/fn, gR+gD)",
+  "ts": "2026-10-13T21:18:54"
+ },
+ "gate": {
+  "G1_sham_equals_frozen": true
+ },
+ "levels": {
+  "pc_d000": {
+   "k_cleared": 0,
+   "gamma_gR": 0.151554,
+   "gamma_gD": 0.174816,
+   "dgamma": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "dleverage": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "dgamma_ci_excl0": false,
+   "dleverage_ci_excl0": false
+  },
+  "pc_d010": {
+   "k_cleared": 22,
+   "gamma_gR": 0.147644,
+   "gamma_gD": 0.171531,
+   "dgamma": {
+    "point": -0.00391,
+    "ci95": [
+     -0.006024,
+     -0.002162
+    ]
+   },
+   "dleverage": {
+    "point": 0.000625,
+    "ci95": [
+     -0.000922,
+     0.002222
+    ]
+   },
+   "dgamma_ci_excl0": true,
+   "dleverage_ci_excl0": false
+  },
+  "pc_d020": {
+   "k_cleared": 45,
+   "gamma_gR": 0.144096,
+   "gamma_gD": 0.168499,
+   "dgamma": {
+    "point": -0.007458,
+    "ci95": [
+     -0.010343,
+     -0.00491
+    ]
+   },
+   "dleverage": {
+    "point": 0.001141,
+    "ci95": [
+     -0.001112,
+     0.003324
+    ]
+   },
+   "dgamma_ci_excl0": true,
+   "dleverage_ci_excl0": false
+  },
+  "pc_d050": {
+   "k_cleared": 112,
+   "gamma_gR": 0.131288,
+   "gamma_gD": 0.154869,
+   "dgamma": {
+    "point": -0.020266,
+    "ci95": [
+     -0.024879,
+     -0.016044
+    ]
+   },
+   "dleverage": {
+    "point": 0.000319,
+    "ci95": [
+     -0.002946,
+     0.003738
+    ]
+   },
+   "dgamma_ci_excl0": true,
+   "dleverage_ci_excl0": false
+  },
+  "pc_d100": {
+   "k_cleared": 223,
+   "gamma_gR": 0.111936,
+   "gamma_gD": 0.136775,
+   "dgamma": {
+    "point": -0.039618,
+    "ci95": [
+     -0.045828,
+     -0.033799
+    ]
+   },
+   "dleverage": {
+    "point": 0.001577,
+    "ci95": [
+     -0.003613,
+     0.007106
+    ]
+   },
+   "dgamma_ci_excl0": true,
+   "dleverage_ci_excl0": false
+  }
+ },
+ "flip": {
+  "pc_d000": {
+   "point": 0.072671,
+   "ci95": [
+    0.052979,
+    0.09295
+   ],
+   "sign_flipped_vs_sham": false,
+   "ci_excl0": true
+  },
+  "pc_d010": {
+   "point": 0.068761,
+   "ci95": [
+    0.049063,
+    0.088895
+   ],
+   "sign_flipped_vs_sham": false,
+   "ci_excl0": true
+  },
+  "pc_d020": {
+   "point": 0.065213,
+   "ci95": [
+    0.045393,
+    0.085423
+   ],
+   "sign_flipped_vs_sham": false,
+   "ci_excl0": true
+  },
+  "pc_d050": {
+   "point": 0.052405,
+   "ci95": [
+    0.032147,
+    0.072869
+   ],
+   "sign_flipped_vs_sham": false,
+   "ci_excl0": true
+  },
+  "pc_d100": {
+   "point": 0.033053,
+   "ci95": [
+    0.01252,
+    0.053884
+   ],
+   "sign_flipped_vs_sham": false,
+   "ci_excl0": true
+  }
+ },
+ "summary": {
+  "G1": true,
+  "H_PC2_direction_all_negative": true,
+  "H_PC3_max_level_excl0": true,
+  "MDE_delta_smallest_ci_excl0": 0.009852216748768473,
+  "H_PC5_leverage_monotone_descriptive": false,
+  "H_PC5_max_level_excl0": false,
+  "H_PC4_flip_detected": null,
+  "gamma_sham_gR": 0.151554,
+  "gamma_sham_gD": 0.174816,
+  "gamma_R0_gR": 0.078884,
+  "verdict": "PASS"
+ }
+}

@@ -1,0 +1,117 @@
+{
+ "experiment": "P1.5 X-A 中文四臂(修订 17/24;修订 35 重审计为正典)",
+ "parser": "src/jcip_audit/d5_llm_hook.parse_output(修订 35:zh freetext 标签前缀剥离 + 合规空输出识别);从保留原始预测本地重审计",
+ "supersedes": "云端日志归集版(p15_zh_four_arm.cloudlog_20261006.bak.json):其 freetext 两臂受解析器缺陷影响(首三元组前缀计 oob/合规空计 parse_fail),json 两臂与新版逐字段一致",
+ "arms": {
+  "qwen_json": {
+   "violation_rate": 0.22149837133550487,
+   "stats": {
+    "n_triples": 9210,
+    "parse_fail": 42,
+    "oob_index": 250,
+    "hallucinated": 0,
+    "ambiguous": 165,
+    "self_pair": 259,
+    "rel_unmapped": 1324,
+    "mapped": 7170
+   },
+   "L1_char_consistent": false,
+   "L1_word_consistent": false,
+   "L2_delta_gap_F1": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "gap_F1_char": 0.002708804479931076,
+   "unverifiable": true
+  },
+  "qwen_freetext": {
+   "violation_rate": 0.21759036144578314,
+   "stats": {
+    "n_triples": 8300,
+    "parse_fail": 0,
+    "oob_index": 232,
+    "hallucinated": 0,
+    "ambiguous": 148,
+    "self_pair": 191,
+    "rel_unmapped": 1235,
+    "mapped": 6494
+   },
+   "L1_char_consistent": true,
+   "L1_word_consistent": true,
+   "L2_delta_gap_F1": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "gap_F1_char": 0.009799411773946259,
+   "unverifiable": true
+  },
+  "mistral_json": {
+   "violation_rate": 0.8871252204585538,
+   "stats": {
+    "n_triples": 1701,
+    "parse_fail": 1459,
+    "oob_index": 36,
+    "hallucinated": 0,
+    "ambiguous": 1,
+    "self_pair": 10,
+    "rel_unmapped": 3,
+    "mapped": 192
+   },
+   "L1_char_consistent": true,
+   "L1_word_consistent": true,
+   "L2_delta_gap_F1": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "gap_F1_char": -0.00029231218941829873,
+   "unverifiable": true
+  },
+  "mistral_freetext": {
+   "violation_rate": 0.10914743904434626,
+   "stats": {
+    "n_triples": 6111,
+    "parse_fail": 0,
+    "oob_index": 319,
+    "hallucinated": 0,
+    "ambiguous": 73,
+    "self_pair": 138,
+    "rel_unmapped": 137,
+    "mapped": 5444
+   },
+   "L1_char_consistent": true,
+   "L1_word_consistent": true,
+   "L2_delta_gap_F1": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "gap_F1_char": -0.002175733650022913,
+   "unverifiable": true
+  }
+ },
+ "en_reference": {
+  "qwen-7b_en_json": 0.114,
+  "qwen-7b_en_freetext": 0.1164,
+  "mistral-7b_en_json": 0.1884,
+  "mistral-7b_en_freetext": 0.0705,
+  "qwen-14b_en_json": 0.0457
+ },
+ "canonical_findings": {
+  "violation_matrix": "qwen json 22.15% / qwen freetext 21.76% / mistral json 88.71% / mistral freetext 10.91%",
+  "surface": "qwen json rel_unmapped 主导(1324/9210=14.4%);mistral json parse_fail 主导(1459/1701=85.7%);freetext 下 mistral 崩坏消失(88.7→10.9,parse_fail 1459→0)",
+  "H_XL1": "L1 三计分符号不一致仅 qwen json 一臂(True/False/True/True)——与论文现有表述一致",
+  "H_XL2": "词/字金标杠杆四臂 Δgap_F1=+0.000000 精确——不变",
+  "gate": "四臂全部 >5% 带旗(不变)"
+ }
+}

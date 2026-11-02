@@ -1,0 +1,84 @@
+{
+ "per_system": {
+  "combined_nocharlm": {
+   "las_micro": 0.8868,
+   "las_macro": 0.898,
+   "las_macro_nonpunct": 0.8842,
+   "swap_punct_macro": {
+    "delta": 0.0137,
+    "ci": [
+     0.0079,
+     0.0196
+    ],
+    "excl_zero": true
+   }
+  },
+  "ewt_nocharlm": {
+   "las_micro": 0.8895,
+   "las_macro": 0.8966,
+   "las_macro_nonpunct": 0.8863,
+   "swap_punct_macro": {
+    "delta": 0.0103,
+    "ci": [
+     0.0033,
+     0.0171
+    ],
+    "excl_zero": true
+   }
+  },
+  "gum_nocharlm": {
+   "las_micro": 0.8518,
+   "las_macro": 0.8608,
+   "las_macro_nonpunct": 0.8494,
+   "swap_punct_macro": {
+    "delta": 0.0114,
+    "ci": [
+     0.0042,
+     0.0185
+    ],
+    "excl_zero": true
+   }
+  }
+ },
+ "pairs": [
+  {
+   "pair": "combined_nocharlm vs ewt_nocharlm",
+   "coord": "micro",
+   "diff": -0.0028,
+   "n_docs": 316,
+   "sign_flip_micro_macro": true
+  },
+  {
+   "pair": "combined_nocharlm vs ewt_nocharlm",
+   "coord": "macro",
+   "diff": 0.0014,
+   "n_docs": 316
+  },
+  {
+   "pair": "combined_nocharlm vs gum_nocharlm",
+   "coord": "micro",
+   "diff": 0.035,
+   "n_docs": 316,
+   "sign_flip_micro_macro": false
+  },
+  {
+   "pair": "combined_nocharlm vs gum_nocharlm",
+   "coord": "macro",
+   "diff": 0.0372,
+   "n_docs": 316
+  },
+  {
+   "pair": "ewt_nocharlm vs gum_nocharlm",
+   "coord": "micro",
+   "diff": 0.0378,
+   "n_docs": 316,
+   "sign_flip_micro_macro": false
+  },
+  {
+   "pair": "ewt_nocharlm vs gum_nocharlm",
+   "coord": "macro",
+   "diff": 0.0358,
+   "n_docs": 316
+  }
+ ]
+}

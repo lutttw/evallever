@@ -1,0 +1,77 @@
+{
+ "discriminant": {
+  "hypothesis": "对照路径上的随机源层级(1-4)预估其种子稳定性",
+  "level_coding": {
+   "1": "同预测内计分/评价侧变换",
+   "2": "同检查点输出解码变换",
+   "3": "跨训练来源(同种子配对)",
+   "4": "双重差分/校准×种子"
+  },
+  "spearman_level_vs_sd": {
+   "rho": 0.896,
+   "perm_p_one_sided_greater": 0.0025,
+   "n_perm": 20000
+  },
+  "spearman_level_vs_sign_consistency": {
+   "rho": -0.73,
+   "perm_p_one_sided_less": 0.08,
+   "n_perm": 20000
+  },
+  "per_contrast": [
+   {
+    "contrast": "P3M换金标(gD−gR2)",
+    "level": 1,
+    "sd": 0.0036,
+    "sign_consistency": 1.0
+   },
+   {
+    "contrast": "历史Dscore(计分对照,同预测)",
+    "level": 1,
+    "sd": 0.0014,
+    "sign_consistency": 1.0
+   },
+   {
+    "contrast": "HacRED Γ(固定0.5)",
+    "level": 2,
+    "sd": 0.001,
+    "sign_consistency": 1.0
+   },
+   {
+    "contrast": "HacRED Γ(金标承载)",
+    "level": 4,
+    "sd": 0.0467,
+    "sign_consistency": 0.6
+   },
+   {
+    "contrast": "HacRED J(交互)",
+    "level": 4,
+    "sd": 0.0473,
+    "sign_consistency": 0.6
+   },
+   {
+    "contrast": "X2 来源差 Δ(ρ=0.25)",
+    "level": 3,
+    "sd": 0.0112,
+    "sign_consistency": 0.6
+   },
+   {
+    "contrast": "X2 来源差 Δ(ρ=1.0)",
+    "level": 3,
+    "sd": 0.0128,
+    "sign_consistency": 0.6
+   },
+   {
+    "contrast": "ATLOP 来源差 Δ(PE8)",
+    "level": 3,
+    "sd": 0.0152,
+    "sign_consistency": 1.0
+   },
+   {
+    "contrast": "ATLOP 来源差 Δ(首轮)",
+    "level": 3,
+    "sd": 0.0052,
+    "sign_consistency": 1.0
+   }
+  ]
+ }
+}

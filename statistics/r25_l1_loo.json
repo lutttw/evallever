@@ -1,0 +1,87 @@
+{
+ "meta": "修订48 L1 出样外交叉验证(LOO 生成器)",
+ "rows": [
+  {
+   "g": "x2",
+   "fam": "encoder",
+   "density": 0.2036234674713541,
+   "arm": 0.021681763943797172
+  },
+  {
+   "g": "atlop_pe8",
+   "fam": "encoder",
+   "density": 0.04848699065183904,
+   "arm": 0.06264702486287686
+  },
+  {
+   "g": "atlop_full",
+   "fam": "encoder",
+   "density": 0.04652626840265322,
+   "arm": 0.042902614286964486
+  },
+  {
+   "g": "dreeam",
+   "fam": "encoder",
+   "density": 0.026924321396667297,
+   "arm": 0.0007903091559361974
+  },
+  {
+   "g": "p3m",
+   "fam": "encoder",
+   "density": 0.0803656966806643,
+   "arm": 0.026186474734835943
+  },
+  {
+   "g": "docunet",
+   "fam": "encoder",
+   "density": 0.04516343455232227,
+   "arm": 0.008174882958703278
+  },
+  {
+   "g": "kddocre",
+   "fam": "encoder",
+   "density": 0.028930764523412606,
+   "arm": 0.005281177907153434
+  },
+  {
+   "g": "mistral-7b-instruct_freetext",
+   "fam": "prompted",
+   "density": 0.09369262909113929,
+   "arm": 0.0020656589219231643
+  },
+  {
+   "g": "mistral-7b-instruct_json",
+   "fam": "prompted",
+   "density": 0.015905589904830236,
+   "arm": 0.00012368075557078403
+  },
+  {
+   "g": "qwen2.5-14b-instruct_json",
+   "fam": "prompted",
+   "density": 0.0291998143028973,
+   "arm": 0.006251910612541545
+  },
+  {
+   "g": "qwen2.5-7b-instruct_freetext",
+   "fam": "prompted",
+   "density": 0.04156555318744856,
+   "arm": 0.014691790509861469
+  }
+ ],
+ "results": {
+  "n": 11,
+  "family_prior": {
+   "mae_log10": 0.7055723172605552,
+   "hits": 11
+  },
+  "density_linear": {
+   "mae_log10": 0.7008125246261043,
+   "hits": 9
+  },
+  "global_median_baseline": {
+   "mae_log10": 0.6839496715889334,
+   "hits": 10
+  },
+  "note": "对数空间 MAE;命中=|预测-真值| ≤ |真值|/2+0.15(约半个数量级)"
+ }
+}

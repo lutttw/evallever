@@ -1,0 +1,9 @@
+{
+ "n": 189556,
+ "n_docs": 498,
+ "logits_sha256": "468404ffdc52747b4f010875c88407d91df33bc6a2da59d3f6a15de4c74a7b3e",
+ "ckpt_sha256": "dc2ae1166c4b3eb4fa4a54c60c7e2e4b3a70beea53e59df68a0c2736c11780c6",
+ "ckpt": "data\\docunet_work\\docunet_pe8_s20260917\\best.ckpt",
+ "deterministic": true,
+ "ts": "2026-10-09T01:44:55"
+}

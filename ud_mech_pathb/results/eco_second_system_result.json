@@ -1,0 +1,44 @@
+{
+ "stanza_EWT_default": {
+  "n_docs": 316,
+  "las_s_all": 0.898,
+  "las_s_np": 0.8946,
+  "swap": {
+   "delta": -0.0034,
+   "ci": [
+    -0.0055,
+    -0.0013
+   ],
+   "excl_zero": true
+  }
+ },
+ "stanza_GUM": {
+  "n_docs": 316,
+  "las_s_all": 0.8608,
+  "las_s_np": 0.8568,
+  "swap": {
+   "delta": -0.004,
+   "ci": [
+    -0.0062,
+    -0.0019
+   ],
+   "excl_zero": true
+  }
+ },
+ "pair": {
+  "pair": "stanza_EWT_default vs stanza_GUM",
+  "n_docs": 316,
+  "diff_s_all": 0.0372,
+  "diff_ci_s_all": [
+   -0.0475,
+   -0.0278
+  ],
+  "diff_s_np": 0.0378,
+  "diff_ci_s_np": [
+   -0.0482,
+   -0.0286
+  ],
+  "sign_flip": false,
+  "flip_ci_backed": false
+ }
+}

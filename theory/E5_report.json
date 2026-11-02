@@ -1,0 +1,606 @@
+{
+ "experiment": "E5",
+ "generated_at": "2026-09-28T22:27:48",
+ "estimand": "Gap = A_intra − A_inter（命中任一金标关系的正实体对率差）；Kitagawa 分解 = 层内率差项 + 构成项；频度参照=DocRED/HaCRED train（模型独立）",
+ "prediction_rule": "sigmoid_multilabel, fixed τ=0.5, earliest_mention grouping",
+ "runs": {
+  "ml_D_r025_s20260917": {
+   "arm": "X2-D",
+   "gold": "gD",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.053749815173750104,
+    "within_term": 0.05337409005639547,
+    "composition_term": 0.00037572511735463267,
+    "one_sided_term": 0.0,
+    "residual": 6.505213034913027e-19,
+    "abs_residual": 6.505213034913027e-19,
+    "composition_share": 0.0069902587783804366,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.053749815173750104,
+    "within_term": 0.053749815173750104,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 2150,
+    "gold_hit|inter": 2855,
+    "gold_miss|intra": 153,
+    "gold_miss|inter": 390,
+    "no_gold_pred|intra": 9148,
+    "no_gold_pred|inter": 37602,
+    "no_gold_nopred|intra": 19663,
+    "no_gold_nopred|inter": 117595
+   }
+  },
+  "ml_D_r025_s20260918": {
+   "arm": "X2-D",
+   "gold": "gD",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.05914292806261279,
+    "within_term": 0.05889441626512753,
+    "composition_term": 0.0002485117974853478,
+    "one_sided_term": 0.0,
+    "residual": -8.955509944730267e-17,
+    "abs_residual": 8.955509944730267e-17,
+    "composition_share": 0.0042018852570548425,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.05914292806261279,
+    "within_term": 0.05914292806261279,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 2139,
+    "gold_hit|inter": 2822,
+    "gold_miss|intra": 164,
+    "gold_miss|inter": 423,
+    "no_gold_pred|intra": 8048,
+    "no_gold_pred|inter": 32947,
+    "no_gold_nopred|intra": 20763,
+    "no_gold_nopred|inter": 122250
+   }
+  },
+  "ml_D_r025_s20260919": {
+   "arm": "X2-D",
+   "gold": "gD",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.05757466478707007,
+    "within_term": 0.056545759505348195,
+    "composition_term": 0.001028905281721934,
+    "one_sided_term": 0.0,
+    "residual": -5.551115123125783e-17,
+    "abs_residual": 5.551115123125783e-17,
+    "composition_share": 0.017870799344245635,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.05757466478707007,
+    "within_term": 0.05757466478707007,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 2107,
+    "gold_hit|inter": 2782,
+    "gold_miss|intra": 196,
+    "gold_miss|inter": 463,
+    "no_gold_pred|intra": 6564,
+    "no_gold_pred|inter": 25553,
+    "no_gold_nopred|intra": 22247,
+    "no_gold_nopred|inter": 129644
+   }
+  },
+  "ml_D_r100_s20260917": {
+   "arm": "X2-D",
+   "gold": "gD",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.08374218126420485,
+    "within_term": 0.0824311417977242,
+    "composition_term": 0.0013110394664807214,
+    "one_sided_term": 0.0,
+    "residual": -7.567731163948821e-17,
+    "abs_residual": 7.567731163948821e-17,
+    "composition_share": 0.015655664166955706,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.08374218126420485,
+    "within_term": 0.08374218126420485,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 2031,
+    "gold_hit|inter": 2590,
+    "gold_miss|intra": 272,
+    "gold_miss|inter": 655,
+    "no_gold_pred|intra": 3375,
+    "no_gold_pred|inter": 10911,
+    "no_gold_nopred|intra": 25436,
+    "no_gold_nopred|inter": 144286
+   }
+  },
+  "ml_D_r100_s20260918": {
+   "arm": "X2-D",
+   "gold": "gD",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.06487364575046817,
+    "within_term": 0.06428796788325335,
+    "composition_term": 0.0005856778672148251,
+    "one_sided_term": 0.0,
+    "residual": -4.553649124439119e-18,
+    "abs_residual": 4.553649124439119e-18,
+    "composition_share": 0.009027978317537341,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.06487364575046817,
+    "within_term": 0.06487364575046817,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 2050,
+    "gold_hit|inter": 2678,
+    "gold_miss|intra": 253,
+    "gold_miss|inter": 567,
+    "no_gold_pred|intra": 4270,
+    "no_gold_pred|inter": 13705,
+    "no_gold_nopred|intra": 24541,
+    "no_gold_nopred|inter": 141492
+   }
+  },
+  "ml_D_r100_s20260919": {
+   "arm": "X2-D",
+   "gold": "gD",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.06431297824837567,
+    "within_term": 0.0643739249755997,
+    "composition_term": -6.0946727223913774e-05,
+    "one_sided_term": 0.0,
+    "residual": -1.0950441942103595e-16,
+    "abs_residual": 1.0950441942103595e-16,
+    "composition_share": -0.0009476582936112601,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.06431297824837567,
+    "within_term": 0.06431297824837567,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 2070,
+    "gold_hit|inter": 2708,
+    "gold_miss|intra": 233,
+    "gold_miss|inter": 537,
+    "no_gold_pred|intra": 4358,
+    "no_gold_pred|inter": 15259,
+    "no_gold_nopred|intra": 24453,
+    "no_gold_nopred|inter": 139938
+   }
+  },
+  "ml_R_r025_s20260917": {
+   "arm": "X2-R",
+   "gold": "gR",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.013935156791716308,
+    "within_term": 0.017876198803992296,
+    "composition_term": -0.003941042012276125,
+    "one_sided_term": 0.0,
+    "residual": 1.3704315460216776e-16,
+    "abs_residual": 1.3704315460216776e-16,
+    "composition_share": -0.28281289340202187,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.013935156791716308,
+    "within_term": 0.013935156791716308,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 4101,
+    "gold_hit|inter": 7670,
+    "gold_miss|intra": 384,
+    "gold_miss|inter": 848,
+    "no_gold_pred|intra": 5065,
+    "no_gold_pred|inter": 23373,
+    "no_gold_nopred|intra": 21564,
+    "no_gold_nopred|inter": 126551
+   }
+  },
+  "ml_R_r025_s20260918": {
+   "arm": "X2-R",
+   "gold": "gR",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.03205817937383837,
+    "within_term": 0.03561990623469269,
+    "composition_term": -0.0035617268608544974,
+    "one_sided_term": 0.0,
+    "residual": 1.7780915628762273e-16,
+    "abs_residual": 1.7780915628762273e-16,
+    "composition_share": -0.11110196930774884,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.03205817937383837,
+    "within_term": 0.03205817937383837,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 4137,
+    "gold_hit|inter": 7584,
+    "gold_miss|intra": 348,
+    "gold_miss|inter": 934,
+    "no_gold_pred|intra": 5044,
+    "no_gold_pred|inter": 23817,
+    "no_gold_nopred|intra": 21585,
+    "no_gold_nopred|inter": 126107
+   }
+  },
+  "ml_R_r025_s20260919": {
+   "arm": "X2-R",
+   "gold": "gR",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.01274934082798751,
+    "within_term": 0.017186984641484986,
+    "composition_term": -0.004437643813497454,
+    "one_sided_term": 0.0,
+    "residual": -2.168404344971009e-17,
+    "abs_residual": 2.168404344971009e-17,
+    "composition_share": -0.3480684902356586,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.01274934082798751,
+    "within_term": 0.01274934082798751,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 4102,
+    "gold_hit|inter": 7682,
+    "gold_miss|intra": 383,
+    "gold_miss|inter": 836,
+    "no_gold_pred|intra": 5975,
+    "no_gold_pred|inter": 27975,
+    "no_gold_nopred|intra": 20654,
+    "no_gold_nopred|inter": 121949
+   }
+  },
+  "ml_R_r100_s20260917": {
+   "arm": "X2-R",
+   "gold": "gR",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.03870172757643797,
+    "within_term": 0.04440711232667164,
+    "composition_term": -0.005705384750233808,
+    "one_sided_term": 0.0,
+    "residual": 1.4051260155412137e-16,
+    "abs_residual": 1.4051260155412137e-16,
+    "composition_share": -0.14741938170499932,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.03870172757643797,
+    "within_term": 0.03870172757643797,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 4022,
+    "gold_hit|inter": 7309,
+    "gold_miss|intra": 463,
+    "gold_miss|inter": 1209,
+    "no_gold_pred|intra": 3223,
+    "no_gold_pred|inter": 12468,
+    "no_gold_nopred|intra": 23406,
+    "no_gold_nopred|inter": 137456
+   }
+  },
+  "ml_R_r100_s20260918": {
+   "arm": "X2-R",
+   "gold": "gR",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.05202690976653024,
+    "within_term": 0.057328230554332844,
+    "composition_term": -0.005301320787802643,
+    "one_sided_term": 0.0,
+    "residual": 3.729655473350135e-17,
+    "abs_residual": 3.729655473350135e-17,
+    "composition_share": -0.1018957460973988,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.05202690976653024,
+    "within_term": 0.05202690976653024,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 4017,
+    "gold_hit|inter": 7186,
+    "gold_miss|intra": 468,
+    "gold_miss|inter": 1332,
+    "no_gold_pred|intra": 2861,
+    "no_gold_pred|inter": 11438,
+    "no_gold_nopred|intra": 23768,
+    "no_gold_nopred|inter": 138486
+   }
+  },
+  "ml_R_r100_s20260919": {
+   "arm": "X2-R",
+   "gold": "gR",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.07203472062440786,
+    "within_term": 0.0776272002624035,
+    "composition_term": -0.00559247963799567,
+    "one_sided_term": 0.0,
+    "residual": 3.0357660829594124e-17,
+    "abs_residual": 3.0357660829594124e-17,
+    "composition_share": -0.07763588988086871,
+    "no_common_support_strata": []
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.07203472062440786,
+    "within_term": 0.07203472062440786,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 3983,
+    "gold_hit|inter": 6951,
+    "gold_miss|intra": 502,
+    "gold_miss|inter": 1567,
+    "no_gold_pred|intra": 2739,
+    "no_gold_pred|inter": 10189,
+    "no_gold_nopred|intra": 23890,
+    "no_gold_nopred|inter": 139735
+   }
+  },
+  "hacred_s20260917": {
+   "arm": "HaCRED",
+   "gold": "H",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.003709242317616712,
+    "within_term": 0.0042237212614458135,
+    "composition_term": 0.00040916637636795317,
+    "one_sided_term": -0.0009236453201970443,
+    "residual": -1.0191500421363742e-17,
+    "abs_residual": 1.0191500421363742e-17,
+    "composition_share": 0.11030996126207618,
+    "no_common_support_strata": [
+     "K>=4"
+    ]
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.003709242317616712,
+    "within_term": 0.003709242317616712,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 4057,
+    "gold_hit|inter": 6158,
+    "gold_miss|intra": 206,
+    "gold_miss|inter": 338,
+    "no_gold_pred|intra": 8781,
+    "no_gold_pred|inter": 18664,
+    "no_gold_nopred|intra": 56848,
+    "no_gold_nopred|inter": 158680
+   }
+  },
+  "hacred_s20260918": {
+   "arm": "HaCRED",
+   "gold": "H",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.0050067440769411276,
+    "within_term": 0.005450898172598575,
+    "composition_term": 0.0006334321112390871,
+    "one_sided_term": -0.0010775862068965517,
+    "residual": 1.691355389077387e-17,
+    "abs_residual": 1.691355389077387e-17,
+    "composition_share": 0.1265157758225347,
+    "no_common_support_strata": [
+     "K>=4"
+    ]
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.0050067440769411276,
+    "within_term": 0.0050067440769411276,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 4096,
+    "gold_hit|inter": 6209,
+    "gold_miss|intra": 167,
+    "gold_miss|inter": 287,
+    "no_gold_pred|intra": 8223,
+    "no_gold_pred|inter": 19324,
+    "no_gold_nopred|intra": 57406,
+    "no_gold_nopred|inter": 158020
+   }
+  },
+  "hacred_s20260919": {
+   "arm": "HaCRED",
+   "gold": "H",
+   "multiplicity": {
+    "stratification": "multiplicity",
+    "gap_observed": 0.006216279615294362,
+    "within_term": 0.007056638438050013,
+    "composition_term": 0.00023722738414097208,
+    "one_sided_term": -0.0010775862068965517,
+    "residual": -7.155734338404329e-17,
+    "abs_residual": 7.155734338404329e-17,
+    "composition_share": 0.038162276928036566,
+    "no_common_support_strata": [
+     "K>=4"
+    ]
+   },
+   "relation_freq": {
+    "stratification": "relation_freq",
+    "gap_observed": 0.006216279615294362,
+    "within_term": 0.006216279615294362,
+    "composition_term": 0.0,
+    "one_sided_term": 0.0,
+    "residual": 0.0,
+    "abs_residual": 0.0,
+    "composition_share": 0.0,
+    "no_common_support_strata": []
+   },
+   "status_desc": {
+    "gold_hit|intra": 4048,
+    "gold_hit|inter": 6128,
+    "gold_miss|intra": 215,
+    "gold_miss|inter": 368,
+    "no_gold_pred|intra": 6353,
+    "no_gold_pred|inter": 13004,
+    "no_gold_nopred|intra": 59276,
+    "no_gold_nopred|inter": 164340
+   }
+  }
+ },
+ "seed_means": {
+  "X2-D": {
+   "multiplicity": {
+    "gap_observed": 0.06389936888108028,
+    "within_term": 0.06331788341390808,
+    "composition_term": 0.0005814854671722579,
+    "composition_share_mean": 0.008799821261760451
+   },
+   "relation_freq": {
+    "gap_observed": 0.06389936888108028,
+    "within_term": 0.06389936888108028,
+    "composition_term": 0.0,
+    "composition_share_mean": 0.0
+   }
+  },
+  "X2-R": {
+   "multiplicity": {
+    "gap_observed": 0.036917672493486375,
+    "within_term": 0.04167427213726299,
+    "composition_term": -0.0047565996437767,
+    "composition_share_mean": -0.17815572843811603
+   },
+   "relation_freq": {
+    "gap_observed": 0.036917672493486375,
+    "within_term": 0.036917672493486375,
+    "composition_term": 0.0,
+    "composition_share_mean": 0.0
+   }
+  },
+  "HaCRED": {
+   "multiplicity": {
+    "gap_observed": 0.004977422003284067,
+    "within_term": 0.005577085957364801,
+    "composition_term": 0.0004266086239160041,
+    "composition_share_mean": 0.09166267133754914
+   },
+   "relation_freq": {
+    "gap_observed": 0.004977422003284067,
+    "within_term": 0.004977422003284067,
+    "composition_term": 0.0,
+    "composition_share_mean": 0.0
+   }
+  }
+ },
+ "max_abs_residual": 1.7780915628762273e-16,
+ "one_sided_strata_note": "HaCRED 的 multiplicity 分层存在 3 个单侧层（某一位置组内该重数无金标候选），其贡献已单列为 one_sided 项并具名报告；X2 两个分层无单侧层",
+ "acceptance": {
+  "residual_lt_1e-10": true,
+  "one_sided_strata_all_named_and_identity_closed": true
+ },
+ "verdict": "VERIFIED",
+ "honest_note": "构成项份额不得表述为'偏差'或'推理代价'；份额随分层变量与金标口径变化，须与分层变量一并报告（正文纪律）"
+}

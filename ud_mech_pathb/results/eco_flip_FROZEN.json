@@ -1,0 +1,37 @@
+{
+ "pair": "stanza_combined_nocharlm vs stanza_ewt_nocharlm",
+ "coord": "aggregation contract: micro(token-pooled, official convention) vs macro(sentence-mean, per-sentence reporting convention)",
+ "gold": "g2",
+ "boot": {
+  "n": 10000,
+  "seed": 20260926
+ },
+ "diffs": {
+  "micro": {
+   "diff_combined_minus_ewt": -0.0028,
+   "ci": [
+    -0.0109,
+    0.0053
+   ],
+   "excl_zero": false
+  },
+  "macro": {
+   "diff_combined_minus_ewt": 0.0014,
+   "ci": [
+    -0.0071,
+    0.0102
+   ],
+   "excl_zero": false
+  }
+ },
+ "sign_flip": true,
+ "both_ci_include_zero": true,
+ "inputs_sha256": {
+  "arms/stanza_C_en.json": "0b7335dbc42281008c9c664cc209a4d7ffe56f9570441d0c084324dee219bbc8",
+  "eco2/stanza_EWT_nocharlm_en.json": "bfad6261c7918f0224dd17ed2390cad34028ab5a12db1bff3d5d1f4a0f5fd722",
+  "stanza_models/en/pos/ewt_nocharlm.pt": "2637eaac91a5b0814717f8ebe9b0f70d16349e637299623945ed21ddd77b02a2",
+  "stanza_models/en/depparse/ewt_nocharlm.pt": "c30e330648c2ca340e0deb81324553df404b766ac49a1c4531d7572ac2a8d6c3"
+ },
+ "frozen_at": "2026-10-18T23:07:24",
+ "status": "FROZEN"
+}

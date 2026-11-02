@@ -1,0 +1,670 @@
+{
+  "experiment": "P1_cross_task_validation",
+  "preregistration": "修订14(冻结设计): 三任务×2契约×每任务至多3异构模型; 仅测核心命题; 无全量种子扫描; 无违规分析; 负结果完整保留。",
+  "created_at_utc": "2026-10-06T04:42:40Z",
+  "seed": 20260926,
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "laptop",
+    "hf_endpoint": "https://hf-mirror.com",
+    "hf_home": ".hf_cache",
+    "seed": 20260926,
+    "torch": "2.11.0+cu128",
+    "transformers": "5.11.0",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "vram_total_gb": 7.96,
+    "cuda_smoketest": "ok",
+    "datasets": "5.0.0",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "pyarrow": "24.0.0",
+    "disk_free_gb": {
+      "C": 568.4,
+      "E": 1078.1
+    }
+  },
+  "registry_proof": {
+    "frozen_file": "p1_model_registry_frozen.json",
+    "written_at_utc": "2026-10-06T04:42:15Z",
+    "sha256_at_freeze": "1c4cbc4a13dc0fb12584f0b7233f16fb9ba61df4ebcd540653bfa6797eac0006",
+    "sha256_now": "1c4cbc4a13dc0fb12584f0b7233f16fb9ba61df4ebcd540653bfa6797eac0006",
+    "metrics_started_at_utc": "2026-10-06T04:42:40Z",
+    "rule": "登记表先于指标落盘冻结; sha256应一致; metrics_started晚于written_at。"
+  },
+  "operationalization": {
+    "leverage_arm": "L = 1 − |E_A Δ E_B| / |E_A ∪ E_B| (错误集Jaccard相似度; |∪|=0→L=1)",
+    "rank_volatility": "V = |gap_A − gap_B|, gap_X = metric_X(c1) − metric_X(c2)",
+    "rank_flip": "sign(m_A(c1)−m_B(c1)) ≠ sign(m_A(c2)−m_B(c2)); 任一端为0记tie不算flip",
+    "sst2": "错误=预测≠金标; accuracy与macro-F1共享同一逐样本0/1正误(两契约仅类别聚合权重不同), 故SST-2的L契约不变——按冻结公式如实记录",
+    "ner": "错误单位=句子: 该契约匹配规则下存在未匹配实体即计1; strict=span+类型精确匹配; relaxed=token重叠≥1且类型相同(边界容忍); F1为微平均",
+    "cnndm": "公开汇总分数路线: ROUGE-1 vs ROUGE-L, 仅演示volatility/flip, leverage不可计算"
+  },
+  "results": {
+    "sst2": {
+      "data": {
+        "task": "sst2",
+        "split": "validation",
+        "n": 872,
+        "source": "cached",
+        "sha256": "d8da9a1a759b05f411a1ff463b36e3f2f7accfa67d417a5e11bb0c97bc2282a1",
+        "fetched_at_utc": "2026-10-06T04:42:14Z",
+        "file": "out\\revision_v5_experiments\\data\\p1_sst2_dev.jsonl",
+        "note": "reuse existing"
+      },
+      "models": {
+        "distilbert-base-uncased-finetuned-sst-2-english": {
+          "accuracy": 0.91055,
+          "macro_f1": 0.91043,
+          "n": 872,
+          "n_errors": 78,
+          "error_flags_sha256": "782b25ed73a57013e868cf21149c762ce8ffa4283163bb03ce1d7c397f6763c8",
+          "polarity_mapping": {
+            "mapping": {
+              "0": 0,
+              "1": 1
+            },
+            "probe_accuracy": 0.9,
+            "n_probes": 10,
+            "warn": false
+          },
+          "dtype": "fp16",
+          "device": "cuda",
+          "elapsed_s": 3.007154
+        },
+        "textattack/bert-base-uncased-SST-2": {
+          "accuracy": 0.924312,
+          "macro_f1": 0.924255,
+          "n": 872,
+          "n_errors": 66,
+          "error_flags_sha256": "c6a30c3ff37c7ae9cffa68221cbfe75c3a21b3b8ec90a48c868e5187a2482eb9",
+          "polarity_mapping": {
+            "mapping": {
+              "0": 0,
+              "1": 1
+            },
+            "probe_accuracy": 0.9,
+            "n_probes": 10,
+            "warn": false
+          },
+          "dtype": "fp16",
+          "device": "cuda",
+          "elapsed_s": 3.503583
+        },
+        "cardiffnlp/twitter-roberta-base-sentiment-latest": {
+          "accuracy": 0.690367,
+          "macro_f1": 0.784614,
+          "n": 872,
+          "n_errors": 270,
+          "error_flags_sha256": "2ac44c9c2318577c55ea8519ef40f1d104c99018aba8adc53e55273570d88435",
+          "polarity_mapping": {
+            "mapping": {
+              "0": 0,
+              "1": -1,
+              "2": 1
+            },
+            "probe_accuracy": 0.9,
+            "n_probes": 10,
+            "warn": false
+          },
+          "dtype": "fp16",
+          "device": "cuda",
+          "elapsed_s": 6.295565
+        }
+      },
+      "pairs": [
+        {
+          "model_A": "distilbert-base-uncased-finetuned-sst-2-english",
+          "model_B": "textattack/bert-base-uncased-SST-2",
+          "leverage": {
+            "accuracy": 0.5,
+            "macro_f1": 0.5,
+            "note": "accuracy与macro-F1下逐样本0/1正误相同, L契约不变"
+          },
+          "gap_A_accuracy_minus_macroF1": 0.00012,
+          "gap_B_accuracy_minus_macroF1": 5.7e-05,
+          "rank_volatility": 6.3e-05,
+          "flip": {
+            "flip": false,
+            "tie": false,
+            "sign_c1": -1,
+            "sign_c2": -1
+          }
+        },
+        {
+          "model_A": "distilbert-base-uncased-finetuned-sst-2-english",
+          "model_B": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+          "leverage": {
+            "accuracy": 0.175676,
+            "macro_f1": 0.175676,
+            "note": "accuracy与macro-F1下逐样本0/1正误相同, L契约不变"
+          },
+          "gap_A_accuracy_minus_macroF1": 0.00012,
+          "gap_B_accuracy_minus_macroF1": -0.094247,
+          "rank_volatility": 0.094367,
+          "flip": {
+            "flip": false,
+            "tie": false,
+            "sign_c1": 1,
+            "sign_c2": 1
+          }
+        },
+        {
+          "model_A": "textattack/bert-base-uncased-SST-2",
+          "model_B": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+          "leverage": {
+            "accuracy": 0.170732,
+            "macro_f1": 0.170732,
+            "note": "accuracy与macro-F1下逐样本0/1正误相同, L契约不变"
+          },
+          "gap_A_accuracy_minus_macroF1": 5.7e-05,
+          "gap_B_accuracy_minus_macroF1": -0.094247,
+          "rank_volatility": 0.094304,
+          "flip": {
+            "flip": false,
+            "tie": false,
+            "sign_c1": 1,
+            "sign_c2": 1
+          }
+        }
+      ],
+      "metrics_started_at_utc": "2026-10-06T04:42:40Z",
+      "metrics_finished_at_utc": "2026-10-06T04:42:53Z"
+    },
+    "ner": {
+      "data": {
+        "task": "ner",
+        "split": "test",
+        "n_sentences": 3453,
+        "n_tokens": 46435,
+        "source": "cached",
+        "sha256": "ab565757a119b16045c900e41a87042ba530546de9a8a24f3c675dd99e10ee52",
+        "fetched_at_utc": "2026-10-06T04:42:14Z",
+        "file": "out\\revision_v5_experiments\\data\\p1_conll03_test.jsonl",
+        "note": "reuse existing"
+      },
+      "models": {
+        "dslim/bert-base-NER": {
+          "strict_span_f1": {
+            "precision": 0.906583,
+            "recall": 0.919263,
+            "f1": 0.912879,
+            "tp": 5192,
+            "fp": 535,
+            "fn": 456
+          },
+          "relaxed_span_f1": {
+            "precision": 0.919679,
+            "recall": 0.932542,
+            "f1": 0.926066,
+            "tp": 5267,
+            "fp": 460,
+            "fn": 381
+          },
+          "tagging_scheme": "bio2",
+          "label_names": [
+            "O",
+            "B-MISC",
+            "I-MISC",
+            "B-PER",
+            "I-PER",
+            "B-ORG",
+            "I-ORG",
+            "B-LOC",
+            "I-LOC"
+          ],
+          "n_sentences": 3453,
+          "n_sent_err_strict": 481,
+          "n_sent_err_relaxed": 450,
+          "strict_err_sha256": "3ac39e519d294712753c8c9ed231cc5daf2ff189fc7e96e58974d77670105315",
+          "relaxed_err_sha256": "b98d907a9b9862f4a2ae3000ff2c53b4337dbcb830b6308e71cce5e92f8a6d3a",
+          "dtype": "fp16",
+          "device": "cuda",
+          "elapsed_s": 3.916167
+        },
+        "Jean-Baptiste/roberta-large-ner-english": {
+          "strict_span_f1": {
+            "precision": 0.918617,
+            "recall": 0.931303,
+            "f1": 0.924916,
+            "tp": 5260,
+            "fp": 466,
+            "fn": 388
+          },
+          "relaxed_span_f1": {
+            "precision": 0.93154,
+            "recall": 0.944405,
+            "f1": 0.937929,
+            "tp": 5334,
+            "fp": 392,
+            "fn": 314
+          },
+          "tagging_scheme": "io",
+          "label_names": [
+            "O",
+            "PER",
+            "ORG",
+            "LOC",
+            "MISC"
+          ],
+          "n_sentences": 3453,
+          "n_sent_err_strict": 437,
+          "n_sent_err_relaxed": 403,
+          "strict_err_sha256": "7acd7769a6c14e6debf9ee3f84e012f9461abf6e2cb9191a5c19c9856577218e",
+          "relaxed_err_sha256": "1b57eca5bd45d532d4b291ea9e6f702db94e808acd5e0c21bf044698cd9299de",
+          "dtype": "fp16",
+          "device": "cuda",
+          "elapsed_s": 8.073929
+        },
+        "elastic/distilbert-base-cased-finetuned-conll03-english": {
+          "strict_span_f1": {
+            "precision": 0.885323,
+            "recall": 0.903506,
+            "f1": 0.894322,
+            "tp": 5103,
+            "fp": 661,
+            "fn": 545
+          },
+          "relaxed_span_f1": {
+            "precision": 0.903192,
+            "recall": 0.921742,
+            "f1": 0.912373,
+            "tp": 5206,
+            "fp": 558,
+            "fn": 442
+          },
+          "tagging_scheme": "bio2",
+          "label_names": [
+            "O",
+            "B-PER",
+            "I-PER",
+            "B-ORG",
+            "I-ORG",
+            "B-LOC",
+            "I-LOC",
+            "B-MISC",
+            "I-MISC"
+          ],
+          "n_sentences": 3453,
+          "n_sent_err_strict": 576,
+          "n_sent_err_relaxed": 533,
+          "strict_err_sha256": "ff31c45880a7f83345ba42f4cf597801c799dfc431dbcd3b42a63a8d8aab794f",
+          "relaxed_err_sha256": "85009b312edfa6a615d95a88ac9d34019d46fe88e88e22360328372c87137918",
+          "dtype": "fp16",
+          "device": "cuda",
+          "elapsed_s": 4.137539
+        }
+      },
+      "pairs": [
+        {
+          "model_A": "dslim/bert-base-NER",
+          "model_B": "Jean-Baptiste/roberta-large-ner-english",
+          "leverage": {
+            "strict_span_f1": 0.633452,
+            "relaxed_span_f1": 0.621673
+          },
+          "gap_A_strict_minus_relaxed": -0.013187,
+          "gap_B_strict_minus_relaxed": -0.013013,
+          "rank_volatility": 0.000174,
+          "flip": {
+            "flip": false,
+            "tie": false,
+            "sign_c1": -1,
+            "sign_c2": -1
+          }
+        },
+        {
+          "model_A": "dslim/bert-base-NER",
+          "model_B": "elastic/distilbert-base-cased-finetuned-conll03-english",
+          "leverage": {
+            "strict_span_f1": 0.667192,
+            "relaxed_span_f1": 0.649329
+          },
+          "gap_A_strict_minus_relaxed": -0.013187,
+          "gap_B_strict_minus_relaxed": -0.018051,
+          "rank_volatility": 0.004864,
+          "flip": {
+            "flip": false,
+            "tie": false,
+            "sign_c1": 1,
+            "sign_c2": 1
+          }
+        },
+        {
+          "model_A": "Jean-Baptiste/roberta-large-ner-english",
+          "model_B": "elastic/distilbert-base-cased-finetuned-conll03-english",
+          "leverage": {
+            "strict_span_f1": 0.560863,
+            "relaxed_span_f1": 0.547107
+          },
+          "gap_A_strict_minus_relaxed": -0.013013,
+          "gap_B_strict_minus_relaxed": -0.018051,
+          "rank_volatility": 0.005038,
+          "flip": {
+            "flip": false,
+            "tie": false,
+            "sign_c1": 1,
+            "sign_c2": 1
+          }
+        }
+      ],
+      "metrics_started_at_utc": "2026-10-06T04:42:53Z",
+      "metrics_finished_at_utc": "2026-10-06T04:43:10Z"
+    },
+    "cnndm": {
+      "route": "published_aggregate_scores",
+      "route_reason": "CNN/DM测试集生成式推理(3个模型×11490篇)超出本地8GB GPU与时间预算; 按预案降级: 仅用公开汇总分数演示rank volatility与flip; leverage arm标记为不可计算。",
+      "published_scores": [
+        {
+          "model_id": "facebook/bart-large-cnn",
+          "paper": "Lewis et al., 2020 (BART, arXiv:1910.13411); HF model card + fairseq README",
+          "params": "406M",
+          "rouge1": 44.16,
+          "rouge2": 21.28,
+          "rougeL": 42.24,
+          "retrieved_at_utc": "2026-10-02"
+        },
+        {
+          "model_id": "google/pegasus-cnn_dailymail",
+          "paper": "Zhang et al., ICML 2020 (PEGASUS, arXiv:1912.08777), Table 3",
+          "params": "568M",
+          "rouge1": 44.17,
+          "rouge2": 21.47,
+          "rougeL": 41.11,
+          "retrieved_at_utc": "2026-10-02"
+        },
+        {
+          "model_id": "t5-11b",
+          "paper": "Raffel et al., JMLR 2020 (T5); fairseq BART README 对比表",
+          "params": "11B",
+          "rouge1": 43.52,
+          "rouge2": 21.61,
+          "rougeL": 40.31,
+          "retrieved_at_utc": "2026-10-02"
+        }
+      ],
+      "pairs": [
+        {
+          "model_A": "facebook/bart-large-cnn",
+          "model_B": "google/pegasus-cnn_dailymail",
+          "leverage": null,
+          "gap_A_rouge1_minus_rougeL": 1.92,
+          "gap_B_rouge1_minus_rougeL": 3.06,
+          "rank_volatility": 1.14,
+          "flip": {
+            "flip": true,
+            "tie": false,
+            "sign_c1": -1,
+            "sign_c2": 1
+          }
+        },
+        {
+          "model_A": "facebook/bart-large-cnn",
+          "model_B": "t5-11b",
+          "leverage": null,
+          "gap_A_rouge1_minus_rougeL": 1.92,
+          "gap_B_rouge1_minus_rougeL": 3.21,
+          "rank_volatility": 1.29,
+          "flip": {
+            "flip": false,
+            "tie": false,
+            "sign_c1": 1,
+            "sign_c2": 1
+          }
+        },
+        {
+          "model_A": "google/pegasus-cnn_dailymail",
+          "model_B": "t5-11b",
+          "leverage": null,
+          "gap_A_rouge1_minus_rougeL": 3.06,
+          "gap_B_rouge1_minus_rougeL": 3.21,
+          "rank_volatility": 0.15,
+          "flip": {
+            "flip": false,
+            "tie": false,
+            "sign_c1": 1,
+            "sign_c2": 1
+          }
+        }
+      ]
+    }
+  },
+  "deviations": [
+    "注册表第1次冻结(2026-10-06T04:01:35Z, 存档为p1_model_registry_frozen.attempt1.json)中, NER候选Jean-Baptiste/roberta-large-ner-english因标签方案校验过严(其IO式标签无B-/I-前缀)被误判不兼容而落选; 该次指标未纳入正式结果。修复方案校验后重新登记(第2次冻结), 最终指标计算晚于第2次冻结时间——登记先于指标的纪律保持成立。",
+    "NER Jean-Baptiste/roberta-large-ner-english: 该模型为IO方案(标签无B-/I-前缀), 已做IO→BIO2确定性转换(连续同类型token合并为实体; 相邻同类不同实体会被合并, 已如实记录)。",
+    "CNN/DM: 采用公开汇总分数路线(本地8GB GPU无法在预算内完成3模型×11490篇生成式推理); 该任务仅演示rank volatility与rank flip, leverage arm标记为不可计算, H-X1仅使用SST-2与NER的模型对(按预案的诚实降级)。"
+  ],
+  "hypotheses": {
+    "H-X1": {
+      "statement": "跨任务 Pearson ρ(L, V) ≥ 0.7 且 p < 0.05",
+      "points": [
+        {
+          "task": "sst2",
+          "model_A": "distilbert-base-uncased-finetuned-sst-2-english",
+          "model_B": "textattack/bert-base-uncased-SST-2",
+          "L": 0.5,
+          "V": 6.3e-05
+        },
+        {
+          "task": "sst2",
+          "model_A": "distilbert-base-uncased-finetuned-sst-2-english",
+          "model_B": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+          "L": 0.175676,
+          "V": 0.094367
+        },
+        {
+          "task": "sst2",
+          "model_A": "textattack/bert-base-uncased-SST-2",
+          "model_B": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+          "L": 0.170732,
+          "V": 0.094304
+        },
+        {
+          "task": "ner",
+          "model_A": "dslim/bert-base-NER",
+          "model_B": "Jean-Baptiste/roberta-large-ner-english",
+          "L": 0.627563,
+          "V": 0.000174
+        },
+        {
+          "task": "ner",
+          "model_A": "dslim/bert-base-NER",
+          "model_B": "elastic/distilbert-base-cased-finetuned-conll03-english",
+          "L": 0.658261,
+          "V": 0.004864
+        },
+        {
+          "task": "ner",
+          "model_A": "Jean-Baptiste/roberta-large-ner-english",
+          "model_B": "elastic/distilbert-base-cased-finetuned-conll03-english",
+          "L": 0.553985,
+          "V": 0.005038
+        }
+      ],
+      "n": 6,
+      "pearson_r": -0.962734,
+      "p_value": 0.002057,
+      "per_task_descriptive": {
+        "sst2": {
+          "pearson_r_descriptive": -0.999906,
+          "n": 3
+        },
+        "ner": {
+          "pearson_r_descriptive": -0.261556,
+          "n": 3
+        }
+      },
+      "verdict": "FAIL(负结果如实保留)"
+    },
+    "H-X2": {
+      "primary": {
+        "tau": 0.5,
+        "checks": [
+          {
+            "task": "sst2",
+            "pair": [
+              "distilbert-base-uncased-finetuned-sst-2-english",
+              "textattack/bert-base-uncased-SST-2"
+            ],
+            "L": 0.5,
+            "above_threshold": false,
+            "flip": false,
+            "implication_ok": null
+          },
+          {
+            "task": "sst2",
+            "pair": [
+              "distilbert-base-uncased-finetuned-sst-2-english",
+              "cardiffnlp/twitter-roberta-base-sentiment-latest"
+            ],
+            "L": 0.175676,
+            "above_threshold": false,
+            "flip": false,
+            "implication_ok": null
+          },
+          {
+            "task": "sst2",
+            "pair": [
+              "textattack/bert-base-uncased-SST-2",
+              "cardiffnlp/twitter-roberta-base-sentiment-latest"
+            ],
+            "L": 0.170732,
+            "above_threshold": false,
+            "flip": false,
+            "implication_ok": null
+          },
+          {
+            "task": "ner",
+            "pair": [
+              "dslim/bert-base-NER",
+              "Jean-Baptiste/roberta-large-ner-english"
+            ],
+            "L": 0.627563,
+            "above_threshold": true,
+            "flip": false,
+            "implication_ok": false
+          },
+          {
+            "task": "ner",
+            "pair": [
+              "dslim/bert-base-NER",
+              "elastic/distilbert-base-cased-finetuned-conll03-english"
+            ],
+            "L": 0.658261,
+            "above_threshold": true,
+            "flip": false,
+            "implication_ok": false
+          },
+          {
+            "task": "ner",
+            "pair": [
+              "Jean-Baptiste/roberta-large-ner-english",
+              "elastic/distilbert-base-cased-finetuned-conll03-english"
+            ],
+            "L": 0.553985,
+            "above_threshold": true,
+            "flip": false,
+            "implication_ok": false
+          }
+        ],
+        "n_pairs_above": 3,
+        "verdict": "FAIL(负结果如实保留)",
+        "tau_status": "主分析(Jaccard相似度过半为先验固定阈值)"
+      },
+      "secondary_median": {
+        "tau": 0.526992,
+        "checks": [
+          {
+            "task": "sst2",
+            "pair": [
+              "distilbert-base-uncased-finetuned-sst-2-english",
+              "textattack/bert-base-uncased-SST-2"
+            ],
+            "L": 0.5,
+            "above_threshold": false,
+            "flip": false,
+            "implication_ok": null
+          },
+          {
+            "task": "sst2",
+            "pair": [
+              "distilbert-base-uncased-finetuned-sst-2-english",
+              "cardiffnlp/twitter-roberta-base-sentiment-latest"
+            ],
+            "L": 0.175676,
+            "above_threshold": false,
+            "flip": false,
+            "implication_ok": null
+          },
+          {
+            "task": "sst2",
+            "pair": [
+              "textattack/bert-base-uncased-SST-2",
+              "cardiffnlp/twitter-roberta-base-sentiment-latest"
+            ],
+            "L": 0.170732,
+            "above_threshold": false,
+            "flip": false,
+            "implication_ok": null
+          },
+          {
+            "task": "ner",
+            "pair": [
+              "dslim/bert-base-NER",
+              "Jean-Baptiste/roberta-large-ner-english"
+            ],
+            "L": 0.627563,
+            "above_threshold": true,
+            "flip": false,
+            "implication_ok": false
+          },
+          {
+            "task": "ner",
+            "pair": [
+              "dslim/bert-base-NER",
+              "elastic/distilbert-base-cased-finetuned-conll03-english"
+            ],
+            "L": 0.658261,
+            "above_threshold": true,
+            "flip": false,
+            "implication_ok": false
+          },
+          {
+            "task": "ner",
+            "pair": [
+              "Jean-Baptiste/roberta-large-ner-english",
+              "elastic/distilbert-base-cased-finetuned-conll03-english"
+            ],
+            "L": 0.553985,
+            "above_threshold": true,
+            "flip": false,
+            "implication_ok": false
+          }
+        ],
+        "n_pairs_above": 3,
+        "verdict": "FAIL(负结果如实保留)",
+        "tau_status": "敏感性分析(事后中位数阈值, 已披露)"
+      }
+    },
+    "proposition_flip_exists": {
+      "statement": "rank flip 存在(任一任务任一模型对在两契约间排序改变)",
+      "n_pairs_checked": 9,
+      "flips": [
+        {
+          "task": "cnndm",
+          "pair": [
+            "facebook/bart-large-cnn",
+            "google/pegasus-cnn_dailymail"
+          ],
+          "flip": true,
+          "tie": false,
+          "sign_c1": -1,
+          "sign_c2": 1
+        }
+      ],
+      "verdict": "PASS"
+    }
+  },
+  "metrics_finished_at_utc": "2026-10-06T04:43:10Z"
+}

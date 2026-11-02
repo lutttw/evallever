@@ -1,0 +1,55 @@
+{
+ "meta": "修订54:双种子合并后重算(LOO n=11 含双种子池化臂;门限 13 设置口径,语言对照两臂为 p15_c1 登记值)",
+ "loo": {
+  "0.5": {
+   "A_hits": 11,
+   "B_hits": 11,
+   "G_hits": 11
+  },
+  "0.25": {
+   "A_hits": 11,
+   "B_hits": 10,
+   "G_hits": 11
+  }
+ },
+ "loo_mae": {
+  "A": 0.5920085647598499,
+  "B": 0.7534178579879824,
+  "G": 0.5843745845440864
+ },
+ "loo_members": [
+  "x2",
+  "atlop_pe8",
+  "atlop_full",
+  "dreeam",
+  "p3m",
+  "docunet",
+  "kddocre",
+  "mistral-7b-instruct_freetext",
+  "mistral-7b-instruct_json",
+  "qwen2.5-14b-instruct_json",
+  "qwen2.5-7b-instruct_freetext"
+ ],
+ "gate_sensitivity": {
+  "0.03": {
+   "pass": [],
+   "n_flagged": 13,
+   "n_settings": 13
+  },
+  "0.05": {
+   "pass": [
+    "qwen-14b_en-docred_json"
+   ],
+   "n_flagged": 12,
+   "n_settings": 13
+  },
+  "0.1": {
+   "pass": [
+    "mistral-7b_en-docred_freetext",
+    "qwen-14b_en-docred_json"
+   ],
+   "n_flagged": 11,
+   "n_settings": 13
+  }
+ }
+}

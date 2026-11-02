@@ -1,0 +1,328 @@
+{
+ "prereg_file": "docs\\ACL_主会执行方案_20261003\\预注册_v1_20261003.md",
+ "sha256": "234514ee8b8756067b01dea9c13b6e25383cc6a56c80e5b71f53ebc6044117d2",
+ "frozen_at": "2026-10-03T14:59:44",
+ "note": "数据集哈希与许可核验在第六节追加;追加仅限第六节,冻结节不得改动;2026-10-10:25-58 hash gap acknowledged, resumes per-amendment from 59",
+ "amendments": [
+  {
+   "at": "2026-10-03T15:01:33",
+   "sha256_after_amendment": "46cc0e6ed81b6cec4c94a314d3b23abf64d8250cba374bb614780a25258b7fe4",
+   "content": "修订1:复现基准改为 BC5CDR+GDA"
+  },
+  {
+   "at": "2026-10-03T16:04:23",
+   "sha256_after_amendment": "53c60778cbbbecf8bb448c18b4b979c4a754d96ba1656f433d137a70d73af41d",
+   "content": "修订2:LLM钩子实验设计冻结(D5, 在任何LLM推理之前);修订3:sharper takeaway条款"
+  },
+  {
+   "at": "2026-10-03T16:31:29",
+   "sha256_after_amendment": "402b8a636ab1aa081acec128f011ffa4a6af9b27f79670309b6544b362efc989",
+   "content": "修订4:恢复任务轴,RAMS 1.0c 入列(D1含RAMS,哈希已登记,契约冻结)"
+  },
+  {
+   "at": "2026-10-03T16:42:59",
+   "sha256_after_amendment": "bb97ce3ad208dc7d57c500e87eeba217b4a7f88fc3a350122f4d9d037b33d7b5",
+   "content": "修订5:R1排名翻转+R2种子数收敛+R3切片稳健性,设计冻结"
+  },
+  {
+   "at": "2026-10-03T16:52:55",
+   "sha256_after_amendment": "5f78e6b924f2c32481f6bca8a40bcd91dbe5466491d4856c2f341ffbfb67ea93",
+   "content": "修订6:BC5CDR登记(哈希+跨句85%实核),GDA查证不可得降为可选,H3改为BC5CDR/RAMS"
+  },
+  {
+   "at": "2026-10-03T17:32:40",
+   "sha256_after_amendment": "129cc22e3d51f930a611b9d5bd725deef5c5035bfc6ccaf3726d4273c355bdd3",
+   "content": "修订7:D5改本地执行,NF4量化(8GB显存查证),鲁棒性模型换Mistral-7B(Llama门控查证)"
+  },
+  {
+   "at": "2026-10-03T18:27:38",
+   "sha256_after_amendment": "e76ba7833895db74d9e0825bb2a9d86929e08ce9a75789c33d13da3a7647507b",
+   "content": "修订8:D5输出格式改实体索引引用(冒烟违规60.9%不可执行;对比A62.9% vs B1.9%),其余冻结项不变"
+  },
+  {
+   "at": "2026-10-05T07:12:39",
+   "sha256_after_amendment": "f3dbdb59efe7c21196c2adf7be1e050ab72af9342d6da8b6d82f6e91525481ad",
+   "content": "修订9:14B剂量-反应设计冻结(NF4/云端/提示逐字复用/H-S1,S2,S0/执行条件触发/不反改D5判定)"
+  },
+  {
+   "at": "2026-10-05T14:43:40",
+   "sha256_after_amendment": "217e286e71e79de0fb10b1efaef63cff4255fc7269f06108defc1eec3176adb4",
+   "content": "修订10:TACL全量单稿(11月中)+JCIP中文实验包(J-A/B/C/D,12月烧卡),两级火箭结构冻结;14B触发改为投稿前主动执行"
+  },
+  {
+   "at": "2026-10-05T18:40:24",
+   "sha256_after_amendment": "4f52fd46941ed78be68e78efc27aff06c6cacc8ed8ac706ece46005a354d0d19",
+   "content": "修订11:R4违规回归(因子冻死)+V8案例(措辞红线/无稳健翻转则取消)+50条人工核验(≥95%线)+内审模拟,全部冻结"
+  },
+  {
+   "at": "2026-10-05T23:25:12",
+   "sha256_after_amendment": "40c7a653d5c1b7087069ccde929926b6088c9cb7fe23159675d3228aa9a736a3",
+   "content": "修订12:作者决定取消JCIP投稿计划,单稿全力TACL;JCIP实验设计留档;自动化停用"
+  },
+  {
+   "at": "2026-10-06T00:00:26",
+   "sha256_after_amendment": "303088628844ac9d3c139112fe7f26e27955c962e1737d2e8697ebe2826e1471",
+   "content": "修订13:推迟至2026-01-01批次(12/31提交);P0封顶+P1跨任务预注册恢复+P2复盘+P3工具包;理论降格为命题并入纪律"
+  },
+  {
+   "at": "2026-10-06T00:05:36",
+   "sha256_after_amendment": "4d606044affb3c6e600438c3613d118d67e70e2d58dfa17ca93d978662aac512",
+   "content": "修订14:P1跨任务验证设计冻结(SST-2/CoNLL03/CNN-DM矩阵+H-X1,X2+负结果定义+模型登记纪律+元分析+V8合并复盘)"
+  },
+  {
+   "at": "2026-10-06T00:08:46",
+   "sha256_after_amendment": "ec0a7f601a1136b8e1dc77ac0fb038d4fb8b127f3796645be369a39deda2b0d0",
+   "content": "修订15:写作/投稿策略定稿(总定位+术语形式化+命题定级重申+三级证据等级+引言三段式+徽章申请+12/30提交);不采纳定理化/1/L2/首次标签"
+  },
+  {
+   "at": "2026-10-06T00:11:40",
+   "sha256_after_amendment": "e58050051af41eb8119a7d71f0cf556d81b7da1d5b1e1c103b0faafd83471628",
+   "content": "修订15b:四条执行细则(定位句边界/徽章材料/公式位置/计分一致性±0.002第四查)"
+  },
+  {
+   "at": "2026-10-06T00:18:18",
+   "sha256_after_amendment": "81488742610a28cdedacc0772840219c05703d97afc3db0a653f5d37c545ad8e",
+   "content": "修订16:五项呈现加成(命题双标注定式/自践对照表/随机效应元分析/图形摘要/EvalLever兼容验证±0.005)"
+  },
+  {
+   "at": "2026-10-06T00:26:50",
+   "sha256_after_amendment": "2c6d26d09f3924b908c55cda7459c5aeb15a8cabb1021a3940fc3195aab55b9c",
+   "content": "修订17:P1.5跨语言验证冻结(X-A中文ICL钩子+词字金标L2杠杆+X-B XNLI三语言小样本;H-XL1/2/3;11月上旬+1.5GPU天)"
+  },
+  {
+   "at": "2026-10-06T00:29:27",
+   "sha256_after_amendment": "3e125be2741232ca8ba6767ed2d3567ec90b38769db61835dec78a787a36fbd0",
+   "content": "修订18:定位升维\"通用视角+结构化试验场\"(几何本质通用段/范式对应表/推广边界讨论节/引言摘要换视角/EvalLever通用定位;零新实验)"
+  },
+  {
+   "at": "2026-10-06T00:43:41",
+   "sha256_after_amendment": "eaa27ca5b335928356e34771df6a45ae89fb4d57ea8afb7afeda63287ee75e1a",
+   "content": "修订19:约束解码激活(Qwen json三重掩码;H-C1正交性准实验/H-C2主设置可核验化/H-C0如实报告;本地10h;R1仍最优先)"
+  },
+  {
+   "at": "2026-10-06T02:05:18",
+   "sha256_after_amendment": "f5e58259ae1873938c694adba767c8afbbb0ddaaed98d5c55582d828436256fd",
+   "content": "修订19b:约束解码降回预案(intregex字面括号方言陷阱,7轮调试留痕);命题4维持观测定级;R1主线不受影响"
+  },
+  {
+   "at": "2026-10-06T05:32:06",
+   "sha256_after_amendment": "99bb7a416a73e7cb71a362cb62a51470ffbf782e91178c4a5f1c96a50129b870",
+   "content": "修订20:14B结果落盘——H-S1成立(4.57%<5%升可核验设置)、H-S2不成立(力臂走低,反直觉数据点)、H-S0如实报告;L1四计分全正为T1/T2新素材"
+  },
+  {
+   "at": "2026-10-06T11:36:57",
+   "sha256_after_amendment": "bb468b35bb9178844ef6987ebf35f97e25d43485ad94011c2ed7cb97c5a098d7",
+   "content": "修订21:判别式四基准合并 H3 通过(ρ=0.656,p=0.0045,15对照点;四层中位SD严格单调 0.0026→0.0387)"
+  },
+  {
+   "at": "2026-10-06T12:44:40",
+   "sha256_after_amendment": "8f280df57df7ab6aec1842f0ec9968c702cf212f8ccfe854dfd84c9cd88bf22b",
+   "content": "修订22:P1结果落盘——H-X1强负相关r=-0.963(显著,方向相反)、H-X2无翻转、聚合层flip PASS(CNN/DM BART vs PEGASUS);命题边界重构:分类/NER误差集重叠与RE分歧对是不同构念,投影几何叙事统一"
+  },
+  {
+   "at": "2026-10-06T13:51:08",
+   "sha256_after_amendment": "ca7d21f7c7a5e9b53e0bb7c41c21ea284b70020c04ff37a78ba035aae8afcf34",
+   "content": "修订23:人工核验90%FAIL如实记录;误判归因(值幻觉类缺失+旧版oob口径);新增value_hallucination类,当前版重审双版本并列"
+  },
+  {
+   "at": "2026-10-06T14:06:15",
+   "sha256_after_amendment": "843e44ca014b01c8daaa5dc9ce7792afdee670d33d5d09acb91c7b282781c9e1",
+   "content": "修订23b:程序真值复核——检测精度100%(50/50),分类精度96%(PASS);oob验收改程序真值制;value_hallucination类正式化;V030极端越界发现"
+  },
+  {
+   "at": "2026-10-06T15:23:03",
+   "sha256_after_amendment": "bb62a18817174656b792bd0db8190e10a4c1c0b09a7db101da411ab4f3767e6b",
+   "content": "修订24:X-A追加中文鲁棒臂Qwen2.5-14B(json必须/freetext可选/提示逐字复用/H-XI1违规随规模降/H-XI2计分形态/H-XI0)"
+  },
+  {
+   "at": "2026-10-06T20:42:40",
+   "sha256_after_amendment": "e91e03ea144b322e9bc179dc9d9c1ae76a4cfe26bee04e8eade2e42c67d2f231",
+   "content": "修订23c:X-A四臂落盘(22.1/33.5/88.7/33.3);H-XL1单点翻转/H-XL2四处Δ=0精确/H-XL3超英文带带旗;模型×格式交互+语言相关失败面+88.7%契约崩坏"
+  },
+  {
+   "at": "2026-10-10T23:50:00",
+   "sha256_after_amendment": "1a11f268490249d2d28f0e382d0f87a7f5f200259311df2455a6415c85557d50",
+   "content": "修订59:内审6三路外审整改(数字更正r28/C3披露/措辞限定/工件补齐);登记簿25-58的逐修订哈希未存档(过程缺口,以md文档修订 trail 为准),自59起恢复逐条登记"
+  },
+  {
+   "at": "2026-10-10T23:59:00",
+   "sha256_after_amendment": "d94a3106bd680c386c31f676ab1be30c081bf7ff5c5cccef72d4becbef6bbf22",
+   "content": "修订60:分组规则轴实验设计冻结(H-G1 唯一确认检验;ESS 完整性门;5 生成器 13 run;冻结于任何新计算之前)"
+  },
+  {
+   "at": "2026-10-11T00:30:00",
+   "sha256_after_amendment": "b816cc377b3aa368893e94990ec6680d8d344bdd052ab866e5e0ec91ec328095",
+   "content": "修订60执行结果:H-G1 PASS(5/5 分组臂 CI 排零 0.020-0.030;公开方法分组臂>金标臂;13/13 方向一致零翻转);入稿+Table A6+r29 入包"
+  },
+  {
+   "at": "2026-10-11T01:00:00",
+   "sha256_after_amendment": "00dc4367e837d98e1d4d4b8db7fa369e7a7986caed15c29245b8d58e5f6d2cb2",
+   "content": "修订61:遗留两项设计冻结——Exp-A replay量化(描述性)/Exp-B docunet_large发表配置臂(混淆检验);D6(iii) 无公开权重判不可行;冻结于训练前"
+  },
+  {
+   "at": "2026-10-11T02:30:00",
+   "sha256_after_amendment": "1e31098cfed876a465effef72b4849b2ec92e4e9d09d76edc41a44debc7d0c25",
+   "content": "修订61执行结果:Exp-A完成并推翻replay归因(模式续写98.9%/内容相似度0.22/46.8%可恢复,论文归因句已改写,r30冻结);Exp-B被8GB卡TDR硬杀,记录implementation-blocked+云端路径"
+  },
+  {
+   "at": "2026-10-11T03:10:00",
+   "sha256_after_amendment": "52f063a87752213c153763293be050fe7980099de9207184c1107fed6bb4baf0",
+   "content": "修订62:TTM-RE v0.2 权重发布勘误修订61不可行判定;冻结第8生成器臂设计(仅推理/Re-DocRED混杂披露/描述性终点/完整性门=标题对齐498);冻结于下载之前"
+  },
+  {
+   "at": "2026-10-10T20:05:00",
+   "sha256_after_amendment": "97b2cf0b42b4684794437bb699bf31ba8c6ec92959c24681a3707570df2a048e",
+   "content": "修订61+62执行结果落盘:Exp-B docunet_large F1=0.6219,阈值臂0.024<<0.088(B-W-b弱训练混淆被支持),金标/分组臂排零;TTM-RE v0.2本地推理接入,金标臂0.0382/分组臂0.0178均排零,6-7/7同号——杠杆结构SOTA外推成立;r31/r32冻结"
+  },
+  {
+   "at": "2026-10-10T21:10:00",
+   "sha256_after_amendment": "08efa7c1494c01f3af2b825cd3d64f1faad0bda887f1b3843925a3760feb1723",
+   "content": "修订63:对照官方投稿须知(浏览器实读),摘要脚注去除Zenodo DOI链接(政策明文disallow links+DOI公开解析双盲风险),改匿名化发布表述;token链接改走Comments to the Editor;其余全项合规"
+  },
+  {
+   "at": "2026-10-10T21:40:00",
+   "sha256_after_amendment": "1f74783057d75f9454fc507d20ba5700317ecd8508ed9a4116ef1a0087849b00",
+   "content": "修订64:对照作者上传官方格式说明四项整改——附录类别纠正(Category#2上限3页非5页,现恰3页零余量)+图放大(0.85栏宽,fig3/4移附录A1/A2)+附录[H]锚布局+参考文献官方bst全名单全名(13条et-al清零,修HacRED/Alzahrani/Schader三处转录错误);终态15页0错0overfull"
+  },
+  {
+   "at": "2026-10-10T22:30:00",
+   "sha256_after_amendment": "c44ee8e10ac9ee2468689438025d35df549dd28f34482991c0e6fca4d8970777",
+   "content": "修订65:模拟再评审裁决8项全执行(计数64/SOTA句收敛/A7协议脚注/14对入口句/Re-DocRED半句/两图appendix指引/Spearman限定/流程项转作者侧);终态15页0错0overfull附录恰3页"
+  },
+  {
+   "at": "2026-10-10T23:00:00",
+   "sha256_after_amendment": "63ab31d06ae46f92a47c439c21ba19df556e78b51f27aa520191afa5172bd5be",
+   "content": "修订66:三窗口项冻结——A BF16量化对照(Qwen2.5-7B云端,同提示格同解析器)/B温度采样(Mistral en_json t0.7 n5)/C TTM-RE第二checkpoint(官方pretrain起步seed20261010,30ep发表配置);均描述性,附录3页红线不破"
+  },
+  {
+   "at": "2026-10-10T23:59:00",
+   "sha256_after_amendment": "a102b1f68e92d461234dc03f47fcc0b25dff09cd6d0014f784cf868c3d322950",
+   "content": "修订66附记:B改Qwen r4/r5凑满n=5(Mistral在HacRED-en-json无贪心锚);C改pretrain_distant=3从base(ghproxy限速30KB/s不可行,官方代码自带路径,方差证据更独立)"
+  },
+  {
+   "at": "2026-10-11T20:30:00",
+   "sha256_after_amendment": "d88b8878f7db127dc87e7abcdaad46de1fcaf4da8296b7a84be9f2a8ab287f74",
+   "content": "修订67:修订66三臂落盘——TTM-RE双ckpt互证(0.038/0.046均排零,SOTA臂跨训练稳定);BF16量化轴配对差-0.0071点符号翻转(真实弱轴);温度采样5/5同号(解码随机性不淹没杠杆);A7扩6行+§9(i)改写;终态15页0错0overfull正文恰10页"
+  },
+  {
+   "at": "2026-10-12T12:00:00",
+   "sha256_after_amendment": "f2a72fd09ed43e111bdc8fd9ec4f9a9f46746d7c3081a04b7e2dfbc8919a26fb",
+   "content": "修订68:专家批注22条整改——理论统一性段(四命题=Γ投影)+引言普适性三引文+摘要负结果句改口径+roadmap升Research Program+几何工具两性质解释结构化限制+X2定位instrument+附录改Complementary Materials+bib 27条venue全称+11条页码+附录图顶格0.98;12处存量压缩吸收新增30行;终态15页0错0overfull正文恰10页;2条需新实验的批注诚实列为可选"
+  },
+  {
+   "at": "2026-10-12T14:00:00",
+   "sha256_after_amendment": "7e7020c37ce132d2a73eecfaba4e8cb35731604b40fd0492585a363f85d855f8",
+   "content": "修订69:B1边界实验证实冻结——NER strict/relaxed天然双金标,P1既存三模型error flags离线重算arm_D,终点纯描述性(证实B1或收窄为单金标任务),产出r36_b1_ner.json"
+  },
+  {
+   "at": "2026-10-12T15:00:00",
+   "sha256_after_amendment": "76cbb309d4cb8e3152b2c150af9bf5a872a46a6473fe9a9435f2caf5ad6908d2",
+   "content": "修订69执行:r36 B1机制性证实——NER双金标rescue rate 6.4-7.8%三模型一致,比DocRED分歧密度低一个量级,B1证实;落位§5三行+表述精确化(two writing systems);页限由Lim(i)/§8/§4.3/Conclusion压缩吸收;终态15页0错0overfull;批注22条全关闭"
+  },
+  {
+   "at": "2026-10-12T18:00:00",
+   "sha256_after_amendment": "1e204b87d39aea69c6d320fa4d19f57b1f92f34621acf0daedd8eb9986af7525",
+   "content": "修订70:五席评审#3裁决6项必改全执行——引言选择性半句/摘要family-level+descriptive限定/formal account措辞(§3标题同步)/A7 not-applicable注/H-G1非构造性+bootstrap单元/TTM-RE能力不变性升正面发现(contract, not competence);8处腾挪吸收16行;终态15页正文恰10页0错0overfull"
+  },
+  {
+   "at": "2026-10-12T22:30:00",
+   "sha256_after_amendment": "05b80f366c6b595c14b182362a0994d52b3e00e19e59de5ae0c6760a31ae8595",
+   "content": "修订71冻结:外审整改——P2留一检验(r37)/摘要pool-dependent+语言共线限定/n*=8条件措辞/人工核验口径/roadmap future-work/几何metaphor/docset机制/B1 illustrative/TTM-RE数据量/bib D1+D2"
+  },
+  {
+   "at": "2026-10-12T23:30:00",
+   "sha256_after_amendment": "331299ebf80e38d056840d9ebef75d13940a0e0ac7b43bba16621ee4ac1a1d72",
+   "content": "修订71执行:外审三轮12项全落位——r37 P2 LOO(0.860vs0.772 p<0.002)+摘要pool-dependent+语言共线+n*=8条件措辞+heuristic metaphor+future work+人工核验口径+docset机制+B1 illustrative+TTM-RE 3053doc+2条新引用+6条DOI+lunardi ECAI;终态15页0错0overfull正文恰10页"
+  },
+  {
+   "at": "2026-10-13T19:43:20",
+   "sha256_after_amendment": "331299ebf80e38d056840d9ebef75d13940a0e0ac7b43bba16621ee4ac1a1d72",
+   "content": "修订72执行:参考文献DOI补全——bib新增22条DOI(CrossRef逐条核验:atlop/DocRED=p19-1074/CoNLL-2003=10.3115/1119176.1119195/BART/XNLI/BC5CDR/HacRED=2021.findings-acl.249/GenRES=naacl-long.155/DREEAM=eacl-main.145/Mizrahi=tacl_a_00681/TTM-RE=2024.acl-long.26等);修正第4处转录错:alt-etal-2020实为《TACRED Revisited: A Thorough Evaluation of the TACRED Relation Extraction Task》ACL2020 pp1558-1569 doi 10.18653/v1/2020.acl-main.142(原题录标题与页码均为捏造,AAAI同名Re-TACRED系Stoica等另一文);recht2019imagenet 题录PNAS 116(13):6100-6103为错误,改为ICML2019 PMLR 97:5389-5400(PMLR官方页核验);acl_natbib.bst inlinelinks 1→0(bst头部明示'constants may be adjusted by hand',DOI由隐藏超链转为可见doi:文本,33条可见,每条唯一);修bib 19处字段缺逗号(bibtex报错清零);终态:main.pdf 16页=正文10页(结论p10)+References p11-13+附录p14-16(恰满Category#2三页上限),0错0overfull;camera版acceptedWithA同步16页;补充包重建104文件(新增bib与r30/r33-r37统计与代码,r34云脚本路径已清洗;最终zip md5记于项目状态,不写入本登记以免自指;此前db78f1作废);无DOI留白=11条(arXiv3/ICLR/TMLR/NeurIPS×3/PMLR×2/NIPS2015),均为无DOI体系,合规"
+  },
+  {
+   "at": "2026-10-13T21:14:29",
+   "sha256_after_amendment": "a9fe9422cccb3283677d91a98425625b6aa8dcf19345d163d9cf5a0e47040258",
+   "content": "修订73冻结:合成阳性对照设计——atlop_pe8 D/R s20260917 载体,嵌套注入(清 intra 预测阳性 logits,δ∈{0,.01,.02,.05,.10},seed 20260926),走未修改 e3 run_score;门G1=sham逐位复现冻结per_doc;端点H-PC2方向/H-PC3灵敏度+MDE/H-PC5杠杆移动/H-PC4翻转检出;10k doc bootstrap;PASS=G1+PC2+PC3"
+  },
+  {
+   "at": "2026-10-13T21:35:04",
+   "sha256_after_amendment": "a9fe9422cccb3283677d91a98425625b6aa8dcf19345d163d9cf5a0e47040258",
+   "content": "修订73执行:合成阳性对照(r38_positive_control.py,r38_positive_control.json)——门G1 PASS(sham逐位复现冻结per_doc,gR+gD,498docs);H-PC2 PASS(δ=1/2/5/10%全负,ΔΓ=-0.0039/-0.0075/-0.0203/-0.0396);H-PC3 PASS(最大水平CI排零,MDE δ≈1%即|ΔΓ|≈0.004);H-PC5如实报告(ΔL +0.0006~+0.0016全含零,预测侧小扰动几乎不动金标杠杆,非单调);H-PC4如实报告(D-R对比+0.073→+0.033单调收缩,δ≤10%内不翻转=初始差距大于最大注入量);判定VERDICT=PASS(G1+PC2+PC3)"
+  },
+  {
+   "at": "2026-10-13T21:35:04",
+   "sha256_after_amendment": "a9fe9422cccb3283677d91a98425625b6aa8dcf19345d163d9cf5a0e47040258",
+   "content": "修订74执行:TACL语料对标(12篇深读:元科学/形式化统计/结构图表三路代理)驱动的写作整改——①§8+§10合并为Discussion and Conclusion,结论恢复(i)-(iv)编号发现清单,Limitations按P4/MultiBLiMP惯例收尾;②§3命题Statement加四条前向指针(语料范式:命题→§4表锚);③§3 Prop1/Prop2 Evidence块与§4.2去重(理论节陈述+指针,实证节承载全量数字);④§5加单向推理免责句(flip⇒读数不可跨契约移植/稳定≠模型内在属性);⑤§6新增Contract-side positive control段(r38:MDE≈0.004,最小臂不可分辨于零口径);⑥§1加预防接种句(not surprising per se;never formalized...nor shown to suffice);⑦Table2 caption加协议脚注(doc-level bootstrap 10k);⑧图1/2 caption收紧+§6/§7/§9等量压缩(leaderboard段删/audit-audit尾句删/selfcheck去重/§3.1 plain-terms句删);⑨logged amendments计数64→73(body×2+gen_appendix);终态:main.pdf 16页=正文恰10页(结论+Limitations收p10,References标题起p10底)+refs p11-13+附录p14-16恰满,0错0overfull;camera版同步16页;补充包106文件zip md5=ef25f4fa4c89db3ab2abf7da6c25316c(含r38统计与代码;74dc7583作废);无DOI留白11条不变"
+  },
+  {
+   "at": "2026-10-14T09:27:05",
+   "sha256_after_amendment": "a9fe9422cccb3283677d91a98425625b6aa8dcf19345d163d9cf5a0e47040258",
+   "content": "修订75执行:全工作区扫荡修订(四路代理约250文件对照论文全文,A类文实不符3项+B类补充+C类披露)——A1 fig2再生(内嵌panel题注dedup 0.534陈旧值改为make_figures直读r28冻结件=0.588);A2 EvalLever兑现predict子命令(命题2条件检查:长臂×能力相近,阈值语料相关由使用者按r37程序拟合,cli无默认值防伪装普适)+README;A3 selftest T1升级为数值级真复算(arm_counts新支持A/B异键模板,atlop 6 run+p3m桥接5 run重算flip_delta=0.036461 vs r1冻结0.036280差2e-4<TOL,3/3 PASS),cli暴露--counts-mode;B类:§4.1确认性三主比较点估计+CIs入稿(C1 +0.036[+.021,+.050] Holm p=.0006/C2 +.039[+.017,+.060] p=.0016/C3 +.015[+.003,+.027] p=.011)+C2双计分反号(accuracy −.027[−.048,−.005] vs F1 +.039);§4.3 label-inventory数字(1.7% vs 13.8%,r28);§4.1截断披露(11.3%超512窗,51/1500,γ差<0.0005);A3表:M7B H-en两行CI补算(r39扩展,门=重算点估计==正典审计1e-9:18.77[17.3,20.4]/12.93[11.9,14.0])+BF16行15.74[14.4,17.1](共14设置,dagger标注post-review);A5表加3行(26/26载值核对/Registered-not-executed两笔:约束解码am19b+14B中文am24);附录新Provenance and robustness notes段(498子集构造/金标补标11,084条70.8%跨句vs 58.2%/Kitagawa分解构成项X2-D 0.9%·HacRED 9.2%·X2-R −17.8%残差<1e-15/截断审计),数字全部程序化读冻结件;计数口径:thirteen→fourteen instruction-tuned(正文×2+A3);§6 EvalLever措辞与实现对齐;等量压缩(§6四段/s4 bootstrap-units/C2句),A5列宽2.65/3.55cm+status logged修12.2pt overfull;终态:main.pdf 16页=正文恰10页+refs p11-13+附录p14-16,0错0overfull;camera同步;补充包114文件zip md5=a48b96b1dad0eb2c7adaca4bab4f34ad(新增E5/kitagawa/truncation/stage45/selection_bias/audit_bf16+BF16 preds;c115a884作废)"
+  },
+  {
+   "at": "2026-10-13T21:25:09",
+   "sha256_after_amendment": "a9fe9422cccb3283677d91a98425625b6aa8dcf19345d163d9cf5a0e47040258",
+   "content": "修订76执行:D类全项落地(作者指示'D类直接做';全部为已冻结数据的二次分析,无新训练/推断)——①r40 X2计分函数分解(20 run冻结per_doc,金标交换Δ按recall/F1/hit/exact分解:+0.005/+0.022/+0.009/+0.024全正且CI排零=方向计分稳健、量级4倍变化,§5入稿一句;附:训练源对比分解在本地20-run口径下不复现cloud-b legacy结论(recall −0.054 vs legacy +0.047,符号相反),legacy判为不可靠,源对比只留冻结件不入稿);②e62 nomark核验入稿(去输入实体标记重训3种子,F1 gap −0.006~−0.015 vs 带标记+0.05~+0.09,gapR全负≈−0.070=输入侧标记约定承载部分读数,§5入稿);③R4违规回归(修订11冻结因子表执行,r41:D5五设置47,630三元级记录,sklearn无正则LR+doc-cluster bootstrap 500次替代混合效应附录项[差异披露];训练关系频率OR=0.43[0.39,0.46]/文档长度OR=2.1/Mistral OR=0.35显著,格式OR=1.02不显著=违规随任务-模型匹配度而非格式,§4.3入稿;臂率与正典审计逐一吻合);④E1子集代表性(498 vs 落选500:句8.2/7.9·实体19.5/19.7·intra 0.149/0.154,§4.1括注);⑤power_analysis入稿(C2@0.02功效0.44,观测+0.039超MDE 0.031);⑥near-miss最大值−0.163(x2|kddocre阈值维,同号不翻转=命题2正面实例)§4.2;⑦CNN/DM补ROUGE-L端(0.01与1.13双向);⑧G-theory对照句+Cronbach1972(bib 45条);双标材料包生成(annotation_round2/:盲表50条seed 20261013/标注人说明/管理员分析计划κ+一致率,修订77回收后入稿);版面再平衡约20处微缩(§1/§2/§3.1/§4/§6/§7/§9),期间body_s67空串replace炸文件已整体重建+BEL控制字符字节级清除;终态:main.pdf 16页=正文恰10页+refs p11-13+附录p14-16,0错0overfull,camera同步;补充包119文件zip md5=3cadf919c0ed952457753cf671d50f84(8431ecea作废);登记52条"
+  },
+  {
+   "at": "2026-10-15T10:56:23",
+   "sha256_after_amendment": "aff6d2fbed2ae7951274cc3c9372ec839cbe59af9d48b057845850ac6ee6f40a",
+   "content": "修订79冻结:test-population契约复现——Re-DocRED test_revised 500篇(∩评测集=0/双金标gD'6134+gR'17448/无训练泄漏已验证);端点E-79.1金标交换臂(主)+翻转矩阵+H-G1-test+阈值臂+LLM违规门+docunetL双种子;47 encoder run+LLM5臂;如实报告条款;完整性门=候选规则一致性抽查;修订77闭环后执行"
+  },
+  {
+   "at": "2026-10-15T16:12:47",
+   "sha256_after_amendment": "94de3a7d9e6c23ed7e45a108a2a0904789c8fcf5d1751a612fefe0fd6ec0d98b",
+   "content": "修订77执行:跨硬件口径核验+中文标签机制(全部冻结预测/权重二次分析,CPU计分,零新训练零新推断)——①M2硬件混杂落稿:docunet-large同种子同配置异GPU重训dev F1 0.622→0.459、注册解码下零预测=训练硬件敏感性(同硬件种子差1pt),写入tab:newarms题注(amendment 77)+附录A/B诊断;②r45跨GPU推断诊断:同ckpt(docunet_pe8 s20260917)frozen logits 5060 vs 5090复跑,L∞=6.48e-4/RMSE=4.3e-5/18,386,932格0翻转=跨硬件fp32推断噪声被确定性解码全吸收,判定NEGLIGIBLE⇒全部frozen-logits+CPU计分读数硬件无关,旧实验无需重跑(产物r45_cross_gpu_diag.py/.json,old sha c11f0ab26bcf4f3a/new f0933e89afeb0f4b);③r46受控清单收窄(英文DocRED冻结预测,W=96→10接受集=训练频率top-W):delta(14B−7B)不随W收窄增大(monotone=False),推翻关系知识面溢出假说,14B P-code接地每宽度均不劣于7B(7B唯一关系173个>96,14B仅78);④r47中文标签词表机制分解(HacRED,与§4.3逐文档去重口径一致):规模效应Δ+6.72pt CI[+3.81,+9.70]排零,上升全部落在关系名分量(14.4%→22.6%),解析失败/头尾同实体/实体映射三类持平或下降;越界名构成regime shift:动作形态滑移(词表要角色名词模型吐动作)23.0%→4.3%,角色名词同义改写(成员/就职机构对所属机构)31.9%→51.3%、绝对量0.28→0.54三元/文档;指令语言非驱动(7B中→英Δ−2.39pt,两臂输出均100%非拉丁关系名);两臂最大单一词表外关系均为出生时间/出生日期(HacRED不标注的真实世界关系);结论=大模型更懂关系语义但改写标签码、小模型照抄码面但形态滑移,失败在标签词表接口的不同层次而非关系知识缺失;⑤入稿:§4.3机制句替换占位结论(罗马化关系名规避pdflatex无CJK限制)+附录Provenance条目(v),等量压缩(Mistral段)保正文恰10页;终态main.pdf 16页=正文恰10页+refs p11-13+附录p14-16,0错0overfull"
+  },
+  {
+   "at": "2026-10-15T16:42:59",
+   "sha256_after_amendment": "68630a8c7b8f3130e2773fa74ae552043f0c0915ef1cbe30d7f905fa215b5675",
+   "content": "修订80冻结:LLM 模型谱系扩充(作者批准执行)——新增 3 谱系×3臂=9 新设置(Llama-3.1-8B-Instruct/GLM-4-9B-Chat/Gemma-2-9b-it;权重已就位 15G/18G/18G,ModelScope 全量校验);臂=D5 英文 DocRED json(498 金标可算)+D5 英文 freetext(498)+HacRED 中文 json(1500 违规门);解码=NF4+greedy,与既有 NF4 臂同格;端点=各设置违规率(逐文档去重+10k doc bootstrap)/可核验设置金标臂/谱系间方向一致性;★排除闭源 API 臂的理由须写入论文:版本漂移使历史读数不可复现、匿名期无法固定快照哈希,与'冻结输出+sha256 可追溯'方法论不兼容;如实报告条款=方向任何结果均入稿,反例作为跨谱系边界条件,不选择性呈现;口径一致性门=必须走未修改的 d5/p15 推断与审计代码(仅 --model/--load 变化),否则重跑;载体=NF4 单卡 RTX 5090 24GB;产物 out/d5_llm_hook/preds_<tag>_{json,freetext}.jsonl + out/p15_hacred_icl/preds_<tag>_json.jsonl + out/rev80/batch_log.jsonl"
+  },
+  {
+   "at": "2026-10-15T17:01:23",
+   "sha256_after_amendment": "2a3f67529621ae88f0012216239dc8c97afa0fed5729c7be7cf9ab9bb8626ce0",
+   "content": "修订79执行:Phase0完成(强化门PASS)+Phase1部分执行+两项阻塞如实上报——①Phase0关键纠正:test_revised 取自官方DocRED**dev**(title 500/500;vs 官方test 0/500;文本逐字一致,L1 445/500 差异源于 vertexSet 微调);不变式全绿(⊆dev 500/500、∩dev_revised=0、∩train=0、dev_revised498∪test_revised500=官方dev998 干净二分);test 总体 500篇/196,144 候选对,gD'对5,618·gR'对13,317;强化完整性门=dev 侧 doc_id 序列+候选对总数+**候选记录逐条(doc_id+h+t+group)**与冻结件 189,556 条全一致 PASS;另实测 dev 2版本与3版本候选集完全相同;②Phase1 阻塞:47 run 中**仅 14 个 checkpoint 在盘**(ATLOP-pe8 0/6、ATLOP-full 0/6、X2 1/20、P3M 0/5 的权重已删,只剩与 dev 总体绑定的冻结 logits);已执行 9 run(DREEAM3/DocuNet2/DocuNetL2/KD2)推断+计分成功,产物 logits_test.npy+keys_test.jsonl+per_doc_<run>_test.json;待作者定:(a)接受14-run子集 (b)重训 ATLOP12+X2 20 (c)P3M 无公开权重记 limitations;③事故如实记录:试点因脚本硬编码输出名,误以 test 覆盖 docunet_pe8_s20260917 的 logits/keys/infer_evaluation 与 s20260918 的 per_doc → 前者重跑 evaluation 恢复且 per_doc 与补充包纯净副本逐格一致(120/120),后者从补充包恢复;已加两道闸(输出名按 split 加后缀+driver 断言只允许 --split test);④未决口径:按 |Γ(gD')−Γ(gR')| 直接读 per_doc 得 dev docunet 0.0252/0.0268,而论文 Arm(gold)=0.016(r1 leverage_gold_swap 口径=跨run池化+重采样内跨run平均)⇒**必须复用 r1 臂计算装置而非重新实现**,否则 dev/test 不可比;**test 臂数值暂不入稿**;结论:Phase0冻结件+完整性门可入补充包,Phase1 9run 冻结件留证,Phase3 待(a)(b)确认后统一执行"
+  },
+  {
+   "at": "2026-10-15T17:36:15",
+   "sha256_after_amendment": "898941abf597e094ff5c3923c8808c42897faafe19cac1cb264608c9387c3c7c",
+   "content": "修订78执行:第二标注员回收→双标一致性(按冻结分析计划)——交接检查通过(50行全填/I列仅真违规行有值/盲ID未改);①检出一致率 **50/50=100%**(第一轮50/50真违规、A2 50/50真违规);①′oob_index 29条对照程序真值 **0/29=0%**(A2选27×rel_unmapped+2×其他);②分类一致率(n=21) **14/21=66.7%**;②′Cohen's κ(n=21,合并oob/其他) **0.561**(po=0.667,pe=0.240);★关键诊断:A2在29条oob行的备注有27条写『头尾实体的编号超出实体表范围』(=oob_index定义本身),另2条(B23/B47)写『不是编号的形式/非标准的编号形式』——**而B23/B47恰是本工作独立机检出的『该写编号却写成名称』两例**,即A2实质识别29条全对(含正确分离该2例子情形),分歧仅在标签选择;最可能成因=rel_unmapped 被读成『映射不上』而非『关系码不在清单』;κ的7条分歧=B06/B28/B39(parse_fail)与B21/B26(ambiguous)→其他、B04及B38→oob_index;A2识别出的类别上14/14全对(rel_unmapped 5/5、self_pair 9/9);诊断上界κ=0.610(仅诊断不入稿);未决=按冻结办法需人工仲裁(揭示第一轮→讨论→填定稿标签,不改原始数字),**仲裁前§6/Limitations(iv)/A5三处不修改**;产物 out/rev78/rev78_kappa.json + 仲裁清单_仅作者.{md,csv}"
+  },
+  {
+   "at": "2026-10-15T17:56:56",
+   "sha256_after_amendment": "889630527b5122d982c6054b80a46dfc414c7b2f9610d5dc40d0a9373dc18b82",
+   "content": "修订78仲裁+入稿:A2确认『备注写对了,标签理解错了』;按事先写定的透明规则归因(R1标签误读30条/R1'备注更精确2条/R2显示约定陷阱2条/R3实质分歧2条,逐条见out/rev78/rev78_arbitration.json);κ集内R1 3条(B06/B28/B38备注=parse_fail定义)+R2 2条(B21/B26『F列不是G列的输出三元组』=F显示解析名/G显示编号的显示约定陷阱,机械核验此二篇无缺号/编号全在范围/头尾各自唯一)+R3 2条(B04备注与实际不符[27实体缺号仅10/输出5-18全在范围/头→[0]尾→[1]唯一];B39备注事实正确[E8→E7跨块P17/P131]但属另一现象,类别仍parse_fail);oob集27条R1→oob_index,B23/B47经R1'保留A2的『其他』(与r47独立机检出的『该写编号却写成名称』两例完全吻合);★口径关键:R2/R3定稿取第一轮类别⇒『定稿后κ』构造依赖、无统计意义,不报告;唯一有效互标统计量仍为原始值(检出50/50·oob程序真值0/29·分类14/21·κ=0.561);入稿三处=§6新增第二盲标注员句(检出50/50、κ=0.561、29/29异常识别、label-level)并删除『no inter-annotator agreement available』括注;Limitations(iv)改『one verifier plus a blind re-annotation』;A5行维持原文避免重复;版面=§6增~4行按等量压缩纪律压缩§6判定句/EvalLever段/§7 workflow段共~4行;终态 main.pdf/camera 16页=正文恰10页(Limitations收p10)+refs p11-13+附录p14-16,0错0overfull,stage45 26/26 ALL PASS;★真实回归:body_appendix.tex是gen_appendix.py的生成物,修订77的附录条目(v)当时直写.tex被本次生成器覆盖→已迁入生成器(真源)并压缩;附录内容必须改生成器"
+  },
+  {
+   "at": "2026-10-15T18:52:28",
+   "sha256_after_amendment": "d9ee8f397b07af3d88913c02466ce50f01cfec115bcd66be3f389181f431e9fe",
+   "content": "修订79续:口径对齐PASS+§1贡献5→3整改+ATLOP本地化探针启动+修订80撤销——①查实两处口径错误(表字典被同gold第二variant覆盖→误读sigmoid05_ref;用跨run池化而非r1的逐run点估计取平均);旧产物已隔离作废;新脚本rev79_test_arm_v2.py直接import r1+rev5_recount_lib逐字复用to_canonical/metrics/bootweights/boot_gaps(REPS=10000/seed=20260926/RULE=earliest_mention);**门PASS=dev逐生成器复现r1冻结leverage(dreeam 0.000790/docunet 0.015888/kddocre 0.012769,逐位一致)**;②test臂(500篇/196,144候选):dreeam 0.0229 CI[-0.0484,+0.0030]不排零|**docunet 0.0505 CI[-0.0718,-0.0292]排零(dev 0.0159不显著→test显著)**|kddocre 0.0113不排零|**docunetL-cloud 0.0413排零(dev 0.0249排零→同向复现)**|docunetL-local 两侧均0(NA塌陷);③§1贡献5→3:删(v)研究纲领、(iii)工具包与(iv)工作流合并为一条『处方』、新增主轴表述『demonstration on one reading』;弱轴(量化/温度)§4.2改标Appendix checks only并删抬高语;仍16页=正文10页(Limitations收p10)+refs p11-13+附录p14-16,0错0overfull;④ATLOP本地化4处环境级适配(AdamW守卫/补meta中rel2id并核验列序/Tokenizer守卫/attn_implementation=eager+.attentions)——冒烟通过,完整探针已启动(atlop_D_s20260917全量2748篇30epoch,独立目录_atlop_probe不碰冻结件),完成后按dev logits翻转数判门;⑤**修订80撤销**:对标Mizrahi et al. TACL2024(1轴+20模型×39任务×6.5M规模的『单轴+框架+处方』形态),本文通货是形式化+戏剧性实例,新增3个LLM属model breadth既换不来同级可信度又加重分散感;此前『做19h版本』的建议据对标撤回"
+  },
+  {
+   "at": "2026-10-15T19:42:15",
+   "sha256_after_amendment": "06b2fb64e9b0147dcc0e8902ab4cab878ea1f7fabcf3c548032689b3236a0ebb",
+   "content": "修订79探针结论:重训不能找回该臂,已判定——atlop_D_s20260917 按留档配方本地重训(PE8 2748篇/排305校准/30ep/20610步,best_ep=21 calibF1=0.5288 vs 留档 ep18 0.5336);门1 dev logits:sha 65612d7ae6df→e1dbaefd9f4e,**L∞=18.81/RMSE=1.884,解码翻转2,462格(0.0134%)/2,366行(1.25%)**;对照r45同ckpt跨硬件推断噪声(L∞=6.5e-4/0翻转)大2.9万倍⇒**非推断噪声而是训练层面分叉**;门2 臂值(同run同总体同管线):冻结Γ(gD)=+0.1748/Γ(gR)=+0.1516/|arm|=0.0233 vs 探针+0.1745/+0.1688/0.0056 ⇒ **臂移动0.0176(缩至1/4)且差异几乎全在gR侧(+0.0173)**;判定=重训产物是另一个模型不是同一个臂 ⇒ **atlop_pe8/atlop_full不可迁移**;不再续训其余11个;**X2重训建议彻底作废**(校验依据更弱,无dev logits);这是独立于docunet-large的**第二例训练硬件敏感性且换架构+配方**⇒该披露由单例升级为跨架构复现;入稿安排=与『哪些生成器可迁移/为何其余不可』一并随Phase-3 test迁移段落入稿(届时整体重排版面),现在不单独插正文;★修订79 run范围最终结论(有据):接受14-run子集(已完成4族9 run的test推断+计分,TTM-RE 2 run待接线),ATLOP/X2/P3M如实记不可迁移(权重未保留+重训实测不可复现)"
+  },
+  {
+   "at": "2026-10-15T20:06:02",
+   "sha256_after_amendment": "af0f5b06a83169c25350f4dc6403008f234bbdbcdbb86207575e488004262f37",
+   "content": "修订79续:TTM-RE接线完成,test迁移扩至5族6臂——r31_ttmre_infer参数化(--dev/--out/--ckpt,dev冻结件未触碰),test推断=docred_aligned/test.json 500篇→201,108全对×97;checkpoint=官方s74+自训s2(cloud66/args.json证实seed=20261010);桥接+臂脚本rev79_ttmre_test_arm.py逐字复用r31(列置换门/签名→vertex映射门/行覆盖门/decode_native/gamma/bootstrap),**dev复现门PASS:s74复现0.0382 CI[0.0124,0.0640]、s2复现0.0461 CI[0.0193,0.0729]均与冻结逐位一致**;test臂=s74 0.0162 CI[0.0009,0.0425]排零、s2 0.0331 CI[0.0070,0.0598]排零;**test迁移汇总:dev侧3个排零臂(docunetL 0.025/s74 0.038/s2 0.046)在未见种群全部同向复现且排零(0.041/0.016/0.033);docunet从不显著变显著(0.0159→0.0505);近零臂dreeam/kddocre保持不显著且点符号翻转=杠杆近零符号不可稳亦复现;atlop_pe8/atlop_full/x2/p3m不可迁移(权重未保留+ATLOP探针实测重训臂移动0.0176)如实记Limitations**"
+  },
+  {
+   "at": "2026-10-15T20:22:54",
+   "sha256_after_amendment": "431120c95aa0963d74ac8c730b040b0c89cf461781a9074648db74e65b3937d8",
+   "content": "修订79 Phase-3落稿完成:test迁移正式入正文——§4.2新段『Replication on an unseen population (gold axis)』(500篇test-revised与评测子集不相交/双金标同页/196,144候选对/候选空间与dev逐条一致已验;三个dev显著臂全部复现:DocuNet-L 0.025→0.041、TTM-RE 0.038→0.016、0.046→0.033同向排零;DocuNet转显著0.016→0.051;近零臂不显著符号不稳;四臂不可迁移[权重未保留;同配方ATLOP重训使该臂0.023→0.006]);等量压缩=§3.6 roadmap(原贡献v)压4行与贡献5→3一致+§4.2弱轴尾段再压3行;终态main.pdf/camera 16页=正文恰10页(Limitations收p10)+refs p11-13+附录p14-16,0错0overfull;stage45 26/26 ALL PASS;内容校验10/10;方法论注记=pdftotext对斜体emph运行有提取盲区(demonstration on one reading提取不到但渲染正确),版面验收须以渲染页为准;**修订79闭环:Phase0→Phase1→口径对齐→TTM-RE接线→Phase3落稿;修订80撤销**;剩余作者侧=Zenodo最终包/投稿系统/通读"
+  },
+  {
+   "at": "2026-10-15T21:48:59",
+   "sha256_after_amendment": "a5a8f4ae9d5541366c0ea45d2fca331d5a299d7bf547164766e0d6d4d3ef4cc4",
+   "content": "修订79附:语言终检完成+七层终检体系落地——tacl_final_inspection.py 41项自动化建成并全PASS(L1硬性格式/L2结构交叉引用/L3数字-冻结件对账/L4匿名泄漏终扫;人工层L5语言四遍法/L6叙事通读/L7提交机制);摘要压缩255→约225词(三处切口:共线披露压缩、种子处方括注细节移§3.4、失败实例名移§4.3,诚实性限定全保留),41/41全PASS;检查器自身修正4处(acceptedWithA查非注释行/摘要剥footnote/删两个论文本不主张的计数针/emph与textbf改查源文件——pdftotext对斜体粗体有提取盲区,以渲染页目视确认);终态main.pdf/camera 16页=正文恰10页(Limitations收p10)+refs p11-13+附录p14-16,0错0overfull,stage45 26/26;登记62条(语言层不触数据不新增修订);补充包132文件待最终刷新"
+  },
+  {
+   "at": "2026-10-20T09:43:32",
+   "sha256_after_amendment": "c242970f9401873f1724f82c0702865478db5494b9f620235c893efc256a8bdc",
+   "content": "修订120:收尾批——①总审计:15项核心数字-冻结件对账全PASS(12.62只引Δ值/14,866为LaTeX逗号格式,均非失配);②camera双build:main与main_camera均20p一致;③cover letter完成(cover_letter.tex/pdf,只从稿内收缩句派生,104 logged已与登记账对齐——首稿误写106已纠);④补充包重打包:161文件(含ud_mech_pathb全套29件:五语言冻结件/脚本/对齐/phase4),supplement.zip sha256=36e15d2ecb0fbab3,supplement_anon.zip sha256=9cc9f5f731247863;⑤§7快照重锚×2(73→104 logged amendments,双build重编译20p/41-41);⑥HF监控复核:无撞车(first-class criterion命中=加维度类工作,criterion leakage=污染类,优先权句成立);**投稿包完备:main.pdf/main_camera.pdf/cover_letter.pdf/supplement.zip/anon版/登记账105条**"
+  }
+ ]
+}
