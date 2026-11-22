@@ -11,7 +11,7 @@
 # EvalLever — v1.0.1 ([venue] submission snapshot, rev211 + r48–r64 additions)
 
 Artifacts backing **"When Model Rankings Move Without Model Change:
-A Preregistered Audit of Evaluation Contracts in Structured Prediction"**
+A Preregistered Audit of Evaluation Contracts in Neural Prediction Pipelines"**
 (Hao Lu, Weixing Zhu, Ruiyang Li; submitted to *[venue]*
 (NLP track), 2026-11). A preprint of the earlier version is available as
 arXiv:2611.04099; the revised version accompanies this submission (arXiv v2).
@@ -20,7 +20,7 @@ The v1.0 baseline (197 files, frozen 2026-10-30, [venue] submission [id])
 is **byte-identical to tag `v1.0-submission`**. v1.0.1 **adds** the
 paper-cited evidence series that postdate that freeze — the r48–r64
 statistics, their paired analysis scripts, and two UD phase-4 reports —
-without modifying any v1.0 file. `MANIFEST.txt` covers all 272 files in
+without modifying any v1.0 file. `MANIFEST.txt` covers all 321 files in
 three labeled blocks.
 
 ## Layout
@@ -111,12 +111,11 @@ for reproducibility: `dreeam/official_code_YoumiMa-dreeam-476a700.tar.gz`
 
 ## Citation
 
-Zenodo concept DOI: *to be minted at public release* (see
-`RELEASE_CHECKLIST.md`). Until then, cite the paper.
-
+Archived snapshot DOI: 10.5281/zenodo.24442304 (see
+`RELEASE_CHECKLIST.md`). 
 ## Contact
 
-Corresponding author: Weixing Zhu ([email redacted]). First author: Hao Lu
+Corresponding author: Hao Lu (luhao_0210@163.com) ([email redacted]). First author: Hao Lu
 ([email redacted]).
 
 ## Artifact field semantics (2026-11-22)
