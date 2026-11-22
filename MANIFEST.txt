@@ -287,6 +287,9 @@ a7a1fa7ac0d250a304162ec5a348cac59d2950bc8223584c4597886018a5e545         1,675  
 4ee6469da0c8d5f6aa36e6a866a402080fc41b5557c8b96ea576091d844396fd         2,405  statistics/stage45_final_integrity.json
 85ea83a72e5e1fb91dfe2860f56648677e2396e607a14ca4e8264e17f42ee7df         3,765  statistics/ud_mech_phase4_report.json
 4f7af55029e4c965113ed2d8fc6f20b2b16d9d7067c1318f7ac6f7fe7359cff1           227  statistics/ud_mech_slice.json
+6a462fe65a826c89144449ae30b52e3261c97fd5344bf45076783429fd7df27a       422,638  statistics/atlop_pe8_perdoc_snapshot/per_doc_atlop_D_s20260917.json
+e662c9ebf7fc27341ed2f1f9d560f08418bc492ccc9e44b9635e5abf8c7283d4       422,924  statistics/atlop_pe8_perdoc_snapshot/per_doc_atlop_D_s20260918.json
+167a8aa405a44b821b70fdcc901f770b6f54e800c726f00e688674e8d263f29c       422,332  statistics/atlop_pe8_perdoc_snapshot/per_doc_atlop_D_s20260919.json
 9f53015087287211c45ae2ebee3ff5d89d01e80b66890b79f72b60a385926255        18,447  theory/E5_report.json
 124acc3af382109837962fb9b74bb4793ec99b28e0c2a3164244bb61c14d50ac         6,432  theory/kitagawa_decomposition.csv
 2e578c965f8b12c184787faa4350391334e14cb65b655f8c73714b438c677529    18,395,580  ttmre/keys_evaluation.jsonl
