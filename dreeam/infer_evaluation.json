@@ -1,0 +1,9 @@
+{
+ "n": 189556,
+ "n_docs": 498,
+ "logits_sha256": "503cfa88deeb085eb7bd277ab739a6d294590ffdb7f85ae3aed2fea0bf53f59a",
+ "ckpt_sha256": "78e39be39f36598864de3294f0b7858f601a3ec2939ddba0a58a9aad9365d053",
+ "code_sha256": "dd8710cb5d90ba3c56c10b26226a337ec955dbd6b518a9f64c079e832fe5e8b9",
+ "deterministic": true,
+ "ts": "2026-10-08T06:47:03"
+}

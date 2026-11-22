@@ -1,0 +1,44 @@
+{
+ "subset_498": {
+  "label": "PE8 subset (doc_idx 0-497)",
+  "n_docs": 498,
+  "sentences_per_doc": {
+   "mean": 8.21,
+   "median": 8.0,
+   "p10": 5,
+   "p90": 12
+  },
+  "gold_triples_per_doc": {
+   "mean": 12.33,
+   "median": 11.0,
+   "p10": 5,
+   "p90": 23
+  },
+  "inter_sentence_distance_of_gold_triples": {
+   "mean": 2.05,
+   "median": 1,
+   "n": 6141
+  }
+ },
+ "unmatched_500": {
+  "label": "dev remainder (doc_idx 498-997)",
+  "n_docs": 500,
+  "sentences_per_doc": {
+   "mean": 7.93,
+   "median": 7.0,
+   "p10": 5,
+   "p90": 12
+  },
+  "gold_triples_per_doc": {
+   "mean": 12.27,
+   "median": 11.0,
+   "p10": 4,
+   "p90": 24
+  },
+  "inter_sentence_distance_of_gold_triples": {
+   "mean": 2.01,
+   "median": 1.0,
+   "n": 6134
+  }
+ }
+}

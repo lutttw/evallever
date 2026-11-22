@@ -1,0 +1,460 @@
+{
+ "questions_full": 11873,
+ "answerable": 5928,
+ "systems": [
+  "roberta-squad2",
+  "minilm-squad2",
+  "distilbert-squad1"
+ ],
+ "primary_rho_v2full_f1_official": {
+  "roberta-squad2": {
+   "rho": 0.189037737267854,
+   "ci95": [
+    0.18306114639001528,
+    0.19501173250908052
+   ]
+  },
+  "minilm-squad2": {
+   "rho": 0.20694541951571768,
+   "ci95": [
+    0.20081180334321785,
+    0.2132217673078579
+   ]
+  },
+  "distilbert-squad1": {
+   "rho": 0.18763661499539042,
+   "ci95": [
+    0.1816437091654553,
+    0.19372877574066322
+   ]
+  }
+ },
+ "arms_vs_baseline": {
+  "roberta-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'bertscore', 'official')": {
+   "abs_delta": 0.600997868370429,
+   "ci95_abs_delta": [
+    0.5911422441038926,
+    0.6108211110380478
+   ]
+  },
+  "minilm-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'bertscore', 'official')": {
+   "abs_delta": 0.5653367999526839,
+   "ci95_abs_delta": [
+    0.5554221163898432,
+    0.5752337500338297
+   ]
+  },
+  "distilbert-squad1: ('v2full', 'f1', 'official') -> ('v11sub', 'bertscore', 'official')": {
+   "abs_delta": 0.6028145487971446,
+   "ci95_abs_delta": [
+    0.5929239205357834,
+    0.6124900339607843
+   ]
+  },
+  "roberta-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'em', 'official')": {
+   "abs_delta": 0.18647858545567308,
+   "ci95_abs_delta": [
+    0.17973686513039458,
+    0.19334821289172302
+   ]
+  },
+  "minilm-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'em', 'official')": {
+   "abs_delta": 0.1928243869618954,
+   "ci95_abs_delta": [
+    0.18601676433031789,
+    0.1996938755413922
+   ]
+  },
+  "distilbert-squad1: ('v2full', 'f1', 'official') -> ('v11sub', 'em', 'official')": {
+   "abs_delta": 0.18198541326590265,
+   "ci95_abs_delta": [
+    0.17517465492782647,
+    0.1887488355188065
+   ]
+  },
+  "roberta-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'em', 'verbatim')": {
+   "abs_delta": 0.1908645503679538,
+   "ci95_abs_delta": [
+    0.1840014554389884,
+    0.1978317419151237
+   ]
+  },
+  "minilm-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'em', 'verbatim')": {
+   "abs_delta": 0.19737904283234076,
+   "ci95_abs_delta": [
+    0.19047141085670644,
+    0.20439511584125664
+   ]
+  },
+  "distilbert-squad1: ('v2full', 'f1', 'official') -> ('v11sub', 'em', 'verbatim')": {
+   "abs_delta": 0.18637137817818336,
+   "ci95_abs_delta": [
+    0.17951200715439353,
+    0.19324148510130815
+   ]
+  },
+  "roberta-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'f1', 'official')": {
+   "abs_delta": 0.0,
+   "ci95_abs_delta": [
+    0.0,
+    0.0
+   ]
+  },
+  "minilm-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'f1', 'official')": {
+   "abs_delta": 0.0,
+   "ci95_abs_delta": [
+    0.0,
+    0.0
+   ]
+  },
+  "distilbert-squad1: ('v2full', 'f1', 'official') -> ('v11sub', 'f1', 'official')": {
+   "abs_delta": 0.0,
+   "ci95_abs_delta": [
+    0.0,
+    0.0
+   ]
+  },
+  "roberta-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'f1', 'verbatim')": {
+   "abs_delta": 0.01401006503470592,
+   "ci95_abs_delta": [
+    0.010462273200488297,
+    0.017590375163815748
+   ]
+  },
+  "minilm-squad2: ('v2full', 'f1', 'official') -> ('v11sub', 'f1', 'verbatim')": {
+   "abs_delta": 0.015094390056468676,
+   "ci95_abs_delta": [
+    0.011501270484708753,
+    0.018690161441672952
+   ]
+  },
+  "distilbert-squad1: ('v2full', 'f1', 'official') -> ('v11sub', 'f1', 'verbatim')": {
+   "abs_delta": 0.012205277917033797,
+   "ci95_abs_delta": [
+    0.008739640882534426,
+    0.015608374084232518
+   ]
+  },
+  "roberta-squad2: ('v2full', 'f1', 'official') -> ('v2full', 'bertscore', 'official')": {
+   "abs_delta": 0.7899549342408574,
+   "ci95_abs_delta": [
+    0.7840641654164583,
+    0.7959495361790776
+   ]
+  },
+  "minilm-squad2: ('v2full', 'f1', 'official') -> ('v2full', 'bertscore', 'official')": {
+   "abs_delta": 0.7722886662528538,
+   "ci95_abs_delta": [
+    0.7661199729641596,
+    0.7785231111814358
+   ]
+  },
+  "distilbert-squad1: ('v2full', 'f1', 'official') -> ('v2full', 'bertscore', 'official')": {
+   "abs_delta": 0.7908823693777101,
+   "ci95_abs_delta": [
+    0.7849595572350585,
+    0.7968779117195607
+   ]
+  },
+  "roberta-squad2: ('v2full', 'f1', 'official') -> ('v2full', 'em', 'official')": {
+   "abs_delta": 0.09310579083477051,
+   "ci95_abs_delta": [
+    0.08940935836437294,
+    0.09693373323711987
+   ]
+  },
+  "minilm-squad2: ('v2full', 'f1', 'official') -> ('v2full', 'em', 'official')": {
+   "abs_delta": 0.0962741485648207,
+   "ci95_abs_delta": [
+    0.09251158744909269,
+    0.10013591626393879
+   ]
+  },
+  "distilbert-squad1: ('v2full', 'f1', 'official') -> ('v2full', 'em', 'official')": {
+   "abs_delta": 0.09086242144700335,
+   "ci95_abs_delta": [
+    0.08712280820714703,
+    0.09465643937670562
+   ]
+  },
+  "roberta-squad2: ('v2full', 'f1', 'official') -> ('v2full', 'em', 'verbatim')": {
+   "abs_delta": 0.09529563333455994,
+   "ci95_abs_delta": [
+    0.091530009420167,
+    0.09921660476192314
+   ]
+  },
+  "minilm-squad2: ('v2full', 'f1', 'official') -> ('v2full', 'em', 'verbatim')": {
+   "abs_delta": 0.0985482157761405,
+   "ci95_abs_delta": [
+    0.0947352425932848,
+    0.10247263592863362
+   ]
+  },
+  "distilbert-squad1: ('v2full', 'f1', 'official') -> ('v2full', 'em', 'verbatim')": {
+   "abs_delta": 0.09305226394679278,
+   "ci95_abs_delta": [
+    0.08925504702496781,
+    0.09693444994490366
+   ]
+  },
+  "roberta-squad2: ('v2full', 'f1', 'official') -> ('v2full', 'f1', 'verbatim')": {
+   "abs_delta": 0.0069950025710213415,
+   "ci95_abs_delta": [
+    0.0052106013221830646,
+    0.008759750584269433
+   ]
+  },
+  "minilm-squad2: ('v2full', 'f1', 'official') -> ('v2full', 'f1', 'verbatim')": {
+   "abs_delta": 0.007536388802724364,
+   "ci95_abs_delta": [
+    0.005723446034571351,
+    0.009352828297845308
+   ]
+  },
+  "distilbert-squad1: ('v2full', 'f1', 'official') -> ('v2full', 'f1', 'verbatim')": {
+   "abs_delta": 0.006093901077417363,
+   "ci95_abs_delta": [
+    0.004386741072850374,
+    0.00781263097085898
+   ]
+  }
+ },
+ "tau_axis": {
+  "roberta-squad2": {
+   "abs_delta": 0.12136780931525311,
+   "ci95_abs_delta": [
+    0.11555630421965805,
+    0.1273477638339089
+   ]
+  },
+  "minilm-squad2": {
+   "abs_delta": 0.12473679777646762,
+   "ci95_abs_delta": [
+    0.11884106796934221,
+    0.13080097700665375
+   ]
+  },
+  "distilbert-squad1": {
+   "abs_delta": 0.11875684325781186,
+   "ci95_abs_delta": [
+    0.11286111345068645,
+    0.12465257306493725
+   ]
+  }
+ },
+ "rank_flips": {
+  "('v2full', 'em', 'verbatim') -> ('v2full', 'f1', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v2full', 'em', 'verbatim') -> ('v2full', 'f1', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'verbatim') -> ('v2full', 'em', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'verbatim') -> ('v2full', 'em', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'verbatim') -> ('v11sub', 'f1', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'verbatim') -> ('v11sub', 'f1', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'verbatim') -> ('v2full', 'f1', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'verbatim') -> ('v2full', 'bertscore', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'verbatim') -> ('v2full', 'f1', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v2full', 'em', 'official') -> ('v2full', 'em', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v2full', 'em', 'official') -> ('v2full', 'f1', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v2full', 'em', 'official') -> ('v2full', 'f1', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'verbatim') -> ('v2full', 'em', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'verbatim') -> ('v2full', 'em', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'verbatim') -> ('v2full', 'f1', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'verbatim') -> ('v2full', 'bertscore', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'verbatim') -> ('v2full', 'f1', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'bertscore', 'official') -> ('v2full', 'em', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'bertscore', 'official') -> ('v11sub', 'em', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'bertscore', 'official') -> ('v2full', 'em', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'bertscore', 'official') -> ('v11sub', 'f1', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'bertscore', 'official') -> ('v11sub', 'em', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'bertscore', 'official') -> ('v11sub', 'f1', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'bertscore', 'official') -> ('v2full', 'f1', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'bertscore', 'official') -> ('v2full', 'bertscore', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'bertscore', 'official') -> ('v2full', 'f1', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'official') -> ('v2full', 'em', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'official') -> ('v11sub', 'em', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'official') -> ('v2full', 'em', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'official') -> ('v11sub', 'f1', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'official') -> ('v11sub', 'f1', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'official') -> ('v2full', 'f1', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'official') -> ('v2full', 'bertscore', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'em', 'official') -> ('v2full', 'f1', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'official') -> ('v2full', 'em', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'official') -> ('v2full', 'em', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'official') -> ('v11sub', 'f1', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'official') -> ('v2full', 'f1', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'official') -> ('v2full', 'bertscore', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v11sub', 'f1', 'official') -> ('v2full', 'f1', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v2full', 'bertscore', 'official') -> ('v2full', 'em', 'verbatim')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v2full', 'bertscore', 'official') -> ('v2full', 'em', 'official')": {
+   "pairwise_flips": 1,
+   "total_pairs": 3
+  },
+  "('v2full', 'bertscore', 'official') -> ('v2full', 'f1', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v2full', 'bertscore', 'official') -> ('v2full', 'f1', 'official')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  },
+  "('v2full', 'f1', 'official') -> ('v2full', 'f1', 'verbatim')": {
+   "pairwise_flips": 0,
+   "total_pairs": 3
+  }
+ },
+ "grid_means": {
+  "v2full|em|official|roberta-squad2": 0.09593194643308346,
+  "v2full|em|official|minilm-squad2": 0.11067127095089699,
+  "v2full|em|official|distilbert-squad1": 0.0967741935483871,
+  "v2full|em|verbatim|roberta-squad2": 0.09374210393329403,
+  "v2full|em|verbatim|minilm-squad2": 0.10839720373957719,
+  "v2full|em|verbatim|distilbert-squad1": 0.09458435104859766,
+  "v2full|f1|official|roberta-squad2": 0.189037737267854,
+  "v2full|f1|official|minilm-squad2": 0.20694541951571768,
+  "v2full|f1|official|distilbert-squad1": 0.18763661499539042,
+  "v2full|f1|verbatim|roberta-squad2": 0.19603273983887537,
+  "v2full|f1|verbatim|minilm-squad2": 0.21448180831844205,
+  "v2full|f1|verbatim|distilbert-squad1": 0.1937305160728078,
+  "v11sub|em|official|roberta-squad2": 0.19197031039136303,
+  "v11sub|em|official|minilm-squad2": 0.2216599190283401,
+  "v11sub|em|official|distilbert-squad1": 0.1938259109311741,
+  "v11sub|em|verbatim|roberta-squad2": 0.18758434547908232,
+  "v11sub|em|verbatim|minilm-squad2": 0.21710526315789475,
+  "v11sub|em|verbatim|distilbert-squad1": 0.18943994601889338,
+  "v11sub|f1|official|roberta-squad2": 0.3784488958470361,
+  "v11sub|f1|official|minilm-squad2": 0.4144843059902355,
+  "v11sub|f1|official|distilbert-squad1": 0.37581132419707663,
+  "v11sub|f1|verbatim|roberta-squad2": 0.39245896088174204,
+  "v11sub|f1|verbatim|minilm-squad2": 0.4295786960467042,
+  "v11sub|f1|verbatim|distilbert-squad1": 0.38801660211411054,
+  "v2full|bertscore|official|roberta-squad2": 0.9789926715087114,
+  "v2full|bertscore|official|minilm-squad2": 0.9792340857685714,
+  "v2full|bertscore|official|distilbert-squad1": 0.9785189843731007,
+  "v11sub|bertscore|official|roberta-squad2": 0.9794467642174651,
+  "v11sub|bertscore|official|minilm-squad2": 0.9798211059429194,
+  "v11sub|bertscore|official|distilbert-squad1": 0.9786258729942213
+ }
+}

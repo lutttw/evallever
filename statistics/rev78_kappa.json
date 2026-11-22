@@ -1,0 +1,318 @@
+{
+ "amendment": 78,
+ "n_rows": 50,
+ "detection": {
+  "agreement": "50/50",
+  "rate": 1.0,
+  "round1_all_violation": true,
+  "annot2_all_violation": true,
+  "oob_program_truth_hit": "0/29",
+  "oob_program_truth_rate": 0.0,
+  "a2_categories_on_oob_rows": {
+   "rel_unmapped": 27,
+   "其他": 2
+  }
+ },
+ "classification": {
+  "n": 21,
+  "labels": [
+   "ambiguous",
+   "parse_fail",
+   "rel_unmapped",
+   "self_pair",
+   "其他/越界"
+  ],
+  "raw_agreement": "14/21",
+  "raw_rate": 0.6666666666666666,
+  "cohen_kappa": 0.5611940298507463,
+  "po": 0.6666666666666666,
+  "pe": 0.2403628117913832,
+  "confusion": [
+   [
+    0,
+    0,
+    0,
+    0,
+    3
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    4
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    9,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ]
+ },
+ "full_50_row_confusion": {
+  "parse_fail -> 其他": 3,
+  "parse_fail -> oob_index": 1,
+  "oob_index -> rel_unmapped": 27,
+  "oob_index -> 其他": 2,
+  "rel_unmapped -> rel_unmapped": 5,
+  "self_pair -> self_pair": 9,
+  "ambiguous -> 其他": 2,
+  "ambiguous -> oob_index": 1
+ },
+ "disagreements_merged": [
+  {
+   "blind": "B01",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B02",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B04",
+   "r1": "ambiguous",
+   "a2": "oob_index",
+   "note": "尾实体不是标准编号，并且超出实体表范围",
+   "marked": "Rage Against the Machine | P36 | 1999"
+  },
+  {
+   "blind": "B05",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B06",
+   "r1": "parse_fail",
+   "a2": "其他",
+   "note": "最后一个三元组缺少右括号，并且整个三元组缺少右括号，以及整个json输出格式缺少三元组",
+   "marked": "<<PARSE_FAIL>> | <<PARSE_FAIL>> | <<PARSE_FAIL>>"
+  },
+  {
+   "blind": "B07",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B08",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B09",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B11",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B12",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B13",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B14",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B15",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B17",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B18",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B19",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B21",
+   "r1": "ambiguous",
+   "a2": "其他",
+   "note": "F列不是G列中的输出三元组",
+   "marked": "Die Haut | P162 | German"
+  },
+  {
+   "blind": "B25",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B26",
+   "r1": "ambiguous",
+   "a2": "其他",
+   "note": "F列不是G列中的输出三元组",
+   "marked": "Grand Duchy of Finland | P178 | Finnish"
+  },
+  {
+   "blind": "B27",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B28",
+   "r1": "parse_fail",
+   "a2": "其他",
+   "note": "最后一个三元组缺少右括号，并且整个三元组缺少右括号，以及整个json输出格式缺少三元组",
+   "marked": "<<PARSE_FAIL>> | <<PARSE_FAIL>> | <<PARSE_FAIL>>"
+  },
+  {
+   "blind": "B30",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B31",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B33",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B35",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B37",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B38",
+   "r1": "parse_fail",
+   "a2": "oob_index",
+   "note": "1.整个json输出格式缺少三元组\n2.头/尾的编号超出实体表范围",
+   "marked": "<<PARSE_FAIL>> | <<PARSE_FAIL>> | <<PARSE_FAIL>>"
+  },
+  {
+   "blind": "B39",
+   "r1": "parse_fail",
+   "a2": "其他",
+   "note": "同一组头尾实体对应了多种关系，头实体E8、尾实体E7有两组关系P17和P131",
+   "marked": "<<PARSE_FAIL>> | <<PARSE_FAIL>> | <<PARSE_FAIL>>"
+  },
+  {
+   "blind": "B40",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B41",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B42",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B43",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B46",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  },
+  {
+   "blind": "B50",
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "note": "头尾实体的编号超出实体表范围",
+   "marked": "<<VIOLATION>> | <<VIOLATION>> | <<VIOLATION>>"
+  }
+ ]
+}

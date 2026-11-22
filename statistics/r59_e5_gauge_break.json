@@ -1,0 +1,19 @@
+{
+ "config": {
+  "task": "synthetic 6-class, N=6000, frozen predictions (seed 20261027)",
+  "rename": "bijection swapping neg<->pos and mix<->q, applied to gold AND predictions (gauge transformation)",
+  "scorers_gauge_safe": "accuracy, macro-F1 (factor through the joint partition)",
+  "scorer_gauge_breaking": "gold-identity-weighted accuracy w=[1,2,1,1.5,1.5,1] (references label names outside the partition)"
+ },
+ "acc_before": 0.7675,
+ "acc_after_rename": 0.7675,
+ "macroF1_before": 0.767439,
+ "macroF1_after_rename": 0.767439,
+ "wacc_before": 0.770209,
+ "wacc_after_rename": 0.76719,
+ "arm": {
+  "accuracy": 0.0,
+  "macroF1": 0.0,
+  "weighted_acc": -0.003019
+ }
+}

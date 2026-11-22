@@ -1,0 +1,473 @@
+{
+ "spec": "fixed-band tie rule sweep on r60 point layer; flip pairs = r60 flip_detail; coverage = flips with |delta|<eps; lost = non-flip pairs tied at eps (orderings destroyed); AER row = registered bootstrap-CI rule (r60)",
+ "grids": {
+  "de-en": {
+   "n_systems": 16,
+   "n_pairs": 120,
+   "n_flips": 11,
+   "aer_registered": {
+    "rule": "bootstrap-CI (r60, R=2000)",
+    "flip_coverage": 11,
+    "note": "ties on flips = coverage count; total ties at R=2000 in r60 bundle"
+   },
+   "band_sweep": {
+    "aer": {
+     "flip_deltas_sorted": [
+      0.0043,
+      0.0045,
+      0.0185,
+      0.0231,
+      0.0367,
+      0.0644,
+      0.0669,
+      0.0689,
+      0.0732,
+      0.0874,
+      0.0917
+     ],
+     "full_coverage": null,
+     "sweep": [
+      {
+       "eps": 0.0043,
+       "coverage": 0,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0045,
+       "coverage": 1,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0185,
+       "coverage": 2,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0231,
+       "coverage": 3,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0367,
+       "coverage": 4,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0644,
+       "coverage": 5,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0669,
+       "coverage": 6,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0689,
+       "coverage": 7,
+       "orderings_lost": 1
+      },
+      {
+       "eps": 0.0732,
+       "coverage": 8,
+       "orderings_lost": 1
+      },
+      {
+       "eps": 0.0874,
+       "coverage": 9,
+       "orderings_lost": 1
+      },
+      {
+       "eps": 0.0917,
+       "coverage": 10,
+       "orderings_lost": 1
+      }
+     ],
+     "full_coverage_cost": {
+      "eps_star": 0.0917,
+      "coverage": 11,
+      "orderings_lost": 1,
+      "note": "eps* = max flip delta (<=); coverage includes ties at point level"
+     }
+    },
+    "bleu13a": {
+     "flip_deltas_sorted": [
+      0.1531,
+      0.1662,
+      0.2375,
+      0.3717,
+      0.409,
+      0.5379,
+      0.6258,
+      0.6275,
+      0.7807,
+      0.7938,
+      0.9469
+     ],
+     "full_coverage": null,
+     "sweep": [
+      {
+       "eps": 0.1531,
+       "coverage": 0,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.1662,
+       "coverage": 1,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.2375,
+       "coverage": 2,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.3717,
+       "coverage": 3,
+       "orderings_lost": 1
+      },
+      {
+       "eps": 0.409,
+       "coverage": 4,
+       "orderings_lost": 1
+      },
+      {
+       "eps": 0.5379,
+       "coverage": 5,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.6258,
+       "coverage": 6,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.6275,
+       "coverage": 7,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.7807,
+       "coverage": 8,
+       "orderings_lost": 3
+      },
+      {
+       "eps": 0.7938,
+       "coverage": 9,
+       "orderings_lost": 4
+      },
+      {
+       "eps": 0.9469,
+       "coverage": 10,
+       "orderings_lost": 6
+      }
+     ],
+     "full_coverage_cost": {
+      "eps_star": 0.9469,
+      "coverage": 11,
+      "orderings_lost": 6,
+      "note": "eps* = max flip delta (<=); coverage includes ties at point level"
+     }
+    },
+    "chrf": {
+     "flip_deltas_sorted": [
+      0.0004,
+      0.0256,
+      0.0729,
+      0.0985,
+      0.1959,
+      0.321,
+      0.3214,
+      0.3939,
+      0.4195,
+      0.4199,
+      0.4646
+     ],
+     "full_coverage": null,
+     "sweep": [
+      {
+       "eps": 0.0004,
+       "coverage": 0,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0256,
+       "coverage": 1,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0729,
+       "coverage": 2,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0985,
+       "coverage": 3,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.1959,
+       "coverage": 4,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.321,
+       "coverage": 5,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.3214,
+       "coverage": 6,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.3939,
+       "coverage": 7,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.4195,
+       "coverage": 8,
+       "orderings_lost": 3
+      },
+      {
+       "eps": 0.4199,
+       "coverage": 9,
+       "orderings_lost": 3
+      },
+      {
+       "eps": 0.4646,
+       "coverage": 10,
+       "orderings_lost": 4
+      }
+     ],
+     "full_coverage_cost": {
+      "eps_star": 0.4646,
+      "coverage": 11,
+      "orderings_lost": 4,
+      "note": "eps* = max flip delta (<=); coverage includes ties at point level"
+     }
+    },
+    "bertscore": {
+     "flip_deltas_sorted": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0002
+     ],
+     "full_coverage": null,
+     "sweep": [
+      {
+       "eps": 0.0,
+       "coverage": 0,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0,
+       "coverage": 1,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0,
+       "coverage": 2,
+       "orderings_lost": 1
+      },
+      {
+       "eps": 0.0,
+       "coverage": 3,
+       "orderings_lost": 1
+      },
+      {
+       "eps": 0.0001,
+       "coverage": 4,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.0001,
+       "coverage": 5,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.0001,
+       "coverage": 6,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.0001,
+       "coverage": 7,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.0001,
+       "coverage": 8,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.0001,
+       "coverage": 9,
+       "orderings_lost": 2
+      },
+      {
+       "eps": 0.0002,
+       "coverage": 10,
+       "orderings_lost": 4
+      }
+     ],
+     "full_coverage_cost": {
+      "eps_star": 0.0002,
+      "coverage": 11,
+      "orderings_lost": 4,
+      "note": "eps* = max flip delta (<=); coverage includes ties at point level"
+     }
+    }
+   }
+  },
+  "zh-en": {
+   "n_systems": 15,
+   "n_pairs": 105,
+   "n_flips": 3,
+   "aer_registered": {
+    "rule": "bootstrap-CI (r60, R=2000)",
+    "flip_coverage": 3,
+    "note": "ties on flips = coverage count; total ties at R=2000 in r60 bundle"
+   },
+   "band_sweep": {
+    "aer": {
+     "flip_deltas_sorted": [
+      0.0207,
+      0.0519,
+      0.0633
+     ],
+     "full_coverage": null,
+     "sweep": [
+      {
+       "eps": 0.0207,
+       "coverage": 0,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.0519,
+       "coverage": 1,
+       "orderings_lost": 1
+      },
+      {
+       "eps": 0.0633,
+       "coverage": 2,
+       "orderings_lost": 1
+      }
+     ],
+     "full_coverage_cost": {
+      "eps_star": 0.0633,
+      "coverage": 3,
+      "orderings_lost": 1,
+      "note": "eps* = max flip delta (<=); coverage includes ties at point level"
+     }
+    },
+    "bleu13a": {
+     "flip_deltas_sorted": [
+      0.127,
+      0.3228,
+      2.2832
+     ],
+     "full_coverage": null,
+     "sweep": [
+      {
+       "eps": 0.127,
+       "coverage": 0,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 0.3228,
+       "coverage": 1,
+       "orderings_lost": 0
+      },
+      {
+       "eps": 2.2832,
+       "coverage": 2,
+       "orderings_lost": 11
+      }
+     ],
+     "full_coverage_cost": {
+      "eps_star": 2.2832,
+      "coverage": 3,
+      "orderings_lost": 11,
+      "note": "eps* = max flip delta (<=); coverage includes ties at point level"
+     }
+    },
+    "chrf": {
+     "flip_deltas_sorted": [
+      0.5274,
+      0.6004,
+      0.6075
+     ],
+     "full_coverage": null,
+     "sweep": [
+      {
+       "eps": 0.5274,
+       "coverage": 0,
+       "orderings_lost": 5
+      },
+      {
+       "eps": 0.6004,
+       "coverage": 1,
+       "orderings_lost": 5
+      },
+      {
+       "eps": 0.6075,
+       "coverage": 2,
+       "orderings_lost": 6
+      }
+     ],
+     "full_coverage_cost": {
+      "eps_star": 0.6075,
+      "coverage": 3,
+      "orderings_lost": 6,
+      "note": "eps* = max flip delta (<=); coverage includes ties at point level"
+     }
+    },
+    "bertscore": {
+     "flip_deltas_sorted": [
+      0.0003,
+      0.0007,
+      0.0008
+     ],
+     "full_coverage": null,
+     "sweep": [
+      {
+       "eps": 0.0003,
+       "coverage": 0,
+       "orderings_lost": 5
+      },
+      {
+       "eps": 0.0007,
+       "coverage": 1,
+       "orderings_lost": 15
+      },
+      {
+       "eps": 0.0008,
+       "coverage": 2,
+       "orderings_lost": 15
+      }
+     ],
+     "full_coverage_cost": {
+      "eps_star": 0.0008,
+      "coverage": 3,
+      "orderings_lost": 15,
+      "note": "eps* = max flip delta (<=); coverage includes ties at point level"
+     }
+    }
+   }
+  }
+ },
+ "headline": {
+  "finding": "no single contract achieves AER-grade coverage cheaply on both grids: at full flip coverage, BERTScore+band costs 4 orderings on de-en but 15/102 (15%) on zh-en; AER costs 1/109 and 1/102 (1%) on both grids with one registered CI procedure. On de-en BERTScore covers by abstaining (all 11 flip-pair point deltas ~0), i.e. it cannot order the flipping pairs at all.",
+  "equal_budget_note": "r60 singles coverage (9-10/14) already uses the SAME bootstrap tie rule as AER (col_mat per contract, identical indices) - the equal-budget comparison is in the paper; this sweep adds the cheaper fixed-band variant."
+ }
+}

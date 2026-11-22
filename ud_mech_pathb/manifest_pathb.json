@@ -1,0 +1,35 @@
+{
+ "udmap_pathb.json": "747eed95779de529b5fe1d9646861949d012e6e2f795a439bec7b45c267fe060",
+ "align": {
+  "ar_dev.jsonl": "4e23eee5ba67cd3944614ae1a2526e99f99408b4348e04eac18500dea8ea2e5e",
+  "cs_dev.jsonl": "6ebb3077d094cff9c3b679fcd7f1defe942a2c8d8e8230804b23276d049e158c",
+  "hi_dev.jsonl": "381980359251729b39cc644628a12ca784e421ca8d009037cdf85d7aed2e7dfd"
+ },
+ "diagnostics": {
+  "ar_dev": {
+   "sentences": 430,
+   "documents": 430,
+   "drift": 0,
+   "mappable_pct": 100.0,
+   "upos_diff_pct": 10.14,
+   "dep_or_head_diff_pct": 16.74
+  },
+  "cs_dev": {
+   "sentences": 9270,
+   "documents": 533,
+   "drift": 0,
+   "mappable_pct": 100.0,
+   "upos_diff_pct": 7.82,
+   "dep_or_head_diff_pct": 20.5
+  },
+  "hi_dev": {
+   "sentences": 1659,
+   "documents": 1,
+   "drift": 0,
+   "mappable_pct": 100.0,
+   "upos_diff_pct": 3.06,
+   "dep_or_head_diff_pct": 19.09
+  }
+ },
+ "note": "Path B (rev113): ar/cs/hi replication of the UD gold-axis mechanism suite; v1.4->v2.0, official migration map only"
+}

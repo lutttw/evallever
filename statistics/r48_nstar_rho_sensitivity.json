@@ -1,0 +1,62 @@
+{
+ "meta": {
+  "source": "r2_seed_convergence.json",
+  "method": "t-quantile CI, per-seed sigma anchored at n=10 batch; enumerate subsets per frozen protocol",
+  "analytic_note": "under equal-sigma, SE_subset = sd_mean identically, so rho cancels; sensitivity appears only via t and per-seed sigma scaling",
+  "rho_hat": 0.3385424306757302,
+  "sigma_exact_mean": 0.008612699552083177,
+  "t_used": {
+   "2": 12.7062,
+   "3": 4.3027,
+   "5": 2.7764,
+   "8": 2.3646,
+   "12": 2.201,
+   "15": 2.1448
+  }
+ },
+ "rows": [
+  {
+   "rho": 0.0,
+   "n_star": 8,
+   "frac_at_nstar": 0.9742035742035742
+  },
+  {
+   "rho": 0.14,
+   "n_star": 8,
+   "frac_at_nstar": 0.9847707847707847
+  },
+  {
+   "rho": 0.339,
+   "n_star": 8,
+   "frac_at_nstar": 0.9869463869463869
+  },
+  {
+   "rho": 0.56,
+   "n_star": 8,
+   "frac_at_nstar": 0.9878787878787879
+  },
+  {
+   "rho": 0.8,
+   "n_star": 8,
+   "frac_at_nstar": 0.9885003885003885
+  }
+ ],
+ "frozen_headline": {
+  "min_n_95pct_trackB_full_pool": 8,
+  "min_n_90pct_trackB_full_pool": 5,
+  "min_n_95pct_trackA_exact_5seed_pool": 5,
+  "curve_trackB": {
+   "2": 0.7619047619047619,
+   "3": 0.8021978021978022,
+   "5": 0.9134199134199135,
+   "8": 0.9912975912975913,
+   "12": 1.0,
+   "15": 1.0
+  },
+  "curve_trackA": {
+   "2": 0.6,
+   "3": 0.6,
+   "5": 1.0
+  }
+ }
+}

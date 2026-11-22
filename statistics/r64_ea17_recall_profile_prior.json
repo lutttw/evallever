@@ -1,0 +1,190 @@
+{
+ "meta": {
+  "experiment": "E-A17 decomposed prior for the remittance h_a: per-class recall profile x added-region composition",
+  "strata": "relation class (rel2id); sentence-distance stratification unavailable (prepared space has no vertex mapping)",
+  "premium": "predicted - measured = difficulty premium of the under-annotated stratum (non-random gD omissions)",
+  "added_total": 10887
+ },
+ "added_composition": {
+  "P1001": 194,
+  "P1056": 13,
+  "P108": 54,
+  "P112": 29,
+  "P118": 30,
+  "P123": 16,
+  "P127": 85,
+  "P131": 3212,
+  "P1336": 2,
+  "P1344": 223,
+  "P136": 9,
+  "P1365": 6,
+  "P1366": 7,
+  "P137": 29,
+  "P1376": 25,
+  "P140": 63,
+  "P1412": 48,
+  "P1441": 81,
+  "P150": 370,
+  "P155": 60,
+  "P156": 69,
+  "P161": 91,
+  "P162": 27,
+  "P166": 42,
+  "P17": 1283,
+  "P170": 75,
+  "P171": 12,
+  "P172": 30,
+  "P175": 150,
+  "P176": 45,
+  "P178": 67,
+  "P179": 13,
+  "P19": 42,
+  "P194": 23,
+  "P20": 26,
+  "P205": 48,
+  "P206": 125,
+  "P22": 55,
+  "P241": 37,
+  "P25": 25,
+  "P26": 64,
+  "P264": 60,
+  "P27": 416,
+  "P272": 23,
+  "P276": 49,
+  "P279": 29,
+  "P30": 108,
+  "P31": 40,
+  "P3373": 63,
+  "P35": 36,
+  "P355": 63,
+  "P36": 24,
+  "P361": 338,
+  "P364": 7,
+  "P37": 26,
+  "P39": 3,
+  "P40": 90,
+  "P400": 21,
+  "P403": 46,
+  "P449": 24,
+  "P463": 210,
+  "P488": 32,
+  "P495": 129,
+  "P50": 43,
+  "P527": 395,
+  "P551": 14,
+  "P569": 25,
+  "P57": 19,
+  "P570": 38,
+  "P571": 105,
+  "P576": 15,
+  "P577": 103,
+  "P58": 16,
+  "P580": 41,
+  "P582": 14,
+  "P585": 49,
+  "P6": 56,
+  "P607": 94,
+  "P674": 48,
+  "P676": 15,
+  "P69": 33,
+  "P706": 89,
+  "P710": 232,
+  "P740": 18,
+  "P749": 57,
+  "P800": 545,
+  "P840": 2,
+  "P86": 39,
+  "P937": 40
+ },
+ "systems": {
+  "atlop_base": {
+   "per_seed": [
+    {
+     "n_classes_with_recall": 94,
+     "h_a_hat": 5653.3,
+     "h_a_measured": 1574,
+     "premium": 4079.3
+    }
+   ],
+   "h_a_hat_mean": 5653.3,
+   "h_a_measured_mean": 1574.0,
+   "premium_pct_of_hat": 72.2
+  },
+  "docunet": {
+   "per_seed": [
+    {
+     "n_classes_with_recall": 94,
+     "h_a_hat": 5458.3,
+     "h_a_measured": 1685,
+     "premium": 3773.3
+    },
+    {
+     "n_classes_with_recall": 94,
+     "h_a_hat": 5153.8,
+     "h_a_measured": 1702,
+     "premium": 3451.8
+    }
+   ],
+   "h_a_hat_mean": 5306.1,
+   "h_a_measured_mean": 1693.5,
+   "premium_pct_of_hat": 68.1
+  },
+  "dreeam": {
+   "per_seed": [
+    {
+     "n_classes_with_recall": 94,
+     "h_a_hat": 5205.6,
+     "h_a_measured": 1341,
+     "premium": 3864.6
+    },
+    {
+     "n_classes_with_recall": 94,
+     "h_a_hat": 5268.8,
+     "h_a_measured": 1359,
+     "premium": 3909.8
+    },
+    {
+     "n_classes_with_recall": 94,
+     "h_a_hat": 5222.2,
+     "h_a_measured": 1332,
+     "premium": 3890.2
+    }
+   ],
+   "h_a_hat_mean": 5232.2,
+   "h_a_measured_mean": 1344.0,
+   "premium_pct_of_hat": 74.3
+  },
+  "kddocre": {
+   "per_seed": [
+    {
+     "n_classes_with_recall": 94,
+     "h_a_hat": 5600.2,
+     "h_a_measured": 1501,
+     "premium": 4099.2
+    },
+    {
+     "n_classes_with_recall": 94,
+     "h_a_hat": 5359.3,
+     "h_a_measured": 1626,
+     "premium": 3733.3
+    }
+   ],
+   "h_a_hat_mean": 5479.8,
+   "h_a_measured_mean": 1563.5,
+   "premium_pct_of_hat": 71.5
+  },
+  "ttmre_release": {
+   "per_seed": [
+    {
+     "n_classes_with_recall": 94,
+     "h_a_hat": 9540.0,
+     "h_a_measured": 5854,
+     "premium": 3686.0
+    }
+   ],
+   "h_a_hat_mean": 9540.0,
+   "h_a_measured_mean": 5854.0,
+   "premium_pct_of_hat": 38.6
+  }
+ }
+}

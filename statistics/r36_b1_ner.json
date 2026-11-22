@@ -1,0 +1,86 @@
+{
+ "meta": {
+  "amendment": 69,
+  "design": "B1 boundary verification: NER (CoNLL-2003) natural dual gold (strict vs relaxed span), disagreement set per sentence = strict-wrong and relaxed-correct; arm_D = |Y intersect D|/|D| per model from P1 stored per-sentence error flags (no new inference)",
+  "models": [
+   "bert-base (dslim)",
+   "roberta-large (Jean-Baptiste)",
+   "distilbert (elastic)"
+  ],
+  "n_sentences": 3453,
+  "b1_reference": "p1_cross_task.json results.ner (B1: leverage transfer fails, r=-1.0/-0.26)"
+ },
+ "per_model": {
+  "bert-base (dslim)": {
+   "strict_err_rate": 0.1393,
+   "relaxed_err_rate": 0.1303,
+   "D_size": 31,
+   "D_density": 0.009,
+   "Y_intersect_D": 31,
+   "arm_D": 1.0,
+   "strict_f1": 0.912879,
+   "relaxed_f1": 0.926066,
+   "rescue_rate_of_strict_errors": 0.0644,
+   "strict_errors": 481
+  },
+  "roberta-large (Jean-Baptiste)": {
+   "strict_err_rate": 0.1266,
+   "relaxed_err_rate": 0.1167,
+   "D_size": 34,
+   "D_density": 0.0098,
+   "Y_intersect_D": 34,
+   "arm_D": 1.0,
+   "strict_f1": 0.924916,
+   "relaxed_f1": 0.937929,
+   "rescue_rate_of_strict_errors": 0.0778,
+   "strict_errors": 437
+  },
+  "distilbert (elastic)": {
+   "strict_err_rate": 0.1668,
+   "relaxed_err_rate": 0.1544,
+   "D_size": 43,
+   "D_density": 0.0125,
+   "Y_intersect_D": 43,
+   "arm_D": 1.0,
+   "strict_f1": 0.894322,
+   "relaxed_f1": 0.912373,
+   "rescue_rate_of_strict_errors": 0.0747,
+   "strict_errors": 576
+  }
+ },
+ "verdict": {
+  "D_size_note": "D is per-model (see per_model D_size)",
+  "arm_D_values": {
+   "bert-base (dslim)": 1.0,
+   "roberta-large (Jean-Baptiste)": 1.0,
+   "distilbert (elastic)": 1.0
+  },
+  "arm_D_spread": 0.0,
+  "arm_D_mean": 1.0,
+  "b1_reading": "rescuable fraction of strict errors is 6.4-7.8% per model, near-identical across generators and an order of magnitude below the DocRED gold-revision disagreement density (~19% of candidate pairs re-labeled): NER strict/relaxed dual-gold does not supply a usable disagreement set — B1 mechanically confirmed",
+  "rescue_rates": {
+   "bert-base (dslim)": 0.0644,
+   "roberta-large (Jean-Baptiste)": 0.0778,
+   "distilbert (elastic)": 0.0747
+  },
+  "arm_D_note": "arm_D=1.0 by construction under this D definition (D subset of strict-error set); the informative quantity is the rescue rate, not arm_D"
+ },
+ "rescue": {
+  "D_sizes": {
+   "bert-base (dslim)": 31,
+   "roberta-large (Jean-Baptiste)": 34,
+   "distilbert (elastic)": 43
+  },
+  "strict_errors": {
+   "bert-base (dslim)": 481,
+   "roberta-large (Jean-Baptiste)": 437,
+   "distilbert (elastic)": 576
+  },
+  "rescue_rates": {
+   "bert-base (dslim)": 0.0644,
+   "roberta-large (Jean-Baptiste)": 0.0778,
+   "distilbert (elastic)": 0.0747
+  },
+  "reading": "rescuable fraction of strict errors is 6.4-7.8% per model, near-identical across generators and an order of magnitude below the DocRED gold-revision disagreement density (~19% of candidate pairs re-labeled): NER strict/relaxed dual-gold does not supply a usable disagreement set — B1 mechanically confirmed"
+ }
+}

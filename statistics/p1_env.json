@@ -1,0 +1,25 @@
+{
+  "checked_at_utc": "2026-10-06T04:42:14Z",
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "LAPTOP-3NEH48E9",
+    "hf_endpoint": "https://hf-mirror.com",
+    "hf_home": "E:\\WorkBuddy\\参考文献解读\\04_文档级IE\\.hf_cache",
+    "seed": 20260926,
+    "torch": "2.11.0+cu128",
+    "transformers": "5.11.0",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "vram_total_gb": 7.96,
+    "cuda_smoketest": "ok",
+    "datasets": "5.0.0",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "pyarrow": "24.0.0",
+    "disk_free_gb": {
+      "C": 568.4,
+      "E": 1078.1
+    }
+  }
+}

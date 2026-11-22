@@ -1,0 +1,135 @@
+{
+ "meta": {
+  "experiment": "E-A19 threshold-axis algebra: symmetric-difference decomposition (unified local-action algebra with the gold-axis E-A16)",
+  "policies": {
+   "fixed": "sigmoid(logit) > 0.5  (logit > 0)",
+   "native": "registry decode variant (fmt-probed)"
+  },
+  "algebra": "within S = P_native XOR P_fixed, each prediction is a TP/FP under exactly one policy; gold status of that prediction determines the count change; outside S counts are untouched",
+  "registry_link": "the fixed-vs-decoded contrast carries 10 of 13 registry flips; this experiment gives each flip an exact count-level attribution"
+ },
+ "systems": {
+  "ledger": {
+   "atlop_base": [
+    {
+     "seed": 0,
+     "S_size": 646398,
+     "S_goldpos": 3506,
+     "S_goldneg": 642892,
+     "identity_confined": true
+    }
+   ],
+   "docunet": [
+    {
+     "seed": 0,
+     "S_size": 13785,
+     "S_goldpos": 3378,
+     "S_goldneg": 10407,
+     "identity_confined": true
+    },
+    {
+     "seed": 1,
+     "S_size": 12480,
+     "S_goldpos": 3240,
+     "S_goldneg": 9240,
+     "identity_confined": true
+    }
+   ],
+   "dreeam": [
+    {
+     "seed": 0,
+     "S_size": 639379,
+     "S_goldpos": 3416,
+     "S_goldneg": 635963,
+     "identity_confined": true
+    },
+    {
+     "seed": 1,
+     "S_size": 561414,
+     "S_goldpos": 3463,
+     "S_goldneg": 557951,
+     "identity_confined": true
+    },
+    {
+     "seed": 2,
+     "S_size": 542826,
+     "S_goldpos": 3358,
+     "S_goldneg": 539468,
+     "identity_confined": true
+    }
+   ],
+   "kddocre": [
+    {
+     "seed": 0,
+     "S_size": 2552996,
+     "S_goldpos": 3362,
+     "S_goldneg": 2549634,
+     "identity_confined": true
+    },
+    {
+     "seed": 1,
+     "S_size": 5851201,
+     "S_goldpos": 3127,
+     "S_goldneg": 5848074,
+     "identity_confined": true
+    }
+   ],
+   "ttmre_release": [
+    {
+     "seed": 0,
+     "S_size": 31570,
+     "S_goldpos": 5245,
+     "S_goldneg": 26325,
+     "identity_confined": true
+    }
+   ]
+  },
+  "identity_all_systems": true
+ },
+ "sweep": {
+  "system": "dreeam seed0",
+  "deltas_vs_tau0": {
+   "tau=-2": -0.0001,
+   "tau=-1": -0.0001,
+   "tau=1": 0.0002,
+   "tau=2": 0.0004
+  },
+  "note": "any scalar-threshold delta is exact algebra over the score histogram; a per-bin precision profile (one gD reconciliation) would predict these without re-decoding"
+ },
+ "registry_attribution": {
+  "atlop_base": {
+   "delta_native_minus_fixed_mean": 0.6032,
+   "per_seed": [
+    0.6032
+   ]
+  },
+  "docunet": {
+   "delta_native_minus_fixed_mean": 0.4735,
+   "per_seed": [
+    0.4641,
+    0.4829
+   ]
+  },
+  "dreeam": {
+   "delta_native_minus_fixed_mean": 0.6091,
+   "per_seed": [
+    0.6096,
+    0.6124,
+    0.6054
+   ]
+  },
+  "kddocre": {
+   "delta_native_minus_fixed_mean": 0.5951,
+   "per_seed": [
+    0.6115,
+    0.5787
+   ]
+  },
+  "ttmre_release": {
+   "delta_native_minus_fixed_mean": 0.5432,
+   "per_seed": [
+    0.5432
+   ]
+  }
+ }
+}

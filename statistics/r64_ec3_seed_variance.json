@@ -1,0 +1,235 @@
+{
+ "meta": {
+  "experiment": "E-C3/N8: training-seed variance vs document-bootstrap variance",
+  "tier": "exploratory, post-review R14",
+  "note": "published CIs condition on a single checkpoint (document bootstrap only); this file quantifies the seed component on every arm with >=2 seeds; combined width is the naive independent-variance approximation, disclosed as such"
+ },
+ "arms": [
+  {
+   "label": "X2 dose r=.25 Delta (gR-gD re-annotation arm)",
+   "per_seed": [
+    -0.00207,
+    -0.00284,
+    -0.00807,
+    0.01945,
+    0.01009
+   ],
+   "n_seeds": 5,
+   "seed_mean": 0.00331,
+   "seed_sd": 0.01121,
+   "seed_range": [
+    -0.00807,
+    0.01945
+   ],
+   "t_ci95_seedmean": [
+    -0.0106,
+    0.01723
+   ],
+   "seed_cv": 3.385,
+   "published_boot_ci95": [
+    -0.00673,
+    0.0124
+   ],
+   "boot_halfwidth": 0.00956,
+   "combined_halfwidth_naive": 0.01688,
+   "width_inflation_factor": 1.766,
+   "seed_sd_over_boot_halfwidth": 1.172,
+   "sign_stable_across_seeds": false
+  },
+  {
+   "label": "X2 dose r=1.0 Delta (gR-gD re-annotation arm)",
+   "per_seed": [
+    0.00576,
+    -0.00284,
+    0.02124,
+    0.02391,
+    -0.00262
+   ],
+   "n_seeds": 5,
+   "seed_mean": 0.00909,
+   "seed_sd": 0.01282,
+   "seed_range": [
+    -0.00284,
+    0.02391
+   ],
+   "t_ci95_seedmean": [
+    -0.00683,
+    0.02501
+   ],
+   "seed_cv": 1.411,
+   "published_boot_ci95": [
+    -0.001,
+    0.01982
+   ],
+   "boot_halfwidth": 0.01041,
+   "combined_halfwidth_naive": 0.01902,
+   "width_inflation_factor": 1.828,
+   "seed_sd_over_boot_halfwidth": 1.232,
+   "sign_stable_across_seeds": false
+  },
+  {
+   "label": "HaCRED Gamma under fixed contract",
+   "per_seed": [
+    -0.002,
+    -0.0025,
+    -0.003,
+    -0.0016,
+    -0.0005
+   ],
+   "n_seeds": 5,
+   "seed_mean": -0.00192,
+   "seed_sd": 0.00095,
+   "seed_range": [
+    -0.003,
+    -0.0005
+   ],
+   "t_ci95_seedmean": [
+    -0.0031,
+    -0.00074
+   ],
+   "seed_cv": 0.496,
+   "published_boot_ci95": [
+    -0.0035,
+    -0.0003
+   ],
+   "boot_halfwidth": 0.0016,
+   "combined_halfwidth_naive": 0.00199,
+   "width_inflation_factor": 1.243,
+   "seed_sd_over_boot_halfwidth": 0.595,
+   "sign_stable_across_seeds": true
+  },
+  {
+   "label": "HaCRED Gamma gold-bearing",
+   "per_seed": [
+    0.0291,
+    0.0281,
+    -0.0204,
+    -0.02,
+    -0.0848
+   ],
+   "n_seeds": 5,
+   "seed_mean": -0.0136,
+   "seed_sd": 0.04669,
+   "seed_range": [
+    -0.0848,
+    0.0291
+   ],
+   "t_ci95_seedmean": [
+    -0.07156,
+    0.04436
+   ],
+   "seed_cv": 3.433,
+   "published_boot_ci95": [
+    -0.0226,
+    -0.0041
+   ],
+   "boot_halfwidth": 0.00925,
+   "combined_halfwidth_naive": 0.05869,
+   "width_inflation_factor": 6.345,
+   "seed_sd_over_boot_halfwidth": 5.047,
+   "sign_stable_across_seeds": false
+  },
+  {
+   "label": "HaCRED J = gold-bearing minus fixed",
+   "per_seed": [
+    0.0311,
+    0.0306,
+    -0.0174,
+    -0.0184,
+    -0.0842
+   ],
+   "n_seeds": 5,
+   "seed_mean": -0.01166,
+   "seed_sd": 0.04731,
+   "seed_range": [
+    -0.0842,
+    0.0311
+   ],
+   "t_ci95_seedmean": [
+    -0.0704,
+    0.04708
+   ],
+   "seed_cv": 4.058,
+   "published_boot_ci95": [
+    -0.0205,
+    -0.0024
+   ],
+   "boot_halfwidth": 0.00905,
+   "combined_halfwidth_naive": 0.05943,
+   "width_inflation_factor": 6.567,
+   "seed_sd_over_boot_halfwidth": 5.228,
+   "sign_stable_across_seeds": false
+  },
+  {
+   "label": "HaCRED absolute Gamma, F1_multi_fixed (n=5)",
+   "per_seed": [
+    0.0803,
+    0.1072,
+    0.0755,
+    0.0865,
+    0.0467
+   ],
+   "n_seeds": 5,
+   "seed_mean": 0.07924,
+   "seed_sd": 0.02184,
+   "seed_range": [
+    0.0467,
+    0.1072
+   ],
+   "t_ci95_seedmean": [
+    0.05212,
+    0.10636
+   ],
+   "seed_cv": 0.276,
+   "sign_stable_across_seeds": true
+  },
+  {
+   "label": "HaCRED absolute Gamma, F1_multi_cal (n=5)",
+   "per_seed": [
+    0.0829,
+    0.1095,
+    0.0838,
+    0.0853,
+    0.0466
+   ],
+   "n_seeds": 5,
+   "seed_mean": 0.08162,
+   "seed_sd": 0.02249,
+   "seed_range": [
+    0.0466,
+    0.1095
+   ],
+   "t_ci95_seedmean": [
+    0.0537,
+    0.10954
+   ],
+   "seed_cv": 0.276,
+   "sign_stable_across_seeds": true
+  },
+  {
+   "label": "TTM-RE arm_gold, seed1(20260910) vs seed2(20261010)",
+   "per_seed": [
+    0.0382,
+    0.0461
+   ],
+   "n_seeds": 2,
+   "seed_mean": 0.04215,
+   "seed_sd": 0.00559,
+   "seed_range": [
+    0.0382,
+    0.0461
+   ],
+   "t_ci95_seedmean": [
+    -0.00804,
+    0.09234
+   ],
+   "seed_cv": 0.133,
+   "sign_stable_across_seeds": true
+  }
+ ],
+ "summary_counts": {
+  "arms_with_5_seeds": 7,
+  "arms_sign_stable": 4,
+  "arms_total": 8
+ }
+}

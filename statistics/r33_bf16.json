@@ -1,0 +1,52 @@
+{
+ "meta": {
+  "amendment": 66,
+  "design": "BF16 vs NF4 greedy, same en_json prompt grid (1500), same parser (d5_llm_hook), HacRED-en char-layer ESS grouping",
+  "purpose": "test whether NF4 quantization confounds LLM-side leverage arms",
+  "bf16_model": "Qwen2.5-7B-Instruct, torch.bfloat16, cloud RTX 24GB GPU, greedy",
+  "nf4_model": "Qwen2.5-7B-Instruct, NF4 double-quant fp16-compute, local RTX 5060, greedy",
+  "bootstrap_reps": 10000
+ },
+ "arms": [
+  {
+   "setting": "qwen2.5-7b-instruct_en_json",
+   "load": "NF4",
+   "violation_rate": 0.1976,
+   "gap_F1": 0.0057,
+   "gap_R": 0.0022,
+   "ci95_gap_F1": [
+    -0.005,
+    0.0165
+   ],
+   "parse_fail": 16,
+   "mapped": 8019,
+   "n_triples": 9994
+  },
+  {
+   "setting": "qwen-bf16_en_json",
+   "load": "BF16",
+   "violation_rate": 0.1574,
+   "gap_F1": -0.0014,
+   "gap_R": -0.0084,
+   "ci95_gap_F1": [
+    -0.0159,
+    0.0125
+   ],
+   "parse_fail": 17,
+   "mapped": 9832,
+   "n_triples": 11669
+  }
+ ],
+ "delta_gap_F1": -0.0071,
+ "sign_flip": true,
+ "verdict": "quantization is a load-bearing contract axis: BF16 flips the gap sign (+0.0057 -> -0.0014) with 22% more mapped triples and lower violation rate",
+ "violation_delta": -0.0402,
+ "paired_delta_gap_F1": {
+  "point": -0.0071,
+  "ci95": [
+   -0.0226,
+   0.008
+  ],
+  "excludes_zero": false
+ }
+}

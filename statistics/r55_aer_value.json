@@ -1,0 +1,132 @@
+{
+ "de-en": {
+  "e1_registry_sensitivity": {
+   "full_set_tau": 0.7,
+   "loo": {
+    "drop_bleu13a": 0.6666666666666666,
+    "drop_chrf": 0.7,
+    "drop_bertscore": 0.6833333333333333
+   },
+   "pairs": {
+    "bleu13a+chrf": 0.6833333333333333,
+    "bleu13a+bertscore": 0.7,
+    "chrf+bertscore": 0.6666666666666666
+   },
+   "single": {
+    "bleu13a": 0.6833333333333333,
+    "chrf": 0.6666666666666666,
+    "bertscore": 0.65
+   },
+   "tau_range_full_vs_loo": [
+    0.6666666666666666,
+    0.7
+   ]
+  },
+  "e2_triage": {
+   "ties_n": 13,
+   "ordered_n": 107,
+   "total_pairs": 120,
+   "human_load_if_triage": "13/120",
+   "tied_abs_mqm_median": 2.1733005050505056,
+   "ordered_abs_mqm_median": 3.1729808467741947,
+   "tied_pairs": [
+    "Facebook_FAIR.6750|NEU.6801",
+    "MLLP-UPV.6899|RWTH_Aachen_System.6818",
+    "MLLP-UPV.6899|UCAM.6461",
+    "MLLP-UPV.6899|dfki-nmt.6478",
+    "MLLP-UPV.6899|online-Y.0",
+    "RWTH_Aachen_System.6818|UCAM.6461",
+    "RWTH_Aachen_System.6818|dfki-nmt.6478",
+    "RWTH_Aachen_System.6818|online-Y.0",
+    "TartuNLP-c.6502|online-G.0",
+    "UCAM.6461|dfki-nmt.6478",
+    "UCAM.6461|online-Y.0",
+    "dfki-nmt.6478|online-Y.0",
+    "online-G.0|uedin.6749"
+   ]
+  }
+ },
+ "zh-en": {
+  "e1_registry_sensitivity": {
+   "full_set_tau": 0.7523809523809524,
+   "loo": {
+    "drop_bleu13a": 0.7714285714285715,
+    "drop_chrf": 0.7523809523809524,
+    "drop_bertscore": 0.7523809523809524
+   },
+   "pairs": {
+    "bleu13a+chrf": 0.7523809523809524,
+    "bleu13a+bertscore": 0.7523809523809524,
+    "chrf+bertscore": 0.7714285714285715
+   },
+   "single": {
+    "bleu13a": 0.7333333333333333,
+    "chrf": 0.7523809523809524,
+    "bertscore": 0.7714285714285715
+   },
+   "tau_range_full_vs_loo": [
+    0.7523809523809524,
+    0.7714285714285715
+   ]
+  },
+  "e2_triage": {
+   "ties_n": 3,
+   "ordered_n": 102,
+   "total_pairs": 105,
+   "human_load_if_triage": "3/105",
+   "tied_abs_mqm_median": 2.1390013152185645,
+   "ordered_abs_mqm_median": 4.588766329910172,
+   "tied_pairs": [
+    "Baidu-system.6940|MSRA.MASS.6942",
+    "NICT.6814|online-Y.0",
+    "online-A.0|online-Y.0"
+   ]
+  }
+ },
+ "e5_segment_metaeval": {
+  "de-en": {
+   "segment_pairwise_acc": {
+    "bleu13a": {
+     "acc": 0.5259,
+     "n": 18873
+    },
+    "chrf": {
+     "acc": 0.5267,
+     "n": 18873
+    },
+    "bertscore": {
+     "acc": 0.5276,
+     "n": 18873
+    }
+   },
+   "aer": {
+    "aer_zmean": {
+     "acc": 0.5276,
+     "n": 18873
+    }
+   }
+  },
+  "zh-en": {
+   "segment_pairwise_acc": {
+    "bleu13a": {
+     "acc": 0.5448,
+     "n": 8589
+    },
+    "chrf": {
+     "acc": 0.544,
+     "n": 8589
+    },
+    "bertscore": {
+     "acc": 0.5478,
+     "n": 8589
+    }
+   },
+   "aer": {
+    "aer_zmean": {
+     "acc": 0.5485,
+     "n": 8589
+    }
+   }
+  }
+ }
+}

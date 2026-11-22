@@ -1,0 +1,718 @@
+{
+ "de-en": {
+  "sents": 2000,
+  "systems": [
+   "Facebook_FAIR.6750",
+   "JHU.6809",
+   "MLLP-UPV.6899",
+   "MSRA.MADL.6910",
+   "NEU.6801",
+   "PROMT_NMT_DE-EN.6683",
+   "RWTH_Aachen_System.6818",
+   "TartuNLP-c.6502",
+   "UCAM.6461",
+   "dfki-nmt.6478",
+   "online-A.0",
+   "online-B.0",
+   "online-G.0",
+   "online-X.0",
+   "online-Y.0",
+   "uedin.6749"
+  ],
+  "rho": {
+   "bleu|13a|Facebook_FAIR.6750": 40.74707562183042,
+   "bleu|none|Facebook_FAIR.6750": 35.92643933620105,
+   "chrf|13a|Facebook_FAIR.6750": 63.57458587976058,
+   "bleu|13a|JHU.6809": 38.06184777611786,
+   "bleu|none|JHU.6809": 33.17379269879799,
+   "chrf|13a|JHU.6809": 61.73202613971082,
+   "bleu|13a|MLLP-UPV.6899": 39.30757388003688,
+   "bleu|none|MLLP-UPV.6899": 34.30011539786361,
+   "chrf|13a|MLLP-UPV.6899": 62.0990210426455,
+   "bleu|13a|MSRA.MADL.6910": 42.78532446090207,
+   "bleu|none|MSRA.MADL.6910": 37.89635941875298,
+   "chrf|13a|MSRA.MADL.6910": 64.87815790359318,
+   "bleu|13a|NEU.6801": 40.509599052932465,
+   "bleu|none|NEU.6801": 35.901912813550695,
+   "chrf|13a|NEU.6801": 63.378694920795496,
+   "bleu|13a|PROMT_NMT_DE-EN.6683": 32.07974998932797,
+   "bleu|none|PROMT_NMT_DE-EN.6683": 27.463147276422855,
+   "chrf|13a|PROMT_NMT_DE-EN.6683": 56.054717946556934,
+   "bleu|13a|RWTH_Aachen_System.6818": 39.56344218145196,
+   "bleu|none|RWTH_Aachen_System.6818": 34.959654817517794,
+   "chrf|13a|RWTH_Aachen_System.6818": 62.493255649624714,
+   "bleu|13a|TartuNLP-c.6502": 33.923412824275715,
+   "bleu|none|TartuNLP-c.6502": 28.656072317781454,
+   "chrf|13a|TartuNLP-c.6502": 57.916385474396456,
+   "bleu|13a|UCAM.6461": 39.716547656391086,
+   "bleu|none|UCAM.6461": 35.054683138412166,
+   "chrf|13a|UCAM.6461": 62.49289982645231,
+   "bleu|13a|dfki-nmt.6478": 38.76964788899394,
+   "bleu|none|dfki-nmt.6478": 34.093246556880565,
+   "chrf|13a|dfki-nmt.6478": 62.07337262374158,
+   "bleu|13a|online-A.0": 36.41403920725689,
+   "bleu|none|online-A.0": 31.181081249688603,
+   "chrf|13a|online-A.0": 60.527209644571776,
+   "bleu|13a|online-B.0": 45.199720153452276,
+   "bleu|none|online-B.0": 39.858103023890266,
+   "chrf|13a|online-B.0": 65.94041733335747,
+   "bleu|13a|online-G.0": 34.33922175747701,
+   "bleu|none|online-G.0": 29.379898385582862,
+   "chrf|13a|online-G.0": 58.913420374856685,
+   "bleu|13a|online-X.0": 28.567853828683337,
+   "bleu|none|online-X.0": 24.13174697204898,
+   "chrf|13a|online-X.0": 53.61696205588318,
+   "bleu|13a|online-Y.0": 38.93589568250511,
+   "bleu|none|online-Y.0": 34.588076318596755,
+   "chrf|13a|online-Y.0": 62.17190347895988,
+   "bleu|13a|uedin.6749": 34.96500231524322,
+   "bleu|none|uedin.6749": 29.789678643600713,
+   "chrf|13a|uedin.6749": 58.4487739661977,
+   "bertscore|official|Facebook_FAIR.6750": 0.9877300903267238,
+   "bertscore|official|JHU.6809": 0.9870096815663638,
+   "bertscore|official|MLLP-UPV.6899": 0.9874129775060804,
+   "bertscore|official|MSRA.MADL.6910": 0.9882726762136241,
+   "bertscore|official|NEU.6801": 0.9877382730442299,
+   "bertscore|official|PROMT_NMT_DE-EN.6683": 0.9848379168093867,
+   "bertscore|official|RWTH_Aachen_System.6818": 0.9874427115259595,
+   "bertscore|official|TartuNLP-c.6502": 0.9859767234766799,
+   "bertscore|official|UCAM.6461": 0.9873816282265332,
+   "bertscore|official|dfki-nmt.6478": 0.9874962902060833,
+   "bertscore|official|online-A.0": 0.9866469707365382,
+   "bertscore|official|online-B.0": 0.9884863108142611,
+   "bertscore|official|online-G.0": 0.986015694384908,
+   "bertscore|official|online-X.0": 0.9838590830145426,
+   "bertscore|official|online-Y.0": 0.987478559253734,
+   "bertscore|official|uedin.6749": 0.9862542228204232
+  },
+  "arms": {
+   "Facebook_FAIR.6750: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 40.74707562183042,
+    "rho_to": 35.92643933620105,
+    "abs_delta": 4.820636285629369
+   },
+   "JHU.6809: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 38.06184777611786,
+    "rho_to": 33.17379269879799,
+    "abs_delta": 4.888055077319869
+   },
+   "MLLP-UPV.6899: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 39.30757388003688,
+    "rho_to": 34.30011539786361,
+    "abs_delta": 5.00745848217327
+   },
+   "MSRA.MADL.6910: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 42.78532446090207,
+    "rho_to": 37.89635941875298,
+    "abs_delta": 4.8889650421490884
+   },
+   "NEU.6801: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 40.509599052932465,
+    "rho_to": 35.901912813550695,
+    "abs_delta": 4.607686239381771
+   },
+   "PROMT_NMT_DE-EN.6683: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 32.07974998932797,
+    "rho_to": 27.463147276422855,
+    "abs_delta": 4.616602712905117
+   },
+   "RWTH_Aachen_System.6818: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 39.56344218145196,
+    "rho_to": 34.959654817517794,
+    "abs_delta": 4.603787363934167
+   },
+   "TartuNLP-c.6502: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 33.923412824275715,
+    "rho_to": 28.656072317781454,
+    "abs_delta": 5.267340506494261
+   },
+   "UCAM.6461: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 39.716547656391086,
+    "rho_to": 35.054683138412166,
+    "abs_delta": 4.66186451797892
+   },
+   "dfki-nmt.6478: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 38.76964788899394,
+    "rho_to": 34.093246556880565,
+    "abs_delta": 4.676401332113372
+   },
+   "online-A.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 36.41403920725689,
+    "rho_to": 31.181081249688603,
+    "abs_delta": 5.2329579575682885
+   },
+   "online-B.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 45.199720153452276,
+    "rho_to": 39.858103023890266,
+    "abs_delta": 5.34161712956201
+   },
+   "online-G.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 34.33922175747701,
+    "rho_to": 29.379898385582862,
+    "abs_delta": 4.9593233718941505
+   },
+   "online-X.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 28.567853828683337,
+    "rho_to": 24.13174697204898,
+    "abs_delta": 4.436106856634357
+   },
+   "online-Y.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 38.93589568250511,
+    "rho_to": 34.588076318596755,
+    "abs_delta": 4.347819363908357
+   },
+   "uedin.6749: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 34.96500231524322,
+    "rho_to": 29.789678643600713,
+    "abs_delta": 5.175323671642506
+   },
+   "Facebook_FAIR.6750: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 40.74707562183042,
+    "rho_to": 63.57458587976058,
+    "abs_delta": 22.827510257930165
+   },
+   "JHU.6809: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 38.06184777611786,
+    "rho_to": 61.73202613971082,
+    "abs_delta": 23.67017836359296
+   },
+   "MLLP-UPV.6899: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 39.30757388003688,
+    "rho_to": 62.0990210426455,
+    "abs_delta": 22.79144716260862
+   },
+   "MSRA.MADL.6910: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 42.78532446090207,
+    "rho_to": 64.87815790359318,
+    "abs_delta": 22.09283344269111
+   },
+   "NEU.6801: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 40.509599052932465,
+    "rho_to": 63.378694920795496,
+    "abs_delta": 22.86909586786303
+   },
+   "PROMT_NMT_DE-EN.6683: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 32.07974998932797,
+    "rho_to": 56.054717946556934,
+    "abs_delta": 23.974967957228962
+   },
+   "RWTH_Aachen_System.6818: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 39.56344218145196,
+    "rho_to": 62.493255649624714,
+    "abs_delta": 22.929813468172753
+   },
+   "TartuNLP-c.6502: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 33.923412824275715,
+    "rho_to": 57.916385474396456,
+    "abs_delta": 23.99297265012074
+   },
+   "UCAM.6461: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 39.716547656391086,
+    "rho_to": 62.49289982645231,
+    "abs_delta": 22.776352170061223
+   },
+   "dfki-nmt.6478: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 38.76964788899394,
+    "rho_to": 62.07337262374158,
+    "abs_delta": 23.30372473474764
+   },
+   "online-A.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 36.41403920725689,
+    "rho_to": 60.527209644571776,
+    "abs_delta": 24.113170437314885
+   },
+   "online-B.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 45.199720153452276,
+    "rho_to": 65.94041733335747,
+    "abs_delta": 20.740697179905197
+   },
+   "online-G.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 34.33922175747701,
+    "rho_to": 58.913420374856685,
+    "abs_delta": 24.574198617379672
+   },
+   "online-X.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 28.567853828683337,
+    "rho_to": 53.61696205588318,
+    "abs_delta": 25.04910822719984
+   },
+   "online-Y.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 38.93589568250511,
+    "rho_to": 62.17190347895988,
+    "abs_delta": 23.236007796454764
+   },
+   "uedin.6749: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 34.96500231524322,
+    "rho_to": 58.4487739661977,
+    "abs_delta": 23.48377165095448
+   },
+   "Facebook_FAIR.6750: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 40.74707562183042,
+    "rho_to": 0.9877300903267238,
+    "abs_delta": 39.7593455315037
+   },
+   "JHU.6809: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 38.06184777611786,
+    "rho_to": 0.9870096815663638,
+    "abs_delta": 37.074838094551495
+   },
+   "MLLP-UPV.6899: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 39.30757388003688,
+    "rho_to": 0.9874129775060804,
+    "abs_delta": 38.320160902530795
+   },
+   "MSRA.MADL.6910: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 42.78532446090207,
+    "rho_to": 0.9882726762136241,
+    "abs_delta": 41.79705178468844
+   },
+   "NEU.6801: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 40.509599052932465,
+    "rho_to": 0.9877382730442299,
+    "abs_delta": 39.521860779888236
+   },
+   "PROMT_NMT_DE-EN.6683: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 32.07974998932797,
+    "rho_to": 0.9848379168093867,
+    "abs_delta": 31.094912072518586
+   },
+   "RWTH_Aachen_System.6818: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 39.56344218145196,
+    "rho_to": 0.9874427115259595,
+    "abs_delta": 38.575999469926
+   },
+   "TartuNLP-c.6502: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 33.923412824275715,
+    "rho_to": 0.9859767234766799,
+    "abs_delta": 32.93743610079903
+   },
+   "UCAM.6461: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 39.716547656391086,
+    "rho_to": 0.9873816282265332,
+    "abs_delta": 38.72916602816455
+   },
+   "dfki-nmt.6478: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 38.76964788899394,
+    "rho_to": 0.9874962902060833,
+    "abs_delta": 37.782151598787856
+   },
+   "online-A.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 36.41403920725689,
+    "rho_to": 0.9866469707365382,
+    "abs_delta": 35.427392236520355
+   },
+   "online-B.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 45.199720153452276,
+    "rho_to": 0.9884863108142611,
+    "abs_delta": 44.211233842638016
+   },
+   "online-G.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 34.33922175747701,
+    "rho_to": 0.986015694384908,
+    "abs_delta": 33.3532060630921
+   },
+   "online-X.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 28.567853828683337,
+    "rho_to": 0.9838590830145426,
+    "abs_delta": 27.583994745668793
+   },
+   "online-Y.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 38.93589568250511,
+    "rho_to": 0.987478559253734,
+    "abs_delta": 37.94841712325138
+   },
+   "uedin.6749: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 34.96500231524322,
+    "rho_to": 0.9862542228204232,
+    "abs_delta": 33.9787480924228
+   }
+  },
+  "rank_flips": {
+   "('bleu', '13a') -> ('chrf', '13a')": {
+    "pairwise_flips": 3,
+    "total_pairs": 120,
+    "kendall_tau": 0.95
+   },
+   "('bleu', '13a') -> ('bertscore', 'official')": {
+    "pairwise_flips": 10,
+    "total_pairs": 120,
+    "kendall_tau": 0.8333333333333334
+   },
+   "('bleu', '13a') -> ('bleu', 'none')": {
+    "pairwise_flips": 1,
+    "total_pairs": 120,
+    "kendall_tau": 0.9833333333333333
+   }
+  },
+  "mqm_anchor": {
+   "kendall_tau_bleu_vs_mqm": 0.6833333333333333,
+   "kendall_tau_bertscore_vs_mqm": 0.65,
+   "mqm_rank": {
+    "Facebook_FAIR.6750": 1,
+    "RWTH_Aachen_System.6818": 2,
+    "MLLP-UPV.6899": 3,
+    "online-B.0": 4,
+    "dfki-nmt.6478": 5,
+    "MSRA.MADL.6910": 6,
+    "Human": 7,
+    "JHU.6809": 8,
+    "NEU.6801": 9,
+    "UCAM.6461": 10,
+    "online-Y.0": 11,
+    "uedin.6749": 12,
+    "online-A.0": 13,
+    "TartuNLP-c.6502": 14,
+    "online-G.0": 15,
+    "PROMT_NMT_DE-EN.6683": 16,
+    "online-X.0": 17
+   }
+  }
+ },
+ "zh-en": {
+  "sents": 2000,
+  "systems": [
+   "Apprentice-c.6706",
+   "BTRANS-ensemble.6992",
+   "BTRANS.6825",
+   "Baidu-system.6940",
+   "KSAI-system.6927",
+   "MSRA.MASS.6942",
+   "MSRA.MASS.6996",
+   "NEU.6832",
+   "NICT.6814",
+   "UEDIN.6530",
+   "online-A.0",
+   "online-B.0",
+   "online-G.0",
+   "online-X.0",
+   "online-Y.0"
+  ],
+  "rho": {
+   "bleu|13a|Apprentice-c.6706": 16.940471185328597,
+   "bleu|none|Apprentice-c.6706": 12.733381800041384,
+   "chrf|13a|Apprentice-c.6706": 41.61354092331016,
+   "bleu|13a|BTRANS-ensemble.6992": 33.83684664142086,
+   "bleu|none|BTRANS-ensemble.6992": 29.679015156500526,
+   "chrf|13a|BTRANS-ensemble.6992": 59.76704033349339,
+   "bleu|13a|BTRANS.6825": 33.43814614146659,
+   "bleu|none|BTRANS.6825": 29.30530432673801,
+   "chrf|13a|BTRANS.6825": 59.65000180596874,
+   "bleu|13a|Baidu-system.6940": 37.96773079504074,
+   "bleu|none|Baidu-system.6940": 33.481576936679645,
+   "chrf|13a|Baidu-system.6940": 63.315775196395876,
+   "bleu|13a|KSAI-system.6927": 37.45687432368232,
+   "bleu|none|KSAI-system.6927": 32.68675645168321,
+   "chrf|13a|KSAI-system.6927": 62.39163874557679,
+   "bleu|13a|MSRA.MASS.6942": 38.29056930475979,
+   "bleu|none|MSRA.MASS.6942": 33.6510125389151,
+   "chrf|13a|MSRA.MASS.6942": 62.70829529694751,
+   "bleu|13a|MSRA.MASS.6996": 39.334051281196906,
+   "bleu|none|MSRA.MASS.6996": 34.68309943323554,
+   "chrf|13a|MSRA.MASS.6996": 63.5332043237955,
+   "bleu|13a|NEU.6832": 34.190957720638764,
+   "bleu|none|NEU.6832": 29.688922766798523,
+   "chrf|13a|NEU.6832": 60.25699757686132,
+   "bleu|13a|NICT.6814": 30.99260183431036,
+   "bleu|none|NICT.6814": 26.83151011596731,
+   "chrf|13a|NICT.6814": 56.78778340341736,
+   "bleu|13a|UEDIN.6530": 27.649701811379465,
+   "bleu|none|UEDIN.6530": 23.72838721247272,
+   "chrf|13a|UEDIN.6530": 54.40405873332564,
+   "bleu|13a|online-A.0": 28.836374192931938,
+   "bleu|none|online-A.0": 24.629337665475173,
+   "chrf|13a|online-A.0": 56.71477488873463,
+   "bleu|13a|online-B.0": 42.214895100877975,
+   "bleu|none|online-B.0": 38.48429601932783,
+   "chrf|13a|online-B.0": 64.98034351993958,
+   "bleu|13a|online-G.0": 25.239647297463478,
+   "bleu|none|online-G.0": 20.94072646570522,
+   "chrf|13a|online-G.0": 53.51735359782683,
+   "bleu|13a|online-X.0": 21.43722175939868,
+   "bleu|none|online-X.0": 17.56143357186086,
+   "chrf|13a|online-X.0": 49.60124507336437,
+   "bleu|13a|online-Y.0": 28.709411813156695,
+   "bleu|none|online-Y.0": 25.19122627607716,
+   "chrf|13a|online-Y.0": 56.187416280962644,
+   "bertscore|official|Apprentice-c.6706": 0.9735276342699823,
+   "bertscore|official|BTRANS-ensemble.6992": 0.9831885509517003,
+   "bertscore|official|BTRANS.6825": 0.9830896654039928,
+   "bertscore|official|Baidu-system.6940": 0.9847269237867121,
+   "bertscore|official|KSAI-system.6927": 0.9842617135664916,
+   "bertscore|official|MSRA.MASS.6942": 0.9850744012375844,
+   "bertscore|official|MSRA.MASS.6996": 0.9853600589157324,
+   "bertscore|official|NEU.6832": 0.9836110768931564,
+   "bertscore|official|NICT.6814": 0.9820973875579684,
+   "bertscore|official|UEDIN.6530": 0.9814789184842295,
+   "bertscore|official|online-A.0": 0.982011148327641,
+   "bertscore|official|online-B.0": 0.9857083736068316,
+   "bertscore|official|online-G.0": 0.9811382905021203,
+   "bertscore|official|online-X.0": 0.9793508884230587,
+   "bertscore|official|online-Y.0": 0.9827973423824499
+  },
+  "arms": {
+   "Apprentice-c.6706: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 16.940471185328597,
+    "rho_to": 12.733381800041384,
+    "abs_delta": 4.2070893852872135
+   },
+   "BTRANS-ensemble.6992: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 33.83684664142086,
+    "rho_to": 29.679015156500526,
+    "abs_delta": 4.157831484920337
+   },
+   "BTRANS.6825: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 33.43814614146659,
+    "rho_to": 29.30530432673801,
+    "abs_delta": 4.132841814728579
+   },
+   "Baidu-system.6940: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 37.96773079504074,
+    "rho_to": 33.481576936679645,
+    "abs_delta": 4.486153858361092
+   },
+   "KSAI-system.6927: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 37.45687432368232,
+    "rho_to": 32.68675645168321,
+    "abs_delta": 4.770117871999112
+   },
+   "MSRA.MASS.6942: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 38.29056930475979,
+    "rho_to": 33.6510125389151,
+    "abs_delta": 4.639556765844695
+   },
+   "MSRA.MASS.6996: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 39.334051281196906,
+    "rho_to": 34.68309943323554,
+    "abs_delta": 4.650951847961366
+   },
+   "NEU.6832: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 34.190957720638764,
+    "rho_to": 29.688922766798523,
+    "abs_delta": 4.502034953840241
+   },
+   "NICT.6814: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 30.99260183431036,
+    "rho_to": 26.83151011596731,
+    "abs_delta": 4.161091718343052
+   },
+   "UEDIN.6530: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 27.649701811379465,
+    "rho_to": 23.72838721247272,
+    "abs_delta": 3.9213145989067435
+   },
+   "online-A.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 28.836374192931938,
+    "rho_to": 24.629337665475173,
+    "abs_delta": 4.207036527456765
+   },
+   "online-B.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 42.214895100877975,
+    "rho_to": 38.48429601932783,
+    "abs_delta": 3.730599081550146
+   },
+   "online-G.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 25.239647297463478,
+    "rho_to": 20.94072646570522,
+    "abs_delta": 4.298920831758256
+   },
+   "online-X.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 21.43722175939868,
+    "rho_to": 17.56143357186086,
+    "abs_delta": 3.875788187537818
+   },
+   "online-Y.0: ('bleu', '13a') -> ('bleu', 'none')": {
+    "rho_from": 28.709411813156695,
+    "rho_to": 25.19122627607716,
+    "abs_delta": 3.5181855370795354
+   },
+   "Apprentice-c.6706: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 16.940471185328597,
+    "rho_to": 41.61354092331016,
+    "abs_delta": 24.673069737981564
+   },
+   "BTRANS-ensemble.6992: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 33.83684664142086,
+    "rho_to": 59.76704033349339,
+    "abs_delta": 25.930193692072528
+   },
+   "BTRANS.6825: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 33.43814614146659,
+    "rho_to": 59.65000180596874,
+    "abs_delta": 26.211855664502153
+   },
+   "Baidu-system.6940: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 37.96773079504074,
+    "rho_to": 63.315775196395876,
+    "abs_delta": 25.34804440135514
+   },
+   "KSAI-system.6927: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 37.45687432368232,
+    "rho_to": 62.39163874557679,
+    "abs_delta": 24.93476442189447
+   },
+   "MSRA.MASS.6942: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 38.29056930475979,
+    "rho_to": 62.70829529694751,
+    "abs_delta": 24.41772599218772
+   },
+   "MSRA.MASS.6996: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 39.334051281196906,
+    "rho_to": 63.5332043237955,
+    "abs_delta": 24.199153042598596
+   },
+   "NEU.6832: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 34.190957720638764,
+    "rho_to": 60.25699757686132,
+    "abs_delta": 26.06603985622256
+   },
+   "NICT.6814: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 30.99260183431036,
+    "rho_to": 56.78778340341736,
+    "abs_delta": 25.795181569106997
+   },
+   "UEDIN.6530: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 27.649701811379465,
+    "rho_to": 54.40405873332564,
+    "abs_delta": 26.754356921946176
+   },
+   "online-A.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 28.836374192931938,
+    "rho_to": 56.71477488873463,
+    "abs_delta": 27.878400695802693
+   },
+   "online-B.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 42.214895100877975,
+    "rho_to": 64.98034351993958,
+    "abs_delta": 22.765448419061606
+   },
+   "online-G.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 25.239647297463478,
+    "rho_to": 53.51735359782683,
+    "abs_delta": 28.277706300363356
+   },
+   "online-X.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 21.43722175939868,
+    "rho_to": 49.60124507336437,
+    "abs_delta": 28.16402331396569
+   },
+   "online-Y.0: ('bleu', '13a') -> ('chrf', '13a')": {
+    "rho_from": 28.709411813156695,
+    "rho_to": 56.187416280962644,
+    "abs_delta": 27.47800446780595
+   },
+   "Apprentice-c.6706: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 16.940471185328597,
+    "rho_to": 0.9735276342699823,
+    "abs_delta": 15.966943551058614
+   },
+   "BTRANS-ensemble.6992: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 33.83684664142086,
+    "rho_to": 0.9831885509517003,
+    "abs_delta": 32.85365809046916
+   },
+   "BTRANS.6825: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 33.43814614146659,
+    "rho_to": 0.9830896654039928,
+    "abs_delta": 32.455056476062595
+   },
+   "Baidu-system.6940: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 37.96773079504074,
+    "rho_to": 0.9847269237867121,
+    "abs_delta": 36.98300387125403
+   },
+   "KSAI-system.6927: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 37.45687432368232,
+    "rho_to": 0.9842617135664916,
+    "abs_delta": 36.47261261011583
+   },
+   "MSRA.MASS.6942: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 38.29056930475979,
+    "rho_to": 0.9850744012375844,
+    "abs_delta": 37.30549490352221
+   },
+   "MSRA.MASS.6996: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 39.334051281196906,
+    "rho_to": 0.9853600589157324,
+    "abs_delta": 38.348691222281175
+   },
+   "NEU.6832: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 34.190957720638764,
+    "rho_to": 0.9836110768931564,
+    "abs_delta": 33.20734664374561
+   },
+   "NICT.6814: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 30.99260183431036,
+    "rho_to": 0.9820973875579684,
+    "abs_delta": 30.010504446752392
+   },
+   "UEDIN.6530: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 27.649701811379465,
+    "rho_to": 0.9814789184842295,
+    "abs_delta": 26.668222892895237
+   },
+   "online-A.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 28.836374192931938,
+    "rho_to": 0.982011148327641,
+    "abs_delta": 27.8543630446043
+   },
+   "online-B.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 42.214895100877975,
+    "rho_to": 0.9857083736068316,
+    "abs_delta": 41.22918672727114
+   },
+   "online-G.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 25.239647297463478,
+    "rho_to": 0.9811382905021203,
+    "abs_delta": 24.258509006961358
+   },
+   "online-X.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 21.43722175939868,
+    "rho_to": 0.9793508884230587,
+    "abs_delta": 20.45787087097562
+   },
+   "online-Y.0: ('bleu', '13a') -> ('bertscore', 'official')": {
+    "rho_from": 28.709411813156695,
+    "rho_to": 0.9827973423824499,
+    "abs_delta": 27.726614470774244
+   }
+  },
+  "rank_flips": {
+   "('bleu', '13a') -> ('chrf', '13a')": {
+    "pairwise_flips": 1,
+    "total_pairs": 105,
+    "kendall_tau": 0.9809523809523809
+   },
+   "('bleu', '13a') -> ('bertscore', 'official')": {
+    "pairwise_flips": 2,
+    "total_pairs": 105,
+    "kendall_tau": 0.9619047619047619
+   },
+   "('bleu', '13a') -> ('bleu', 'none')": {
+    "pairwise_flips": 1,
+    "total_pairs": 105,
+    "kendall_tau": 0.9809523809523809
+   }
+  },
+  "mqm_anchor": {
+   "kendall_tau_bleu_vs_mqm": 0.7333333333333333,
+   "kendall_tau_bertscore_vs_mqm": 0.7714285714285715,
+   "mqm_rank": {
+    "Baidu-system.6940": 1,
+    "KSAI-system.6927": 2,
+    "MSRA.MASS.6996": 3,
+    "MSRA.MASS.6942": 4,
+    "NEU.6832": 5,
+    "online-B.0": 6,
+    "BTRANS.6825": 7,
+    "BTRANS-ensemble.6992": 8,
+    "online-Y.0": 9,
+    "UEDIN.6530": 10,
+    "NICT.6814": 11,
+    "online-A.0": 12,
+    "online-G.0": 13,
+    "online-X.0": 14,
+    "Apprentice-c.6706": 15
+   }
+  }
+ }
+}

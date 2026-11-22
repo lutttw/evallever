@@ -1,0 +1,208 @@
+{
+ "de-en": {
+  "canonical_spec": "corpus-level z (sample SD; scale-invariant for tau), equal-weight mean over {bleu13a(force), chrf++ word_order=2 beta=2, bertscore-roberta-large rescale=off}, anchor = official human anchor wmt-raw (r53 protocol); R=2000, seed 7, corpus metrics recomputed per resample; ties = 95% percentile CI of resample-level paired difference",
+  "tau_point": {
+   "aer": 0.7,
+   "median_of_z": 0.7,
+   "singles": {
+    "bleu13a": 0.6833,
+    "chrf": 0.6667,
+    "bertscore": 0.65
+   },
+   "best_single": "bleu13a"
+  },
+  "tau_ci95_bootstrap": [
+   0.6167,
+   0.7167
+  ],
+  "delta_aer_vs_best_single": {
+   "ci90": [
+    -0.05,
+    0.0167
+   ],
+   "tost": {
+    "eps=0.05": true,
+    "eps=0.1": true
+   },
+   "one_sided_p": {
+    "le_-eps10": 0.0,
+    "ge_+eps10": 0.0
+   }
+  },
+  "median_baseline_tau": {
+   "point": 0.7,
+   "boot_mean": 0.6725
+  },
+  "flip_coverage": {
+   "aer": 11,
+   "median": 9,
+   "singles": {
+    "bleu13a": 8,
+    "chrf": 9,
+    "bertscore": 10
+   },
+   "n": 11
+  },
+  "flip_detail": [
+   {
+    "pair": "Facebook_FAIR.6750|NEU.6801",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": true,
+    "bertscore": true,
+    "median": true
+   },
+   {
+    "pair": "MLLP-UPV.6899|UCAM.6461",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": true,
+    "bertscore": true,
+    "median": true
+   },
+   {
+    "pair": "MLLP-UPV.6899|dfki-nmt.6478",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": true,
+    "bertscore": true,
+    "median": true
+   },
+   {
+    "pair": "MLLP-UPV.6899|online-Y.0",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": true,
+    "bertscore": true,
+    "median": true
+   },
+   {
+    "pair": "RWTH_Aachen_System.6818|UCAM.6461",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": true,
+    "bertscore": true,
+    "median": true
+   },
+   {
+    "pair": "RWTH_Aachen_System.6818|dfki-nmt.6478",
+    "aer": true,
+    "bleu13a": false,
+    "chrf": false,
+    "bertscore": true,
+    "median": false
+   },
+   {
+    "pair": "RWTH_Aachen_System.6818|online-Y.0",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": true,
+    "bertscore": true,
+    "median": true
+   },
+   {
+    "pair": "UCAM.6461|dfki-nmt.6478",
+    "aer": true,
+    "bleu13a": false,
+    "chrf": false,
+    "bertscore": true,
+    "median": false
+   },
+   {
+    "pair": "UCAM.6461|online-Y.0",
+    "aer": true,
+    "bleu13a": false,
+    "chrf": true,
+    "bertscore": true,
+    "median": true
+   },
+   {
+    "pair": "dfki-nmt.6478|online-Y.0",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": true,
+    "bertscore": true,
+    "median": true
+   },
+   {
+    "pair": "online-G.0|uedin.6749",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": true,
+    "bertscore": false,
+    "median": true
+   }
+  ]
+ },
+ "zh-en": {
+  "canonical_spec": "corpus-level z (sample SD; scale-invariant for tau), equal-weight mean over {bleu13a(force), chrf++ word_order=2 beta=2, bertscore-roberta-large rescale=off}, anchor = official human anchor wmt-raw (r53 protocol); R=2000, seed 7, corpus metrics recomputed per resample; ties = 95% percentile CI of resample-level paired difference",
+  "tau_point": {
+   "aer": 0.7524,
+   "median_of_z": 0.7524,
+   "singles": {
+    "bleu13a": 0.7333,
+    "chrf": 0.7524,
+    "bertscore": 0.7714
+   },
+   "best_single": "bertscore"
+  },
+  "tau_ci95_bootstrap": [
+   0.7333,
+   0.7714
+  ],
+  "delta_aer_vs_best_single": {
+   "ci90": [
+    -0.019,
+    0.019
+   ],
+   "tost": {
+    "eps=0.05": true,
+    "eps=0.1": true
+   },
+   "one_sided_p": {
+    "le_-eps10": 0.0,
+    "ge_+eps10": 0.0
+   }
+  },
+  "median_baseline_tau": {
+   "point": 0.7524,
+   "boot_mean": 0.7455
+  },
+  "flip_coverage": {
+   "aer": 3,
+   "median": 1,
+   "singles": {
+    "bleu13a": 2,
+    "chrf": 0,
+    "bertscore": 0
+   },
+   "n": 3
+  },
+  "flip_detail": [
+   {
+    "pair": "Baidu-system.6940|MSRA.MASS.6942",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": false,
+    "bertscore": false,
+    "median": true
+   },
+   {
+    "pair": "NICT.6814|online-Y.0",
+    "aer": true,
+    "bleu13a": false,
+    "chrf": false,
+    "bertscore": false,
+    "median": false
+   },
+   {
+    "pair": "online-A.0|online-Y.0",
+    "aer": true,
+    "bleu13a": true,
+    "chrf": false,
+    "bertscore": false,
+    "median": false
+   }
+  ]
+ }
+}

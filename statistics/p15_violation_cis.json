@@ -1,0 +1,171 @@
+{
+ "meta": {
+  "seed": 20260926,
+  "reps": 10000,
+  "semantics": {
+   "docred_arms": "d5 审计口径(按解析出现计数)",
+   "hacred_arms": "p15 审计口径(每文档集合去重)"
+  },
+  "unit": "document bootstrap, percentile 95%",
+  "extension_revision75": {
+   "added": [
+    "mistral-7b_en-hacred_json",
+    "mistral-7b_en-hacred_freetext",
+    "qwen-7b-bf16_en-hacred_json"
+   ],
+   "note": "3 臂追补(2×Mistral H-en + BF16);原 11 臂逐位未动;协议与 r24 一致(10k doc bootstrap, seed 20260926);逐臂门=重算点估计==正典审计 violation_rate(1e-9)"
+  }
+ },
+ "arms": {
+  "qwen-7b_en-docred_json": {
+   "point": 0.1139629372708354,
+   "ci95": [
+    0.09400696299749825,
+    0.13445658617549902
+   ],
+   "n_docs": 498,
+   "n_triples": 10091,
+   "n_violations": 1150
+  },
+  "qwen-7b_en-docred_freetext": {
+   "point": 0.1164068632948301,
+   "ci95": [
+    0.08827492082236688,
+    0.1464296005525134
+   ],
+   "n_docs": 498,
+   "n_triples": 8917,
+   "n_violations": 1038
+  },
+  "mistral-7b_en-docred_json": {
+   "point": 0.18842530282637954,
+   "ci95": [
+    0.15272576252451298,
+    0.22857825932787743
+   ],
+   "n_docs": 498,
+   "n_triples": 3715,
+   "n_violations": 700
+  },
+  "mistral-7b_en-docred_freetext": {
+   "point": 0.07049772334746428,
+   "ci95": [
+    0.05323729191574886,
+    0.08878433733940387
+   ],
+   "n_docs": 498,
+   "n_triples": 19107,
+   "n_violations": 1347
+  },
+  "qwen-14b_en-docred_json": {
+   "point": 0.045689655172413794,
+   "ci95": [
+    0.03391886197823045,
+    0.05990504062778732
+   ],
+   "n_docs": 498,
+   "n_triples": 5800,
+   "n_violations": 265
+  },
+  "qwen-7b_zh-hacred_json": {
+   "point": 0.22149837133550487,
+   "ci95": [
+    0.2023702857617314,
+    0.24094006047862646
+   ],
+   "n_docs": 1500,
+   "n_triples": 9210,
+   "n_violations": 2040
+  },
+  "qwen-7b_zh-hacred_freetext": {
+   "point": 0.21759036144578314,
+   "ci95": [
+    0.197397841144857,
+    0.2396655559718597
+   ],
+   "n_docs": 1500,
+   "n_triples": 8300,
+   "n_violations": 1806
+  },
+  "mistral-7b_zh-hacred_json": {
+   "point": 0.8871252204585538,
+   "ci95": [
+    0.8304895828616596,
+    0.9388655816789903
+   ],
+   "n_docs": 1500,
+   "n_triples": 1701,
+   "n_violations": 1509
+  },
+  "mistral-7b_zh-hacred_freetext": {
+   "point": 0.10914743904434626,
+   "ci95": [
+    0.09381484705530069,
+    0.1268307924351354
+   ],
+   "n_docs": 1500,
+   "n_triples": 6111,
+   "n_violations": 667
+  },
+  "qwen-7b_en-hacred_json": {
+   "point": 0.1976185711426856,
+   "ci95": [
+    0.1788770947466835,
+    0.2172357365802885
+   ],
+   "n_docs": 1500,
+   "n_triples": 9994,
+   "n_violations": 1975
+  },
+  "qwen-7b_en-hacred_freetext": {
+   "point": 0.2300543150271575,
+   "ci95": [
+    0.20779205686817542,
+    0.25362117307687937
+   ],
+   "n_docs": 1500,
+   "n_triples": 8285,
+   "n_violations": 1906
+  },
+  "mistral-7b_en-hacred_json": {
+   "point": 0.18766004145835874,
+   "ci95": [
+    0.17317146623989882,
+    0.20374714168725738
+   ],
+   "n_docs": 1500,
+   "n_triples": 8201,
+   "n_violations": 1539
+  },
+  "mistral-7b_en-hacred_freetext": {
+   "point": 0.1293052382161293,
+   "ci95": [
+    0.11892880618370562,
+    0.140331335034957
+   ],
+   "n_docs": 1500,
+   "n_triples": 11817,
+   "n_violations": 1528
+  },
+  "qwen-7b-bf16_en-hacred_json": {
+   "point": 0.15742565772559775,
+   "ci95": [
+    0.14408278211480963,
+    0.17110527867346942
+   ],
+   "n_docs": 1500,
+   "n_triples": 11669,
+   "n_violations": 1837
+  },
+  "qwen-14b_zh-hacred_json": {
+   "point": 0.288705312633528,
+   "ci95": [
+    0.26396299777984056,
+    0.3147410798161799
+   ],
+   "n_docs": 1500,
+   "n_triples": 7021,
+   "n_violations": 2027
+  }
+ }
+}

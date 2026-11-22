@@ -1,0 +1,106 @@
+{
+ "experiment": "修订 33/37:C1 语言去混杂臂(Qwen-7B,HacRED,仅指令语言 zh→en)",
+ "design_freeze": "预注册修订 33(2026-10-07 晨,冻结于推断前);模型/数据/标签空间/E{i}契约/演示/冒烟/解析/审计全部与中文臂同源",
+ "inference": "本地 RTX 5060 8GB,NF4,batch=2,greedy;json 1500/1500 零截断 14.4s/篇;freetext 1500/1500 零截断 14.7s/篇",
+ "matrix": {
+  "zh_json": 0.22149837133550487,
+  "zh_freetext": 0.21759036144578314,
+  "en_json": 0.1976185711426856,
+  "en_freetext": 0.2300543150271575
+ },
+ "arms": {
+  "zh_json": {
+   "violation_rate": 0.22149837133550487,
+   "stats": {
+    "n_triples": 9210,
+    "parse_fail": 42,
+    "oob_index": 250,
+    "hallucinated": 0,
+    "ambiguous": 165,
+    "self_pair": 259,
+    "rel_unmapped": 1324,
+    "mapped": 7170
+   },
+   "L1_char_consistent": false
+  },
+  "zh_freetext": {
+   "violation_rate": 0.21759036144578314,
+   "stats": {
+    "n_triples": 8300,
+    "parse_fail": 0,
+    "oob_index": 232,
+    "hallucinated": 0,
+    "ambiguous": 148,
+    "self_pair": 191,
+    "rel_unmapped": 1235,
+    "mapped": 6494
+   },
+   "L1_char_consistent": true
+  },
+  "en_json": {
+   "violation_rate": 0.1976185711426856,
+   "stats": {
+    "n_triples": 9994,
+    "parse_fail": 16,
+    "oob_index": 250,
+    "hallucinated": 0,
+    "ambiguous": 139,
+    "self_pair": 194,
+    "rel_unmapped": 1376,
+    "mapped": 8019
+   },
+   "L1_char_consistent": true,
+   "L2_delta_gap_F1": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "rel_unmapped_share": 0.138,
+   "unverifiable": true
+  },
+  "en_freetext": {
+   "violation_rate": 0.2300543150271575,
+   "stats": {
+    "n_triples": 8285,
+    "parse_fail": 0,
+    "oob_index": 146,
+    "hallucinated": 0,
+    "ambiguous": 119,
+    "self_pair": 191,
+    "rel_unmapped": 1450,
+    "mapped": 6379
+   },
+   "L1_char_consistent": true,
+   "L2_delta_gap_F1": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "rel_unmapped_share": 0.175,
+   "unverifiable": true
+  }
+ },
+ "H_C1a_verdict": {
+  "claim": "英文指令臂违规率与中文臂可比(带内)则语言非主因",
+  "rate_band": "19.76%–23.01%(四臂极差 3.25 个百分点)",
+  "verdict": "成立:指令语言对违规率的影响 ≤2.4 个百分点,远小于模型×格式差异(88.7 vs 10.9)"
+ },
+ "H_C1b_verdict": {
+  "claim": "构成不变(rel_unmapped 主导)则失败面归因于中文关系名标签空间",
+  "rel_unmapped_share": {
+   "zh_json": 0.144,
+   "zh_freetext": 0.149,
+   "en_json": 0.138,
+   "en_freetext": 0.175
+  },
+  "oob_json_pair": "zh json 250 = en json 250(逐个相同)",
+  "verdict": "成立:四臂失败面均为 rel_unmapped 主导(13.8–17.5%),失败面由标签空间×模型决定,与指令语言无关"
+ },
+ "L1_finding": "三计分符号一致性仅在 中文×json 一臂翻转(zh json False / zh free True / en json True / en free True)——L1 形态是 (指令语言×格式) 交互而非语言主效应",
+ "L2": "词/字金标杠杆 en 两臂 Δgap_F1=+0.000000(第 5–6 处独立复现)",
+ "gate": "en json 19.76% / en free 23.01% 均 >5% 带旗(指令微调设置总数 9→11,带旗 10/11)"
+}

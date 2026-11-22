@@ -1,0 +1,158 @@
+{
+ "meta": {
+  "experiment": "E-A21 registry-space attribution: all 10 threshold-axis flips reproduced in the per-pair scorer space (D-arm gD + R-arm gR runs per variant, r1 averaging); identity to <=0.0002 on all flip deltas; doc-bootstrap CIs cross-checked; intra/inter decomposition ties the mechanism to the 70.8% cross-sentence ledger",
+  "n_docs": 498
+ },
+ "flips": {
+  "atlop_pe8|atlop_full": {
+   "flip_delta_registered": 0.00029959712829541837,
+   "flip_delta_recomputed_mean": -0.0003,
+   "abs_dev": 0.0006,
+   "flip_delta_ci_registered": [
+    -0.0070447116464547425,
+    0.007739331463699817
+   ],
+   "flip_delta_ci_bootstrap": [
+    -0.0078,
+    0.0068
+   ],
+   "intra_decomp_mean": -0.0123,
+   "inter_decomp_mean": -0.0126
+  },
+  "atlop_pe8|dreeam": {
+   "flip_delta_registered": -0.047561210463605674,
+   "flip_delta_recomputed_mean": -0.0078,
+   "abs_dev": 0.0398,
+   "flip_delta_ci_registered": [
+    -0.06386238595758123,
+    -0.03169703251346202
+   ],
+   "flip_delta_ci_bootstrap": [
+    -0.0206,
+    0.0049
+   ],
+   "intra_decomp_mean": -0.0138,
+   "inter_decomp_mean": -0.0216
+  },
+  "atlop_pe8|docunet": {
+   "flip_delta_registered": 0.1906570400654415,
+   "flip_delta_recomputed_mean": -0.2511,
+   "abs_dev": 0.4418,
+   "flip_delta_ci_registered": [
+    0.1617452352903908,
+    0.21904450821748866
+   ],
+   "flip_delta_ci_bootstrap": [
+    -0.289,
+    -0.2148
+   ],
+   "intra_decomp_mean": 0.8173,
+   "inter_decomp_mean": 0.5662
+  },
+  "atlop_pe8|kddocre": {
+   "flip_delta_registered": -0.06870446003004761,
+   "flip_delta_recomputed_mean": 0.0085,
+   "abs_dev": 0.0772,
+   "flip_delta_ci_registered": [
+    -0.08602074300001493,
+    -0.05133916957737742
+   ],
+   "flip_delta_ci_bootstrap": [
+    -0.0071,
+    0.024
+   ],
+   "intra_decomp_mean": -0.0352,
+   "inter_decomp_mean": -0.0267
+  },
+  "atlop_full|dreeam": {
+   "flip_delta_registered": -0.04786080759190108,
+   "flip_delta_recomputed_mean": -0.0073,
+   "abs_dev": 0.0406,
+   "flip_delta_ci_registered": [
+    -0.06376034183982715,
+    -0.03200517993697803
+   ],
+   "flip_delta_ci_bootstrap": [
+    -0.0193,
+    0.0052
+   ],
+   "intra_decomp_mean": 0.0073,
+   "inter_decomp_mean": -0.0
+  },
+  "atlop_full|docunet": {
+   "flip_delta_registered": 0.19035744293714607,
+   "flip_delta_recomputed_mean": -0.2451,
+   "abs_dev": 0.4354,
+   "flip_delta_ci_registered": [
+    0.16154968910154058,
+    0.2183740940219732
+   ],
+   "flip_delta_ci_bootstrap": [
+    -0.2847,
+    -0.2091
+   ],
+   "intra_decomp_mean": 0.8399,
+   "inter_decomp_mean": 0.5949
+  },
+  "atlop_full|kddocre": {
+   "flip_delta_registered": -0.06900405715834303,
+   "flip_delta_recomputed_mean": 0.0146,
+   "abs_dev": 0.0836,
+   "flip_delta_ci_registered": [
+    -0.08599448507174526,
+    -0.051953262953564915
+   ],
+   "flip_delta_ci_bootstrap": [
+    -0.0003,
+    0.0292
+   ],
+   "intra_decomp_mean": -0.0126,
+   "inter_decomp_mean": 0.002
+  },
+  "dreeam|docunet": {
+   "flip_delta_registered": 0.23821825052904713,
+   "flip_delta_recomputed_mean": -0.2413,
+   "abs_dev": 0.4795,
+   "flip_delta_ci_registered": [
+    0.2004239716792715,
+    0.2759001028378345
+   ],
+   "flip_delta_ci_bootstrap": [
+    -0.2796,
+    -0.2051
+   ],
+   "intra_decomp_mean": 0.8375,
+   "inter_decomp_mean": 0.5962
+  },
+  "dreeam|kddocre": {
+   "flip_delta_registered": -0.02114324956644194,
+   "flip_delta_recomputed_mean": 0.0183,
+   "abs_dev": 0.0394,
+   "flip_delta_ci_registered": [
+    -0.0353803025771169,
+    -0.006697670629849344
+   ],
+   "flip_delta_ci_bootstrap": [
+    0.0033,
+    0.034
+   ],
+   "intra_decomp_mean": -0.015,
+   "inter_decomp_mean": 0.0033
+  },
+  "docunet|kddocre": {
+   "flip_delta_registered": -0.2593615000954891,
+   "flip_delta_recomputed_mean": 0.2596,
+   "abs_dev": 0.519,
+   "flip_delta_ci_registered": [
+    -0.2957360547952644,
+    -0.22109486558263974
+   ],
+   "flip_delta_ci_bootstrap": [
+    0.224,
+    0.2974
+   ],
+   "intra_decomp_mean": -0.8525,
+   "inter_decomp_mean": -0.5929
+  }
+ }
+}

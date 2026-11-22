@@ -1,0 +1,192 @@
+{
+ "boot": {
+  "n": 10000,
+  "seed": 20260926
+ },
+ "langs": {
+  "ar": {
+   "delta_A": {
+    "mean": -0.0003,
+    "ci": [
+     -0.0014,
+     0.0008
+    ],
+    "n_docs": 430,
+    "excl_zero": false
+   },
+   "delta_A'": {
+    "mean": -0.0096,
+    "ci": [
+     -0.0118,
+     -0.0075
+    ],
+    "n_docs": 430,
+    "excl_zero": true
+   },
+   "delta_B": {
+    "mean": 0.0003,
+    "ci": [
+     -0.0014,
+     0.0019
+    ],
+    "n_docs": 430,
+    "excl_zero": false
+   },
+   "delta_B'": {
+    "mean": -0.0087,
+    "ci": [
+     -0.0107,
+     -0.0068
+    ],
+    "n_docs": 430,
+    "excl_zero": true
+   },
+   "sign_reversal": {
+    "n_seeds": 15,
+    "reversals": 6,
+    "A_mean": 0.0,
+    "Ap_mean": -0.0095
+   },
+   "gauge_slices_C": {
+    "ren": {
+     "n": 3254,
+     "acc_g2": 0.6291,
+     "acc_g1m": 0.3463
+    },
+    "reann": {
+     "n": 59,
+     "acc_g2": 0.2712,
+     "acc_g1m": 0.1017
+    },
+    "unch": {
+     "n": 11553,
+     "acc_g2": 0.7848,
+     "acc_g1m": 0.7848
+    }
+   }
+  },
+  "cs": {
+   "delta_A": {
+    "mean": 0.0284,
+    "ci": [
+     0.0268,
+     0.0301
+    ],
+    "n_docs": 533,
+    "excl_zero": true
+   },
+   "delta_A'": {
+    "mean": -0.0266,
+    "ci": [
+     -0.0282,
+     -0.025
+    ],
+    "n_docs": 533,
+    "excl_zero": true
+   },
+   "delta_B": {
+    "mean": 0.0259,
+    "ci": [
+     0.0244,
+     0.0275
+    ],
+    "n_docs": 533,
+    "excl_zero": true
+   },
+   "delta_B'": {
+    "mean": -0.0272,
+    "ci": [
+     -0.0289,
+     -0.0256
+    ],
+    "n_docs": 533,
+    "excl_zero": true
+   },
+   "sign_reversal": {
+    "n_seeds": 15,
+    "reversals": 15,
+    "A_mean": 0.0368,
+    "Ap_mean": -0.0344
+   },
+   "gauge_slices_C": {
+    "ren": {
+     "n": 35495,
+     "acc_g2": 0.7551,
+     "acc_g1m": 0.3751
+    },
+    "reann": {
+     "n": 3403,
+     "acc_g2": 0.891,
+     "acc_g1m": 0.0097
+    },
+    "unch": {
+     "n": 120386,
+     "acc_g2": 0.8713,
+     "acc_g1m": 0.8713
+    }
+   }
+  },
+  "hi": {
+   "delta_A": {
+    "mean": 0.0135,
+    "ci": [
+     0.0135,
+     0.0135
+    ],
+    "n_docs": 1,
+    "excl_zero": true
+   },
+   "delta_A'": {
+    "mean": -0.014,
+    "ci": [
+     -0.014,
+     -0.014
+    ],
+    "n_docs": 1,
+    "excl_zero": true
+   },
+   "delta_B": {
+    "mean": 0.0128,
+    "ci": [
+     0.0128,
+     0.0128
+    ],
+    "n_docs": 1,
+    "excl_zero": true
+   },
+   "delta_B'": {
+    "mean": -0.0134,
+    "ci": [
+     -0.0134,
+     -0.0134
+    ],
+    "n_docs": 1,
+    "excl_zero": true
+   },
+   "sign_reversal": {
+    "n_seeds": 15,
+    "reversals": 15,
+    "A_mean": 0.0101,
+    "Ap_mean": -0.0108
+   },
+   "gauge_slices_C": {
+    "ren": {
+     "n": 6987,
+     "acc_g2": 0.7643,
+     "acc_g1m": 0.3343
+    },
+    "reann": {
+     "n": 189,
+     "acc_g2": 0.9153,
+     "acc_g1m": 0.0423
+    },
+    "unch": {
+     "n": 28041,
+     "acc_g2": 0.8942,
+     "acc_g1m": 0.8942
+    }
+   }
+  }
+ },
+ "status": "FROZEN"
+}

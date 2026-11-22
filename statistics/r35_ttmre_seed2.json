@@ -1,0 +1,80 @@
+{
+ "meta": {
+  "arm": "ttmre (TTM-RE seed-2 finetune (amendment 66: from-base, seed 20261010, 30 epochs, pretrain_distant=3; test F1 62.28; deviation from official two-stage 83.6 disclosed)",
+  "rel2id_permutation": "TTM-RE columns permuted by relation name to pipeline order (bijective, Na fixed)",
+  "entity_space": "signature index -> aligned DocRED vertex via canonical manifest; TTM-RE pair rows looked up by (vertex_h, vertex_t) over all-pairs enumeration",
+  "decode": "atlop_native (same as r29); thresholds contract f as registered",
+  "boot": 10000,
+  "seed": 20260926,
+  "amendment": 66
+ },
+ "ttmre": {
+  "gamma_gD": 0.1386,
+  "gamma_gR": 0.1847,
+  "arm_gold": 0.0461,
+  "arm_gold_ci95": [
+   0.0193,
+   0.0729
+  ],
+  "gamma_ess_gR": 0.1847,
+  "gamma_ass_gR": 0.1624,
+  "arm_grouping": 0.0223,
+  "arm_grouping_ci95": [
+   0.0099,
+   0.0349
+  ],
+  "density_mean_rels_per_pair": 0.0365,
+  "f1_vs_gD": [
+   0.5826,
+   0.6757,
+   0.6257
+  ],
+  "f1_vs_gR": [
+   0.8896,
+   0.3655,
+   0.5181
+  ]
+ },
+ "flips_vs_7": {
+  "x2": {
+   "delta_gen": 0.0217,
+   "delta_ttmre": -0.0461,
+   "flip": true
+  },
+  "atlop_pe8": {
+   "delta_gen": 0.0626,
+   "delta_ttmre": -0.0461,
+   "flip": true
+  },
+  "atlop_full": {
+   "delta_gen": 0.0429,
+   "delta_ttmre": -0.0461,
+   "flip": true
+  },
+  "dreeam": {
+   "delta_gen": 0.0008,
+   "delta_ttmre": -0.0461,
+   "flip": true
+  },
+  "p3m": {
+   "delta_gen": 0.0262,
+   "delta_ttmre": -0.0461,
+   "flip": true
+  },
+  "docunet": {
+   "delta_gen": -0.0159,
+   "delta_ttmre": -0.0461,
+   "flip": false
+  },
+  "kddocre": {
+   "delta_gen": 0.0128,
+   "delta_ttmre": -0.0461,
+   "flip": true
+  }
+ },
+ "summary": {
+  "n_flip_goldswap": 6,
+  "arm_gold_excl0": true,
+  "arm_grouping_excl0": true
+ }
+}

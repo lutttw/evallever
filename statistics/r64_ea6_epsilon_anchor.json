@@ -1,0 +1,96 @@
+{
+ "meta": {
+  "experiment": "E-A6a: anchor-resampling noise floor for tau_b (epsilon calibration)",
+  "draws_split_half": 200,
+  "jackknife": "leave-one-segment-out",
+  "tier": "exploratory, post-review R12"
+ },
+ "grids": {
+  "de-en": {
+   "n_systems": 16,
+   "n_pairs": 120,
+   "n_segments": 2000,
+   "split_half_anchor_self_tau": {
+    "mean": 0.8055,
+    "sd": 0.0528
+   },
+   "floors": {
+    "bleu13a": {
+     "split_half_sd_at_half_n": 0.0464,
+     "implied_full_n_floor": 0.0328,
+     "jackknife_loo_sd_of_tau": 0.0102,
+     "point_tau": 0.6833
+    },
+    "chrf": {
+     "split_half_sd_at_half_n": 0.0464,
+     "implied_full_n_floor": 0.0328,
+     "jackknife_loo_sd_of_tau": 0.0102,
+     "point_tau": 0.6667
+    },
+    "bertscore": {
+     "split_half_sd_at_half_n": 0.0449,
+     "implied_full_n_floor": 0.0318,
+     "jackknife_loo_sd_of_tau": 0.0102,
+     "point_tau": 0.65
+    },
+    "ens3": {
+     "split_half_sd_at_half_n": 0.0464,
+     "implied_full_n_floor": 0.0328,
+     "jackknife_loo_sd_of_tau": 0.0102,
+     "point_tau": 0.7
+    }
+   },
+   "discordant_pair_calibration": {
+    "tau=0.05": "~6 of 120 pairs",
+    "tau=0.1": "~12 of 120 pairs"
+   },
+   "calibrated_eps": {
+    "1x_max_jackknife_floor": 0.0102,
+    "2x": 0.0204
+   }
+  },
+  "zh-en": {
+   "n_systems": 15,
+   "n_pairs": 105,
+   "n_segments": 2000,
+   "split_half_anchor_self_tau": {
+    "mean": 0.8591,
+    "sd": 0.0436
+   },
+   "floors": {
+    "bleu13a": {
+     "split_half_sd_at_half_n": 0.0369,
+     "implied_full_n_floor": 0.0261,
+     "jackknife_loo_sd_of_tau": 0.0047,
+     "point_tau": 0.7333
+    },
+    "chrf": {
+     "split_half_sd_at_half_n": 0.0367,
+     "implied_full_n_floor": 0.026,
+     "jackknife_loo_sd_of_tau": 0.0047,
+     "point_tau": 0.7524
+    },
+    "bertscore": {
+     "split_half_sd_at_half_n": 0.0385,
+     "implied_full_n_floor": 0.0272,
+     "jackknife_loo_sd_of_tau": 0.0047,
+     "point_tau": 0.7714
+    },
+    "ens3": {
+     "split_half_sd_at_half_n": 0.0368,
+     "implied_full_n_floor": 0.026,
+     "jackknife_loo_sd_of_tau": 0.0047,
+     "point_tau": 0.7524
+    }
+   },
+   "discordant_pair_calibration": {
+    "tau=0.05": "~5 of 105 pairs",
+    "tau=0.1": "~10 of 105 pairs"
+   },
+   "calibrated_eps": {
+    "1x_max_jackknife_floor": 0.0047,
+    "2x": 0.0094
+   }
+  }
+ }
+}

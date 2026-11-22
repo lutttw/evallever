@@ -1,0 +1,36 @@
+{
+ "de-en": {
+  "n_systems": 16,
+  "tau_aer_vs_wmt_raw": 0.7,
+  "tau_aer_vs_wmt_z": 0.65,
+  "tau_median_vs_wmt_raw": 0.7,
+  "tau_median_vs_wmt_z": 0.65,
+  "tau_single_vs_wmt_raw": {
+   "bleu13a": 0.6833,
+   "chrf": 0.6667,
+   "bertscore": 0.65
+  },
+  "tau_single_vs_wmt_z": {
+   "bleu13a": 0.6333,
+   "chrf": 0.6167,
+   "bertscore": 0.6
+  }
+ },
+ "zh-en": {
+  "n_systems": 15,
+  "tau_aer_vs_wmt_raw": 0.7524,
+  "tau_aer_vs_wmt_z": 0.7143,
+  "tau_median_vs_wmt_raw": 0.7524,
+  "tau_median_vs_wmt_z": 0.7143,
+  "tau_single_vs_wmt_raw": {
+   "bleu13a": 0.7333,
+   "chrf": 0.7524,
+   "bertscore": 0.7714
+  },
+  "tau_single_vs_wmt_z": {
+   "bleu13a": 0.6952,
+   "chrf": 0.7143,
+   "bertscore": 0.7333
+  }
+ }
+}

@@ -1,0 +1,597 @@
+{
+ "meta": {
+  "experiment": "E-A14 empirical stand-in sensitivity curves for the published-claims audit (r6 residual action a): verdict stability vs TP-removal degradation of either stand-in side",
+  "directions": {
+   "favorable": "degrade claim-subject side (E-A14)",
+   "adverse": "degrade comparator side (E-A14b) - the direction that could erase verdicts"
+  },
+  "degradation_model": "per-doc Binomial TP->FN removal at p in {.005,.01,.02,.04,.08}; R_draw=200 replicas; 500-resample doc-paired bootstrap per replica; seed 20261113",
+  "calibration": "observed standin-vs-published F1 gaps ~0.3-1.5pt correspond to p~0.005-0.02",
+  "base_check": "p=0 deltas/CIs reproduce r56 v2 (all 6 cells)"
+ },
+ "tally": {
+  "favorable_direction": "zero sign flips at every level, all claims/golds",
+  "adverse_direction": {
+   "C1_gR_headline": "sign flips 0/0/0/0.035/0.925 and CI-exclusion loss 0/0/0.035/0.635/0.875 at p=.005/.01/.02/.04/.08 - stable through the observed-gap scale (p<=0.02), breaks at 4-8%",
+   "C2_both_golds": "zero flips to 8%",
+   "C3_gD": "stable to 4%, CI-loss 0.83 at 8%",
+   "C3_gR": "zero flips to 8% (margin .29)"
+  }
+ },
+ "favorable": {
+  "meta": {
+   "experiment": "E-A14 empirical stand-in sensitivity curves: TP-removal (recall) degradation on the claim-subject side, verdict flip rates vs degradation level",
+   "degradation_model": "per-doc Binomial: each TP moved to FN with prob p; side A (claim subject) degraded, side B fixed",
+   "levels_p": [
+    0.005,
+    0.01,
+    0.02,
+    0.04,
+    0.08
+   ],
+   "R_draw": 200,
+   "boot": 500,
+   "seed": 20261113,
+   "base_check": "p=0 deltas/CIs cross-checked against r56 v2 stored values"
+  },
+  "claims": {
+   "C1": {
+    "claim": "DREEAM > ATLOP(BERT-base)",
+    "sysA": "dreeam",
+    "sysB": "atlop_base",
+    "gold": {
+     "gD": {
+      "base": {
+       "F1_A": 0.6105,
+       "F1_B": 0.6044,
+       "delta": 0.006,
+       "ci": [
+        -0.0027,
+        0.0134
+       ],
+       "stored_delta_ci": [
+        0.0061,
+        [
+         -0.0001,
+         0.0119
+        ]
+       ],
+       "base_check_ok": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_A": 0.0021,
+        "sign_flip_rate": 0.015,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_A": 0.0041,
+        "sign_flip_rate": 0.21,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_A": 0.0087,
+        "sign_flip_rate": 0.795,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_A": 0.0166,
+        "sign_flip_rate": 0.995,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_A": 0.0352,
+        "sign_flip_rate": 1.0,
+        "ci_exclusion_loss_rate": 0.0
+       }
+      }
+     },
+     "gR": {
+      "base": {
+       "F1_A": 0.4304,
+       "F1_B": 0.4519,
+       "delta": -0.0216,
+       "ci": [
+        -0.0282,
+        -0.0143
+       ],
+       "stored_delta_ci": [
+        -0.0215,
+        [
+         -0.0265,
+         -0.0167
+        ]
+       ],
+       "base_check_ok": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_A": 0.0017,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_A": 0.0033,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_A": 0.0069,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_A": 0.0132,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_A": 0.0277,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       }
+      }
+     }
+    }
+   },
+   "C2": {
+    "claim": "KD-DocRE > DocuNet",
+    "sysA": "kddocre",
+    "sysB": "docunet",
+    "gold": {
+     "gD": {
+      "base": {
+       "F1_A": 0.5954,
+       "F1_B": 0.4741,
+       "delta": 0.1213,
+       "ci": [
+        0.1116,
+        0.1318
+       ],
+       "stored_delta_ci": [
+        0.1213,
+        [
+         0.1131,
+         0.1293
+        ]
+       ],
+       "base_check_ok": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_A": 0.002,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_A": 0.0041,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_A": 0.0086,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_A": 0.0164,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_A": 0.0347,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       }
+      }
+     },
+     "gR": {
+      "base": {
+       "F1_A": 0.4468,
+       "F1_B": 0.4025,
+       "delta": 0.0443,
+       "ci": [
+        0.0356,
+        0.052
+       ],
+       "stored_delta_ci": [
+        0.0443,
+        [
+         0.038,
+         0.0506
+        ]
+       ],
+       "base_check_ok": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_A": 0.0017,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_A": 0.0034,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_A": 0.0071,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_A": 0.0135,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_A": 0.0285,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.3
+       }
+      }
+     }
+    }
+   },
+   "C3": {
+    "claim": "TTM-RE > KD-DocRE",
+    "sysA": "ttmre_release",
+    "sysB": "kddocre",
+    "gold": {
+     "gD": {
+      "base": {
+       "F1_A": 0.5474,
+       "F1_B": 0.5954,
+       "delta": -0.048,
+       "ci": [
+        -0.0642,
+        -0.0324
+       ],
+       "stored_delta_ci": [
+        -0.048,
+        [
+         -0.0611,
+         -0.035
+        ]
+       ],
+       "base_check_ok": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_A": 0.0019,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_A": 0.0039,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_A": 0.0081,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_A": 0.0156,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_A": 0.033,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       }
+      }
+     },
+     "gR": {
+      "base": {
+       "F1_A": 0.7385,
+       "F1_B": 0.4468,
+       "delta": 0.2917,
+       "ci": [
+        0.2794,
+        0.3045
+       ],
+       "stored_delta_ci": [
+        0.2917,
+        [
+         0.2816,
+         0.302
+        ]
+       ],
+       "base_check_ok": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_A": 0.0024,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_A": 0.0046,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_A": 0.0095,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_A": 0.0183,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_A": 0.0391,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "adverse": {
+  "meta": {
+   "experiment": "E-A14b adverse-direction stand-in sensitivity: TP-removal degradation on side B (comparator stand-in), where a flip would erase the audited verdict",
+   "levels_p": [
+    0.005,
+    0.01,
+    0.02,
+    0.04,
+    0.08
+   ],
+   "R_draw": 200,
+   "boot": 500,
+   "seed": 20261113
+  },
+  "claims": {
+   "C1": {
+    "claim": "C1",
+    "sysA": "dreeam",
+    "sysB": "atlop_base",
+    "gold": {
+     "gD": {
+      "base": {
+       "delta": 0.006,
+       "ci": [
+        -0.0027,
+        0.0134
+       ],
+       "base_ci_excl": false
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_B": 0.0019,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_B": 0.0041,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_B": 0.0083,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_B": 0.0172,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_B": 0.0348,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       }
+      }
+     },
+     "gR": {
+      "base": {
+       "delta": -0.0216,
+       "ci": [
+        -0.0282,
+        -0.0143
+       ],
+       "base_ci_excl": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_B": 0.0016,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_B": 0.0033,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_B": 0.0069,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.035
+       },
+       "p=0.040": {
+        "mean_F1_drop_B": 0.0141,
+        "sign_flip_rate": 0.035,
+        "ci_exclusion_loss_rate": 0.635
+       },
+       "p=0.080": {
+        "mean_F1_drop_B": 0.0287,
+        "sign_flip_rate": 0.925,
+        "ci_exclusion_loss_rate": 0.875
+       }
+      }
+     }
+    }
+   },
+   "C2": {
+    "claim": "C2",
+    "sysA": "kddocre",
+    "sysB": "docunet",
+    "gold": {
+     "gD": {
+      "base": {
+       "delta": 0.1213,
+       "ci": [
+        0.1116,
+        0.1318
+       ],
+       "base_ci_excl": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_B": 0.0016,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_B": 0.0035,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_B": 0.0071,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_B": 0.0146,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_B": 0.0297,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       }
+      }
+     },
+     "gR": {
+      "base": {
+       "delta": 0.0443,
+       "ci": [
+        0.0356,
+        0.052
+       ],
+       "base_ci_excl": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_B": 0.0015,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_B": 0.0031,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_B": 0.0064,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_B": 0.0128,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_B": 0.0264,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       }
+      }
+     }
+    }
+   },
+   "C3": {
+    "claim": "C3",
+    "sysA": "ttmre_release",
+    "sysB": "kddocre",
+    "gold": {
+     "gD": {
+      "base": {
+       "delta": -0.048,
+       "ci": [
+        -0.0642,
+        -0.0324
+       ],
+       "base_ci_excl": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_B": 0.0019,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_B": 0.004,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_B": 0.0083,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_B": 0.017,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.02
+       },
+       "p=0.080": {
+        "mean_F1_drop_B": 0.0345,
+        "sign_flip_rate": 0.025,
+        "ci_exclusion_loss_rate": 0.83
+       }
+      }
+     },
+     "gR": {
+      "base": {
+       "delta": 0.2917,
+       "ci": [
+        0.2794,
+        0.3045
+       ],
+       "base_ci_excl": true
+      },
+      "levels": {
+       "p=0.005": {
+        "mean_F1_drop_B": 0.0016,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.010": {
+        "mean_F1_drop_B": 0.0033,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.020": {
+        "mean_F1_drop_B": 0.0069,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.040": {
+        "mean_F1_drop_B": 0.0139,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       },
+       "p=0.080": {
+        "mean_F1_drop_B": 0.0285,
+        "sign_flip_rate": 0.0,
+        "ci_exclusion_loss_rate": 0.0
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

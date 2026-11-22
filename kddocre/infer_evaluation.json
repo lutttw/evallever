@@ -1,0 +1,10 @@
+{
+ "n": 189556,
+ "n_docs": 498,
+ "logits_sha256": "6a514babc77423ecbeb8032981d31352e15adc21b1d1e2e91d2b42f26fde02d9",
+ "ckpt_sha256": "0e3fb81d26495f19b320ae342325bef071c023962ed338629aa86bf65d3edc3d",
+ "code_sha256": "99b5dca17687da08bc1676fd168e300ca6d956c1e2c353366fa4269337371694",
+ "encoder": "roberta-large(ner-english snapshot 作架构/分词器,权重全部被 ckpt 覆盖)",
+ "deterministic": true,
+ "ts": "2026-10-09T15:37:43"
+}

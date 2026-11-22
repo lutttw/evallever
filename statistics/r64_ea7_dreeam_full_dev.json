@@ -1,0 +1,31 @@
+{
+ "experiment": "E-AppE: DREEAM full-dev official-entrypoint rerun (998 docs, official run.py, env-compat patches documented; venv tf450)",
+ "published_vs_rerun": [
+  {
+   "ckpt": "bert_teacher",
+   "published_f1": 61.42,
+   "rerun_f1_full_dev": 51.329,
+   "delta": -10.09
+  },
+  {
+   "ckpt": "bert_student",
+   "published_f1": 65.3,
+   "rerun_f1_full_dev": 66.605,
+   "delta": 1.31
+  },
+  {
+   "ckpt": "roberta_teacher",
+   "published_f1": 63.49,
+   "rerun_f1_full_dev": 55.08,
+   "delta": -8.41
+  },
+  {
+   "ckpt": "roberta_student",
+   "published_f1": 67.09,
+   "rerun_f1_full_dev": 62.14,
+   "delta": -4.95
+  }
+ ],
+ "slice_vs_full": "50-doc slice collapses (15.7-15.8) absent on full dev; the same slice carries a user-retrained ckpt to 64.0 (the slice is the failing component there)",
+ "ign_note": "test_rel_ign excluded (doc-key join broken in reference-copy restoration)"
+}

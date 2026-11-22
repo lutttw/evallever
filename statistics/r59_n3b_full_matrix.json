@@ -1,0 +1,349 @@
+{
+ "config": "full pairwise scorer-switch flip matrix from frozen r59/N3 corpus readings; per-grid variation",
+ "pooled": {
+  "bleu|13a -> bleu|none": {
+   "flips": 45,
+   "pairs": 894,
+   "rate": 0.0503
+  },
+  "bleu|13a -> chrf|13a": {
+   "flips": 84,
+   "pairs": 894,
+   "rate": 0.094
+  },
+  "bleu|13a -> bertscore|official": {
+   "flips": 132,
+   "pairs": 894,
+   "rate": 0.1477
+  },
+  "bleu|none -> chrf|13a": {
+   "flips": 69,
+   "pairs": 894,
+   "rate": 0.0772
+  },
+  "bleu|none -> bertscore|official": {
+   "flips": 123,
+   "pairs": 894,
+   "rate": 0.1376
+  },
+  "chrf|13a -> bertscore|official": {
+   "flips": 126,
+   "pairs": 894,
+   "rate": 0.1409
+  }
+ },
+ "per_grid": {
+  "2021-zh-en": {
+   "bleu|13a -> bleu|none": [
+    16,
+    210
+   ],
+   "bleu|13a -> chrf|13a": [
+    20,
+    210
+   ],
+   "bleu|13a -> bertscore|official": [
+    24,
+    210
+   ],
+   "bleu|none -> chrf|13a": [
+    22,
+    210
+   ],
+   "bleu|none -> bertscore|official": [
+    20,
+    210
+   ],
+   "chrf|13a -> bertscore|official": [
+    22,
+    210
+   ]
+  },
+  "2021-de-en": {
+   "bleu|13a -> bleu|none": [
+    12,
+    171
+   ],
+   "bleu|13a -> chrf|13a": [
+    20,
+    171
+   ],
+   "bleu|13a -> bertscore|official": [
+    51,
+    171
+   ],
+   "bleu|none -> chrf|13a": [
+    12,
+    171
+   ],
+   "bleu|none -> bertscore|official": [
+    47,
+    171
+   ],
+   "chrf|13a -> bertscore|official": [
+    43,
+    171
+   ]
+  },
+  "2021-ru-en": {
+   "bleu|13a -> bleu|none": [
+    1,
+    45
+   ],
+   "bleu|13a -> chrf|13a": [
+    9,
+    45
+   ],
+   "bleu|13a -> bertscore|official": [
+    6,
+    45
+   ],
+   "bleu|none -> chrf|13a": [
+    8,
+    45
+   ],
+   "bleu|none -> bertscore|official": [
+    5,
+    45
+   ],
+   "chrf|13a -> bertscore|official": [
+    7,
+    45
+   ]
+  },
+  "2021-cs-en": {
+   "bleu|13a -> bleu|none": [
+    0,
+    28
+   ],
+   "bleu|13a -> chrf|13a": [
+    1,
+    28
+   ],
+   "bleu|13a -> bertscore|official": [
+    4,
+    28
+   ],
+   "bleu|none -> chrf|13a": [
+    1,
+    28
+   ],
+   "bleu|none -> bertscore|official": [
+    4,
+    28
+   ],
+   "chrf|13a -> bertscore|official": [
+    3,
+    28
+   ]
+  },
+  "2022-zh-en": {
+   "bleu|13a -> bleu|none": [
+    2,
+    55
+   ],
+   "bleu|13a -> chrf|13a": [
+    4,
+    55
+   ],
+   "bleu|13a -> bertscore|official": [
+    2,
+    55
+   ],
+   "bleu|none -> chrf|13a": [
+    2,
+    55
+   ],
+   "bleu|none -> bertscore|official": [
+    4,
+    55
+   ],
+   "chrf|13a -> bertscore|official": [
+    2,
+    55
+   ]
+  },
+  "2022-de-en": {
+   "bleu|13a -> bleu|none": [
+    2,
+    36
+   ],
+   "bleu|13a -> chrf|13a": [
+    2,
+    36
+   ],
+   "bleu|13a -> bertscore|official": [
+    6,
+    36
+   ],
+   "bleu|none -> chrf|13a": [
+    2,
+    36
+   ],
+   "bleu|none -> bertscore|official": [
+    6,
+    36
+   ],
+   "chrf|13a -> bertscore|official": [
+    8,
+    36
+   ]
+  },
+  "2022-ru-en": {
+   "bleu|13a -> bleu|none": [
+    3,
+    45
+   ],
+   "bleu|13a -> chrf|13a": [
+    3,
+    45
+   ],
+   "bleu|13a -> bertscore|official": [
+    9,
+    45
+   ],
+   "bleu|none -> chrf|13a": [
+    2,
+    45
+   ],
+   "bleu|none -> bertscore|official": [
+    6,
+    45
+   ],
+   "chrf|13a -> bertscore|official": [
+    8,
+    45
+   ]
+  },
+  "2022-cs-en": {
+   "bleu|13a -> bleu|none": [
+    0,
+    55
+   ],
+   "bleu|13a -> chrf|13a": [
+    0,
+    55
+   ],
+   "bleu|13a -> bertscore|official": [
+    0,
+    55
+   ],
+   "bleu|none -> chrf|13a": [
+    0,
+    55
+   ],
+   "bleu|none -> bertscore|official": [
+    0,
+    55
+   ],
+   "chrf|13a -> bertscore|official": [
+    0,
+    55
+   ]
+  },
+  "2023-zh-en": {
+   "bleu|13a -> bleu|none": [
+    4,
+    105
+   ],
+   "bleu|13a -> chrf|13a": [
+    10,
+    105
+   ],
+   "bleu|13a -> bertscore|official": [
+    14,
+    105
+   ],
+   "bleu|none -> chrf|13a": [
+    8,
+    105
+   ],
+   "bleu|none -> bertscore|official": [
+    14,
+    105
+   ],
+   "chrf|13a -> bertscore|official": [
+    12,
+    105
+   ]
+  },
+  "2023-de-en": {
+   "bleu|13a -> bleu|none": [
+    3,
+    78
+   ],
+   "bleu|13a -> chrf|13a": [
+    6,
+    78
+   ],
+   "bleu|13a -> bertscore|official": [
+    5,
+    78
+   ],
+   "bleu|none -> chrf|13a": [
+    5,
+    78
+   ],
+   "bleu|none -> bertscore|official": [
+    6,
+    78
+   ],
+   "chrf|13a -> bertscore|official": [
+    7,
+    78
+   ]
+  },
+  "2023-ru-en": {
+   "bleu|13a -> bleu|none": [
+    2,
+    66
+   ],
+   "bleu|13a -> chrf|13a": [
+    9,
+    66
+   ],
+   "bleu|13a -> bertscore|official": [
+    11,
+    66
+   ],
+   "bleu|none -> chrf|13a": [
+    7,
+    66
+   ],
+   "bleu|none -> bertscore|official": [
+    11,
+    66
+   ],
+   "chrf|13a -> bertscore|official": [
+    14,
+    66
+   ]
+  }
+ },
+ "per_switch_range": {
+  "bleu|13a -> bleu|none": [
+   0.0,
+   0.0762
+  ],
+  "bleu|13a -> chrf|13a": [
+   0.0,
+   0.2
+  ],
+  "bleu|13a -> bertscore|official": [
+   0.0,
+   0.2982
+  ],
+  "bleu|none -> chrf|13a": [
+   0.0,
+   0.1778
+  ],
+  "bleu|none -> bertscore|official": [
+   0.0,
+   0.2749
+  ],
+  "chrf|13a -> bertscore|official": [
+   0.0,
+   0.2515
+  ]
+ }
+}

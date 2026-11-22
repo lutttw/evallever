@@ -1,0 +1,7 @@
+{
+ "superseded_by": "multi_task/audit_published/stats/audit_published_v2.json (v2: gold axis exercised, bug fix)",
+ "paper_cites": "r56 v2 numbers in body_s4_empirical.tex: gR deltas -0.0215 / +0.0443 / +0.2917",
+ "reason": "v1 bug: F1_gD and F1_gR columns identical for every claim (gold axis not exercised); verdicts C1 TIE / C2 HOLDS / C3 无增量 are void",
+ "marked": "2026-10-28",
+ "renamed_artifact": "r56_published_claims_audit.V1BUG.gold-axis-not-exercised.json"
+}

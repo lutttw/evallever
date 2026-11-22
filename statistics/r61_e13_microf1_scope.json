@@ -1,0 +1,35 @@
+{
+ "arms_gold_swap": {
+  "x2": 0.021681763943797172,
+  "atlop_pe8": 0.06264702486287686,
+  "atlop_full": 0.042902614286964486,
+  "dreeam": 0.0007903091559361974,
+  "p3m": 0.026186474734835943,
+  "docunet": -0.01588831393463222,
+  "kddocre": 0.012768599605007785
+ },
+ "arm_abs_range": [
+  0.0008,
+  0.0626
+ ],
+ "paper_claimed_range": [
+  0.001,
+  0.063
+ ],
+ "arm_is_resample_quantity": {
+  "point_spec": "原样本直接计算,重采样内跨 run 平均",
+  "resampling_unit": "document(配对,同一权重矩阵贯穿全部对比)",
+  "reps": 10000
+ },
+ "bound_parameters_on_file": {
+  "task": "DocRED dev aligned population",
+  "N_documents": 498,
+  "gold_relations_gD": 5958,
+  "gold_relations_gR": 16819,
+  "gold_relations_gR2": 21410,
+  "denominator_scale": "thousands (relations-level counts)",
+  "remark_constants": "R3 corrected reading: the corrected-bound remark uses an unnamed positive constant (write gamma): |Delta micro-F1| <= (2/gamma)|D|/N WHENEVER 2TP+FP+FN >= gamma*N, for some gamma>0 with gamma <= Q/N. The class count (96) is NOT this constant; Q <= 2N bounds gamma <= 2, so the remark is a scaling statement, not a numeric bound for DocRE.",
+  "denominator_caliber_note": "E1_report gold_stats counts relations in the 498-doc aligned population (gD 5958 / gR 16819 / gR2 21410); paper appendix (ii) reports 6074 -> 17098 for a slightly different alignment caliber. Both are thousands-scale; the footnote only claims thousands-scale."
+ },
+ "lemma_scope": "Lemma A premise holds for accuracy only; micro-F1 is a ratio functional and escapes it (R3 counterexample). The arms above are resample quantities computed directly and do not invoke any bound (E13 scope; R3 round-5 #3/#11)."
+}

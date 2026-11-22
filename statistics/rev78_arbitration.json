@@ -1,0 +1,325 @@
+{
+ "amendment": 78,
+ "rule": "R1 标签误读 / R2 显示约定陷阱 / R3 实质分歧",
+ "raw_kappa_unchanged": 0.5611940298507463,
+ "note_post_hoc_kappa": "不报告:定稿对 R2/R3 行取第一轮类别,构造依赖",
+ "label_differences_total": 36,
+ "attribution_all50": {
+  "R1 标签误读(备注命中定义)": 30,
+  "R3 实质分歧": 2,
+  "R2 显示约定陷阱(F 为解析名/G 为编号)": 2,
+  "R1' 备注更精确(A2 标签比程序桶名更贴切)": 2
+ },
+ "attribution_kappa_21": {
+  "R3 实质分歧": 2,
+  "R1 标签误读(备注命中定义)": 3,
+  "R2 显示约定陷阱(F 为解析名/G 为编号)": 2
+ },
+ "oob_final_distribution": {
+  "oob_index": 27,
+  "其他": 2
+ },
+ "oob_substantive_identification": "29/29",
+ "final_labels": {
+  "B01": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B02": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B03": {
+   "r1": "self_pair",
+   "a2": "self_pair",
+   "final": "self_pair",
+   "reason": "一致"
+  },
+  "B04": {
+   "r1": "ambiguous",
+   "a2": "oob_index",
+   "final": "ambiguous",
+   "reason": "R3 实质分歧"
+  },
+  "B05": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B06": {
+   "r1": "parse_fail",
+   "a2": "其他",
+   "final": "parse_fail",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B07": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B08": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B09": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B10": {
+   "r1": "self_pair",
+   "a2": "self_pair",
+   "final": "self_pair",
+   "reason": "一致"
+  },
+  "B11": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B12": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B13": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B14": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B15": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B16": {
+   "r1": "self_pair",
+   "a2": "self_pair",
+   "final": "self_pair",
+   "reason": "一致"
+  },
+  "B17": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B18": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B19": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B20": {
+   "r1": "rel_unmapped",
+   "a2": "rel_unmapped",
+   "final": "rel_unmapped",
+   "reason": "一致"
+  },
+  "B21": {
+   "r1": "ambiguous",
+   "a2": "其他",
+   "final": "ambiguous",
+   "reason": "R2 显示约定陷阱(F 为解析名/G 为编号)"
+  },
+  "B22": {
+   "r1": "self_pair",
+   "a2": "self_pair",
+   "final": "self_pair",
+   "reason": "一致"
+  },
+  "B23": {
+   "r1": "oob_index",
+   "a2": "其他",
+   "final": "其他",
+   "reason": "R1' 备注更精确(A2 标签比程序桶名更贴切)"
+  },
+  "B24": {
+   "r1": "self_pair",
+   "a2": "self_pair",
+   "final": "self_pair",
+   "reason": "一致"
+  },
+  "B25": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B26": {
+   "r1": "ambiguous",
+   "a2": "其他",
+   "final": "ambiguous",
+   "reason": "R2 显示约定陷阱(F 为解析名/G 为编号)"
+  },
+  "B27": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B28": {
+   "r1": "parse_fail",
+   "a2": "其他",
+   "final": "parse_fail",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B29": {
+   "r1": "rel_unmapped",
+   "a2": "rel_unmapped",
+   "final": "rel_unmapped",
+   "reason": "一致"
+  },
+  "B30": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B31": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B32": {
+   "r1": "rel_unmapped",
+   "a2": "rel_unmapped",
+   "final": "rel_unmapped",
+   "reason": "一致"
+  },
+  "B33": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B34": {
+   "r1": "self_pair",
+   "a2": "self_pair",
+   "final": "self_pair",
+   "reason": "一致"
+  },
+  "B35": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B36": {
+   "r1": "self_pair",
+   "a2": "self_pair",
+   "final": "self_pair",
+   "reason": "一致"
+  },
+  "B37": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B38": {
+   "r1": "parse_fail",
+   "a2": "oob_index",
+   "final": "parse_fail",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B39": {
+   "r1": "parse_fail",
+   "a2": "其他",
+   "final": "parse_fail",
+   "reason": "R3 实质分歧"
+  },
+  "B40": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B41": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B42": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B43": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B44": {
+   "r1": "rel_unmapped",
+   "a2": "rel_unmapped",
+   "final": "rel_unmapped",
+   "reason": "一致"
+  },
+  "B45": {
+   "r1": "self_pair",
+   "a2": "self_pair",
+   "final": "self_pair",
+   "reason": "一致"
+  },
+  "B46": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  },
+  "B47": {
+   "r1": "oob_index",
+   "a2": "其他",
+   "final": "其他",
+   "reason": "R1' 备注更精确(A2 标签比程序桶名更贴切)"
+  },
+  "B48": {
+   "r1": "rel_unmapped",
+   "a2": "rel_unmapped",
+   "final": "rel_unmapped",
+   "reason": "一致"
+  },
+  "B49": {
+   "r1": "self_pair",
+   "a2": "self_pair",
+   "final": "self_pair",
+   "reason": "一致"
+  },
+  "B50": {
+   "r1": "oob_index",
+   "a2": "rel_unmapped",
+   "final": "oob_index",
+   "reason": "R1 标签误读(备注命中定义)"
+  }
+ }
+}

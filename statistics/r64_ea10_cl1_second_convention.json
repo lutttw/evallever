@@ -1,0 +1,63 @@
+{
+ "meta": {
+  "experiment": "CL1 under a second independent ATLOP retraining convention (independent_model_retrain, 3 seeds) x DREEAM stand-in teacher seeds; same caliber as r56 v2/PS",
+  "atlop_convB_runs": "independent_model_retrain/runs/atlop_D_s20260917,independent_model_retrain/runs/atlop_D_s20260918,independent_model_retrain/runs/atlop_D_s20260919",
+  "population": "498 common docs"
+ },
+ "per_seed": [
+  {
+   "seed_index": 0,
+   "F1_gD_ATLOPconvB": 0.5954,
+   "F1_gD_DREEAMstandin": 0.6108,
+   "delta_gD": 0.0155,
+   "ci_gD": [
+    -0.0227,
+    -0.0081
+   ],
+   "F1_gR_ATLOPconvB": 0.4498,
+   "F1_gR_DREEAMstandin": 0.4301,
+   "delta_gR": -0.0197,
+   "ci_gR": [
+    0.013,
+    0.0264
+   ],
+   "ordering": "MIXED"
+  },
+  {
+   "seed_index": 1,
+   "F1_gD_ATLOPconvB": 0.5568,
+   "F1_gD_DREEAMstandin": 0.6137,
+   "delta_gD": 0.0569,
+   "ci_gD": [
+    -0.0664,
+    -0.0475
+   ],
+   "F1_gR_ATLOPconvB": 0.4662,
+   "F1_gR_DREEAMstandin": 0.4338,
+   "delta_gR": -0.0324,
+   "ci_gR": [
+    0.0248,
+    0.0401
+   ],
+   "ordering": "MIXED"
+  },
+  {
+   "seed_index": 2,
+   "F1_gD_ATLOPconvB": 0.5942,
+   "F1_gD_DREEAMstandin": 0.6068,
+   "delta_gD": 0.0126,
+   "ci_gD": [
+    -0.0206,
+    -0.0049
+   ],
+   "F1_gR_ATLOPconvB": 0.4512,
+   "F1_gR_DREEAMstandin": 0.4272,
+   "delta_gR": -0.024,
+   "ci_gR": [
+    0.0183,
+    0.0298
+   ],
+   "ordering": "MIXED"
+  }
+ ]
+}

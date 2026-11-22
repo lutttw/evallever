@@ -1,0 +1,3324 @@
+{
+ "meta": {
+  "experiment": "E-A3b: basic-interval tie re-declaration on the held-out grids",
+  "tie_rules": {
+   "percentile": "95% percentile CI of resample-level paired diff contains 0 (frozen rule)",
+   "basic": "reverse-percentile: [2*theta - q97.5, 2*theta - q2.5] contains 0"
+  },
+  "bootstrap": {
+   "reps": 1000,
+   "unit": "segment",
+   "seed": 7,
+   "note": "same rng stream as the frozen E-A3 run; bertscore from _ea3_bs cache (no GPU)"
+  },
+  "flip_set": "frozen: percentile-discovered contract-induced flips (asserted == frozen json)"
+ },
+ "validation": {
+  "de-en_point_vs_r59_n3": "ok",
+  "zh-en_point_vs_r59_n3": "ok"
+ },
+ "grids": {
+  "newstest2021-de-en": {
+   "n_systems": 19,
+   "n_segments": 1000,
+   "n_pairs": 171,
+   "n_contract_induced_flips_pct": 114,
+   "n_flips_basic_discovery": 4,
+   "coverage_percentile_frozen": {
+    "aer_ensemble": 88,
+    "either_of_flipping_contracts": 102,
+    "n": 114
+   },
+   "coverage_basic": {
+    "aer_ensemble": 84,
+    "median_of_z": 80,
+    "best_single": 82,
+    "either_of_flipping_contracts": 100,
+    "n": 114
+   },
+   "tie_verdict_agreement_pct_vs_basic": {
+    "aer": "110/114",
+    "median": "112/114",
+    "either_contract": "112/114"
+   },
+   "false_tie_rate_pct": {
+    "bleu13a": "48/67",
+    "chrf": "47/66",
+    "bertscore": "27/46"
+   },
+   "flips_detail": [
+    {
+     "pair": "Borderline|Facebook-AI",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Borderline|Facebook-AI",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|HuaweiTSC",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|HuaweiTSC",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|NVIDIA-NeMo",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|NVIDIA-NeMo",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-A",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Borderline|Online-A",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-B",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-B",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-W",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-W",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|UEdin",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|UEdin",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|UF",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|UF",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|VolcTrans-GLAT",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|VolcTrans-GLAT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|HuaweiTSC",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|HuaweiTSC",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Online-A",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Online-A",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|VolcTrans-AT",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Facebook-AI|VolcTrans-GLAT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Watermelon",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Watermelon",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|Online-A",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|Online-A",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|VolcTrans-GLAT",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|Manifold",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|Manifold",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|P3AI",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|P3AI",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "ICL|SMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Manifold|Online-W",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|Online-W",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|Online-Y",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|Online-Y",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|SMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-B",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-B",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-G",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-G",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-W",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-W",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|SMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "NVIDIA-NeMo|UEdin",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|UEdin",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|UF",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|UF",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "NVIDIA-NeMo|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "NVIDIA-NeMo|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|VolcTrans-GLAT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Watermelon",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Watermelon",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|VolcTrans-AT",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|VolcTrans-GLAT",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|Watermelon",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|Watermelon",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|Online-W",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|Online-W",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|SMU",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|SMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|UEdin",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|UEdin",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|Watermelon",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|Watermelon",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-G|Online-W",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-G|Online-W",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-G|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-G|SMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|P3AI",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|P3AI",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Online-W|SMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|UEdin",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|UEdin",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|UF",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|UF",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|VolcTrans-GLAT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|Watermelon",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|Watermelon",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-Y|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Online-Y|SMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "P3AI|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|SMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "SMU|UEdin",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "SMU|UEdin",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "SMU|UF",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "SMU|UF",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|UF",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|UF",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|Watermelon",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|Watermelon",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|Watermelon",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|Watermelon",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    }
+   ]
+  },
+  "newstest2021-zh-en": {
+   "n_systems": 21,
+   "n_segments": 1948,
+   "n_pairs": 210,
+   "n_contract_induced_flips_pct": 66,
+   "n_flips_basic_discovery": 0,
+   "coverage_percentile_frozen": {
+    "aer_ensemble": 44,
+    "either_of_flipping_contracts": 58,
+    "n": 66
+   },
+   "coverage_basic": {
+    "aer_ensemble": 46,
+    "median_of_z": 48,
+    "best_single": 42,
+    "either_of_flipping_contracts": 59,
+    "n": 66
+   },
+   "tie_verdict_agreement_pct_vs_basic": {
+    "aer": "64/66",
+    "median": "60/66",
+    "either_contract": "65/66"
+   },
+   "false_tie_rate_pct": {
+    "bleu13a": "32/35",
+    "chrf": "26/29",
+    "bertscore": "19/22"
+   },
+   "flips_detail": [
+    {
+     "pair": "Borderline|DIDI-NLP",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Borderline|DIDI-NLP",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|MiSS",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|MiSS",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|yyds",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|yyds",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "DIDI-NLP|MiSS",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "DIDI-NLP|MiSS",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "DIDI-NLP|yyds",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "DIDI-NLP|yyds",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|IIE-MT",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|IIE-MT",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Facebook-AI|NiuTrans",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|NiuTrans",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Online-B",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Online-B",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|SMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HappyNewYear|HuaweiTSC",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HappyNewYear|HuaweiTSC",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HappyNewYear|NJUSC_TSC",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HappyNewYear|NJUSC_TSC",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HuaweiTSC|ICL",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|ICL",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|Machine_Translation",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HuaweiTSC|Machine_Translation",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": false
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HuaweiTSC|P3AI",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|P3AI",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|Machine_Translation",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|Machine_Translation",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|P3AI",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|P3AI",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "IIE-MT|SMU",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "IIE-MT|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": false,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "IIE-MT|XMU",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "IIE-MT|XMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|NiuTrans",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|NiuTrans",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|Online-B",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|Online-B",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "KwaiNLP|SMU",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Machine_Translation|NJUSC_TSC",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Machine_Translation|NJUSC_TSC",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Machine_Translation|P3AI",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Machine_Translation|P3AI",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "MiSS|Online-B",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "MiSS|Online-B",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "MiSS|yyds",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "MiSS|yyds",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|Online-B",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|Online-B",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|SMU",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|SMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|XMU",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|XMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": false,
+      "bleu13a": true,
+      "chrf": false,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|Online-Y",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|Online-Y",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|yyds",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|yyds",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": true,
+      "chrf": true,
+      "bertscore": false,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|UF",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|UF",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|XMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|XMU",
+     "between": "bertscore|chrf",
+     "basic": {
+      "aer": false,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|XMU",
+     "between": "bleu13a|chrf",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|XMU",
+     "between": "bertscore|bleu13a",
+     "basic": {
+      "aer": true,
+      "median": true,
+      "bleu13a": false,
+      "chrf": true,
+      "bertscore": true,
+      "either_contract": true
+     },
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    }
+   ]
+  }
+ }
+}

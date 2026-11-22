@@ -1,0 +1,11 @@
+{
+ "config": "Re-TACRED pure-relabel effect, subset-matched: identical instance set (13,418 ids), only the gold label changes (TACRED original vs Re-TACRED); pruning excluded by construction",
+ "systems": 45,
+ "microF1_delta_min": -0.2158,
+ "microF1_delta_max": -0.1372,
+ "microF1_delta_mean": -0.1858,
+ "pairwise_rank_flips": 108,
+ "total_pairs": 990,
+ "top1_restricted_original": "self_att_elmo_wo_discr_masked",
+ "top1_retacred": "self_att_elmo_wo_discr_masked"
+}

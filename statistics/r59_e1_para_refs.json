@@ -1,0 +1,2310 @@
+{
+ "config": {
+  "systems": "21 released WMT19 en-de submissions (Human and DA<60 broken cell excluded), 1997 segments, frozen outputs",
+  "refs": "orig newstest2019 + Freitag et al. 2020 paraphrased refs (ar/arp/wmtp/hqr/hqp)",
+  "scorers": "bleu|13a, chrf|13a, bertscore|official(de)",
+  "anchor": "per-system mean DA (wmt-raw)",
+  "seed": 20261027
+ },
+ "systems": [
+  "Facebook_FAIR.6862",
+  "Helsinki-NLP.6820",
+  "JHU.6819",
+  "MLLP-UPV.6651",
+  "MSRA.MADL.6926",
+  "Microsoft-WMT19-document-level.6808",
+  "Microsoft-WMT19-sentence-level.6785",
+  "Microsoft-WMT19-sentence_document.6974",
+  "NEU.6763",
+  "PROMT_NMT_EN-DE.6674",
+  "TartuNLP-c.6508",
+  "UCAM.6731",
+  "UdS-DFKI.6871",
+  "dfki-nmt.6479",
+  "eTranslation.6823",
+  "lmu-ctx-tf-single-en-de.6981",
+  "online-A.0",
+  "online-B.0",
+  "online-G.0",
+  "online-X.0",
+  "online-Y.0"
+ ],
+ "rho_orig": {
+  "bleu|Facebook_FAIR.6862": 42.66519048670808,
+  "bleu|Helsinki-NLP.6820": 41.41066068922021,
+  "bleu|JHU.6819": 42.51705349834923,
+  "bleu|MLLP-UPV.6651": 41.72289803260966,
+  "bleu|MSRA.MADL.6926": 44.92618781753418,
+  "bleu|Microsoft-WMT19-document-level.6808": 43.848512186415306,
+  "bleu|Microsoft-WMT19-sentence-level.6785": 42.96845362624415,
+  "bleu|Microsoft-WMT19-sentence_document.6974": 43.92493448044643,
+  "bleu|NEU.6763": 43.523607215828854,
+  "bleu|PROMT_NMT_EN-DE.6674": 37.94136681418762,
+  "bleu|TartuNLP-c.6508": 36.42810528951447,
+  "bleu|UCAM.6731": 43.008755992812574,
+  "bleu|UdS-DFKI.6871": 38.6481209033165,
+  "bleu|dfki-nmt.6479": 41.56550531203471,
+  "bleu|eTranslation.6823": 41.89989457529362,
+  "bleu|lmu-ctx-tf-single-en-de.6981": 40.30628805765635,
+  "bleu|online-A.0": 41.030063203028,
+  "bleu|online-B.0": 41.238798521159644,
+  "bleu|online-G.0": 35.14346848299817,
+  "bleu|online-X.0": 29.475686142702067,
+  "bleu|online-Y.0": 42.0236586060433,
+  "chrf|Facebook_FAIR.6862": 68.09319632420107,
+  "chrf|Helsinki-NLP.6820": 66.55562217009181,
+  "chrf|JHU.6819": 66.92908182403454,
+  "chrf|MLLP-UPV.6651": 66.60488752172054,
+  "chrf|MSRA.MADL.6926": 68.93462741318763,
+  "chrf|Microsoft-WMT19-document-level.6808": 68.65472791645286,
+  "chrf|Microsoft-WMT19-sentence-level.6785": 67.87035902332572,
+  "chrf|Microsoft-WMT19-sentence_document.6974": 68.66421122676662,
+  "chrf|NEU.6763": 67.88291721811551,
+  "chrf|PROMT_NMT_EN-DE.6674": 63.47544298234338,
+  "chrf|TartuNLP-c.6508": 62.44884286797598,
+  "chrf|UCAM.6731": 67.31074131926691,
+  "chrf|UdS-DFKI.6871": 63.995238827386814,
+  "chrf|dfki-nmt.6479": 66.5699025724079,
+  "chrf|eTranslation.6823": 66.87559060742527,
+  "chrf|lmu-ctx-tf-single-en-de.6981": 65.88650827053266,
+  "chrf|online-A.0": 65.78986748132361,
+  "chrf|online-B.0": 65.61838770325271,
+  "chrf|online-G.0": 62.41183575994715,
+  "chrf|online-X.0": 59.06624661257508,
+  "chrf|online-Y.0": 66.68768594178528,
+  "bertscore|Facebook_FAIR.6862": 0.8928732872009277,
+  "bertscore|Helsinki-NLP.6820": 0.8880895376205444,
+  "bertscore|JHU.6819": 0.889266848564148,
+  "bertscore|MLLP-UPV.6651": 0.8883302807807922,
+  "bertscore|MSRA.MADL.6926": 0.8946889638900757,
+  "bertscore|Microsoft-WMT19-document-level.6808": 0.8944520354270935,
+  "bertscore|Microsoft-WMT19-sentence-level.6785": 0.8897398710250854,
+  "bertscore|Microsoft-WMT19-sentence_document.6974": 0.8945447206497192,
+  "bertscore|NEU.6763": 0.8932253122329712,
+  "bertscore|PROMT_NMT_EN-DE.6674": 0.8794353604316711,
+  "bertscore|TartuNLP-c.6508": 0.8750455975532532,
+  "bertscore|UCAM.6731": 0.891743004322052,
+  "bertscore|UdS-DFKI.6871": 0.8787891268730164,
+  "bertscore|dfki-nmt.6479": 0.8868616819381714,
+  "bertscore|eTranslation.6823": 0.8897678852081299,
+  "bertscore|lmu-ctx-tf-single-en-de.6981": 0.8834710121154785,
+  "bertscore|online-A.0": 0.88371741771698,
+  "bertscore|online-B.0": 0.8878471851348877,
+  "bertscore|online-G.0": 0.8754474520683289,
+  "bertscore|online-X.0": 0.8580943942070007,
+  "bertscore|online-Y.0": 0.8897987604141235
+ },
+ "para_ar": {
+  "rho": {
+   "bleu|Facebook_FAIR.6862": 38.30975603889449,
+   "bleu|Helsinki-NLP.6820": 34.0851260752291,
+   "bleu|JHU.6819": 35.148097720424715,
+   "bleu|MLLP-UPV.6651": 33.895429572426934,
+   "bleu|MSRA.MADL.6926": 37.54337730607026,
+   "bleu|Microsoft-WMT19-document-level.6808": 37.758555099752165,
+   "bleu|Microsoft-WMT19-sentence-level.6785": 36.16027654561321,
+   "bleu|Microsoft-WMT19-sentence_document.6974": 37.838210449029,
+   "bleu|NEU.6763": 36.185080170922156,
+   "bleu|PROMT_NMT_EN-DE.6674": 30.45470369248101,
+   "bleu|TartuNLP-c.6508": 29.242270639062156,
+   "bleu|UCAM.6731": 35.967212366689964,
+   "bleu|UdS-DFKI.6871": 32.2241465283343,
+   "bleu|dfki-nmt.6479": 33.09046453802091,
+   "bleu|eTranslation.6823": 34.23856777587729,
+   "bleu|lmu-ctx-tf-single-en-de.6981": 33.74529355890366,
+   "bleu|online-A.0": 31.548437356727863,
+   "bleu|online-B.0": 31.979957591889168,
+   "bleu|online-G.0": 28.318383254683997,
+   "bleu|online-X.0": 24.836629832385295,
+   "bleu|online-Y.0": 33.31399196065051,
+   "chrf|Facebook_FAIR.6862": 64.86903656465863,
+   "chrf|Helsinki-NLP.6820": 61.57405069067511,
+   "chrf|JHU.6819": 62.193254782005255,
+   "chrf|MLLP-UPV.6651": 61.78419168397874,
+   "chrf|MSRA.MADL.6926": 63.88341605155679,
+   "chrf|Microsoft-WMT19-document-level.6808": 64.40344987043845,
+   "chrf|Microsoft-WMT19-sentence-level.6785": 63.282545875005056,
+   "chrf|Microsoft-WMT19-sentence_document.6974": 64.40634553023135,
+   "chrf|NEU.6763": 62.86357882165541,
+   "chrf|PROMT_NMT_EN-DE.6674": 58.83176852901926,
+   "chrf|TartuNLP-c.6508": 58.09935281843822,
+   "chrf|UCAM.6731": 62.54477959818544,
+   "chrf|UdS-DFKI.6871": 59.7089113384095,
+   "chrf|dfki-nmt.6479": 61.25532965418359,
+   "chrf|eTranslation.6823": 61.74200442773217,
+   "chrf|lmu-ctx-tf-single-en-de.6981": 61.381471519113795,
+   "chrf|online-A.0": 59.98117885418631,
+   "chrf|online-B.0": 60.1901572871544,
+   "chrf|online-G.0": 57.786892308621354,
+   "chrf|online-X.0": 55.63509902023242,
+   "chrf|online-Y.0": 60.86595801987481,
+   "bertscore|Facebook_FAIR.6862": 0.8895120024681091,
+   "bertscore|Helsinki-NLP.6820": 0.880765438079834,
+   "bertscore|JHU.6819": 0.8810132741928101,
+   "bertscore|MLLP-UPV.6651": 0.8770303726196289,
+   "bertscore|MSRA.MADL.6926": 0.8867297768592834,
+   "bertscore|Microsoft-WMT19-document-level.6808": 0.8890271186828613,
+   "bertscore|Microsoft-WMT19-sentence-level.6785": 0.8840550780296326,
+   "bertscore|Microsoft-WMT19-sentence_document.6974": 0.889362633228302,
+   "bertscore|NEU.6763": 0.887007474899292,
+   "bertscore|PROMT_NMT_EN-DE.6674": 0.8673547506332397,
+   "bertscore|TartuNLP-c.6508": 0.8643065690994263,
+   "bertscore|UCAM.6731": 0.8854793906211853,
+   "bertscore|UdS-DFKI.6871": 0.8715554475784302,
+   "bertscore|dfki-nmt.6479": 0.8733571171760559,
+   "bertscore|eTranslation.6823": 0.8818419575691223,
+   "bertscore|lmu-ctx-tf-single-en-de.6981": 0.8756820559501648,
+   "bertscore|online-A.0": 0.8693884611129761,
+   "bertscore|online-B.0": 0.8738771080970764,
+   "bertscore|online-G.0": 0.8634809851646423,
+   "bertscore|online-X.0": 0.8486750721931458,
+   "bertscore|online-Y.0": 0.8791661858558655
+  },
+  "bleu": {
+   "arm_min": 4.355,
+   "arm_max": 9.482,
+   "n_flips": 20,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -2.261,
+     0.766
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -1.183,
+     0.551
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence-level.6785",
+     -0.303,
+     2.149
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -1.26,
+     0.472
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.858,
+     2.125
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "UCAM.6731",
+     -0.344,
+     2.343
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "MLLP-UPV.6651",
+     -0.312,
+     0.19
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.155,
+     0.995
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.613,
+     0.771
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.301,
+     0.581
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     1.078,
+     -0.215
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     1.001,
+     -0.295
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "UCAM.6731",
+     -0.04,
+     0.193
+    ],
+    [
+     "UdS-DFKI.6871",
+     "online-A.0",
+     -2.382,
+     0.676
+    ],
+    [
+     "UdS-DFKI.6871",
+     "online-B.0",
+     -2.591,
+     0.244
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     1.259,
+     -0.655
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.124,
+     0.925
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.724,
+     2.197
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-B.0",
+     -0.933,
+     1.765
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-Y.0",
+     -1.717,
+     0.431
+    ]
+   ],
+   "tau_DA_orig": 0.7619,
+   "tau_DA_para": 0.7619
+  },
+  "chrf": {
+   "arm_min": 3.224,
+   "arm_max": 5.822,
+   "n_flips": 14,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.841,
+     0.986
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -0.562,
+     0.466
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.571,
+     0.463
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.014,
+     0.319
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.132,
+     0.708
+    ],
+    [
+     "MLLP-UPV.6651",
+     "eTranslation.6823",
+     -0.271,
+     0.042
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.083,
+     0.918
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.28,
+     -0.52
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.27,
+     -0.523
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "NEU.6763",
+     -0.013,
+     0.419
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     0.683,
+     -0.126
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-Y.0",
+     -0.118,
+     0.389
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-Y.0",
+     -0.801,
+     0.516
+    ],
+    [
+     "online-A.0",
+     "online-B.0",
+     0.171,
+     -0.209
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.781
+  },
+  "bertscore": {
+   "arm_min": 0.003,
+   "arm_max": 0.014,
+   "n_flips": 19,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.002,
+     0.003
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -0.002,
+     0.0
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.002,
+     0.0
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.0,
+     0.003
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "MLLP-UPV.6651",
+     -0.0,
+     0.004
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.002,
+     0.002
+    ],
+    [
+     "JHU.6819",
+     "online-Y.0",
+     -0.001,
+     0.002
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.0,
+     -0.002
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.0,
+     -0.003
+    ],
+    [
+     "MSRA.MADL.6926",
+     "NEU.6763",
+     0.001,
+     -0.0
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "eTranslation.6823",
+     -0.0,
+     0.002
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "online-Y.0",
+     -0.0,
+     0.005
+    ],
+    [
+     "PROMT_NMT_EN-DE.6674",
+     "UdS-DFKI.6871",
+     0.001,
+     -0.004
+    ],
+    [
+     "TartuNLP-c.6508",
+     "online-G.0",
+     -0.0,
+     0.001
+    ],
+    [
+     "UdS-DFKI.6871",
+     "online-A.0",
+     -0.005,
+     0.002
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     0.003,
+     -0.002
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.0,
+     0.003
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.0,
+     0.006
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-B.0",
+     -0.004,
+     0.002
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.7905
+  }
+ },
+ "para_arp": {
+  "rho": {
+   "bleu|Facebook_FAIR.6862": 13.390243384041032,
+   "bleu|Helsinki-NLP.6820": 12.097642429987726,
+   "bleu|JHU.6819": 12.415271333297783,
+   "bleu|MLLP-UPV.6651": 12.42670853416962,
+   "bleu|MSRA.MADL.6926": 12.797404758378859,
+   "bleu|Microsoft-WMT19-document-level.6808": 13.257071692439323,
+   "bleu|Microsoft-WMT19-sentence-level.6785": 12.618707514190342,
+   "bleu|Microsoft-WMT19-sentence_document.6974": 13.228374639515923,
+   "bleu|NEU.6763": 12.56535608854162,
+   "bleu|PROMT_NMT_EN-DE.6674": 11.13226748728988,
+   "bleu|TartuNLP-c.6508": 11.121048836601778,
+   "bleu|UCAM.6731": 12.679461756568513,
+   "bleu|UdS-DFKI.6871": 11.469205515599132,
+   "bleu|dfki-nmt.6479": 11.746906502525366,
+   "bleu|eTranslation.6823": 12.412437168238794,
+   "bleu|lmu-ctx-tf-single-en-de.6981": 12.137368535136078,
+   "bleu|online-A.0": 11.631730084179122,
+   "bleu|online-B.0": 11.917442180111237,
+   "bleu|online-G.0": 10.40843405993041,
+   "bleu|online-X.0": 9.049283962289358,
+   "bleu|online-Y.0": 11.818446479710373,
+   "chrf|Facebook_FAIR.6862": 45.52171477879821,
+   "chrf|Helsinki-NLP.6820": 43.81792211175135,
+   "chrf|JHU.6819": 44.03734288110343,
+   "chrf|MLLP-UPV.6651": 44.159255620414164,
+   "chrf|MSRA.MADL.6926": 44.77094345497858,
+   "chrf|Microsoft-WMT19-document-level.6808": 45.4237950438743,
+   "chrf|Microsoft-WMT19-sentence-level.6785": 44.664091043892434,
+   "chrf|Microsoft-WMT19-sentence_document.6974": 45.29727233474365,
+   "chrf|NEU.6763": 44.36823047070594,
+   "chrf|PROMT_NMT_EN-DE.6674": 42.52922618864963,
+   "chrf|TartuNLP-c.6508": 42.51075364675055,
+   "chrf|UCAM.6731": 44.38599774223116,
+   "chrf|UdS-DFKI.6871": 42.66879515541882,
+   "chrf|dfki-nmt.6479": 43.67816546996103,
+   "chrf|eTranslation.6823": 44.2004078325583,
+   "chrf|lmu-ctx-tf-single-en-de.6981": 43.840462531235374,
+   "chrf|online-A.0": 43.27742107636464,
+   "chrf|online-B.0": 43.53843940918109,
+   "chrf|online-G.0": 41.64677815467452,
+   "chrf|online-X.0": 40.48520868633895,
+   "chrf|online-Y.0": 43.25198502516845,
+   "bertscore|Facebook_FAIR.6862": 0.8006526827812195,
+   "bertscore|Helsinki-NLP.6820": 0.7957698702812195,
+   "bertscore|JHU.6819": 0.7963582873344421,
+   "bertscore|MLLP-UPV.6651": 0.7949128746986389,
+   "bertscore|MSRA.MADL.6926": 0.7983866930007935,
+   "bertscore|Microsoft-WMT19-document-level.6808": 0.8009230494499207,
+   "bertscore|Microsoft-WMT19-sentence-level.6785": 0.7965255975723267,
+   "bertscore|Microsoft-WMT19-sentence_document.6974": 0.8003935813903809,
+   "bertscore|NEU.6763": 0.7990010976791382,
+   "bertscore|PROMT_NMT_EN-DE.6674": 0.7890973091125488,
+   "bertscore|TartuNLP-c.6508": 0.7889310717582703,
+   "bertscore|UCAM.6731": 0.7993284463882446,
+   "bertscore|UdS-DFKI.6871": 0.790702760219574,
+   "bertscore|dfki-nmt.6479": 0.792009711265564,
+   "bertscore|eTranslation.6823": 0.7965489625930786,
+   "bertscore|lmu-ctx-tf-single-en-de.6981": 0.7931572794914246,
+   "bertscore|online-A.0": 0.7904927730560303,
+   "bertscore|online-B.0": 0.7951303720474243,
+   "bertscore|online-G.0": 0.7852911353111267,
+   "bertscore|online-X.0": 0.7762573957443237,
+   "bertscore|online-Y.0": 0.7936785817146301
+  },
+  "bleu": {
+   "arm_min": 20.426,
+   "arm_max": 32.129,
+   "n_flips": 24,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -2.261,
+     0.593
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -1.183,
+     0.133
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence-level.6785",
+     -0.303,
+     0.772
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -1.26,
+     0.162
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.858,
+     0.825
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "UCAM.6731",
+     -0.344,
+     0.711
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.155,
+     0.351
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "lmu-ctx-tf-single-en-de.6981",
+     1.104,
+     -0.04
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.613,
+     0.279
+    ],
+    [
+     "JHU.6819",
+     "MLLP-UPV.6651",
+     0.794,
+     -0.011
+    ],
+    [
+     "MLLP-UPV.6651",
+     "eTranslation.6823",
+     -0.177,
+     0.014
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.301,
+     0.608
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     1.078,
+     -0.46
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     1.001,
+     -0.431
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.076,
+     0.029
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "NEU.6763",
+     -0.555,
+     0.053
+    ],
+    [
+     "NEU.6763",
+     "UCAM.6731",
+     0.515,
+     -0.114
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     1.259,
+     -0.39
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-B.0",
+     0.327,
+     -0.171
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.124,
+     0.594
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.724,
+     0.506
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-B.0",
+     -0.933,
+     0.22
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-Y.0",
+     -1.717,
+     0.319
+    ],
+    [
+     "online-B.0",
+     "online-Y.0",
+     -0.785,
+     0.099
+    ]
+   ],
+   "tau_DA_orig": 0.7619,
+   "tau_DA_para": 0.7429
+  },
+  "chrf": {
+   "arm_min": 18.581,
+   "arm_max": 24.164,
+   "n_flips": 20,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.841,
+     0.751
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -0.562,
+     0.098
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.571,
+     0.224
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.014,
+     0.14
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "lmu-ctx-tf-single-en-de.6981",
+     0.669,
+     -0.023
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.132,
+     0.566
+    ],
+    [
+     "JHU.6819",
+     "MLLP-UPV.6651",
+     0.324,
+     -0.122
+    ],
+    [
+     "JHU.6819",
+     "eTranslation.6823",
+     0.053,
+     -0.163
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.083,
+     0.907
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.28,
+     -0.653
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.27,
+     -0.526
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.009,
+     0.127
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "NEU.6763",
+     -0.013,
+     0.296
+    ],
+    [
+     "NEU.6763",
+     "UCAM.6731",
+     0.572,
+     -0.018
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     0.683,
+     -0.162
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-Y.0",
+     -0.118,
+     0.426
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-Y.0",
+     -0.801,
+     0.588
+    ],
+    [
+     "online-A.0",
+     "online-B.0",
+     0.171,
+     -0.261
+    ],
+    [
+     "online-A.0",
+     "online-Y.0",
+     -0.898,
+     0.025
+    ],
+    [
+     "online-B.0",
+     "online-Y.0",
+     -1.069,
+     0.286
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.7619
+  },
+  "bertscore": {
+   "arm_min": 0.082,
+   "arm_max": 0.096,
+   "n_flips": 22,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.002,
+     0.002
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.002,
+     0.0
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.0,
+     0.002
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "MLLP-UPV.6651",
+     -0.0,
+     0.001
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.002,
+     0.002
+    ],
+    [
+     "JHU.6819",
+     "online-Y.0",
+     -0.001,
+     0.003
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-B.0",
+     0.0,
+     -0.0
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.001,
+     0.001
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.0,
+     -0.003
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.0,
+     -0.002
+    ],
+    [
+     "MSRA.MADL.6926",
+     "NEU.6763",
+     0.001,
+     -0.001
+    ],
+    [
+     "MSRA.MADL.6926",
+     "UCAM.6731",
+     0.003,
+     -0.001
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.0,
+     0.001
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "online-Y.0",
+     -0.0,
+     0.003
+    ],
+    [
+     "NEU.6763",
+     "UCAM.6731",
+     0.001,
+     -0.0
+    ],
+    [
+     "PROMT_NMT_EN-DE.6674",
+     "UdS-DFKI.6871",
+     0.001,
+     -0.002
+    ],
+    [
+     "TartuNLP-c.6508",
+     "online-G.0",
+     -0.0,
+     0.004
+    ],
+    [
+     "UdS-DFKI.6871",
+     "online-A.0",
+     -0.005,
+     0.0
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     0.003,
+     -0.001
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.0,
+     0.003
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.0,
+     0.003
+    ],
+    [
+     "online-B.0",
+     "online-Y.0",
+     -0.002,
+     0.001
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.8
+  }
+ },
+ "para_wmtp": {
+  "rho": {
+   "bleu|Facebook_FAIR.6862": 13.917557585632453,
+   "bleu|Helsinki-NLP.6820": 12.628216006976816,
+   "bleu|JHU.6819": 12.8011455207437,
+   "bleu|MLLP-UPV.6651": 12.81136576615353,
+   "bleu|MSRA.MADL.6926": 13.249310630251394,
+   "bleu|Microsoft-WMT19-document-level.6808": 13.796282756538044,
+   "bleu|Microsoft-WMT19-sentence-level.6785": 13.069858737216519,
+   "bleu|Microsoft-WMT19-sentence_document.6974": 13.810504168380614,
+   "bleu|NEU.6763": 13.017579359995109,
+   "bleu|PROMT_NMT_EN-DE.6674": 11.517190598202271,
+   "bleu|TartuNLP-c.6508": 11.470288748669946,
+   "bleu|UCAM.6731": 13.263450891303874,
+   "bleu|UdS-DFKI.6871": 11.73952374896313,
+   "bleu|dfki-nmt.6479": 12.274160804290249,
+   "bleu|eTranslation.6823": 12.711187167585319,
+   "bleu|lmu-ctx-tf-single-en-de.6981": 12.358700325487485,
+   "bleu|online-A.0": 12.084078100998727,
+   "bleu|online-B.0": 12.516436846270134,
+   "bleu|online-G.0": 10.47625969828338,
+   "bleu|online-X.0": 9.013484175624578,
+   "bleu|online-Y.0": 12.12755116472292,
+   "chrf|Facebook_FAIR.6862": 45.25362767849025,
+   "chrf|Helsinki-NLP.6820": 43.69555058030831,
+   "chrf|JHU.6819": 43.83406311168919,
+   "chrf|MLLP-UPV.6651": 43.93261617190507,
+   "chrf|MSRA.MADL.6926": 44.49624954778036,
+   "chrf|Microsoft-WMT19-document-level.6808": 45.22558289288779,
+   "chrf|Microsoft-WMT19-sentence-level.6785": 44.43304771859568,
+   "chrf|Microsoft-WMT19-sentence_document.6974": 45.108053948578096,
+   "chrf|NEU.6763": 44.09837567517814,
+   "chrf|PROMT_NMT_EN-DE.6674": 42.24239270602819,
+   "chrf|TartuNLP-c.6508": 42.33687889353834,
+   "chrf|UCAM.6731": 44.29090442287942,
+   "chrf|UdS-DFKI.6871": 42.333833489916685,
+   "chrf|dfki-nmt.6479": 43.47570852730551,
+   "chrf|eTranslation.6823": 43.990230225989116,
+   "chrf|lmu-ctx-tf-single-en-de.6981": 43.62074909534337,
+   "chrf|online-A.0": 43.15423436230479,
+   "chrf|online-B.0": 43.45074872243749,
+   "chrf|online-G.0": 41.33502154193754,
+   "chrf|online-X.0": 40.05871367299034,
+   "chrf|online-Y.0": 43.17063760880531,
+   "bertscore|Facebook_FAIR.6862": 0.8031208515167236,
+   "bertscore|Helsinki-NLP.6820": 0.79914391040802,
+   "bertscore|JHU.6819": 0.7981793880462646,
+   "bertscore|MLLP-UPV.6651": 0.7973033785820007,
+   "bertscore|MSRA.MADL.6926": 0.8010281920433044,
+   "bertscore|Microsoft-WMT19-document-level.6808": 0.8037923574447632,
+   "bertscore|Microsoft-WMT19-sentence-level.6785": 0.799216091632843,
+   "bertscore|Microsoft-WMT19-sentence_document.6974": 0.8030683994293213,
+   "bertscore|NEU.6763": 0.8017921447753906,
+   "bertscore|PROMT_NMT_EN-DE.6674": 0.7905260920524597,
+   "bertscore|TartuNLP-c.6508": 0.7914929986000061,
+   "bertscore|UCAM.6731": 0.8025388717651367,
+   "bertscore|UdS-DFKI.6871": 0.7931900024414062,
+   "bertscore|dfki-nmt.6479": 0.7938450574874878,
+   "bertscore|eTranslation.6823": 0.7998728156089783,
+   "bertscore|lmu-ctx-tf-single-en-de.6981": 0.7961241006851196,
+   "bertscore|online-A.0": 0.7928293347358704,
+   "bertscore|online-B.0": 0.7983772158622742,
+   "bertscore|online-G.0": 0.7871208786964417,
+   "bertscore|online-X.0": 0.7771220803260803,
+   "bertscore|online-Y.0": 0.7975394129753113
+  },
+  "bleu": {
+   "arm_min": 20.462,
+   "arm_max": 31.677,
+   "n_flips": 23,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -2.261,
+     0.668
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -1.183,
+     0.121
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence-level.6785",
+     -0.303,
+     0.848
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -1.26,
+     0.107
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.858,
+     0.9
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "UCAM.6731",
+     -0.344,
+     0.654
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.155,
+     0.354
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.613,
+     0.501
+    ],
+    [
+     "JHU.6819",
+     "MLLP-UPV.6651",
+     0.794,
+     -0.01
+    ],
+    [
+     "MLLP-UPV.6651",
+     "eTranslation.6823",
+     -0.177,
+     0.1
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.301,
+     0.684
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     1.078,
+     -0.547
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     1.001,
+     -0.561
+    ],
+    [
+     "MSRA.MADL.6926",
+     "UCAM.6731",
+     1.917,
+     -0.014
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "NEU.6763",
+     -0.555,
+     0.052
+    ],
+    [
+     "NEU.6763",
+     "UCAM.6731",
+     0.515,
+     -0.246
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     1.259,
+     -0.085
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-B.0",
+     0.327,
+     -0.242
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-Y.0",
+     -0.458,
+     0.147
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.124,
+     0.584
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.724,
+     0.275
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-Y.0",
+     -1.717,
+     0.231
+    ],
+    [
+     "online-B.0",
+     "online-Y.0",
+     -0.785,
+     0.389
+    ]
+   ],
+   "tau_DA_orig": 0.7619,
+   "tau_DA_para": 0.7905
+  },
+  "chrf": {
+   "arm_min": 19.008,
+   "arm_max": 24.438,
+   "n_flips": 20,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.841,
+     0.757
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -0.562,
+     0.028
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.571,
+     0.146
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.014,
+     0.22
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.132,
+     0.525
+    ],
+    [
+     "JHU.6819",
+     "MLLP-UPV.6651",
+     0.324,
+     -0.099
+    ],
+    [
+     "JHU.6819",
+     "eTranslation.6823",
+     0.053,
+     -0.156
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.083,
+     0.762
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.28,
+     -0.729
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.27,
+     -0.612
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.009,
+     0.118
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "NEU.6763",
+     -0.013,
+     0.335
+    ],
+    [
+     "NEU.6763",
+     "UCAM.6731",
+     0.572,
+     -0.193
+    ],
+    [
+     "PROMT_NMT_EN-DE.6674",
+     "TartuNLP-c.6508",
+     1.027,
+     -0.094
+    ],
+    [
+     "TartuNLP-c.6508",
+     "UdS-DFKI.6871",
+     -1.546,
+     0.003
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     0.683,
+     -0.145
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-Y.0",
+     -0.118,
+     0.305
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-Y.0",
+     -0.801,
+     0.45
+    ],
+    [
+     "online-A.0",
+     "online-B.0",
+     0.171,
+     -0.297
+    ],
+    [
+     "online-B.0",
+     "online-Y.0",
+     -1.069,
+     0.28
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.781
+  },
+  "bertscore": {
+   "arm_min": 0.081,
+   "arm_max": 0.094,
+   "n_flips": 24,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.002,
+     0.002
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.002,
+     0.0
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.0,
+     0.001
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "JHU.6819",
+     -0.001,
+     0.001
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "MLLP-UPV.6651",
+     -0.0,
+     0.002
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.002,
+     0.002
+    ],
+    [
+     "JHU.6819",
+     "online-B.0",
+     0.001,
+     -0.0
+    ],
+    [
+     "JHU.6819",
+     "online-Y.0",
+     -0.001,
+     0.001
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-B.0",
+     0.0,
+     -0.001
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.0,
+     -0.003
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.0,
+     -0.002
+    ],
+    [
+     "MSRA.MADL.6926",
+     "NEU.6763",
+     0.001,
+     -0.001
+    ],
+    [
+     "MSRA.MADL.6926",
+     "UCAM.6731",
+     0.003,
+     -0.002
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.0,
+     0.001
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "online-Y.0",
+     -0.0,
+     0.002
+    ],
+    [
+     "NEU.6763",
+     "UCAM.6731",
+     0.001,
+     -0.001
+    ],
+    [
+     "PROMT_NMT_EN-DE.6674",
+     "TartuNLP-c.6508",
+     0.004,
+     -0.001
+    ],
+    [
+     "PROMT_NMT_EN-DE.6674",
+     "UdS-DFKI.6871",
+     0.001,
+     -0.003
+    ],
+    [
+     "TartuNLP-c.6508",
+     "online-G.0",
+     -0.0,
+     0.004
+    ],
+    [
+     "UdS-DFKI.6871",
+     "online-A.0",
+     -0.005,
+     0.0
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     0.003,
+     -0.002
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.0,
+     0.002
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.0,
+     0.003
+    ],
+    [
+     "online-B.0",
+     "online-Y.0",
+     -0.002,
+     0.001
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.7619
+  }
+ },
+ "para_hqr": {
+  "rho": {
+   "bleu|Facebook_FAIR.6862": 40.83660754711789,
+   "bleu|Helsinki-NLP.6820": 37.6162884142048,
+   "bleu|JHU.6819": 38.673333181868166,
+   "bleu|MLLP-UPV.6651": 37.852483207283534,
+   "bleu|MSRA.MADL.6926": 40.94945339086857,
+   "bleu|Microsoft-WMT19-document-level.6808": 40.79178393186863,
+   "bleu|Microsoft-WMT19-sentence-level.6785": 39.448220292449065,
+   "bleu|Microsoft-WMT19-sentence_document.6974": 40.7523086689689,
+   "bleu|NEU.6763": 39.71423899547164,
+   "bleu|PROMT_NMT_EN-DE.6674": 33.82321017058448,
+   "bleu|TartuNLP-c.6508": 32.64850249549291,
+   "bleu|UCAM.6731": 39.29655129414096,
+   "bleu|UdS-DFKI.6871": 35.193871604046876,
+   "bleu|dfki-nmt.6479": 37.41001442327661,
+   "bleu|eTranslation.6823": 37.6744492935996,
+   "bleu|lmu-ctx-tf-single-en-de.6981": 36.676485303067714,
+   "bleu|online-A.0": 36.06273176729422,
+   "bleu|online-B.0": 36.76170742231832,
+   "bleu|online-G.0": 31.54788832645574,
+   "bleu|online-X.0": 27.30788814180364,
+   "bleu|online-Y.0": 37.62788034984995,
+   "chrf|Facebook_FAIR.6862": 66.80969317645084,
+   "chrf|Helsinki-NLP.6820": 64.07775400935226,
+   "chrf|JHU.6819": 64.56962278358918,
+   "chrf|MLLP-UPV.6651": 64.2378210832176,
+   "chrf|MSRA.MADL.6926": 66.32110942002593,
+   "chrf|Microsoft-WMT19-document-level.6808": 66.6343287795349,
+   "chrf|Microsoft-WMT19-sentence-level.6785": 65.60759710673136,
+   "chrf|Microsoft-WMT19-sentence_document.6974": 66.56350228319181,
+   "chrf|NEU.6763": 65.32860447529161,
+   "chrf|PROMT_NMT_EN-DE.6674": 60.90609591213551,
+   "chrf|TartuNLP-c.6508": 60.24817628387096,
+   "chrf|UCAM.6731": 64.84495277463806,
+   "chrf|UdS-DFKI.6871": 61.79874728719158,
+   "chrf|dfki-nmt.6479": 63.902521214384734,
+   "chrf|eTranslation.6823": 64.17704402740961,
+   "chrf|lmu-ctx-tf-single-en-de.6981": 63.571282462439086,
+   "chrf|online-A.0": 62.65580172783868,
+   "chrf|online-B.0": 63.06361466355293,
+   "chrf|online-G.0": 59.96368542137993,
+   "chrf|online-X.0": 57.294799220231376,
+   "chrf|online-Y.0": 63.738302514164204,
+   "bertscore|Facebook_FAIR.6862": 0.8917773365974426,
+   "bertscore|Helsinki-NLP.6820": 0.8844543695449829,
+   "bertscore|JHU.6819": 0.8850709199905396,
+   "bertscore|MLLP-UPV.6651": 0.882118821144104,
+   "bertscore|MSRA.MADL.6926": 0.8902137279510498,
+   "bertscore|Microsoft-WMT19-document-level.6808": 0.8924517035484314,
+   "bertscore|Microsoft-WMT19-sentence-level.6785": 0.8872150182723999,
+   "bertscore|Microsoft-WMT19-sentence_document.6974": 0.8922631144523621,
+   "bertscore|NEU.6763": 0.8901178240776062,
+   "bertscore|PROMT_NMT_EN-DE.6674": 0.8720577359199524,
+   "bertscore|TartuNLP-c.6508": 0.8689408898353577,
+   "bertscore|UCAM.6731": 0.8885848522186279,
+   "bertscore|UdS-DFKI.6871": 0.8748202323913574,
+   "bertscore|dfki-nmt.6479": 0.8795356154441833,
+   "bertscore|eTranslation.6823": 0.885662853717804,
+   "bertscore|lmu-ctx-tf-single-en-de.6981": 0.8795022368431091,
+   "bertscore|online-A.0": 0.8756149411201477,
+   "bertscore|online-B.0": 0.8807138204574585,
+   "bertscore|online-G.0": 0.8687514066696167,
+   "bertscore|online-X.0": 0.8528552055358887,
+   "bertscore|online-Y.0": 0.8844890594482422
+  },
+  "bleu": {
+   "arm_min": 1.829,
+   "arm_max": 4.967,
+   "n_flips": 12,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -1.183,
+     0.045
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence-level.6785",
+     -0.303,
+     1.388
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -1.26,
+     0.084
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.858,
+     1.122
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "UCAM.6731",
+     -0.344,
+     1.54
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.155,
+     0.206
+    ],
+    [
+     "MLLP-UPV.6651",
+     "eTranslation.6823",
+     -0.177,
+     0.178
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.301,
+     0.225
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.076,
+     0.039
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "UCAM.6731",
+     -0.04,
+     0.152
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.124,
+     0.047
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.724,
+     0.614
+    ]
+   ],
+   "tau_DA_orig": 0.7619,
+   "tau_DA_para": 0.7619
+  },
+  "chrf": {
+   "arm_min": 1.284,
+   "arm_max": 3.134,
+   "n_flips": 13,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.841,
+     0.489
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -0.562,
+     0.175
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.571,
+     0.246
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.014,
+     0.175
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.132,
+     0.339
+    ],
+    [
+     "MLLP-UPV.6651",
+     "eTranslation.6823",
+     -0.271,
+     0.061
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.083,
+     0.5
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.28,
+     -0.313
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.27,
+     -0.242
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.009,
+     0.071
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "NEU.6763",
+     -0.013,
+     0.279
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-Y.0",
+     -0.118,
+     0.164
+    ],
+    [
+     "online-A.0",
+     "online-B.0",
+     0.171,
+     -0.408
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.7905
+  },
+  "bertscore": {
+   "arm_min": 0.001,
+   "arm_max": 0.008,
+   "n_flips": 13,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.002,
+     0.002
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.0,
+     0.002
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "MLLP-UPV.6651",
+     -0.0,
+     0.002
+    ],
+    [
+     "JHU.6819",
+     "online-Y.0",
+     -0.001,
+     0.001
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.0,
+     -0.002
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.0,
+     -0.002
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.0,
+     0.0
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "eTranslation.6823",
+     -0.0,
+     0.002
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "online-Y.0",
+     -0.0,
+     0.003
+    ],
+    [
+     "PROMT_NMT_EN-DE.6674",
+     "UdS-DFKI.6871",
+     0.001,
+     -0.003
+    ],
+    [
+     "TartuNLP-c.6508",
+     "online-G.0",
+     -0.0,
+     0.0
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.0,
+     0.001
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.0,
+     0.004
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.8095
+  }
+ },
+ "para_hqp": {
+  "rho": {
+   "bleu|Facebook_FAIR.6862": 13.798779773123373,
+   "bleu|Helsinki-NLP.6820": 12.4847799388437,
+   "bleu|JHU.6819": 12.869901400505924,
+   "bleu|MLLP-UPV.6651": 12.895428943905825,
+   "bleu|MSRA.MADL.6926": 13.133305818398869,
+   "bleu|Microsoft-WMT19-document-level.6808": 13.702664745494175,
+   "bleu|Microsoft-WMT19-sentence-level.6785": 13.089986146482612,
+   "bleu|Microsoft-WMT19-sentence_document.6974": 13.747325923733504,
+   "bleu|NEU.6763": 13.12368059232529,
+   "bleu|PROMT_NMT_EN-DE.6674": 11.445736371862052,
+   "bleu|TartuNLP-c.6508": 11.408047775342446,
+   "bleu|UCAM.6731": 13.162053518430099,
+   "bleu|UdS-DFKI.6871": 11.689804497526092,
+   "bleu|dfki-nmt.6479": 12.140491455777566,
+   "bleu|eTranslation.6823": 12.716407882337663,
+   "bleu|lmu-ctx-tf-single-en-de.6981": 12.358032683131027,
+   "bleu|online-A.0": 11.936221787594407,
+   "bleu|online-B.0": 12.366271098569916,
+   "bleu|online-G.0": 10.504420863597295,
+   "bleu|online-X.0": 9.147091914988696,
+   "bleu|online-Y.0": 12.000114988314008,
+   "chrf|Facebook_FAIR.6862": 45.717003236851745,
+   "chrf|Helsinki-NLP.6820": 44.16451236907002,
+   "chrf|JHU.6819": 44.35017905348247,
+   "chrf|MLLP-UPV.6651": 44.46050425180895,
+   "chrf|MSRA.MADL.6926": 45.027525218384454,
+   "chrf|Microsoft-WMT19-document-level.6808": 45.74300499936205,
+   "chrf|Microsoft-WMT19-sentence-level.6785": 44.981420944442554,
+   "chrf|Microsoft-WMT19-sentence_document.6974": 45.616174527665564,
+   "chrf|NEU.6763": 44.66884562616554,
+   "chrf|PROMT_NMT_EN-DE.6674": 42.71729842992173,
+   "chrf|TartuNLP-c.6508": 42.76485551240543,
+   "chrf|UCAM.6731": 44.78455159356591,
+   "chrf|UdS-DFKI.6871": 42.83780047382567,
+   "chrf|dfki-nmt.6479": 43.93432560529902,
+   "chrf|eTranslation.6823": 44.48797190346535,
+   "chrf|lmu-ctx-tf-single-en-de.6981": 44.090799677245464,
+   "chrf|online-A.0": 43.5571874422767,
+   "chrf|online-B.0": 43.84900993059888,
+   "chrf|online-G.0": 41.81321100350969,
+   "chrf|online-X.0": 40.550563883456256,
+   "chrf|online-Y.0": 43.50691924991944,
+   "bertscore|Facebook_FAIR.6862": 0.8051273822784424,
+   "bertscore|Helsinki-NLP.6820": 0.8006155490875244,
+   "bertscore|JHU.6819": 0.8005841970443726,
+   "bertscore|MLLP-UPV.6651": 0.7993907928466797,
+   "bertscore|MSRA.MADL.6926": 0.8031564950942993,
+   "bertscore|Microsoft-WMT19-document-level.6808": 0.805980920791626,
+   "bertscore|Microsoft-WMT19-sentence-level.6785": 0.8012475371360779,
+   "bertscore|Microsoft-WMT19-sentence_document.6974": 0.8051866888999939,
+   "bertscore|NEU.6763": 0.8039710521697998,
+   "bertscore|PROMT_NMT_EN-DE.6674": 0.7926186323165894,
+   "bertscore|TartuNLP-c.6508": 0.7928967475891113,
+   "bertscore|UCAM.6731": 0.8045601844787598,
+   "bertscore|UdS-DFKI.6871": 0.7950592041015625,
+   "bertscore|dfki-nmt.6479": 0.7956812977790833,
+   "bertscore|eTranslation.6823": 0.8015995025634766,
+   "bertscore|lmu-ctx-tf-single-en-de.6981": 0.7978258728981018,
+   "bertscore|online-A.0": 0.7942760586738586,
+   "bertscore|online-B.0": 0.7996730208396912,
+   "bertscore|online-G.0": 0.7888922691345215,
+   "bertscore|online-X.0": 0.7792617082595825,
+   "bertscore|online-Y.0": 0.7987375259399414
+  },
+  "bleu": {
+   "arm_min": 20.329,
+   "arm_max": 31.793,
+   "n_flips": 22,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -2.261,
+     0.665
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-document-level.6808",
+     -1.183,
+     0.096
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence-level.6785",
+     -0.303,
+     0.709
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -1.26,
+     0.051
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.858,
+     0.675
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "UCAM.6731",
+     -0.344,
+     0.637
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.155,
+     0.344
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.613,
+     0.485
+    ],
+    [
+     "JHU.6819",
+     "MLLP-UPV.6651",
+     0.794,
+     -0.026
+    ],
+    [
+     "MLLP-UPV.6651",
+     "eTranslation.6823",
+     -0.177,
+     0.179
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.301,
+     0.895
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     1.078,
+     -0.569
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     1.001,
+     -0.614
+    ],
+    [
+     "MSRA.MADL.6926",
+     "UCAM.6731",
+     1.917,
+     -0.029
+    ],
+    [
+     "NEU.6763",
+     "UCAM.6731",
+     0.515,
+     -0.038
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     1.259,
+     -0.218
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-B.0",
+     0.327,
+     -0.226
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-Y.0",
+     -0.458,
+     0.14
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.124,
+     0.716
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.724,
+     0.422
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-Y.0",
+     -1.717,
+     0.358
+    ],
+    [
+     "online-B.0",
+     "online-Y.0",
+     -0.785,
+     0.366
+    ]
+   ],
+   "tau_DA_orig": 0.7619,
+   "tau_DA_para": 0.8
+  },
+  "chrf": {
+   "arm_min": 18.516,
+   "arm_max": 23.907,
+   "n_flips": 19,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.841,
+     0.689
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.571,
+     0.101
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "dfki-nmt.6479",
+     -0.014,
+     0.23
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.132,
+     0.658
+    ],
+    [
+     "JHU.6819",
+     "MLLP-UPV.6651",
+     0.324,
+     -0.11
+    ],
+    [
+     "JHU.6819",
+     "eTranslation.6823",
+     0.053,
+     -0.138
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.083,
+     0.954
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.28,
+     -0.715
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.27,
+     -0.589
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.009,
+     0.127
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "NEU.6763",
+     -0.013,
+     0.313
+    ],
+    [
+     "NEU.6763",
+     "UCAM.6731",
+     0.572,
+     -0.116
+    ],
+    [
+     "PROMT_NMT_EN-DE.6674",
+     "TartuNLP-c.6508",
+     1.027,
+     -0.048
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     0.683,
+     -0.156
+    ],
+    [
+     "dfki-nmt.6479",
+     "online-Y.0",
+     -0.118,
+     0.427
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-Y.0",
+     -0.801,
+     0.584
+    ],
+    [
+     "online-A.0",
+     "online-B.0",
+     0.171,
+     -0.292
+    ],
+    [
+     "online-A.0",
+     "online-Y.0",
+     -0.898,
+     0.05
+    ],
+    [
+     "online-B.0",
+     "online-Y.0",
+     -1.069,
+     0.342
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.7714
+  },
+  "bertscore": {
+   "arm_min": 0.079,
+   "arm_max": 0.092,
+   "n_flips": 23,
+   "total_pairs": 210,
+   "flips": [
+    [
+     "Facebook_FAIR.6862",
+     "MSRA.MADL.6926",
+     -0.002,
+     0.002
+    ],
+    [
+     "Facebook_FAIR.6862",
+     "NEU.6763",
+     -0.0,
+     0.001
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "JHU.6819",
+     -0.001,
+     0.0
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "MLLP-UPV.6651",
+     -0.0,
+     0.001
+    ],
+    [
+     "Helsinki-NLP.6820",
+     "online-Y.0",
+     -0.002,
+     0.002
+    ],
+    [
+     "JHU.6819",
+     "online-Y.0",
+     -0.001,
+     0.002
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-B.0",
+     0.0,
+     -0.0
+    ],
+    [
+     "MLLP-UPV.6651",
+     "online-Y.0",
+     -0.001,
+     0.001
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-document-level.6808",
+     0.0,
+     -0.003
+    ],
+    [
+     "MSRA.MADL.6926",
+     "Microsoft-WMT19-sentence_document.6974",
+     0.0,
+     -0.002
+    ],
+    [
+     "MSRA.MADL.6926",
+     "NEU.6763",
+     0.001,
+     -0.001
+    ],
+    [
+     "MSRA.MADL.6926",
+     "UCAM.6731",
+     0.003,
+     -0.001
+    ],
+    [
+     "Microsoft-WMT19-document-level.6808",
+     "Microsoft-WMT19-sentence_document.6974",
+     -0.0,
+     0.001
+    ],
+    [
+     "Microsoft-WMT19-sentence-level.6785",
+     "online-Y.0",
+     -0.0,
+     0.003
+    ],
+    [
+     "NEU.6763",
+     "UCAM.6731",
+     0.001,
+     -0.001
+    ],
+    [
+     "PROMT_NMT_EN-DE.6674",
+     "TartuNLP-c.6508",
+     0.004,
+     -0.0
+    ],
+    [
+     "PROMT_NMT_EN-DE.6674",
+     "UdS-DFKI.6871",
+     0.001,
+     -0.002
+    ],
+    [
+     "TartuNLP-c.6508",
+     "online-G.0",
+     -0.0,
+     0.004
+    ],
+    [
+     "UdS-DFKI.6871",
+     "online-A.0",
+     -0.005,
+     0.001
+    ],
+    [
+     "dfki-nmt.6479",
+     "lmu-ctx-tf-single-en-de.6981",
+     0.003,
+     -0.002
+    ],
+    [
+     "eTranslation.6823",
+     "online-Y.0",
+     -0.0,
+     0.003
+    ],
+    [
+     "lmu-ctx-tf-single-en-de.6981",
+     "online-A.0",
+     -0.0,
+     0.004
+    ],
+    [
+     "online-B.0",
+     "online-Y.0",
+     -0.002,
+     0.001
+    ]
+   ],
+   "tau_DA_orig": 0.781,
+   "tau_DA_para": 0.7905
+  }
+ }
+}

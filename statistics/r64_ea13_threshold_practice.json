@@ -1,0 +1,202 @@
+{
+ "meta": {
+  "experiment": "E-A13 threshold-reporting-practice sampling (review DA M1 / R-12 B2)",
+  "sample": "published DocRE model papers, 2021-2025: audited-system sources + canonical models; full-text scan (pdftotext) with manual headline-policy reading",
+  "n_papers": 11,
+  "caveats": [
+   "paper-text level; released-code policies may differ (SSAN/SAIS silent in text, ATLOP-lineage codebases)",
+   "adaptive-vs-fixed distinction maps onto the audit fixed-vs-decoded threshold axis",
+   "SIRE excluded (download failed twice)"
+  ]
+ },
+ "tally": {
+  "adaptive/learned": 7,
+  "fixed margin": 1,
+  "silent in text": 2,
+  "unverifiable": 1
+ },
+ "papers": [
+  {
+   "tag": "ATLOP",
+   "url": "https://arxiv.org/pdf/2010.11304",
+   "policy": "adaptive/learned",
+   "flags": {
+    "adaptive": true,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [
+    "document-level relation extraction with adaptive thresholding and localized context pooling wenxuan zhou,1* kevin huang,2 tengyu ma,3 jing huang 2 1department of computer science, universit",
+    "occurs multiple times in the document associated with multiple possible relations. in this paper, we propose two novel techniques, adaptive thresholding and localized context pooling, to solve the multi-label and multi-entity problems. the adaptive thresholding replaces the globa",
+    "two novel techniques, adaptive thresholding and localized context pooling, to solve the multi-label and multi-entity problems. the adaptive thresholding replaces the global threshold for multi-label classification in the prior work with a learnable entities-dependent threshold. t",
+    "resholding and localized context pooling, to solve the multi-label and multi-entity problems. the adaptive thresholding replaces the global threshold for multi-label classification in the prior work with a learnable entities-dependent threshold. the localized context pooling dire",
+    "he adaptive thresholding replaces the global threshold for multi-label classification in the prior work with a learnable entities-dependent threshold. the localized context pooling directly transfers attention from pre-trained language models to locate relevant context that is us",
+    "rk datasets: docred, a recently released large-scale re dataset, and two datasets cdr and gda in the biomedical domain. our atlop (adaptive thresholding and localized context pooling) model achieves an f1 score of 63.4, and also significantly outperforms existing models on both c",
+    "nt to both of them. for the multi-label problem, existing approaches reduce it to a binary classification problem. after training, a global threshold is applied to the class probabilities to get relation labels. this method involves heuristic threshold tuning and introduces decis",
+    "on problem. after training, a global threshold is applied to the class probabilities to get relation labels. this method involves heuristic threshold tuning and introduces decision errors when the tuned threshold from development data may not be optimal for all instances. in this"
+   ],
+   "manual_policy": "adaptive/learned (own contribution; replaces global threshold)"
+  },
+  {
+   "tag": "DREEAM",
+   "url": "https://aclanthology.org/2023.eacl-main.145.pdf",
+   "policy": "adaptive/learned",
+   "flags": {
+    "adaptive": true,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [
+    " r r holds between entity es and eo is thus p(r|s, o) = (s,o) (yr ), where is the sigmoid function. loss function atlop proposes adaptive thresholding loss (atl) that learns a dummy threshold class th during training, serving as a dynamic threshold for each relation class r r.",
+    " p(r|s, o) = (s,o) (yr ), where is the sigmoid function. loss function atlop proposes adaptive thresholding loss (atl) that learns a dummy threshold class th during training, serving as a dynamic threshold for each relation class r r. for each entity pair (es, eo), atl forces t",
+    " loss function atlop proposes adaptive thresholding loss (atl) that learns a dummy threshold class th during training, serving as a dynamic threshold for each relation class r r. for each entity pair (es, eo), atl forces the model to yield scores above th for positive relation c",
+    "ted as below: lre = - s=o rrp (s,o) exp(yr ) rrp {th} exp(yr(s,o)) - exp(yth (s,o)) . (s,o) rrn {th} exp(yr ) (7) the idea of setting a threshold class is similar to the flexible threshold (chen et al., 2020). 3 proposed method: dreeam to perform information filtering, atlop",
+    "r ) rrp {th} exp(yr(s,o)) - exp(yth (s,o)) . (s,o) rrn {th} exp(yr ) (7) the idea of setting a threshold class is similar to the flexible threshold (chen et al., 2020). 3 proposed method: dreeam to perform information filtering, atlop computes a localized context embedding bas",
+    "o refine its knowledge about docre and er with reliable supervisory signals. 3.3 inference following zhou et al. (2021), we apply adaptive thresholding to obtain re predictions, selecting relation classes with scores higher than the threshold class as predictions. for er, we app",
+    "llowing zhou et al. (2021), we apply adaptive thresholding to obtain re predictions, selecting relation classes with scores higher than the threshold class as predictions. for er, we apply static statistics # of documents # of relation types avg. # of ent. per doc. avg. # of sen",
+    "ns doc., ent., sent., ment., rel., and evi. stand for document, entity, sentence, mention, relation, and evidence sentences, respectively. thresholding and choose sentences with importance higher than a pre-defined threshold as evidence. we further incorporate the inference-stag"
+   ],
+   "manual_policy": "adaptive/learned (adopts ATLOP ATL loss)"
+  },
+  {
+   "tag": "KD-DocRE",
+   "url": "https://aclanthology.org/2022.findings-acl.132.pdf",
+   "policy": "adaptive/learned",
+   "flags": {
+    "adaptive": true,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [
+    "itly tackles the class-imbalance problem for docre. existing works (zhou et al., 2021; zhang et al., 2021; zeng et al., 2020) only focus on threshold learning for balancing the positive and negative examples, but the class-imbalance problem within positive examples is not address",
+    "is computed as: p (ri|es, eo) = exp(lri (s,o)) (s,o) (s,o) (9) exp(lri ) + exp(lt h ) where the logit of ri is ranked with the logit of threshold class t h individually. this is different from the original atl, where all positive logits are ranked together with a softmax func",
+    "problem. traditionally, binary cross-entropy (bce) loss is used to tackle this problem. however, this method relies on a global probability threshold for inference. recently adaptive thresholding loss (atl, zhou et al., 2021) has been proposed for multi-label classification. inst",
+    "y (bce) loss is used to tackle this problem. however, this method relies on a global probability threshold for inference. recently adaptive thresholding loss (atl, zhou et al., 2021) has been proposed for multi-label classification. instead of using a global probability threshold",
+    "adaptive thresholding loss (atl, zhou et al., 2021) has been proposed for multi-label classification. instead of using a global probability threshold for all examples, atl introduced a special class t h as the adaptive threshold value for each example. for similarly, p (rt h |es",
+    "-label classification. instead of using a global probability threshold for all examples, atl introduced a special class t h as the adaptive threshold value for each example. for similarly, p (rt h |es, eo) is referred to as p (rt h ) in the remainder of this section. since the d",
+    "encoder to extract inter-sentence relations. atlop (zhou et al., 2021) is purely based on the transformer architecture and a novel adaptive thresholding loss to deal with the multi-label problem for docre. besides, it also fuses the contextual information with the aggregated atte",
+    "ent types refer to the most popular 10 relation types, and long-tail relations refer to the rest of the 86 relations. ventional adaptive thresholding loss (zhou et al., 2021), the overall performance with kd drops by 0.89 f1, and the f1 score for the frequent labels only drops"
+   ],
+   "manual_policy": "adaptive/learned (per-class threshold logits, variant of ATL)"
+  },
+  {
+   "tag": "DocuNet",
+   "url": "https://www.ijcai.org/proceedings/2021/0551.pdf",
+   "policy": "adaptive/learned",
+   "flags": {
+    "adaptive": true,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [
+    "nce, and document levels to perform hierarchical reasoning. zhou et al. [2021] proposed a novel transformer-based model (atlop) of adaptive thresholding and localized context pooling based on bert. however, most previous studies focused on the local entity representation, regardl",
+    "s are all less than s0. formally, we have: l = log es0 + esi + log e-s0 + e-sj . ineg jpos (10) for simplicity, we set the threshold as zero and have the following: l = log 1 + esi +log 1 + e-sj . (11) ineg jpos 4 experiments 4.1 dataset we evaluate",
+    "5259-5270, 2020. [zhou et al., 2021] wenxuan zhou, kevin huang, tengyu ma, and jing huang. document-level relation extraction with adaptive thresholding and localized context pooling. in aaai, 2021. 4006 "
+   ],
+   "manual_policy": "fixed margin (zero-logit/sigmoid 0.5; adaptive mention = related work only)"
+  },
+  {
+   "tag": "TTM-RE",
+   "url": "https://aclanthology.org/2024.acl-long.26.pdf",
+   "policy": "adaptive/learned",
+   "flags": {
+    "adaptive": true,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [
+    "oblem in document-level relation extraction. zhou et al. (2021a) introduced the atlop, which uses roberta-large as the encoder and adaptive thresholding for the multilabel relation classification. tan et al. (2022a) introduced kd-docre, which combines axial attention over the ent",
+    " performance empirically. furthermore, the final output is a prediction vector of dimension r + 1 (number of all relations + 1 to learn the threshold value), as we adopt the adaptive thresholding approach implemented by zhou et al. (2021b), which most other recent document re wor",
+    "final output is a prediction vector of dimension r + 1 (number of all relations + 1 to learn the threshold value), as we adopt the adaptive thresholding approach implemented by zhou et al. (2021b), which most other recent document re work as done as well (ma et al., 2023; tan et ",
+    "iv preprint arxiv:2205.12674. wenxuan zhou, kevin huang, tengyu ma, and jing huang. 2021a. document-level relation extraction with adaptive thresholding and localized context pooling. in proceedings of the aaai conference on artificial intelligence, volume 35, pages 14612-14620. ",
+    "volume 35, pages 14612-14620. wenxuan zhou, kevin huang, tengyu ma, and jing huang. 2021b. document-level relation extraction with adaptive thresholding and localized context pooling. in proceedings of the aaai conference on artificial intelligence, volume 35, pages 14612-14620. ",
+    "grated approaches like hierarchical inference networks (tang et al., 2020), enhanced co-reference reasoning (ye et al., 2020), and adaptive thresholding. furthermore, graphical neural networks (gnns) (zeng et al., 2020) have been leveraged for document-level relation extraction, "
+   ],
+   "manual_policy": "adaptive/learned (adopts ATLOP approach)"
+  },
+  {
+   "tag": "Global-RE",
+   "url": "https://aclanthology.org/2025.findings-acl.1002.pdf",
+   "policy": "adaptive/learned",
+   "flags": {
+    "adaptive": true,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [
+    "f the transformer (vaswani et al., 2017), atlop (zhou et al., 2021) addresses the multi-label classification task in docre through adaptive thresholds and localized context pooling. furthermore, models like eider (xie et al., 2022) and dreeam (ma et al., 2023) extend atlop by int",
+    "s,o) doc p~ = p + p (19) 4.5 loss function to more effectively address the multi-label classification tasks, we also adopt the adaptive threshold loss method (zhou et al., 2021) as the classification loss to train our model. specifically, it introduces an additional threshold",
+    "adaptive threshold loss method (zhou et al., 2021) as the classification loss to train our model. specifically, it introduces an additional threshold relation class t h, and optimizes the loss by increasing the logits of positive relations pt above the threshold and decreasing th",
+    "t introduces an additional threshold relation class t h, and optimizes the loss by increasing the logits of positive relations pt above the threshold and decreasing the logits of negative relations nt below the threshold. the loss function for relation classification can be forma",
+    "the loss by increasing the logits of positive relations pt above the threshold and decreasing the logits of negative relations nt below the threshold. the loss function for relation classification can be formalized as: 4.4 global relation prediction module in this module, we for",
+    "g (emnlp), pages 15426-15439. wenxuan zhou, kevin huang, tengyu ma, and jing huang. 2021. document-level relation extraction with adaptive thresholding and localized context pooling. in proceedings of the aaai conference on artificial intelligence (aaai), volume 35, pages 14612-"
+   ],
+   "manual_policy": "adaptive/learned (adopts ATLOP ATL loss)"
+  },
+  {
+   "tag": "Re-DocRED",
+   "url": "https://aclanthology.org/2022.emnlp-main.580.pdf",
+   "policy": "adaptive/learned",
+   "flags": {
+    "adaptive": true,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [
+    "dict the scores for all the enumerated relation triples. to control the number of relation triple candidates for the next step, we define a threshold score to remove the less confident predictions. specifically, we set the dynamic threshold to 0.9 of the models for the adaptive t",
+    "triple candidates for the next step, we define a threshold score to remove the less confident predictions. specifically, we set the dynamic threshold to 0.9 of the models for the adaptive threshold class (zhou et al., 2021) for all trained models. the predicted relation triples f",
+    " threshold score to remove the less confident predictions. specifically, we set the dynamic threshold to 0.9 of the models for the adaptive threshold class (zhou et al., 2021) for all trained models. the predicted relation triples from all the models are then merged together. due",
+    "aset. in proceedings of aaai. wenxuan zhou, kevin huang, tengyu ma, and jing huang. 2021. document-level relation extraction with adaptive thresholding and localized context pooling. in proceedings of aaai. qingyu tan, ruidan he, lidong bing, and hwee tou ng. 2022. document-lev"
+   ],
+   "manual_policy": "adaptive/learned (benchmark protocol sets dynamic threshold 0.9 for ATLOP threshold class, all models)"
+  },
+  {
+   "tag": "SSAN",
+   "url": "https://arxiv.org/pdf/2102.10249",
+   "policy": "unspecified",
+   "flags": {
+    "adaptive": false,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [],
+   "manual_policy": "unspecified in text (0 threshold mentions; ATLOP-lineage codebase)"
+  },
+  {
+   "tag": "SAIS",
+   "url": "https://aclanthology.org/2022.naacl-main.359.pdf",
+   "policy": "unspecified",
+   "flags": {
+    "adaptive": false,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [],
+   "manual_policy": "unspecified in text (0 threshold mentions)"
+  },
+  {
+   "tag": "SIRE",
+   "policy": "download-fail",
+   "url": "https://aclanthology.org/2021.findings-acl.47.pdf",
+   "manual_policy": "unverifiable (PDF download failed twice)"
+  },
+  {
+   "tag": "Zhang2022-Better",
+   "url": "https://aclanthology.org/2022.emnlp-main.568.pdf",
+   "policy": "adaptive/learned",
+   "flags": {
+    "adaptive": true,
+    "fixed05": false,
+    "tuned": false
+   },
+   "snippets": [
+    "ng the final predictions p (k). 2.3 model training we adopt a two-stage strategy to train our model. at the first stage, we use an adaptive threshold loss figure 4: illustration of our contrastive learning. the stop-gradient operation stop-grad can effectively prevent the repres",
+    "se module in a one-pass manner, as opposed to the multiple iterations used during testing. next, we describe our losses in detail. adaptive threshold loss lr this loss is proposed by zhou et al. (2021), aiming to alleviate the imbalanced relation distribution problem in document-",
+    " which is defined as lr=- log rpt exp(logitr ) r{pt ,th} exp(logitr ) - log exp(logitth) , (13) r{nt ,th} exp(logitr ) where th is a threshold relation used to distinguish between positive and negative relations. this loss will push the logits of all positive relations p",
+    "y apply pre-trained language models to document-level re. zhou et al. (2021) propose the atlop model that features two techniques: adaptive thresholding (chen et al., 2020b) and localized context pooling. however, these two types of methods mainly focus on mention- and entity-lev",
+    "gs of coling, pages 5259-5270. wenxuan zhou, kevin huang, tengyu ma, and jing huang. 2021. document-level relation extraction with adaptive thresholding and localized context pooling. in proceedings of aaai, pages 14612-14620. 8316 hyper-parameter docred bert roberta-large a"
+   ],
+   "manual_policy": "adaptive/learned (adopts ATLOP adaptive threshold loss)"
+  }
+ ]
+}

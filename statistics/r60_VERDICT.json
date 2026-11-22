@@ -1,0 +1,20 @@
+{
+ "verdict": "PASS",
+ "checked": "2026-10-28T19:41:18",
+ "criteria": {
+  "de-en": {
+   "tau_aer": 0.7,
+   "coverage": "11/11 @R2000",
+   "tost": "eps.05 pass, eps.10 pass",
+   "flip_set_matches_R200": true
+  },
+  "zh-en": {
+   "tau_aer": 0.7524,
+   "coverage": "3/3 @R2000",
+   "tost": "eps.05 pass, eps.10 pass",
+   "flip_set_matches_R200": true
+  }
+ },
+ "acceptance": "ens tau 0.7000/0.7524 + 14/14 coverage at R=2000 + TOST both eps both grids",
+ "note": "R5 condition (c) closed: 14/14 at R=2000 both grids; flip sets identical to R=200 (W4 sensitivity verified)."
+}

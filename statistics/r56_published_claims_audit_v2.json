@@ -1,0 +1,71 @@
+[
+ {
+  "_note_source_correction": "C3 'source: Xu et al. 2025 (Findings)' in the entries below is a mislabel (round-6 R1/R4); the TTM-RE paper is Gao, Wang & Sun, ACL 2024 (10.18653/v1/2024.acl-long.26). Numbers are unaffected. See AUDIT_PREREG.md erratum (2026-10-28 E20/E29) and the round-9 R1 report."
+ },
+ {
+  "claim_id": "C1",
+  "claim": "DREEAM > ATLOP(BERT-base)",
+  "source": "Ma et al. 2023 (EACL)",
+  "note": "v2: gold axis exercised (bug fix)",
+  "F1_gD_A": 0.6105,
+  "F1_gD_B": 0.6044,
+  "delta_gD": 0.0061,
+  "ci_gD": [
+   -0.0001,
+   0.0119
+  ],
+  "F1_gR_A": 0.4304,
+  "F1_gR_B": 0.4519,
+  "delta_gR": -0.0215,
+  "ci_gR": [
+   -0.0265,
+   -0.0167
+  ],
+  "replicates_under_gD": false,
+  "gR_behavior": "REVERSES"
+ },
+ {
+  "claim_id": "C2",
+  "claim": "KD-DocRE > DocuNet",
+  "source": "Tan et al. 2022a (Findings)",
+  "note": "v2: gold axis exercised (bug fix)",
+  "F1_gD_A": 0.5954,
+  "F1_gD_B": 0.4741,
+  "delta_gD": 0.1213,
+  "ci_gD": [
+   0.1131,
+   0.1293
+  ],
+  "F1_gR_A": 0.4468,
+  "F1_gR_B": 0.4025,
+  "delta_gR": 0.0443,
+  "ci_gR": [
+   0.038,
+   0.0506
+  ],
+  "replicates_under_gD": true,
+  "gR_behavior": "HOLDS"
+ },
+ {
+  "claim_id": "C3",
+  "claim": "TTM-RE > KD-DocRE",
+  "source": "Xu et al. 2025 (Findings)",
+  "note": "v2: gold axis exercised (bug fix)",
+  "F1_gD_A": 0.5474,
+  "F1_gD_B": 0.5954,
+  "delta_gD": -0.048,
+  "ci_gD": [
+   -0.0611,
+   -0.035
+  ],
+  "F1_gR_A": 0.7385,
+  "F1_gR_B": 0.4468,
+  "delta_gR": 0.2917,
+  "ci_gR": [
+   0.2816,
+   0.302
+  ],
+  "replicates_under_gD": false,
+  "gR_behavior": "HOLDS"
+ }
+]

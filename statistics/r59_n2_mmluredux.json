@@ -1,0 +1,2461 @@
+{
+ "models": {
+  "Qwen2.5-0.5B-Instruct": {
+   "acc_M": 0.46649122807017546,
+   "acc_R": 0.4723149938477764,
+   "delta": 0.005823765777600964,
+   "flips_correct_to_wrong": 23,
+   "flips_wrong_to_correct": 55,
+   "per_subject_M": {
+    "abstract_algebra": [
+     0.34,
+     100
+    ],
+    "anatomy": [
+     0.41,
+     100
+    ],
+    "astronomy": [
+     0.46,
+     100
+    ],
+    "business_ethics": [
+     0.54,
+     100
+    ],
+    "clinical_knowledge": [
+     0.49,
+     100
+    ],
+    "college_biology": [
+     0.44,
+     100
+    ],
+    "college_chemistry": [
+     0.3,
+     100
+    ],
+    "college_computer_science": [
+     0.34,
+     100
+    ],
+    "college_mathematics": [
+     0.29,
+     100
+    ],
+    "college_medicine": [
+     0.49,
+     100
+    ],
+    "college_physics": [
+     0.28,
+     100
+    ],
+    "computer_security": [
+     0.69,
+     100
+    ],
+    "conceptual_physics": [
+     0.38,
+     100
+    ],
+    "econometrics": [
+     0.31,
+     100
+    ],
+    "electrical_engineering": [
+     0.49,
+     100
+    ],
+    "elementary_mathematics": [
+     0.33,
+     100
+    ],
+    "formal_logic": [
+     0.32,
+     100
+    ],
+    "global_facts": [
+     0.29,
+     100
+    ],
+    "high_school_biology": [
+     0.44,
+     100
+    ],
+    "high_school_chemistry": [
+     0.39,
+     100
+    ],
+    "high_school_computer_science": [
+     0.43,
+     100
+    ],
+    "high_school_european_history": [
+     0.58,
+     100
+    ],
+    "high_school_geography": [
+     0.5,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.46,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.36,
+     100
+    ],
+    "high_school_mathematics": [
+     0.32,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.52,
+     100
+    ],
+    "high_school_physics": [
+     0.28,
+     100
+    ],
+    "high_school_psychology": [
+     0.6,
+     100
+    ],
+    "high_school_statistics": [
+     0.27,
+     100
+    ],
+    "high_school_us_history": [
+     0.57,
+     100
+    ],
+    "high_school_world_history": [
+     0.58,
+     100
+    ],
+    "human_aging": [
+     0.55,
+     100
+    ],
+    "human_sexuality": [
+     0.56,
+     100
+    ],
+    "international_law": [
+     0.74,
+     100
+    ],
+    "jurisprudence": [
+     0.58,
+     100
+    ],
+    "logical_fallacies": [
+     0.49,
+     100
+    ],
+    "machine_learning": [
+     0.42,
+     100
+    ],
+    "management": [
+     0.57,
+     100
+    ],
+    "marketing": [
+     0.79,
+     100
+    ],
+    "medical_genetics": [
+     0.52,
+     100
+    ],
+    "miscellaneous": [
+     0.56,
+     100
+    ],
+    "moral_disputes": [
+     0.56,
+     100
+    ],
+    "moral_scenarios": [
+     0.19,
+     100
+    ],
+    "nutrition": [
+     0.64,
+     100
+    ],
+    "philosophy": [
+     0.43,
+     100
+    ],
+    "prehistory": [
+     0.49,
+     100
+    ],
+    "professional_accounting": [
+     0.34,
+     100
+    ],
+    "professional_law": [
+     0.32,
+     100
+    ],
+    "professional_medicine": [
+     0.35,
+     100
+    ],
+    "professional_psychology": [
+     0.48,
+     100
+    ],
+    "public_relations": [
+     0.57,
+     100
+    ],
+    "security_studies": [
+     0.51,
+     100
+    ],
+    "sociology": [
+     0.71,
+     100
+    ],
+    "us_foreign_policy": [
+     0.72,
+     100
+    ],
+    "virology": [
+     0.39,
+     100
+    ],
+    "world_religions": [
+     0.62,
+     100
+    ]
+   },
+   "per_subject_R": {
+    "abstract_algebra": [
+     0.36363636363636365,
+     99
+    ],
+    "anatomy": [
+     0.42,
+     100
+    ],
+    "astronomy": [
+     0.46,
+     100
+    ],
+    "business_ethics": [
+     0.54,
+     100
+    ],
+    "clinical_knowledge": [
+     0.49,
+     100
+    ],
+    "college_biology": [
+     0.43,
+     100
+    ],
+    "college_chemistry": [
+     0.36,
+     100
+    ],
+    "college_computer_science": [
+     0.34,
+     100
+    ],
+    "college_mathematics": [
+     0.29,
+     100
+    ],
+    "college_medicine": [
+     0.48,
+     100
+    ],
+    "college_physics": [
+     0.28,
+     100
+    ],
+    "computer_security": [
+     0.7,
+     100
+    ],
+    "conceptual_physics": [
+     0.41,
+     100
+    ],
+    "econometrics": [
+     0.31,
+     100
+    ],
+    "electrical_engineering": [
+     0.48,
+     100
+    ],
+    "elementary_mathematics": [
+     0.31,
+     100
+    ],
+    "formal_logic": [
+     0.30851063829787234,
+     94
+    ],
+    "global_facts": [
+     0.29591836734693877,
+     98
+    ],
+    "high_school_biology": [
+     0.46,
+     100
+    ],
+    "high_school_chemistry": [
+     0.39,
+     100
+    ],
+    "high_school_computer_science": [
+     0.43,
+     100
+    ],
+    "high_school_european_history": [
+     0.58,
+     100
+    ],
+    "high_school_geography": [
+     0.5,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.46,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.36,
+     100
+    ],
+    "high_school_mathematics": [
+     0.32,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.53,
+     100
+    ],
+    "high_school_physics": [
+     0.28,
+     100
+    ],
+    "high_school_psychology": [
+     0.6,
+     100
+    ],
+    "high_school_statistics": [
+     0.28,
+     100
+    ],
+    "high_school_us_history": [
+     0.57,
+     100
+    ],
+    "high_school_world_history": [
+     0.58,
+     100
+    ],
+    "human_aging": [
+     0.55,
+     100
+    ],
+    "human_sexuality": [
+     0.54,
+     100
+    ],
+    "international_law": [
+     0.74,
+     100
+    ],
+    "jurisprudence": [
+     0.58,
+     100
+    ],
+    "logical_fallacies": [
+     0.48484848484848486,
+     99
+    ],
+    "machine_learning": [
+     0.42,
+     100
+    ],
+    "management": [
+     0.57,
+     100
+    ],
+    "marketing": [
+     0.79,
+     100
+    ],
+    "medical_genetics": [
+     0.52,
+     100
+    ],
+    "miscellaneous": [
+     0.56,
+     100
+    ],
+    "moral_disputes": [
+     0.56,
+     100
+    ],
+    "moral_scenarios": [
+     0.19,
+     100
+    ],
+    "nutrition": [
+     0.64,
+     100
+    ],
+    "philosophy": [
+     0.43,
+     100
+    ],
+    "prehistory": [
+     0.49,
+     100
+    ],
+    "professional_accounting": [
+     0.34,
+     100
+    ],
+    "professional_law": [
+     0.35,
+     100
+    ],
+    "professional_medicine": [
+     0.35,
+     100
+    ],
+    "professional_psychology": [
+     0.48,
+     100
+    ],
+    "public_relations": [
+     0.5757575757575758,
+     99
+    ],
+    "security_studies": [
+     0.51,
+     100
+    ],
+    "sociology": [
+     0.71,
+     100
+    ],
+    "us_foreign_policy": [
+     0.72,
+     100
+    ],
+    "virology": [
+     0.58,
+     100
+    ],
+    "world_religions": [
+     0.62,
+     100
+    ]
+   }
+  },
+  "Qwen2.5-1.5B-Instruct": {
+   "acc_M": 0.618421052631579,
+   "acc_R": 0.627175250483389,
+   "delta": 0.008754197851809975,
+   "flips_correct_to_wrong": 15,
+   "flips_wrong_to_correct": 62,
+   "per_subject_M": {
+    "abstract_algebra": [
+     0.38,
+     100
+    ],
+    "anatomy": [
+     0.48,
+     100
+    ],
+    "astronomy": [
+     0.68,
+     100
+    ],
+    "business_ethics": [
+     0.66,
+     100
+    ],
+    "clinical_knowledge": [
+     0.64,
+     100
+    ],
+    "college_biology": [
+     0.62,
+     100
+    ],
+    "college_chemistry": [
+     0.36,
+     100
+    ],
+    "college_computer_science": [
+     0.49,
+     100
+    ],
+    "college_mathematics": [
+     0.4,
+     100
+    ],
+    "college_medicine": [
+     0.69,
+     100
+    ],
+    "college_physics": [
+     0.48,
+     100
+    ],
+    "computer_security": [
+     0.73,
+     100
+    ],
+    "conceptual_physics": [
+     0.55,
+     100
+    ],
+    "econometrics": [
+     0.45,
+     100
+    ],
+    "electrical_engineering": [
+     0.56,
+     100
+    ],
+    "elementary_mathematics": [
+     0.48,
+     100
+    ],
+    "formal_logic": [
+     0.53,
+     100
+    ],
+    "global_facts": [
+     0.22,
+     100
+    ],
+    "high_school_biology": [
+     0.66,
+     100
+    ],
+    "high_school_chemistry": [
+     0.52,
+     100
+    ],
+    "high_school_computer_science": [
+     0.66,
+     100
+    ],
+    "high_school_european_history": [
+     0.78,
+     100
+    ],
+    "high_school_geography": [
+     0.73,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.79,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.6,
+     100
+    ],
+    "high_school_mathematics": [
+     0.42,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.78,
+     100
+    ],
+    "high_school_physics": [
+     0.37,
+     100
+    ],
+    "high_school_psychology": [
+     0.86,
+     100
+    ],
+    "high_school_statistics": [
+     0.57,
+     100
+    ],
+    "high_school_us_history": [
+     0.74,
+     100
+    ],
+    "high_school_world_history": [
+     0.79,
+     100
+    ],
+    "human_aging": [
+     0.65,
+     100
+    ],
+    "human_sexuality": [
+     0.72,
+     100
+    ],
+    "international_law": [
+     0.77,
+     100
+    ],
+    "jurisprudence": [
+     0.8,
+     100
+    ],
+    "logical_fallacies": [
+     0.76,
+     100
+    ],
+    "machine_learning": [
+     0.44,
+     100
+    ],
+    "management": [
+     0.81,
+     100
+    ],
+    "marketing": [
+     0.87,
+     100
+    ],
+    "medical_genetics": [
+     0.66,
+     100
+    ],
+    "miscellaneous": [
+     0.77,
+     100
+    ],
+    "moral_disputes": [
+     0.68,
+     100
+    ],
+    "moral_scenarios": [
+     0.35,
+     100
+    ],
+    "nutrition": [
+     0.67,
+     100
+    ],
+    "philosophy": [
+     0.6,
+     100
+    ],
+    "prehistory": [
+     0.67,
+     100
+    ],
+    "professional_accounting": [
+     0.43,
+     100
+    ],
+    "professional_law": [
+     0.48,
+     100
+    ],
+    "professional_medicine": [
+     0.68,
+     100
+    ],
+    "professional_psychology": [
+     0.65,
+     100
+    ],
+    "public_relations": [
+     0.61,
+     100
+    ],
+    "security_studies": [
+     0.68,
+     100
+    ],
+    "sociology": [
+     0.8,
+     100
+    ],
+    "us_foreign_policy": [
+     0.75,
+     100
+    ],
+    "virology": [
+     0.45,
+     100
+    ],
+    "world_religions": [
+     0.83,
+     100
+    ]
+   },
+   "per_subject_R": {
+    "abstract_algebra": [
+     0.37373737373737376,
+     99
+    ],
+    "anatomy": [
+     0.49,
+     100
+    ],
+    "astronomy": [
+     0.68,
+     100
+    ],
+    "business_ethics": [
+     0.66,
+     100
+    ],
+    "clinical_knowledge": [
+     0.64,
+     100
+    ],
+    "college_biology": [
+     0.63,
+     100
+    ],
+    "college_chemistry": [
+     0.4,
+     100
+    ],
+    "college_computer_science": [
+     0.49,
+     100
+    ],
+    "college_mathematics": [
+     0.4,
+     100
+    ],
+    "college_medicine": [
+     0.7,
+     100
+    ],
+    "college_physics": [
+     0.48,
+     100
+    ],
+    "computer_security": [
+     0.76,
+     100
+    ],
+    "conceptual_physics": [
+     0.57,
+     100
+    ],
+    "econometrics": [
+     0.45,
+     100
+    ],
+    "electrical_engineering": [
+     0.57,
+     100
+    ],
+    "elementary_mathematics": [
+     0.46,
+     100
+    ],
+    "formal_logic": [
+     0.5212765957446809,
+     94
+    ],
+    "global_facts": [
+     0.24489795918367346,
+     98
+    ],
+    "high_school_biology": [
+     0.68,
+     100
+    ],
+    "high_school_chemistry": [
+     0.52,
+     100
+    ],
+    "high_school_computer_science": [
+     0.66,
+     100
+    ],
+    "high_school_european_history": [
+     0.78,
+     100
+    ],
+    "high_school_geography": [
+     0.73,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.79,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.6,
+     100
+    ],
+    "high_school_mathematics": [
+     0.42,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.79,
+     100
+    ],
+    "high_school_physics": [
+     0.38,
+     100
+    ],
+    "high_school_psychology": [
+     0.86,
+     100
+    ],
+    "high_school_statistics": [
+     0.59,
+     100
+    ],
+    "high_school_us_history": [
+     0.74,
+     100
+    ],
+    "high_school_world_history": [
+     0.8,
+     100
+    ],
+    "human_aging": [
+     0.65,
+     100
+    ],
+    "human_sexuality": [
+     0.73,
+     100
+    ],
+    "international_law": [
+     0.77,
+     100
+    ],
+    "jurisprudence": [
+     0.8,
+     100
+    ],
+    "logical_fallacies": [
+     0.7575757575757576,
+     99
+    ],
+    "machine_learning": [
+     0.43,
+     100
+    ],
+    "management": [
+     0.81,
+     100
+    ],
+    "marketing": [
+     0.87,
+     100
+    ],
+    "medical_genetics": [
+     0.66,
+     100
+    ],
+    "miscellaneous": [
+     0.77,
+     100
+    ],
+    "moral_disputes": [
+     0.69,
+     100
+    ],
+    "moral_scenarios": [
+     0.35,
+     100
+    ],
+    "nutrition": [
+     0.67,
+     100
+    ],
+    "philosophy": [
+     0.6,
+     100
+    ],
+    "prehistory": [
+     0.67,
+     100
+    ],
+    "professional_accounting": [
+     0.43,
+     100
+    ],
+    "professional_law": [
+     0.5,
+     100
+    ],
+    "professional_medicine": [
+     0.68,
+     100
+    ],
+    "professional_psychology": [
+     0.66,
+     100
+    ],
+    "public_relations": [
+     0.6363636363636364,
+     99
+    ],
+    "security_studies": [
+     0.68,
+     100
+    ],
+    "sociology": [
+     0.8,
+     100
+    ],
+    "us_foreign_policy": [
+     0.75,
+     100
+    ],
+    "virology": [
+     0.68,
+     100
+    ],
+    "world_religions": [
+     0.83,
+     100
+    ]
+   }
+  },
+  "Qwen2.5-7B-Instruct": {
+   "acc_M": 0.734561403508772,
+   "acc_R": 0.7447706099490244,
+   "delta": 0.010209206440252472,
+   "flips_correct_to_wrong": 21,
+   "flips_wrong_to_correct": 74,
+   "per_subject_M": {
+    "abstract_algebra": [
+     0.57,
+     100
+    ],
+    "anatomy": [
+     0.73,
+     100
+    ],
+    "astronomy": [
+     0.84,
+     100
+    ],
+    "business_ethics": [
+     0.79,
+     100
+    ],
+    "clinical_knowledge": [
+     0.74,
+     100
+    ],
+    "college_biology": [
+     0.84,
+     100
+    ],
+    "college_chemistry": [
+     0.54,
+     100
+    ],
+    "college_computer_science": [
+     0.69,
+     100
+    ],
+    "college_mathematics": [
+     0.41,
+     100
+    ],
+    "college_medicine": [
+     0.69,
+     100
+    ],
+    "college_physics": [
+     0.52,
+     100
+    ],
+    "computer_security": [
+     0.79,
+     100
+    ],
+    "conceptual_physics": [
+     0.71,
+     100
+    ],
+    "econometrics": [
+     0.67,
+     100
+    ],
+    "electrical_engineering": [
+     0.7,
+     100
+    ],
+    "elementary_mathematics": [
+     0.67,
+     100
+    ],
+    "formal_logic": [
+     0.57,
+     100
+    ],
+    "global_facts": [
+     0.45,
+     100
+    ],
+    "high_school_biology": [
+     0.87,
+     100
+    ],
+    "high_school_chemistry": [
+     0.68,
+     100
+    ],
+    "high_school_computer_science": [
+     0.81,
+     100
+    ],
+    "high_school_european_history": [
+     0.88,
+     100
+    ],
+    "high_school_geography": [
+     0.83,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.93,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.77,
+     100
+    ],
+    "high_school_mathematics": [
+     0.54,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.85,
+     100
+    ],
+    "high_school_physics": [
+     0.52,
+     100
+    ],
+    "high_school_psychology": [
+     0.92,
+     100
+    ],
+    "high_school_statistics": [
+     0.67,
+     100
+    ],
+    "high_school_us_history": [
+     0.89,
+     100
+    ],
+    "high_school_world_history": [
+     0.9,
+     100
+    ],
+    "human_aging": [
+     0.79,
+     100
+    ],
+    "human_sexuality": [
+     0.8,
+     100
+    ],
+    "international_law": [
+     0.81,
+     100
+    ],
+    "jurisprudence": [
+     0.79,
+     100
+    ],
+    "logical_fallacies": [
+     0.83,
+     100
+    ],
+    "machine_learning": [
+     0.56,
+     100
+    ],
+    "management": [
+     0.88,
+     100
+    ],
+    "marketing": [
+     0.95,
+     100
+    ],
+    "medical_genetics": [
+     0.83,
+     100
+    ],
+    "miscellaneous": [
+     0.84,
+     100
+    ],
+    "moral_disputes": [
+     0.77,
+     100
+    ],
+    "moral_scenarios": [
+     0.44,
+     100
+    ],
+    "nutrition": [
+     0.81,
+     100
+    ],
+    "philosophy": [
+     0.68,
+     100
+    ],
+    "prehistory": [
+     0.87,
+     100
+    ],
+    "professional_accounting": [
+     0.52,
+     100
+    ],
+    "professional_law": [
+     0.5,
+     100
+    ],
+    "professional_medicine": [
+     0.8,
+     100
+    ],
+    "professional_psychology": [
+     0.79,
+     100
+    ],
+    "public_relations": [
+     0.75,
+     100
+    ],
+    "security_studies": [
+     0.72,
+     100
+    ],
+    "sociology": [
+     0.91,
+     100
+    ],
+    "us_foreign_policy": [
+     0.86,
+     100
+    ],
+    "virology": [
+     0.54,
+     100
+    ],
+    "world_religions": [
+     0.85,
+     100
+    ]
+   },
+   "per_subject_R": {
+    "abstract_algebra": [
+     0.5555555555555556,
+     99
+    ],
+    "anatomy": [
+     0.74,
+     100
+    ],
+    "astronomy": [
+     0.85,
+     100
+    ],
+    "business_ethics": [
+     0.79,
+     100
+    ],
+    "clinical_knowledge": [
+     0.74,
+     100
+    ],
+    "college_biology": [
+     0.85,
+     100
+    ],
+    "college_chemistry": [
+     0.6,
+     100
+    ],
+    "college_computer_science": [
+     0.69,
+     100
+    ],
+    "college_mathematics": [
+     0.41,
+     100
+    ],
+    "college_medicine": [
+     0.7,
+     100
+    ],
+    "college_physics": [
+     0.52,
+     100
+    ],
+    "computer_security": [
+     0.8,
+     100
+    ],
+    "conceptual_physics": [
+     0.74,
+     100
+    ],
+    "econometrics": [
+     0.67,
+     100
+    ],
+    "electrical_engineering": [
+     0.69,
+     100
+    ],
+    "elementary_mathematics": [
+     0.67,
+     100
+    ],
+    "formal_logic": [
+     0.5851063829787234,
+     94
+    ],
+    "global_facts": [
+     0.46938775510204084,
+     98
+    ],
+    "high_school_biology": [
+     0.89,
+     100
+    ],
+    "high_school_chemistry": [
+     0.68,
+     100
+    ],
+    "high_school_computer_science": [
+     0.81,
+     100
+    ],
+    "high_school_european_history": [
+     0.88,
+     100
+    ],
+    "high_school_geography": [
+     0.83,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.93,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.77,
+     100
+    ],
+    "high_school_mathematics": [
+     0.54,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.86,
+     100
+    ],
+    "high_school_physics": [
+     0.54,
+     100
+    ],
+    "high_school_psychology": [
+     0.92,
+     100
+    ],
+    "high_school_statistics": [
+     0.69,
+     100
+    ],
+    "high_school_us_history": [
+     0.89,
+     100
+    ],
+    "high_school_world_history": [
+     0.91,
+     100
+    ],
+    "human_aging": [
+     0.79,
+     100
+    ],
+    "human_sexuality": [
+     0.8,
+     100
+    ],
+    "international_law": [
+     0.8,
+     100
+    ],
+    "jurisprudence": [
+     0.79,
+     100
+    ],
+    "logical_fallacies": [
+     0.8080808080808081,
+     99
+    ],
+    "machine_learning": [
+     0.58,
+     100
+    ],
+    "management": [
+     0.88,
+     100
+    ],
+    "marketing": [
+     0.95,
+     100
+    ],
+    "medical_genetics": [
+     0.83,
+     100
+    ],
+    "miscellaneous": [
+     0.84,
+     100
+    ],
+    "moral_disputes": [
+     0.78,
+     100
+    ],
+    "moral_scenarios": [
+     0.44,
+     100
+    ],
+    "nutrition": [
+     0.81,
+     100
+    ],
+    "philosophy": [
+     0.68,
+     100
+    ],
+    "prehistory": [
+     0.87,
+     100
+    ],
+    "professional_accounting": [
+     0.52,
+     100
+    ],
+    "professional_law": [
+     0.54,
+     100
+    ],
+    "professional_medicine": [
+     0.8,
+     100
+    ],
+    "professional_psychology": [
+     0.81,
+     100
+    ],
+    "public_relations": [
+     0.7878787878787878,
+     99
+    ],
+    "security_studies": [
+     0.72,
+     100
+    ],
+    "sociology": [
+     0.91,
+     100
+    ],
+    "us_foreign_policy": [
+     0.86,
+     100
+    ],
+    "virology": [
+     0.78,
+     100
+    ],
+    "world_religions": [
+     0.85,
+     100
+    ]
+   }
+  },
+  "Meta-Llama-3.1-8B-Instruct": {
+   "acc_M": 0.6871929824561404,
+   "acc_R": 0.6971348215855159,
+   "delta": 0.009941839129375518,
+   "flips_correct_to_wrong": 17,
+   "flips_wrong_to_correct": 71,
+   "per_subject_M": {
+    "abstract_algebra": [
+     0.36,
+     100
+    ],
+    "anatomy": [
+     0.67,
+     100
+    ],
+    "astronomy": [
+     0.73,
+     100
+    ],
+    "business_ethics": [
+     0.71,
+     100
+    ],
+    "clinical_knowledge": [
+     0.77,
+     100
+    ],
+    "college_biology": [
+     0.8,
+     100
+    ],
+    "college_chemistry": [
+     0.47,
+     100
+    ],
+    "college_computer_science": [
+     0.54,
+     100
+    ],
+    "college_mathematics": [
+     0.32,
+     100
+    ],
+    "college_medicine": [
+     0.71,
+     100
+    ],
+    "college_physics": [
+     0.46,
+     100
+    ],
+    "computer_security": [
+     0.78,
+     100
+    ],
+    "conceptual_physics": [
+     0.57,
+     100
+    ],
+    "econometrics": [
+     0.51,
+     100
+    ],
+    "electrical_engineering": [
+     0.63,
+     100
+    ],
+    "elementary_mathematics": [
+     0.54,
+     100
+    ],
+    "formal_logic": [
+     0.51,
+     100
+    ],
+    "global_facts": [
+     0.37,
+     100
+    ],
+    "high_school_biology": [
+     0.79,
+     100
+    ],
+    "high_school_chemistry": [
+     0.6,
+     100
+    ],
+    "high_school_computer_science": [
+     0.74,
+     100
+    ],
+    "high_school_european_history": [
+     0.78,
+     100
+    ],
+    "high_school_geography": [
+     0.76,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.85,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.67,
+     100
+    ],
+    "high_school_mathematics": [
+     0.43,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.83,
+     100
+    ],
+    "high_school_physics": [
+     0.5,
+     100
+    ],
+    "high_school_psychology": [
+     0.86,
+     100
+    ],
+    "high_school_statistics": [
+     0.56,
+     100
+    ],
+    "high_school_us_history": [
+     0.84,
+     100
+    ],
+    "high_school_world_history": [
+     0.9,
+     100
+    ],
+    "human_aging": [
+     0.71,
+     100
+    ],
+    "human_sexuality": [
+     0.82,
+     100
+    ],
+    "international_law": [
+     0.8,
+     100
+    ],
+    "jurisprudence": [
+     0.78,
+     100
+    ],
+    "logical_fallacies": [
+     0.85,
+     100
+    ],
+    "machine_learning": [
+     0.49,
+     100
+    ],
+    "management": [
+     0.82,
+     100
+    ],
+    "marketing": [
+     0.94,
+     100
+    ],
+    "medical_genetics": [
+     0.78,
+     100
+    ],
+    "miscellaneous": [
+     0.9,
+     100
+    ],
+    "moral_disputes": [
+     0.78,
+     100
+    ],
+    "moral_scenarios": [
+     0.55,
+     100
+    ],
+    "nutrition": [
+     0.8,
+     100
+    ],
+    "philosophy": [
+     0.73,
+     100
+    ],
+    "prehistory": [
+     0.67,
+     100
+    ],
+    "professional_accounting": [
+     0.56,
+     100
+    ],
+    "professional_law": [
+     0.52,
+     100
+    ],
+    "professional_medicine": [
+     0.78,
+     100
+    ],
+    "professional_psychology": [
+     0.8,
+     100
+    ],
+    "public_relations": [
+     0.73,
+     100
+    ],
+    "security_studies": [
+     0.74,
+     100
+    ],
+    "sociology": [
+     0.82,
+     100
+    ],
+    "us_foreign_policy": [
+     0.88,
+     100
+    ],
+    "virology": [
+     0.5,
+     100
+    ],
+    "world_religions": [
+     0.86,
+     100
+    ]
+   },
+   "per_subject_R": {
+    "abstract_algebra": [
+     0.3939393939393939,
+     99
+    ],
+    "anatomy": [
+     0.68,
+     100
+    ],
+    "astronomy": [
+     0.72,
+     100
+    ],
+    "business_ethics": [
+     0.71,
+     100
+    ],
+    "clinical_knowledge": [
+     0.77,
+     100
+    ],
+    "college_biology": [
+     0.81,
+     100
+    ],
+    "college_chemistry": [
+     0.47,
+     100
+    ],
+    "college_computer_science": [
+     0.55,
+     100
+    ],
+    "college_mathematics": [
+     0.32,
+     100
+    ],
+    "college_medicine": [
+     0.72,
+     100
+    ],
+    "college_physics": [
+     0.46,
+     100
+    ],
+    "computer_security": [
+     0.81,
+     100
+    ],
+    "conceptual_physics": [
+     0.6,
+     100
+    ],
+    "econometrics": [
+     0.51,
+     100
+    ],
+    "electrical_engineering": [
+     0.62,
+     100
+    ],
+    "elementary_mathematics": [
+     0.56,
+     100
+    ],
+    "formal_logic": [
+     0.5106382978723404,
+     94
+    ],
+    "global_facts": [
+     0.3877551020408163,
+     98
+    ],
+    "high_school_biology": [
+     0.81,
+     100
+    ],
+    "high_school_chemistry": [
+     0.6,
+     100
+    ],
+    "high_school_computer_science": [
+     0.74,
+     100
+    ],
+    "high_school_european_history": [
+     0.78,
+     100
+    ],
+    "high_school_geography": [
+     0.76,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.85,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.67,
+     100
+    ],
+    "high_school_mathematics": [
+     0.43,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.84,
+     100
+    ],
+    "high_school_physics": [
+     0.51,
+     100
+    ],
+    "high_school_psychology": [
+     0.86,
+     100
+    ],
+    "high_school_statistics": [
+     0.58,
+     100
+    ],
+    "high_school_us_history": [
+     0.84,
+     100
+    ],
+    "high_school_world_history": [
+     0.91,
+     100
+    ],
+    "human_aging": [
+     0.71,
+     100
+    ],
+    "human_sexuality": [
+     0.84,
+     100
+    ],
+    "international_law": [
+     0.79,
+     100
+    ],
+    "jurisprudence": [
+     0.78,
+     100
+    ],
+    "logical_fallacies": [
+     0.8686868686868687,
+     99
+    ],
+    "machine_learning": [
+     0.49,
+     100
+    ],
+    "management": [
+     0.82,
+     100
+    ],
+    "marketing": [
+     0.94,
+     100
+    ],
+    "medical_genetics": [
+     0.78,
+     100
+    ],
+    "miscellaneous": [
+     0.9,
+     100
+    ],
+    "moral_disputes": [
+     0.79,
+     100
+    ],
+    "moral_scenarios": [
+     0.55,
+     100
+    ],
+    "nutrition": [
+     0.8,
+     100
+    ],
+    "philosophy": [
+     0.73,
+     100
+    ],
+    "prehistory": [
+     0.67,
+     100
+    ],
+    "professional_accounting": [
+     0.56,
+     100
+    ],
+    "professional_law": [
+     0.53,
+     100
+    ],
+    "professional_medicine": [
+     0.78,
+     100
+    ],
+    "professional_psychology": [
+     0.81,
+     100
+    ],
+    "public_relations": [
+     0.7575757575757576,
+     99
+    ],
+    "security_studies": [
+     0.74,
+     100
+    ],
+    "sociology": [
+     0.82,
+     100
+    ],
+    "us_foreign_policy": [
+     0.88,
+     100
+    ],
+    "virology": [
+     0.74,
+     100
+    ],
+    "world_religions": [
+     0.86,
+     100
+    ]
+   }
+  },
+  "mistral-7b-instruct-v0.3": {
+   "acc_M": 0.6150877192982456,
+   "acc_R": 0.62682369484971,
+   "delta": 0.01173597555146444,
+   "flips_correct_to_wrong": 12,
+   "flips_wrong_to_correct": 76,
+   "per_subject_M": {
+    "abstract_algebra": [
+     0.27,
+     100
+    ],
+    "anatomy": [
+     0.58,
+     100
+    ],
+    "astronomy": [
+     0.65,
+     100
+    ],
+    "business_ethics": [
+     0.6,
+     100
+    ],
+    "clinical_knowledge": [
+     0.72,
+     100
+    ],
+    "college_biology": [
+     0.7,
+     100
+    ],
+    "college_chemistry": [
+     0.48,
+     100
+    ],
+    "college_computer_science": [
+     0.52,
+     100
+    ],
+    "college_mathematics": [
+     0.39,
+     100
+    ],
+    "college_medicine": [
+     0.62,
+     100
+    ],
+    "college_physics": [
+     0.39,
+     100
+    ],
+    "computer_security": [
+     0.67,
+     100
+    ],
+    "conceptual_physics": [
+     0.49,
+     100
+    ],
+    "econometrics": [
+     0.47,
+     100
+    ],
+    "electrical_engineering": [
+     0.59,
+     100
+    ],
+    "elementary_mathematics": [
+     0.39,
+     100
+    ],
+    "formal_logic": [
+     0.43,
+     100
+    ],
+    "global_facts": [
+     0.39,
+     100
+    ],
+    "high_school_biology": [
+     0.69,
+     100
+    ],
+    "high_school_chemistry": [
+     0.48,
+     100
+    ],
+    "high_school_computer_science": [
+     0.66,
+     100
+    ],
+    "high_school_european_history": [
+     0.75,
+     100
+    ],
+    "high_school_geography": [
+     0.71,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.81,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.5,
+     100
+    ],
+    "high_school_mathematics": [
+     0.34,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.66,
+     100
+    ],
+    "high_school_physics": [
+     0.28,
+     100
+    ],
+    "high_school_psychology": [
+     0.82,
+     100
+    ],
+    "high_school_statistics": [
+     0.55,
+     100
+    ],
+    "high_school_us_history": [
+     0.85,
+     100
+    ],
+    "high_school_world_history": [
+     0.8,
+     100
+    ],
+    "human_aging": [
+     0.64,
+     100
+    ],
+    "human_sexuality": [
+     0.75,
+     100
+    ],
+    "international_law": [
+     0.8,
+     100
+    ],
+    "jurisprudence": [
+     0.76,
+     100
+    ],
+    "logical_fallacies": [
+     0.79,
+     100
+    ],
+    "machine_learning": [
+     0.55,
+     100
+    ],
+    "management": [
+     0.81,
+     100
+    ],
+    "marketing": [
+     0.92,
+     100
+    ],
+    "medical_genetics": [
+     0.71,
+     100
+    ],
+    "miscellaneous": [
+     0.78,
+     100
+    ],
+    "moral_disputes": [
+     0.7,
+     100
+    ],
+    "moral_scenarios": [
+     0.21,
+     100
+    ],
+    "nutrition": [
+     0.69,
+     100
+    ],
+    "philosophy": [
+     0.63,
+     100
+    ],
+    "prehistory": [
+     0.65,
+     100
+    ],
+    "professional_accounting": [
+     0.48,
+     100
+    ],
+    "professional_law": [
+     0.41,
+     100
+    ],
+    "professional_medicine": [
+     0.63,
+     100
+    ],
+    "professional_psychology": [
+     0.58,
+     100
+    ],
+    "public_relations": [
+     0.66,
+     100
+    ],
+    "security_studies": [
+     0.65,
+     100
+    ],
+    "sociology": [
+     0.85,
+     100
+    ],
+    "us_foreign_policy": [
+     0.85,
+     100
+    ],
+    "virology": [
+     0.47,
+     100
+    ],
+    "world_religions": [
+     0.84,
+     100
+    ]
+   },
+   "per_subject_R": {
+    "abstract_algebra": [
+     0.30303030303030304,
+     99
+    ],
+    "anatomy": [
+     0.59,
+     100
+    ],
+    "astronomy": [
+     0.64,
+     100
+    ],
+    "business_ethics": [
+     0.6,
+     100
+    ],
+    "clinical_knowledge": [
+     0.72,
+     100
+    ],
+    "college_biology": [
+     0.71,
+     100
+    ],
+    "college_chemistry": [
+     0.56,
+     100
+    ],
+    "college_computer_science": [
+     0.52,
+     100
+    ],
+    "college_mathematics": [
+     0.39,
+     100
+    ],
+    "college_medicine": [
+     0.63,
+     100
+    ],
+    "college_physics": [
+     0.39,
+     100
+    ],
+    "computer_security": [
+     0.68,
+     100
+    ],
+    "conceptual_physics": [
+     0.52,
+     100
+    ],
+    "econometrics": [
+     0.47,
+     100
+    ],
+    "electrical_engineering": [
+     0.6,
+     100
+    ],
+    "elementary_mathematics": [
+     0.41,
+     100
+    ],
+    "formal_logic": [
+     0.43617021276595747,
+     94
+    ],
+    "global_facts": [
+     0.41836734693877553,
+     98
+    ],
+    "high_school_biology": [
+     0.71,
+     100
+    ],
+    "high_school_chemistry": [
+     0.48,
+     100
+    ],
+    "high_school_computer_science": [
+     0.66,
+     100
+    ],
+    "high_school_european_history": [
+     0.75,
+     100
+    ],
+    "high_school_geography": [
+     0.71,
+     100
+    ],
+    "high_school_government_and_politics": [
+     0.81,
+     100
+    ],
+    "high_school_macroeconomics": [
+     0.5,
+     100
+    ],
+    "high_school_mathematics": [
+     0.34,
+     100
+    ],
+    "high_school_microeconomics": [
+     0.67,
+     100
+    ],
+    "high_school_physics": [
+     0.29,
+     100
+    ],
+    "high_school_psychology": [
+     0.82,
+     100
+    ],
+    "high_school_statistics": [
+     0.57,
+     100
+    ],
+    "high_school_us_history": [
+     0.85,
+     100
+    ],
+    "high_school_world_history": [
+     0.81,
+     100
+    ],
+    "human_aging": [
+     0.64,
+     100
+    ],
+    "human_sexuality": [
+     0.75,
+     100
+    ],
+    "international_law": [
+     0.79,
+     100
+    ],
+    "jurisprudence": [
+     0.76,
+     100
+    ],
+    "logical_fallacies": [
+     0.7878787878787878,
+     99
+    ],
+    "machine_learning": [
+     0.55,
+     100
+    ],
+    "management": [
+     0.81,
+     100
+    ],
+    "marketing": [
+     0.92,
+     100
+    ],
+    "medical_genetics": [
+     0.71,
+     100
+    ],
+    "miscellaneous": [
+     0.78,
+     100
+    ],
+    "moral_disputes": [
+     0.71,
+     100
+    ],
+    "moral_scenarios": [
+     0.21,
+     100
+    ],
+    "nutrition": [
+     0.69,
+     100
+    ],
+    "philosophy": [
+     0.63,
+     100
+    ],
+    "prehistory": [
+     0.65,
+     100
+    ],
+    "professional_accounting": [
+     0.48,
+     100
+    ],
+    "professional_law": [
+     0.48,
+     100
+    ],
+    "professional_medicine": [
+     0.63,
+     100
+    ],
+    "professional_psychology": [
+     0.58,
+     100
+    ],
+    "public_relations": [
+     0.6666666666666666,
+     99
+    ],
+    "security_studies": [
+     0.65,
+     100
+    ],
+    "sociology": [
+     0.85,
+     100
+    ],
+    "us_foreign_policy": [
+     0.85,
+     100
+    ],
+    "virology": [
+     0.74,
+     100
+    ],
+    "world_religions": [
+     0.84,
+     100
+    ]
+   }
+  }
+ },
+ "config": {
+  "data": "edinburgh-dawg/mmlu-redux-2.0 (5700 questions, 57 subjects)",
+  "method": "4-way single-token loglikelihood argmax, bf16, greedy",
+  "gauges": {
+   "M": "original MMLU labels, all 5700 questions",
+   "R": "Redux-corrected: 100 relabels, 33 any-of-multiple, 11 dropped (5689 scored)"
+  }
+ },
+ "aggregate_rank": {
+  "Qwen2.5-0.5B-Instruct|Qwen2.5-1.5B-Instruct": {
+   "rank_M": "Qwen2.5-1.5B-Instruct>Qwen2.5-0.5B-Instruct",
+   "rank_R": "Qwen2.5-1.5B-Instruct>Qwen2.5-0.5B-Instruct",
+   "gap_M": 0.15192982456140353,
+   "gap_R": 0.15486025663561254,
+   "flipped": false
+  },
+  "Qwen2.5-0.5B-Instruct|Qwen2.5-7B-Instruct": {
+   "rank_M": "Qwen2.5-7B-Instruct>Qwen2.5-0.5B-Instruct",
+   "rank_R": "Qwen2.5-7B-Instruct>Qwen2.5-0.5B-Instruct",
+   "gap_M": 0.2680701754385965,
+   "gap_R": 0.272455616101248,
+   "flipped": false
+  },
+  "Qwen2.5-0.5B-Instruct|Meta-Llama-3.1-8B-Instruct": {
+   "rank_M": "Meta-Llama-3.1-8B-Instruct>Qwen2.5-0.5B-Instruct",
+   "rank_R": "Meta-Llama-3.1-8B-Instruct>Qwen2.5-0.5B-Instruct",
+   "gap_M": 0.2207017543859649,
+   "gap_R": 0.22481982773773945,
+   "flipped": false
+  },
+  "Qwen2.5-0.5B-Instruct|mistral-7b-instruct-v0.3": {
+   "rank_M": "mistral-7b-instruct-v0.3>Qwen2.5-0.5B-Instruct",
+   "rank_R": "mistral-7b-instruct-v0.3>Qwen2.5-0.5B-Instruct",
+   "gap_M": 0.14859649122807012,
+   "gap_R": 0.1545087010019336,
+   "flipped": false
+  },
+  "Qwen2.5-1.5B-Instruct|Qwen2.5-7B-Instruct": {
+   "rank_M": "Qwen2.5-7B-Instruct>Qwen2.5-1.5B-Instruct",
+   "rank_R": "Qwen2.5-7B-Instruct>Qwen2.5-1.5B-Instruct",
+   "gap_M": 0.11614035087719299,
+   "gap_R": 0.11759535946563549,
+   "flipped": false
+  },
+  "Qwen2.5-1.5B-Instruct|Meta-Llama-3.1-8B-Instruct": {
+   "rank_M": "Meta-Llama-3.1-8B-Instruct>Qwen2.5-1.5B-Instruct",
+   "rank_R": "Meta-Llama-3.1-8B-Instruct>Qwen2.5-1.5B-Instruct",
+   "gap_M": 0.06877192982456137,
+   "gap_R": 0.06995957110212692,
+   "flipped": false
+  },
+  "Qwen2.5-1.5B-Instruct|mistral-7b-instruct-v0.3": {
+   "rank_M": "Qwen2.5-1.5B-Instruct>mistral-7b-instruct-v0.3",
+   "rank_R": "Qwen2.5-1.5B-Instruct>mistral-7b-instruct-v0.3",
+   "gap_M": 0.0033333333333334103,
+   "gap_R": 0.00035155563367894604,
+   "flipped": false
+  },
+  "Qwen2.5-7B-Instruct|Meta-Llama-3.1-8B-Instruct": {
+   "rank_M": "Qwen2.5-7B-Instruct>Meta-Llama-3.1-8B-Instruct",
+   "rank_R": "Qwen2.5-7B-Instruct>Meta-Llama-3.1-8B-Instruct",
+   "gap_M": 0.047368421052631615,
+   "gap_R": 0.04763578836350857,
+   "flipped": false
+  },
+  "Qwen2.5-7B-Instruct|mistral-7b-instruct-v0.3": {
+   "rank_M": "Qwen2.5-7B-Instruct>mistral-7b-instruct-v0.3",
+   "rank_R": "Qwen2.5-7B-Instruct>mistral-7b-instruct-v0.3",
+   "gap_M": 0.1194736842105264,
+   "gap_R": 0.11794691509931443,
+   "flipped": false
+  },
+  "Meta-Llama-3.1-8B-Instruct|mistral-7b-instruct-v0.3": {
+   "rank_M": "Meta-Llama-3.1-8B-Instruct>mistral-7b-instruct-v0.3",
+   "rank_R": "Meta-Llama-3.1-8B-Instruct>mistral-7b-instruct-v0.3",
+   "gap_M": 0.07210526315789478,
+   "gap_R": 0.07031112673580586,
+   "flipped": false
+  }
+ },
+ "subject_level": {
+  "Qwen2.5-0.5B-Instruct|Qwen2.5-1.5B-Instruct": {
+   "subject_leader_flips": 0,
+   "near_tie_subjects(M<0.10)": 18
+  },
+  "Qwen2.5-0.5B-Instruct|Qwen2.5-7B-Instruct": {
+   "subject_leader_flips": 0,
+   "near_tie_subjects(M<0.10)": 1
+  },
+  "Qwen2.5-0.5B-Instruct|Meta-Llama-3.1-8B-Instruct": {
+   "subject_leader_flips": 0,
+   "near_tie_subjects(M<0.10)": 6
+  },
+  "Qwen2.5-0.5B-Instruct|mistral-7b-instruct-v0.3": {
+   "subject_leader_flips": 0,
+   "near_tie_subjects(M<0.10)": 16
+  },
+  "Qwen2.5-1.5B-Instruct|Qwen2.5-7B-Instruct": {
+   "subject_leader_flips": 0,
+   "near_tie_subjects(M<0.10)": 25
+  },
+  "Qwen2.5-1.5B-Instruct|Meta-Llama-3.1-8B-Instruct": {
+   "subject_leader_flips": 1,
+   "near_tie_subjects(M<0.10)": 40
+  },
+  "Qwen2.5-1.5B-Instruct|mistral-7b-instruct-v0.3": {
+   "subject_leader_flips": 0,
+   "near_tie_subjects(M<0.10)": 49
+  },
+  "Qwen2.5-7B-Instruct|Meta-Llama-3.1-8B-Instruct": {
+   "subject_leader_flips": 2,
+   "near_tie_subjects(M<0.10)": 47
+  },
+  "Qwen2.5-7B-Instruct|mistral-7b-instruct-v0.3": {
+   "subject_leader_flips": 0,
+   "near_tie_subjects(M<0.10)": 25
+  },
+  "Meta-Llama-3.1-8B-Instruct|mistral-7b-instruct-v0.3": {
+   "subject_leader_flips": 1,
+   "near_tie_subjects(M<0.10)": 42
+  }
+ }
+}

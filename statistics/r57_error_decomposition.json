@@ -1,0 +1,106 @@
+{
+ "mt_family": {
+  "de-en": {
+   "system_level": {
+    "n_systems": 16,
+    "mean_abs_contract_swing_z": 0.0134,
+    "leverage2_sys": 0.00026,
+    "system_difficulty_var": 0.00739,
+    "note": "swings = std over contracts of system-mean error (z units); this is the arm at leaderboard granularity"
+   },
+   "n_pairs": 31948,
+   "per_contract_mse": {
+    "bleu": 1.5292,
+    "chrf": 1.4218,
+    "bertscore": 1.4368
+   },
+   "decomposition": {
+    "mse_total": 1.46261,
+    "leverage_bias2": 0.0,
+    "within_var": 1.46261,
+    "cross_term": 0.0,
+    "leverage_share": 0.0,
+    "within_share": 1.0
+   },
+   "violations": "N/A (outputs fully parseable)"
+  },
+  "zh-en": {
+   "system_level": {
+    "n_systems": 15,
+    "mean_abs_contract_swing_z": 0.0426,
+    "leverage2_sys": 0.00463,
+    "system_difficulty_var": 0.0175,
+    "note": "swings = std over contracts of system-mean error (z units); this is the arm at leaderboard granularity"
+   },
+   "n_pairs": 20199,
+   "per_contract_mse": {
+    "bleu": 1.315,
+    "chrf": 1.1547,
+    "bertscore": 1.1658
+   },
+   "decomposition": {
+    "mse_total": 1.21184,
+    "leverage_bias2": 0.0,
+    "within_var": 1.21184,
+    "cross_term": 0.0,
+    "leverage_share": 0.0,
+    "within_share": 1.0
+   },
+   "violations": "N/A (outputs fully parseable)"
+  }
+ },
+ "judge_family": {
+  "system_level": {
+   "n_systems": 16,
+   "mean_abs_contract_swing_z": 0.038,
+   "leverage2_sys": 0.00197,
+   "system_difficulty_var": 0.04592,
+   "note": "swings = std over contracts of system-mean error (z units); this is the arm at leaderboard granularity"
+  },
+  "n_cells": 15,
+  "decomposition": {
+   "mse_total": 1.43964,
+   "leverage_bias2": 0.0,
+   "within_var": 1.43964,
+   "cross_term": 0.0,
+   "leverage_share": 0.0,
+   "within_share": 1.0
+  },
+  "per_cell_bias": {
+   "Llama-3.1-8B/base": -0.0,
+   "Llama-3.1-8B/r3": -0.0,
+   "Llama-3.1-8B/text": -0.0,
+   "Llama-3.1-8B/zh": 0.0,
+   "Mistral-7B/base": 0.0,
+   "Mistral-7B/r3": 0.0,
+   "Mistral-7B/text": 0.0,
+   "Mistral-7B/zh": -0.0,
+   "Qwen2.5-7B/base": -0.0,
+   "Qwen2.5-7B/r3": 0.0,
+   "Qwen2.5-7B/text": -0.0,
+   "Qwen2.5-7B/zh": 0.0,
+   "Yi-1.5-9B/base": 0.0,
+   "Yi-1.5-9B/r3": 0.0,
+   "Yi-1.5-9B/zh": 0.0
+  },
+  "violation_rate": {
+   "Qwen2.5-7B/base": 0.0,
+   "Qwen2.5-7B/r3": 0.0,
+   "Qwen2.5-7B/zh": 0.0,
+   "Qwen2.5-7B/text": 0.0002,
+   "Llama-3.1-8B/base": 0.0,
+   "Llama-3.1-8B/r3": 0.0006,
+   "Llama-3.1-8B/zh": 0.0018,
+   "Llama-3.1-8B/text": 0.0002,
+   "Mistral-7B/base": 0.002,
+   "Mistral-7B/r3": 0.0001,
+   "Mistral-7B/zh": 0.0471,
+   "Mistral-7B/text": 0.0289,
+   "Yi-1.5-9B/base": 0.0172,
+   "Yi-1.5-9B/r3": 0.0045,
+   "Yi-1.5-9B/zh": 0.3785
+  },
+  "bias_vs_violation_corr": 0.3308,
+  "note": "violations enter as parse-failure selection; corr over judge×cells (n=15)"
+ }
+}

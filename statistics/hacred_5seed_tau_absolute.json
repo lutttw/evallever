@@ -1,0 +1,56 @@
+{
+ "20260917": {
+  "F1_multi_fixed": {
+   "intra": 0.4681,
+   "inter": 0.3878
+  },
+  "F1_multi_cal": {
+   "intra": 0.4476,
+   "inter": 0.3647
+  }
+ },
+ "20260918": {
+  "F1_multi_fixed": {
+   "intra": 0.4877,
+   "inter": 0.3805
+  },
+  "F1_multi_cal": {
+   "intra": 0.4597,
+   "inter": 0.3502
+  }
+ },
+ "20260919": {
+  "F1_multi_fixed": {
+   "intra": 0.5446,
+   "inter": 0.4691
+  },
+  "F1_multi_cal": {
+   "intra": 0.5253,
+   "inter": 0.4415
+  }
+ },
+ "20261001": {
+  "tau_sigmoid": 0.54,
+  "tau_top1": 0.01,
+  "F1_multi_fixed": {
+   "intra": 0.5091,
+   "inter": 0.4226
+  },
+  "F1_multi_cal": {
+   "intra": 0.517,
+   "inter": 0.4317
+  }
+ },
+ "20261002": {
+  "tau_sigmoid": 0.49,
+  "tau_top1": 0.01,
+  "F1_multi_fixed": {
+   "intra": 0.5604,
+   "inter": 0.5137
+  },
+  "F1_multi_cal": {
+   "intra": 0.5588,
+   "inter": 0.5122
+  }
+ }
+}

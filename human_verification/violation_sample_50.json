@@ -1,0 +1,2680 @@
+{
+ "meta": {
+  "prereg": "修订11:D5 违规三元组分层抽样人工核验(oob/parse_fail/rel_unmapped/self_pair/ambiguous 按占比分层,不足的类全取)",
+  "generated_by": "src/jcip_audit/r16_violation_sample.py",
+  "seed": 20260926,
+  "total": 50,
+  "min_per_class": 3,
+  "parser": "src/jcip_audit/d5_llm_hook.parse_output(修订19 k_bound 口径,import 复用)",
+  "pred_files": [
+   "out/d5_llm_hook/preds_qwen2.5-7b-instruct_json.jsonl",
+   "out/d5_llm_hook/preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "out/d5_llm_hook/preds_mistral-7b-instruct_json.jsonl",
+   "out/d5_llm_hook/preds_mistral-7b-instruct_freetext.jsonl"
+  ],
+  "allocation_rule": "配额=全池占比×50,每类≥3(池内<3 全取);最大缺口法配平;类内 rng.sample 不放回(random.Random(20260926))",
+  "n_pool": 4235,
+  "pool_counts": {
+   "parse_fail": 350,
+   "oob_index": 2506,
+   "rel_unmapped": 415,
+   "self_pair": 733,
+   "ambiguous": 231
+  },
+  "hallucinated_excluded": 0,
+  "allocation": {
+   "parse_fail": 4,
+   "oob_index": 29,
+   "rel_unmapped": 5,
+   "self_pair": 9,
+   "ambiguous": 3
+  },
+  "per_file": [
+   {
+    "file": "preds_qwen2.5-7b-instruct_json.jsonl",
+    "n_docs": 498,
+    "n_triples": 10091,
+    "parse_fail": 29,
+    "oob_index": 718,
+    "rel_unmapped": 174,
+    "hallucinated": 0,
+    "ambiguous": 44,
+    "self_pair": 185,
+    "mapped": 8941,
+    "docs_missing": 0
+   },
+   {
+    "file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+    "n_docs": 498,
+    "n_triples": 8917,
+    "parse_fail": 0,
+    "oob_index": 652,
+    "rel_unmapped": 86,
+    "hallucinated": 0,
+    "ambiguous": 61,
+    "self_pair": 239,
+    "mapped": 7879,
+    "docs_missing": 0
+   },
+   {
+    "file": "preds_mistral-7b-instruct_json.jsonl",
+    "n_docs": 498,
+    "n_triples": 3715,
+    "parse_fail": 321,
+    "oob_index": 246,
+    "rel_unmapped": 66,
+    "hallucinated": 0,
+    "ambiguous": 25,
+    "self_pair": 42,
+    "mapped": 3015,
+    "docs_missing": 0
+   },
+   {
+    "file": "preds_mistral-7b-instruct_freetext.jsonl",
+    "n_docs": 498,
+    "n_triples": 19107,
+    "parse_fail": 0,
+    "oob_index": 890,
+    "rel_unmapped": 89,
+    "hallucinated": 0,
+    "ambiguous": 101,
+    "self_pair": 267,
+    "mapped": 17760,
+    "docs_missing": 0
+   }
+  ],
+  "data_anomaly_notes": []
+ },
+ "sample": [
+  {
+   "样本ID": "V001",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "parse_fail",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 95,
+   "did": "91516d5b4f47943edce2d1bd984dffdb3d7cfea1409c3b2ec3cd16a2cb5322f0",
+   "title": "East Asia Economic Caucus",
+   "triple": [
+    "<<PARSE_FAIL>>",
+    "<<PARSE_FAIL>>",
+    "<<PARSE_FAIL>>"
+   ],
+   "raw_item": null,
+   "detail": {
+    "reason": "整段输出未能解析出三元组列表"
+   },
+   "n_ents": 21,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1997",
+    "2005",
+    "APT)agreed",
+    "Asia - Pacific Economic Cooperation",
+    "Asian",
+    "Association of Southeast Asian Nations",
+    "Australia",
+    "China",
+    "East Asia",
+    "East Asia Economic Caucus",
+    "East Asia Summit",
+    "India",
+    "Japan",
+    "Mahathir bin Mohamad",
+    "Malaysia",
+    "Malaysian",
+    "New Zealand",
+    "North America",
+    "Republic of Korea",
+    "Western nations",
+    "free trade zone"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"P131\",\"E5\"],[\"E5\",\"P131\",\"E8\"],[\"E8\",\"P131\",\"E9\"],[\"E9\",\"P131\",\"E10\"],[\"E9\",\"P131\",\"E12\"],[\"E10\",\"P131\",\"E11\"],[\"E11\",\"P131\",\"E18\"],[\"E12\",\"P131\",\"E18\"],[\"E13\",\"P17\",\"E15\"],[\"E14\",\"P131\",\"E15\"],[\"E15\",\"P131\",\"E16\"],[\"E16\",\"P131\",\"E17\"],[\"E18\",\"P131\",\"E19\"],[\"E9\",\"P136\",\"E12\"],[\"E12\",\"P136\",\"E11\"],[\"E11\",\"P136\",\"E10\"],[\"E10\",\"P136\",\"E9\"],[\"E18\",\"P136\",\"E12\"],[\"E12\",\"P136\",\"E11\"],[\"E11\",\"P136\",\"E10\"],[\"E10\",\"P136\",\"E9\"],[\"E19\",\"P136\",\"E12\"],[\"E12\",\"P136\",\"E11\"],[\"E11\",\"P136\",\"E10\"],[\"E10\",\"P136\",\"E9\"],[\"E18\",\"P1365\",\"E12\"],[\"E12\",\"P1365\",\"E11\"],[\"E11\",\"P1365\",\"E10\"],[\"E10\",\"P1365\",\"E9\"],[\"E19\",\"P1365\",\"E12\"],[\"E12\",\"P1365\",\"E11\"],[\"E11\",\"P1365\",\"E10\"],[\"E10\",\"P1365\",\"E9\"],[\"E18\",\"P1376\",\"E12\"],[\"E12\",\"P1376\",\"E11\"],[\"E11\",\"P1376\",\"E10\"],[\"E10\",\"P1376\",\"E9\"],[\"E19\",\"P1376\",\"E12\"],[\"E12\",\"P1376\",\"E11\"],[\"E11\",\"P1376\",\"E10\"],[\"E10\",\"P1376\",\"E9\"],[\"E18\",\"P138\",\"E12\"],[\"E12\",\"P138\",\"E11\"],[\"E11\",\"P138\",\"E10\"],[\"E10\",\"P138\",\"E9\"],[\"E19\",\"P138\",\"E12\"],[\"E12\",\"P138\",\"E11\"],[\"E11\",\"P138\",\"E10\"],[\"E10\",\"P138\",\"E9\"],[\"E18\",\"P140\",\"E12\"],[\"E12\",\"P140\",\"E11\"],[\"E11\",\"P140\",\"E10\"],[\"E10\",\"P140\",\"E9\"],[\"E19\",\"P140\",\"E12\"],[\"E12\",\"P140\",\"E11\"],[\"E11\",\"P140\",\"E10\"],[\"E10\",\"P140\",\"E9\"],[\"E18\",\"P1412\",\"E12\"],[\"E12\",\"P1412\",\"E11"
+  },
+  {
+   "样本ID": "V002",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "parse_fail",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 359,
+   "did": "e695f17e7d9ed4f17db43a1149613fd8b6804d0becdde5abc0096b674608d8f8",
+   "title": "Villanova Preparatory School",
+   "triple": [
+    "<<PARSE_FAIL>>",
+    "<<PARSE_FAIL>>",
+    "<<PARSE_FAIL>>"
+   ],
+   "raw_item": null,
+   "detail": {
+    "reason": "整段输出未能解析出三元组列表"
+   },
+   "n_ents": 23,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "14",
+    "1920s",
+    "2015-16",
+    "265",
+    "Augustinian Catholic",
+    "Augustinian Secondary Education Association",
+    "Augustinians",
+    "California",
+    "John Cantwell",
+    "Los Angeles",
+    "North America",
+    "October 1924",
+    "Ojai",
+    "Pennsylvania",
+    "Roman Catholic Archdiocese",
+    "Thirty - four percent",
+    "Villanova",
+    "Villanova Preparatory School",
+    "eight",
+    "more than 130 acres",
+    "over 100",
+    "the United States",
+    "two"
+   ],
+   "raw": "{\"triples\":[[\"E17\",\"P17\",\"E16\"],[\"E16\",\"P17\",\"E4\"],[\"E16\",\"P131\",\"E7\"],[\"E16\",\"P172\",\"E5\"],[\"E16\",\"P150\",\"E13\"],[\"E16\",\"P175\",\"E3\"],[\"E16\",\"P156\",\"E6\"],[\"E16\",\"P159\",\"E4\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P136\",\"E4\"],[\"E16\",\"P1376\",\"E22\"],[\"E16\",\"P137\",\"E4\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22\"],[\"E16\",\"P1365\",\"E22\"],[\"E16\",\"P1366\",\"E22"
+  },
+  {
+   "样本ID": "V003",
+   "model": "mistral-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "parse_fail",
+   "src_file": "preds_mistral-7b-instruct_json.jsonl",
+   "line_no": 14,
+   "did": "fd4afe5ef625620261ed1fc6f38a45393d54cc5c523b7340815967027099c952",
+   "title": "Edward Rowan Finnegan",
+   "triple": [
+    "<<PARSE_FAIL>>",
+    "<<PARSE_FAIL>>",
+    "<<PARSE_FAIL>>"
+   ],
+   "raw_item": null,
+   "detail": {
+    "reason": "整段输出未能解析出三元组列表"
+   },
+   "n_ents": 23,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1930",
+    "1931",
+    "1939",
+    "1960",
+    "1961",
+    "1964",
+    "1971",
+    "9th District",
+    "Assistant Corporation Counsel",
+    "Chicago",
+    "Circuit Court of Cook County",
+    "Congress",
+    "Cook County",
+    "DePaul University School of Law",
+    "Democrat",
+    "Democratic",
+    "Edward Rowan Finnegan",
+    "Illinois",
+    "June 5 , 1905",
+    "Loyola University Chicago",
+    "Sidney Yates",
+    "U.S.",
+    "the United States Senate"
+   ],
+   "raw": "[\n  {\n    \"triples\": [\n      [\"E16\", \"P1001\", \"E18\"],\n      [\"E16\", \"P102\", \"E19\"],\n      [\"E16\", \"P1056\", \"E20\"],\n      [\"E16\", \"P108\", \"E21\"],\n      [\"E16\", \"P112\", \"E22\"],\n      [\"E16\", \"P118\", \"E23\"],\n      [\"E16\", \"P1198\", \"E24\"],\n      [\"E16\", \"P123\", \"E25\"],\n      [\"E16\", \"P127\", \"E26\"],\n      [\"E16\", \"P131\", \"E27\"],\n      [\"E16\", \"P1336\", \"E28\"],\n      [\"E16\", \"P1344\", \"E29\"],\n      [\"E16\", \"P136\", \"E30\"],\n      [\"E16\", \"P1365\", \"E3\"],\n      [\"E16\", \"P1366\", \"E4\"],\n      [\"E16\", \"P137\", \"E5\"],\n      [\"E16\", \"P1376\", \"E6\"],\n      [\"E16\", \"P140\", \"E7\"],\n      [\"E16\", \"P1412\", \"E8\"],\n      [\"E16\", \"P1441\", \"E9\"],\n      [\"E16\", \"P150\", \"E10\"],\n      [\"E16\", \"P155\", \"E11\"],\n      [\"E16\", \"P156\", \"E12\"],\n      [\"E16\", \"P159\", \"E13\"],\n      [\"E16\", \"P161\", \"E14\"],\n      [\"E16\", \"P162\", \"E15\"],\n      [\"E16\", \"P166\", \"E16\"],\n      [\"E16\", \"P17\", \"E17\"],\n      [\"E16\", \"P170\", \"E18\"],\n      [\"E16\", \"P171\", \"E19\"],\n      [\"E16\", \"P172\", \"E20\"],\n      [\"E16\", \"P175\", \"E13\"],\n      [\"E16\", \"P176\", \"E15\"],\n      [\"E16\", \"P178\", \"E16\"],\n      [\"E16\", \"P179\", \"E17\"],\n      [\"E16\", \"P19\", \"E10\"],\n      [\"E16\", \"P190\", \"E11\"],\n      [\"E16\", \"P194\", \"E12\"],\n      [\"E16\", \"P20\", \"E13\"],\n      [\"E16\", \"P205\", \"E14\"],\n      [\"E16\", \"P206\", \"E15\"],\n      [\"E16\", \"P22\", \"E16\"],\n     "
+  },
+  {
+   "样本ID": "V004",
+   "model": "mistral-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "parse_fail",
+   "src_file": "preds_mistral-7b-instruct_json.jsonl",
+   "line_no": 414,
+   "did": "02a3f17ad8fce43671afd4bd5354b74ca388d14c32e3ed81947dff38f0ba1866",
+   "title": "Yandina, Solomon Islands",
+   "triple": [
+    "<<PARSE_FAIL>>",
+    "<<PARSE_FAIL>>",
+    "<<PARSE_FAIL>>"
+   ],
+   "raw_item": null,
+   "detail": {
+    "reason": "整段输出未能解析出三元组列表"
+   },
+   "n_ents": 9,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "Central Province",
+    "Guadalcanal Revolutionary Army",
+    "IATA",
+    "ICAO",
+    "Mbanika Island",
+    "RAMSI",
+    "Russell Islands",
+    "Solomon Islands",
+    "Yandina"
+   ],
+   "raw": "[\n  {\n    \"triples\": [\n      [\"E8\", \"P17\", \"E7\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E8\", \"P131\", \"E7\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E4\", \"P131\", \"E7\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E6\", \"P131\", \"E7\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E0\", \"P17\", \"E7\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E0\", \"P131\", \"E7\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E2\", \"P17\", \"E7\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E3\", \"P17\", \"E7\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E5\", \"P17\", \"E7\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E1\", \"P17\", \"E7\"]\n    ]\n  }\n]"
+  },
+  {
+   "样本ID": "V005",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 42,
+   "did": "db0a3317e0e5ea9fce7632bc4a0493787e128f0aa13ae52e36a7cdd453e4cb68",
+   "title": "Think Bike",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E25",
+    "P17",
+    "E5"
+   ],
+   "detail": {
+    "bad": {
+     "head": 25,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 19
+   },
+   "n_ents": 19,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "1981",
+    "2005",
+    "900",
+    "Cape Town",
+    "Free State",
+    "Gauteng province",
+    "Hurt Report",
+    "KwaZulu Natal",
+    "Los Angeles",
+    "South Africa",
+    "The Think Bike Campaign",
+    "Tony Day",
+    "Toy Run",
+    "United Kingdom",
+    "Western Cape",
+    "the 1980s",
+    "the United States",
+    "three fourths",
+    "two thirds"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"P17\",\"E5\"],[\"E1\",\"P17\",\"E5\"],[\"E2\",\"P17\",\"E5\"],[\"E3\",\"P17\",\"E5\"],[\"E4\",\"P17\",\"E5\"],[\"E5\",\"P17\",\"E9\"],[\"E6\",\"P175\",\"E5\"],[\"E7\",\"P17\",\"E5\"],[\"E8\",\"P17\",\"E5\"],[\"E9\",\"P17\",\"E5\"],[\"E10\",\"P17\",\"E5\"],[\"E11\",\"P17\",\"E5\"],[\"E12\",\"P17\",\"E5\"],[\"E13\",\"P17\",\"E5\"],[\"E14\",\"P17\",\"E5\"],[\"E15\",\"P17\",\"E5\"],[\"E16\",\"P17\",\"E5\"],[\"E17\",\"P17\",\"E5\"],[\"E18\",\"P17\",\"E5\"],[\"E19\",\"P17\",\"E5\"],[\"E20\",\"P17\",\"E5\"],[\"E21\",\"P17\",\"E5\"],[\"E22\",\"P17\",\"E5\"],[\"E23\",\"P17\",\"E5\"],[\"E24\",\"P17\",\"E5\"],[\"E25\",\"P17\",\"E5\"],[\"E26\",\"P17\",\"E5\"],[\"E27\",\"P17\",\"E5\"],[\"E28\",\"P17\",\"E5\"],[\"E29\",\"P17\",\"E5\"],[\"E30\",\"P17\",\"E5\"]]}"
+  },
+  {
+   "样本ID": "V006",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 76,
+   "did": "f237962c6f0af1e888cb727cd4cb4afc7601e4bcb24a78633ac9b7efe6bb31b8",
+   "title": "List of colleges and universities in Connecticut",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E28",
+    "P175",
+    "E5"
+   ],
+   "detail": {
+    "bad": {
+     "head": 28,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 11
+   },
+   "n_ents": 11,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "1701",
+    "Charter Oak State College",
+    "Connecticut",
+    "Connecticut State Colleges & Universities",
+    "U.S.",
+    "United States Coast Guard Academy",
+    "University of Connecticut",
+    "Yale University",
+    "five",
+    "four",
+    "twelve"
+   ],
+   "raw": "{\"triples\":[[\"E2\",\"P17\",\"E4\"], [\"E6\",\"P17\",\"E2\"], [\"E7\",\"P17\",\"E2\"], [\"E8\",\"P131\",\"E3\"], [\"E9\",\"P131\",\"E3\"], [\"E10\",\"P131\",\"E3\"], [\"E11\",\"P175\",\"E6\"], [\"E12\",\"P175\",\"E6\"], [\"E13\",\"P175\",\"E6\"], [\"E14\",\"P175\",\"E5\"], [\"E15\",\"P175\",\"E5\"], [\"E16\",\"P175\",\"E5\"], [\"E17\",\"P175\",\"E5\"], [\"E18\",\"P175\",\"E5\"], [\"E19\",\"P175\",\"E5\"], [\"E20\",\"P175\",\"E5\"], [\"E21\",\"P175\",\"E5\"], [\"E22\",\"P175\",\"E5\"], [\"E23\",\"P175\",\"E5\"], [\"E24\",\"P175\",\"E5\"], [\"E25\",\"P175\",\"E5\"], [\"E26\",\"P175\",\"E5\"], [\"E27\",\"P175\",\"E5\"], [\"E28\",\"P175\",\"E5\"], [\"E29\",\"P175\",\"E5\"], [\"E30\",\"P175\",\"E5\"]]}"
+  },
+  {
+   "样本ID": "V007",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 130,
+   "did": "bad47f996a5776c74752f4a6dba29d830adbb888b5942bdfeb675df567aa7864",
+   "title": "N. C. Wyeth",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E17",
+    "P1365",
+    "E8"
+   ],
+   "detail": {
+    "bad": {
+     "head": 17,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 14
+   },
+   "n_ents": 14,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "112",
+    "1908",
+    "25",
+    "3,000",
+    "America",
+    "Andrew Wyeth",
+    "Howard Pyle",
+    "Jamie Wyeth",
+    "Newell Convers Wyeth",
+    "October 19 , 1945",
+    "October 22 , 1882",
+    "Scribner 's",
+    "Scribner Classics",
+    "Treasure Island"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"P1056\",\"E8\"],[\"E1\",\"P17\",\"E8\"],[\"E2\",\"P17\",\"E8\"],[\"E3\",\"P1366\",\"E8\"],[\"E4\",\"P17\",\"E8\"],[\"E5\",\"P1056\",\"E0\"],[\"E6\",\"P1056\",\"E3\"],[\"E7\",\"P17\",\"E8\"],[\"E8\",\"P1056\",\"E5\"],[\"E9\",\"P178\",\"E8\"],[\"E10\",\"P179\",\"E8\"],[\"E11\",\"P1365\",\"E8\"],[\"E12\",\"P1365\",\"E8\"],[\"E13\",\"P1365\",\"E8\"],[\"E14\",\"P1365\",\"E8\"],[\"E15\",\"P1365\",\"E8\"],[\"E16\",\"P1365\",\"E8\"],[\"E17\",\"P1365\",\"E8\"],[\"E18\",\"P1365\",\"E8\"],[\"E19\",\"P1365\",\"E8\"],[\"E20\",\"P1365\",\"E8\"],[\"E21\",\"P1365\",\"E8\"],[\"E22\",\"P1365\",\"E8\"],[\"E23\",\"P1365\",\"E8\"],[\"E24\",\"P1365\",\"E8\"],[\"E25\",\"P1365\",\"E8\"],[\"E26\",\"P1365\",\"E8\"],[\"E27\",\"P1365\",\"E8\"],[\"E28\",\"P1365\",\"E8\"],[\"E29\",\"P1365\",\"E8\"],[\"E30\",\"P1365\",\"E8\"]]}"
+  },
+  {
+   "样本ID": "V008",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 260,
+   "did": "934b1a6999d13e721f9fab7211875a5ea954f188cde030ecb87ae976a21d1d67",
+   "title": "Google Springboard",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E9",
+    "rel",
+    "E13"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 13
+    },
+    "k_bound": null,
+    "n_ents": 12
+   },
+   "n_ents": 12,
+   "k_bound": null,
+   "ents_context": [
+    [
+     11,
+     "Springboard"
+    ]
+   ],
+   "ents": [
+    "AI - powered",
+    "Calendar",
+    "Gmail",
+    "Google",
+    "Google Calendar",
+    "Google Contacts",
+    "Google Docs",
+    "Google Drive",
+    "Google Maps",
+    "Google Sites",
+    "Machine Learning",
+    "Springboard"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"rel\",\"E5\"],[\"E0\",\"rel\",\"E6\"],[\"E0\",\"rel\",\"E7\"],[\"E0\",\"rel\",\"E8\"],[\"E0\",\"rel\",\"E9\"],[\"E0\",\"rel\",\"E10\"],[\"E0\",\"rel\",\"E11\"],[\"E1\",\"rel\",\"E3\"],[\"E2\",\"rel\",\"E3\"],[\"E3\",\"rel\",\"E4\"],[\"E4\",\"rel\",\"E12\"],[\"E5\",\"rel\",\"E13\"],[\"E6\",\"rel\",\"E13\"],[\"E7\",\"rel\",\"E13\"],[\"E8\",\"rel\",\"E13\"],[\"E9\",\"rel\",\"E13\"],[\"E10\",\"rel\",\"E13\"],[\"E11\",\"rel\",\"E13\"]]}"
+  },
+  {
+   "样本ID": "V009",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 303,
+   "did": "30674252bc75d3b160f858d1e7a898eff356c123c03b84ae54366ee346fcf94e",
+   "title": "French Resistance",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E11",
+    "P170",
+    "E26"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 26
+    },
+    "k_bound": null,
+    "n_ents": 25
+   },
+   "n_ents": 25,
+   "k_bound": null,
+   "ents_context": [
+    [
+     24,
+     "Wehrmacht"
+    ]
+   ],
+   "ents": [
+    "1.2 million",
+    "100,000",
+    "15 August",
+    "400,000",
+    "6 June 1944",
+    "Allied",
+    "Atlantic Wall",
+    "European",
+    "France",
+    "French",
+    "French Forces of the Interior",
+    "French Resistance",
+    "German",
+    "Maquis",
+    "May 1945",
+    "Milice française",
+    "Nazi",
+    "Normandy",
+    "October",
+    "Provence",
+    "Roman Catholics",
+    "Second World War",
+    "Vichy",
+    "Waffen SS",
+    "Wehrmacht"
+   ],
+   "raw": "{\"triples\":[[\"E11\",\"P175\",\"E3\"],[\"E11\",\"P176\",\"E5\"],[\"E11\",\"P178\",\"E7\"],[\"E11\",\"P179\",\"E8\"],[\"E11\",\"P170\",\"E9\"],[\"E11\",\"P172\",\"E12\"],[\"E11\",\"P171\",\"E15\"],[\"E11\",\"P173\",\"E16\"],[\"E11\",\"P174\",\"E18\"],[\"E11\",\"P177\",\"E19\"],[\"E11\",\"P179\",\"E20\"],[\"E11\",\"P175\",\"E22\"],[\"E11\",\"P176\",\"E23\"],[\"E11\",\"P178\",\"E24\"],[\"E11\",\"P179\",\"E25\"],[\"E11\",\"P170\",\"E26\"],[\"E11\",\"P172\",\"E27\"],[\"E11\",\"P171\",\"E28\"],[\"E11\",\"P173\",\"E29\"],[\"E11\",\"P174\",\"E30\"],[\"E11\",\"P177\",\"E31\"],[\"E11\",\"P175\",\"E32\"],[\"E11\",\"P176\",\"E33\"],[\"E11\",\"P178\",\"E34\"],[\"E11\",\"P179\",\"E35\"],[\"E11\",\"P170\",\"E36\"],[\"E11\",\"P172\",\"E37\"],[\"E11\",\"P171\",\"E38\"],[\"E11\",\"P173\",\"E39\"],[\"E11\",\"P174\",\"E40\"],[\"E11\",\"P177\",\"E41\"]]}"
+  },
+  {
+   "样本ID": "V010",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 308,
+   "did": "1e708e2c6413955ba9b5416502153f982a66f8bd631e579d09a9183dcceec95d",
+   "title": "Jonathan Joss",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E5",
+    "P176",
+    "E18"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 18
+    },
+    "k_bound": null,
+    "n_ents": 18
+   },
+   "n_ents": 18,
+   "k_bound": null,
+   "ents_context": [
+    [
+     16,
+     "Texas State University–San Marcos"
+    ],
+    [
+     17,
+     "White Mountain Apache"
+    ]
+   ],
+   "ents": [
+    "American",
+    "Comanche",
+    "December 22 , 1965",
+    "Grammy Award for Best Native American Music Album",
+    "John Redcorn",
+    "Jonathan Joss",
+    "Ken Hotate",
+    "King of the Hill",
+    "McCollum High School",
+    "Our Lady of the Lake University",
+    "Parks and Recreation",
+    "Red Corn Band",
+    "San Antonio",
+    "San Antonio College",
+    "Spanish",
+    "Texas",
+    "Texas State University–San Marcos",
+    "White Mountain Apache"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"P17\",\"E5\"],[\"E1\",\"P17\",\"E5\"],[\"E2\",\"P577\",\"E5\"],[\"E3\",\"P17\",\"E5\"],[\"E4\",\"P17\",\"E5\"],[\"E5\",\"P264\",\"E0\"],[\"E5\",\"P175\",\"E1\"],[\"E5\",\"P577\",\"E2\"],[\"E5\",\"P176\",\"E3\"],[\"E5\",\"P176\",\"E4\"],[\"E5\",\"P176\",\"E11\"],[\"E5\",\"P176\",\"E12\"],[\"E5\",\"P176\",\"E13\"],[\"E5\",\"P176\",\"E14\"],[\"E5\",\"P176\",\"E15\"],[\"E5\",\"P176\",\"E16\"],[\"E5\",\"P176\",\"E17\"],[\"E5\",\"P176\",\"E18\"],[\"E5\",\"P176\",\"E19\"],[\"E5\",\"P176\",\"E20\"],[\"E5\",\"P176\",\"E21\"],[\"E5\",\"P176\",\"E22\"],[\"E5\",\"P176\",\"E23\"],[\"E5\",\"P176\",\"E24\"],[\"E5\",\"P176\",\"E25\"],[\"E5\",\"P176\",\"E26\"],[\"E5\",\"P176\",\"E27\"],[\"E5\",\"P176\",\"E28\"],[\"E5\",\"P176\",\"E29\"],[\"E5\",\"P176\",\"E30\"]]}"
+  },
+  {
+   "样本ID": "V011",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 446,
+   "did": "99d6b54b23893e65c659d2a0bcbf05e7ef91b68aa74bf1e8d71f3d740c64a25f",
+   "title": "Viscount Alanbrooke",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E5",
+    "P187",
+    "E18"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 18
+    },
+    "k_bound": null,
+    "n_ents": 17
+   },
+   "n_ents": 17,
+   "k_bound": null,
+   "ents_context": [
+    [
+     16,
+     "Viscount Brookeborough"
+    ]
+   ],
+   "ents": [
+    "10 January 2018",
+    "18 September 1945",
+    "1952",
+    "29 January 1946",
+    "Alan",
+    "Alanbrooke",
+    "Basil Brooke",
+    "Brookeborough",
+    "County of Fermanagh",
+    "March 1963",
+    "May 1943",
+    "Northern Ireland",
+    "Thomas",
+    "United Kingdom",
+    "Victor Brooke",
+    "Viscount Alanbrooke",
+    "Viscount Brookeborough"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"P131\",\"E5\"],[\"E1\",\"P178\",\"E5\"],[\"E2\",\"P179\",\"E5\"],[\"E3\",\"P179\",\"E5\"],[\"E4\",\"P175\",\"E5\"],[\"E5\",\"P175\",\"E6\"],[\"E5\",\"P176\",\"E7\"],[\"E5\",\"P177\",\"E8\"],[\"E5\",\"P178\",\"E9\"],[\"E5\",\"P179\",\"E10\"],[\"E5\",\"P180\",\"E11\"],[\"E5\",\"P181\",\"E12\"],[\"E5\",\"P182\",\"E13\"],[\"E5\",\"P183\",\"E14\"],[\"E5\",\"P184\",\"E15\"],[\"E5\",\"P185\",\"E16\"],[\"E5\",\"P186\",\"E17\"],[\"E5\",\"P187\",\"E18\"],[\"E5\",\"P188\",\"E19\"],[\"E5\",\"P189\",\"E20\"],[\"E5\",\"P190\",\"E21\"]]}"
+  },
+  {
+   "样本ID": "V012",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 33,
+   "did": "be6138873fb3e5a0007aabdf0c3ec1766b9c1c065d53f72e01d23b689a2e6342",
+   "title": "Rogaland County Municipality",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E21",
+    "P161",
+    "E5"
+   ],
+   "detail": {
+    "bad": {
+     "head": 21,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 14
+   },
+   "n_ents": 14,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "29",
+    "47",
+    "Conservative Party",
+    "Harald Thune",
+    "Janne Johnsen",
+    "King and Government of Norway",
+    "Norway",
+    "Progress Party",
+    "Rogaland",
+    "Rogaland County Municipality",
+    "Rogaland county",
+    "Rogfast",
+    "Stavanger",
+    "Terje Halleland"
+   ],
+   "raw": "Relations: E9 -> P161 -> E5; E10 -> P161 -> E5; E1 -> P161 -> E5; E2 -> P161 -> E5; E3 -> P161 -> E5; E4 -> P161 -> E5; E7 -> P161 -> E5; E8 -> P161 -> E5; E11 -> P161 -> E5; E12 -> P161 -> E5; E13 -> P161 -> E5; E14 -> P161 -> E5; E15 -> P161 -> E5; E16 -> P161 -> E5; E17 -> P161 -> E5; E18 -> P161 -> E5; E19 -> P161 -> E5; E20 -> P161 -> E5; E21 -> P161 -> E5; E22 -> P161 -> E5; E23 -> P161 -> E5; E24 -> P161 -> E5; E25 -> P161 -> E5; E26 -> P161 -> E5; E27 -> P161 -> E5; E28 -> P161 -> E5; E29 -> P161 -> E5; E30 -> P161 -> E5;"
+  },
+  {
+   "样本ID": "V013",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 45,
+   "did": "adeb9549d44d1e6b4ddb4f3d48613b9cd52d5ffcacfd8a3bf4fd2c3c04e6824d",
+   "title": "Surreal (song)",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E26",
+    "P131",
+    "E8"
+   ],
+   "detail": {
+    "bad": {
+     "head": 26,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 17
+   },
+   "n_ents": 17,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "2000",
+    "250,000",
+    "27 September 2000",
+    "Avex Taiwan",
+    "Avex Trax",
+    "Ayumi Hamasaki",
+    "December 2000",
+    "Duty",
+    "Japanese",
+    "Japanese Count Down TV",
+    "Max Matsuura",
+    "New Year Countdown",
+    "Oricon DVD Chart",
+    "Oricon Singles Chart",
+    "Recording Industry Association of Japan",
+    "SURREAL",
+    "Wataru Takeishi"
+   ],
+   "raw": "Relations: E2 -> P27 -> E5; E0 -> P361 -> E5; E10 -> P463 -> E5; E11 -> P463 -> E5; E12 -> P131 -> E8; E13 -> P131 -> E8; E14 -> P131 -> E8; E15 -> P264 -> E5; E16 -> P264 -> E5; E17 -> P17 -> E8; E18 -> P131 -> E8; E19 -> P131 -> E8; E20 -> P131 -> E8; E21 -> P131 -> E8; E22 -> P131 -> E8; E23 -> P131 -> E8; E24 -> P131 -> E8; E25 -> P131 -> E8; E26 -> P131 -> E8; E27 -> P131 -> E8; E28 -> P131 -> E8; E29 -> P131 -> E8; E30 -> P131 -> E8"
+  },
+  {
+   "样本ID": "V014",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 57,
+   "did": "dc5b4da52cc9e4132ce5672fa25e093d86ddc47f0cf48de57dcded6ea6d04206",
+   "title": "Chopin and his Europe",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E20",
+    "P17",
+    "E28"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 28
+    },
+    "k_bound": null,
+    "n_ents": 28
+   },
+   "n_ents": 28,
+   "k_bound": null,
+   "ents_context": [
+    [
+     26,
+     "Warsaw"
+    ],
+    [
+     27,
+     "Warsaw Philharmonic"
+    ]
+   ],
+   "ents": [
+    "1810",
+    "1819",
+    "1846",
+    "1849",
+    "2005",
+    "Chopin Competition",
+    "Chopin and his Europe’",
+    "Dina Yoffe",
+    "Erard",
+    "European",
+    "Fryderyk Chopin",
+    "Fryderyk Chopin Heritage 2010’",
+    "Fryderyk Chopin Institute",
+    "Garrick Ohlsson",
+    "Graf",
+    "Ivo Pogorelich",
+    "Jan Lisiecki",
+    "Marta Argerich",
+    "Nelson Goerner",
+    "Pleyel",
+    "Poland",
+    "Polish",
+    "Polish Radio II",
+    "Stanisław Leszczyński",
+    "Teatr Wielki – Polish National Opera",
+    "Tobias Koch",
+    "Warsaw",
+    "Warsaw Philharmonic"
+   ],
+   "raw": "Relations: E20 -> P17 -> E24; E20 -> P17 -> E26; E20 -> P17 -> E27; E20 -> P17 -> E21; E20 -> P17 -> E19; E20 -> P17 -> E18; E20 -> P17 -> E8; E20 -> P17 -> E22; E20 -> P17 -> E23; E20 -> P17 -> E10; E20 -> P17 -> E11; E20 -> P17 -> E5; E20 -> P17 -> E17; E20 -> P17 -> E16; E20 -> P17 -> E15; E20 -> P17 -> E14; E20 -> P17 -> E13; E20 -> P17 -> E12; E20 -> P17 -> E7; E20 -> P17 -> E6; E20 -> P17 -> E4; E20 -> P17 -> E3; E20 -> P17 -> E2; E20 -> P17 -> E1; E20 -> P17 -> E0; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17 -> E25; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17 -> E25; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17 -> E25; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17 -> E25; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17 -> E25; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17 -> E25; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17 -> E25; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17 -> E25; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17 -> E25; E20 -> P17 -> E28; E20 -> P17 -> E29; E20 -> P17 -> E30; E20 -> P17"
+  },
+  {
+   "样本ID": "V015",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 161,
+   "did": "52d0f3380316141cbe4738c0abc900d4dc54863ce6a5ce8bad570ed39662a4f9",
+   "title": "The Swingle Singers",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E5",
+    "P175",
+    "E21"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 21
+    },
+    "k_bound": null,
+    "n_ents": 17
+   },
+   "n_ents": 17,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "0.\nThe Swingles",
+    "1962",
+    "1973",
+    "2011",
+    "Anne Germain",
+    "Christiane Legrand",
+    "Claude Germain",
+    "Claudine Meunier",
+    "France",
+    "Jean Cussac",
+    "Jean-Claude Briodin",
+    "Jeanette Baucomont",
+    "London",
+    "Paris",
+    "Ward Swingle",
+    "eight",
+    "two"
+   ],
+   "raw": "Relations: E4 -> P361 -> E5; E5 -> P175 -> E3; E5 -> P175 -> E14; E5 -> P175 -> E15; E5 -> P175 -> E16; E5 -> P175 -> E17; E5 -> P175 -> E18; E5 -> P175 -> E19; E5 -> P175 -> E20; E5 -> P175 -> E21; E5 -> P175 -> E22; E5 -> P175 -> E23; E5 -> P175 -> E24; E5 -> P175 -> E25; E5 -> P175 -> E26; E5 -> P175 -> E27;"
+  },
+  {
+   "样本ID": "V016",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 233,
+   "did": "fe1bd9b423c9532aed2342c1e9feb5d37dee44428472dc89e2b5e30b1557c465",
+   "title": "Hooshang Seyhoun",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E5",
+    "P179",
+    "E22"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 22
+    },
+    "k_bound": null,
+    "n_ents": 19
+   },
+   "n_ents": 19,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "1950s",
+    "August 22 , 1920",
+    "Avicenna Mausoleum",
+    "Central Railway Station",
+    "Dean of the College of Fine Arts",
+    "Hamadan",
+    "Houshang Seyhoun",
+    "Iranian",
+    "Iranian Revolution",
+    "May 26 , 2014",
+    "Paris",
+    "Tehran",
+    "Tehran University",
+    "Tehran University 's College of Architecture",
+    "University of Tehran",
+    "Vancouver",
+    "one thousand",
+    "six",
+    "École nationale supérieure des Beaux - Arts"
+   ],
+   "raw": "Relations: E1 -> P17 -> E5; E2 -> P17 -> E5; E5 -> P17 -> E7; E5 -> P172 -> E11; E5 -> P178 -> E12; E5 -> P179 -> E13; E5 -> P179 -> E14; E5 -> P179 -> E15; E5 -> P179 -> E16; E5 -> P179 -> E17; E5 -> P179 -> E18; E5 -> P179 -> E21; E5 -> P179 -> E22; E5 -> P179 -> E23; E5 -> P179 -> E24; E5 -> P179 -> E25; E5 -> P179 -> E26; E5 -> P179 -> E27; E5 -> P179 -> E28; E5 -> P179 -> E29; E5 -> P179 -> E30;"
+  },
+  {
+   "样本ID": "V017",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 266,
+   "did": "a8d7759e6cbaddfa59eb7412c3a998d8bfe7845f6a403ac3c56dcaa7dbe9e088",
+   "title": "Cranford Agreement",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E29",
+    "P175",
+    "E5"
+   ],
+   "detail": {
+    "bad": {
+     "head": 29,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 24
+   },
+   "n_ents": 24,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "15 January 2009",
+    "1952",
+    "2 February 2017",
+    "BAA",
+    "British Government",
+    "Coalition Government",
+    "Cranford",
+    "Cranford Protocol",
+    "Cranford Residents",
+    "District Amenities Association",
+    "Heathrow",
+    "Heathrow Airport Holdings",
+    "Heathrow Manual of Air Traffic Services",
+    "June 2015",
+    "Labour Government",
+    "London",
+    "London Borough of Hillingdon",
+    "London Borough of Hounslow",
+    "London Heathrow Airport",
+    "March 2014",
+    "May 2010",
+    "May 2013",
+    "Planning Inspectorate",
+    "Windsor and Maidenhead"
+   ],
+   "raw": "Relations: E0 -> P17 -> E5; E1 -> P175 -> E5; E2 -> P17 -> E5; E4 -> P175 -> E5; E5 -> P175 -> E3; E6 -> P175 -> E5; E7 -> P175 -> E5; E8 -> P175 -> E5; E9 -> P175 -> E5; E10 -> P175 -> E5; E11 -> P175 -> E5; E12 -> P175 -> E5; E13 -> P175 -> E5; E14 -> P175 -> E5; E15 -> P175 -> E5; E16 -> P175 -> E5; E17 -> P175 -> E5; E18 -> P175 -> E5; E19 -> P175 -> E5; E20 -> P175 -> E5; E21 -> P175 -> E5; E22 -> P175 -> E5; E23 -> P175 -> E5; E24 -> P175 -> E5; E25 -> P175 -> E5; E26 -> P175 -> E5; E27 -> P175 -> E5; E28 -> P175 -> E5; E29 -> P175 -> E5; E30 -> P175 -> E5"
+  },
+  {
+   "样本ID": "V018",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 295,
+   "did": "fae1fabac525322edf358f087b26643e28f6693ca6b394e17f4a599b22f5fe53",
+   "title": "Liang Congjie",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E53",
+    "P175",
+    "E22"
+   ],
+   "detail": {
+    "bad": {
+     "head": 53,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 29
+   },
+   "n_ents": 29,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "14 years",
+    "1994",
+    "1999",
+    "2000",
+    "28 October 2010",
+    "4 August 1932",
+    "78",
+    "Academy for Chinese Culture",
+    "Asian",
+    "Beijing",
+    "Chinese",
+    "Friends of Nature",
+    "Greenpeace",
+    "Japan",
+    "Li Bo",
+    "Liang Congjie",
+    "Liang Qichao",
+    "Liang Sicheng",
+    "Ma Jun",
+    "Maoist Cultural Revolution",
+    "October 28 , 2010",
+    "Peking University",
+    "People's Republic of China",
+    "Qing Dynasty",
+    "Ramon Magsaysay Award",
+    "Tibetan",
+    "Western China",
+    "Zhu Rongji",
+    "three"
+   ],
+   "raw": "Relations: E5 -> P577 -> E1; E5 -> P175 -> E3; E11 -> P175 -> E8; E11 -> P175 -> E12; E21 -> P175 -> E22; E27 -> P175 -> E22; E26 -> P175 -> E22; E20 -> P175 -> E22; E23 -> P175 -> E22; E25 -> P175 -> E22; E28 -> P175 -> E22; E24 -> P175 -> E22; E26 -> P175 -> E22; E27 -> P175 -> E22; E28 -> P175 -> E22; E29 -> P175 -> E22; E30 -> P175 -> E22; E31 -> P175 -> E22; E32 -> P175 -> E22; E33 -> P175 -> E22; E34 -> P175 -> E22; E35 -> P175 -> E22; E36 -> P175 -> E22; E37 -> P175 -> E22; E38 -> P175 -> E22; E39 -> P175 -> E22; E40 -> P175 -> E22; E41 -> P175 -> E22; E42 -> P175 -> E22; E43 -> P175 -> E22; E44 -> P175 -> E22; E45 -> P175 -> E22; E46 -> P175 -> E22; E47 -> P175 -> E22; E48 -> P175 -> E22; E49 -> P175 -> E22; E50 -> P175 -> E22; E51 -> P175 -> E22; E52 -> P175 -> E22; E53 -> P175 -> E22; E54 -> P175 -> E22; E55 -> P175 -> E22; E56 -> P175 -> E22; E57 -> P175 -> E22; E58 -> P175 -> E22; E59 -> P175 -> E22; E60 -> P175 -> E22; E61 -> P175 -> E22; E62 -> P175 -> E22; E63 -> P175 -> E22; E64 -> P175 -> E22; E65 -> P175 -> E22; E66 -> P175 -> E22; E67 -> P175 -> E22; E68 -> P175 -> E22; E69 -> P175 -> E22; E70 -> P175 -> E22; E71 -> P175 -> E22; E72 -> P175 -> E22; E73 ->"
+  },
+  {
+   "样本ID": "V019",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 295,
+   "did": "fae1fabac525322edf358f087b26643e28f6693ca6b394e17f4a599b22f5fe53",
+   "title": "Liang Congjie",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E71",
+    "P175",
+    "E22"
+   ],
+   "detail": {
+    "bad": {
+     "head": 71,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 29
+   },
+   "n_ents": 29,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "14 years",
+    "1994",
+    "1999",
+    "2000",
+    "28 October 2010",
+    "4 August 1932",
+    "78",
+    "Academy for Chinese Culture",
+    "Asian",
+    "Beijing",
+    "Chinese",
+    "Friends of Nature",
+    "Greenpeace",
+    "Japan",
+    "Li Bo",
+    "Liang Congjie",
+    "Liang Qichao",
+    "Liang Sicheng",
+    "Ma Jun",
+    "Maoist Cultural Revolution",
+    "October 28 , 2010",
+    "Peking University",
+    "People's Republic of China",
+    "Qing Dynasty",
+    "Ramon Magsaysay Award",
+    "Tibetan",
+    "Western China",
+    "Zhu Rongji",
+    "three"
+   ],
+   "raw": "Relations: E5 -> P577 -> E1; E5 -> P175 -> E3; E11 -> P175 -> E8; E11 -> P175 -> E12; E21 -> P175 -> E22; E27 -> P175 -> E22; E26 -> P175 -> E22; E20 -> P175 -> E22; E23 -> P175 -> E22; E25 -> P175 -> E22; E28 -> P175 -> E22; E24 -> P175 -> E22; E26 -> P175 -> E22; E27 -> P175 -> E22; E28 -> P175 -> E22; E29 -> P175 -> E22; E30 -> P175 -> E22; E31 -> P175 -> E22; E32 -> P175 -> E22; E33 -> P175 -> E22; E34 -> P175 -> E22; E35 -> P175 -> E22; E36 -> P175 -> E22; E37 -> P175 -> E22; E38 -> P175 -> E22; E39 -> P175 -> E22; E40 -> P175 -> E22; E41 -> P175 -> E22; E42 -> P175 -> E22; E43 -> P175 -> E22; E44 -> P175 -> E22; E45 -> P175 -> E22; E46 -> P175 -> E22; E47 -> P175 -> E22; E48 -> P175 -> E22; E49 -> P175 -> E22; E50 -> P175 -> E22; E51 -> P175 -> E22; E52 -> P175 -> E22; E53 -> P175 -> E22; E54 -> P175 -> E22; E55 -> P175 -> E22; E56 -> P175 -> E22; E57 -> P175 -> E22; E58 -> P175 -> E22; E59 -> P175 -> E22; E60 -> P175 -> E22; E61 -> P175 -> E22; E62 -> P175 -> E22; E63 -> P175 -> E22; E64 -> P175 -> E22; E65 -> P175 -> E22; E66 -> P175 -> E22; E67 -> P175 -> E22; E68 -> P175 -> E22; E69 -> P175 -> E22; E70 -> P175 -> E22; E71 -> P175 -> E22; E72 -> P175 -> E22; E73 ->"
+  },
+  {
+   "样本ID": "V020",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 467,
+   "did": "c143a52e9c54a98202d0687bc444f7f5668246f12caf355c3de5eacd0e24adef",
+   "title": "The Catholic Catechism (Hardon)",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E17",
+    "P17",
+    "E5"
+   ],
+   "detail": {
+    "bad": {
+     "head": 17,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 15
+   },
+   "n_ents": 15,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "1962",
+    "1965",
+    "1975",
+    "1992",
+    "Catechism of the Catholic Church",
+    "Catholic",
+    "Catholic Catechism",
+    "Catholic Church",
+    "John Hardon",
+    "John Paul II",
+    "Joseph Cardinal Ratzinger",
+    "Paul VI",
+    "Second Vatican Council",
+    "The Catholic Catechism",
+    "Vatican II"
+   ],
+   "raw": "Relations: E11 -> P17 -> E7; E12 -> P17 -> E7; E13 -> P175 -> E6; E13 -> P17 -> E5; E14 -> P175 -> E6; E14 -> P17 -> E5; E15 -> P175 -> E6; E15 -> P17 -> E5; E16 -> P175 -> E6; E16 -> P17 -> E5; E17 -> P175 -> E6; E17 -> P17 -> E5"
+  },
+  {
+   "样本ID": "V021",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 484,
+   "did": "3a9d12c1904364171a1f52d40b1689ae62b4b4ecdde573fd9459bed7541cfd6f",
+   "title": "Cimatti",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E58",
+    "P17",
+    "E59"
+   ],
+   "detail": {
+    "bad": {
+     "head": 58,
+     "tail": 59
+    },
+    "k_bound": null,
+    "n_ents": 29
+   },
+   "n_ents": 29,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "1937",
+    "1950",
+    "1972",
+    "1980s",
+    "1984",
+    "77",
+    "Bologna",
+    "Cimatti",
+    "City - Bike",
+    "Enrico",
+    "France",
+    "Italian",
+    "Kaiman Cross",
+    "Marco Cimatti",
+    "Moto Minarelli",
+    "Moto Morini",
+    "Norway",
+    "Olympic",
+    "Sport Luxury",
+    "Town - Bike",
+    "Tunisia",
+    "five",
+    "four",
+    "one",
+    "the 1960s",
+    "the 1970s",
+    "the United States",
+    "the early 1980s",
+    "two"
+   ],
+   "raw": "Relations: E0 -> P577 -> E1; E1 -> P577 -> E2; E2 -> P577 -> E3; E3 -> P577 -> E4; E4 -> P577 -> E5; E5 -> P17 -> E6; E6 -> P17 -> E11; E11 -> P17 -> E7; E7 -> P17 -> E8; E8 -> P17 -> E9; E9 -> P17 -> E10; E10 -> P17 -> E11; E11 -> P17 -> E12; E12 -> P17 -> E13; E13 -> P17 -> E14; E14 -> P17 -> E15; E15 -> P17 -> E11; E11 -> P17 -> E16; E16 -> P17 -> E17; E17 -> P17 -> E18; E18 -> P17 -> E19; E19 -> P17 -> E20; E20 -> P17 -> E21; E21 -> P17 -> E22; E22 -> P17 -> E23; E23 -> P17 -> E24; E24 -> P17 -> E25; E25 -> P17 -> E26; E26 -> P17 -> E27; E27 -> P17 -> E28; E28 -> P17 -> E29; E29 -> P17 -> E30; E30 -> P17 -> E31; E31 -> P17 -> E32; E32 -> P17 -> E33; E33 -> P17 -> E34; E34 -> P17 -> E35; E35 -> P17 -> E36; E36 -> P17 -> E37; E37 -> P17 -> E38; E38 -> P17 -> E39; E39 -> P17 -> E40; E40 -> P17 -> E41; E41 -> P17 -> E42; E42 -> P17 -> E43; E43 -> P17 -> E44; E44 -> P17 -> E45; E45 -> P17 -> E46; E46 -> P17 -> E47; E47 -> P17 -> E48; E48 -> P17 -> E49; E49 -> P17 -> E50; E50 -> P17 -> E51; E51 -> P17 -> E52; E52 -> P17 -> E53; E53 -> P17 -> E54; E54 -> P17 -> E55; E55 -> P17 -> E56; E56 -> P17 -> E57; E57 -> P17 -> E58; E58 -> P17 -> E59; E59 -> P17 -> E60; E60 -> P17 -> E61; E61 -> P17 -> E62; E62 -> P17 -> E63;"
+  },
+  {
+   "样本ID": "V022",
+   "model": "mistral-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_json.jsonl",
+   "line_no": 26,
+   "did": "14bac9aaff3128bfc2985016fba6504f27935e596daaa2447cf3c04a9c6e2231",
+   "title": "Toufique Imrose Khalidi",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E12",
+    "P1001",
+    "2006"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": "2006"
+    },
+    "k_bound": null,
+    "n_ents": 15
+   },
+   "n_ents": 15,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "2006",
+    "2013",
+    "BBC",
+    "Bangladesh",
+    "December 2017",
+    "Dhaka",
+    "Khaleda Zia",
+    "London",
+    "Paris",
+    "Sheikh Hasina",
+    "Special Recognition / Honour",
+    "Tokyo",
+    "Toufique Imrose Khalidi",
+    "UK",
+    "two"
+   ],
+   "raw": "[{\"triples\":[[\"E12\",\"P1001\",\"2006\"],[\"E12\",\"P102\",\"2013\"],[\"E12\",\"P108\",\"Bangladesh\"],[\"E12\",\"P112\",\"2017\"],[\"E12\",\"P118\",\"Dhaka\"],[\"E12\",\"P1198\",\"London\"],[\"E12\",\"P123\",\"Paris\"],[\"E12\",\"P127\",\"Tokyo\"],[\"E12\",\"P131\",\"UK\"],[\"E12\",\"P1336\",\"bdnews24.com\"],[\"E12\",\"P1344\",\"BBC\"],[\"E12\",\"P136\",\"Sheikh Hasina\"],[\"E12\",\"P1365\",\"Khaleda Zia\"],[\"E12\",\"P1366\",\"Special Recognition / Honour\"]]}"
+  },
+  {
+   "样本ID": "V023",
+   "model": "mistral-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_json.jsonl",
+   "line_no": 86,
+   "did": "1c5f6e14facf52fa843a8913c74f126e98eb62eb1265ca755ffa1121ffabab1f",
+   "title": "Paul Beliën",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E14",
+    "P171",
+    "E20"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 20
+    },
+    "k_bound": null,
+    "n_ents": 19
+   },
+   "n_ents": 19,
+   "k_bound": null,
+   "ents_context": [
+    [
+     18,
+     "Vlaams Belang"
+    ]
+   ],
+   "ents": [
+    "1959",
+    "A Throne in Brussels",
+    "Alexandra Colen",
+    "Americophile",
+    "Belgian Federal Parliament",
+    "Belgium",
+    "Europe",
+    "European",
+    "European Union",
+    "Flemish",
+    "Flemish Belgian",
+    "Hudson Institute",
+    "International Free Press Society",
+    "Islamic",
+    "Paul Beliën",
+    "The Brussels Journal",
+    "University of Buckingham",
+    "University of Ghent",
+    "Vlaams Belang"
+   ],
+   "raw": "[\n  {\n    \"triples\": [\n      [\"E14\", \"P1001\", \"E0\"],\n      [\"E14\", \"P108\", \"E1\"],\n      [\"E14\", \"P112\", \"E2\"],\n      [\"E14\", \"P118\", \"E3\"],\n      [\"E14\", \"P131\", \"E4\"],\n      [\"E14\", \"P136\", \"E5\"],\n      [\"E14\", \"P1365\", \"E6\"],\n      [\"E14\", \"P137\", \"E7\"],\n      [\"E14\", \"P1376\", \"E8\"],\n      [\"E14\", \"P140\", \"E9\"],\n      [\"E14\", \"P1412\", \"E10\"],\n      [\"E14\", \"P1441\", \"E11\"],\n      [\"E14\", \"P150\", \"E12\"],\n      [\"E14\", \"P155\", \"E13\"],\n      [\"E14\", \"P156\", \"E14\"],\n      [\"E14\", \"P159\", \"E15\"],\n      [\"E14\", \"P161\", \"E16\"],\n      [\"E14\", \"P162\", \"E17\"],\n      [\"E14\", \"P166\", \"E18\"],\n      [\"E14\", \"P170\", \"E19\"],\n      [\"E14\", \"P171\", \"E20\"],\n      [\"E14\", \"P172\", \"E21\"],\n      [\"E14\", \"P175\", \"E22\"],\n      [\"E14\", \"P176\", \"E23\"],\n      [\"E14\", \"P178\", \"E24\"],\n      [\"E14\", \"P179\", \"E25\"],\n      [\"E14\", \"P19\", \"E26\"],\n      [\"E14\", \"P20\", \"E27\"],\n      [\"E14\", \"P22\", \"E28\"],\n      [\"E14\", \"P241\", \"E29\"],\n      [\"E14\", \"P25\", \"E30\"]\n    ]\n  },\n  {\n    \"triples\": [\n      [\"E14\", \"P577\", \"E4\"],\n      [\"E14\", \"P361\", \"E5\"],\n      [\"E14\", \"P571\", \"E6\"],\n      [\"E14\", \"P577\", \"E7\"],\n      [\"E14\", \"P361\", \"E8\"],\n      [\"E14\", \"P577\", \"E9\"],\n      [\"E14\", \"P361\", \"E10\"],\n      [\"E14\", \"P577\", \"E11\"],\n      [\"E14\", \"P361\", \"E12\"],\n      [\"E14\", \"P577\", \"E13\"],\n      [\"E14\", \"P361\", \"E14\"],"
+  },
+  {
+   "样本ID": "V024",
+   "model": "mistral-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_json.jsonl",
+   "line_no": 221,
+   "did": "e7e6cf3c18bbbd94f02f57e5e9e8ee14f300f3662d6fd8c4c91220cc930dc53b",
+   "title": "Tomasz Bohdanowicz-Dworzecki",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E19",
+    "P1198",
+    "Academy of Fine Arts"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": "Academy of Fine Arts"
+    },
+    "k_bound": null,
+    "n_ents": 21
+   },
+   "n_ents": 21,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1859",
+    "1893",
+    "1897",
+    "1899",
+    "1901",
+    "Academy of Fine Arts",
+    "Alexander Lednicki",
+    "Alexander Pomerantsev",
+    "April 1920",
+    "Byzantine",
+    "Cathedral of the Immaculate Conception of the Holy Virgin Mary",
+    "Gothic",
+    "Moscow",
+    "Moscow School of Painting, Sculpture and Architecture",
+    "Polish",
+    "Riga Central Railway Station",
+    "Russian Empire",
+    "Saint Petersburg",
+    "Stanislaw Nowakowski",
+    "Tomasz Bohdanowicz-Dworzecki",
+    "Vitebsk"
+   ],
+   "raw": "[{\"triples\":[[\"E19\",\"P1001\",\"1859\"],[\"E19\",\"P102\",\"1893\"],[\"E19\",\"P1056\",\"1897\"],[\"E19\",\"P108\",\"1899\"],[\"E19\",\"P112\",\"1901\"],[\"E19\",\"P118\",\"April 1920\"],[\"E19\",\"P1198\",\"Academy of Fine Arts\"],[\"E19\",\"P123\",\"Alexander Lednicki\"],[\"E19\",\"P127\",\"Alexander Pomerantsev\"],[\"E19\",\"P131\",\"April 1920\"],[\"E19\",\"P1336\",\"Cathedral of the Immaculate Conception of the Holy Virgin Mary\"],[\"E19\",\"P1344\",\"Gothic\"],[\"E19\",\"P136\",\"Moscow\"],[\"E19\",\"P1365\",\"Moscow School of Painting, Sculpture and Architecture\"],[\"E19\",\"P1366\",\"Polish\"],[\"E19\",\"P137\",\"Riga Central Railway Station\"],[\"E19\",\"P1376\",\"Russian Empire\"],[\"E19\",\"P140\",\"Saint Petersburg\"],[\"E19\",\"P1412\",\"Stanislaw Nowakowski\"]]}"
+  },
+  {
+   "样本ID": "V025",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 68,
+   "did": "ad4edb293c989943085cfaa834bf89a0de307d0a44bbc5f789093fa07d244fef",
+   "title": "Vineeth Sreenivasan",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E24",
+    "P155",
+    "E29"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 29
+    },
+    "k_bound": null,
+    "n_ents": 25
+   },
+   "n_ents": 25,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "1 October 1985",
+    "2003",
+    "2008",
+    "2010",
+    "2012",
+    "2013",
+    "2015",
+    "2016",
+    "2017",
+    "Aanandam",
+    "Cycle",
+    "Dhyan Sreenivasan",
+    "G. Pajith",
+    "Habit of Life",
+    "Indian",
+    "Jacobinte Swargarajyam",
+    "Kasavinte Thattamittu",
+    "Kilichundan Mampazham",
+    "Malarvaadi Arts Club",
+    "Malayalam cinema",
+    "Oru Vadakkan Selfie",
+    "Sreenivasan",
+    "Thattathin Marayathu",
+    "Thira",
+    "Vineeth"
+   ],
+   "raw": "Relations: E24 -> P155 -> E0; E24 -> P155 -> E11; E24 -> P155 -> E16; E24 -> P155 -> E21; E24 -> P155 -> E22; E24 -> P155 -> E23; E24 -> P155 -> E24; E24 -> P155 -> E25; E24 -> P155 -> E27; E24 -> P155 -> E28; E24 -> P155 -> E29; E24 -> P155 -> E30; E24 -> P155 -> E3; E24 -> P155 -> E4; E24 -> P155 -> E5; E24 -> P155 -> E6; E24 -> P155 -> E7; E24 -> P155 -> E8; E24 -> P155 -> E9; E24 -> P155 -> E10; E24 -> P155 -> E12; E24 -> P155 -> E13; E24 -> P155 -> E14; E24 -> P155 -> E15; E24 -> P155 -> E17; E24 -> P155 -> E18; E24 -> P155 -> E19; E24 -> P155 -> E20; E24 -> P155 -> E21; E24 -> P155 -> E22; E24 -> P155 -> E23; E24 -> P155 -> E24; E24 -> P155 -> E25; E24 -> P155 -> E27; E24 -> P155 -> E28; E24 -> P155 -> E29; E24 -> P155 -> E30; E24 -> P155 -> E3; E24 -> P155 -> E4; E24 -> P155 -> E5; E24 -> P155 -> E6; E24 -> P155 -> E7; E24 -> P155 -> E8; E24 -> P155 -> E9; E24 -> P155 -> E10; E24 -> P155 -> E12; E24 -> P155 -> E13; E24 -> P155 -> E14; E24 -> P155 -> E15; E24 -> P155 -> E17; E24 -> P155 -> E18; E24 -> P155 -> E19; E24 -> P155 -> E20; E24 -> P155 -> E21; E24 -> P155 -> E22; E24 -> P155 -> E23; E24 -> P155 -> E24; E24 -> P155 -> E25; E24 -> P155 -> E27; E24 -> P155 -> E28;"
+  },
+  {
+   "样本ID": "V026",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 148,
+   "did": "6ace31df7383d2f8397fb334a533575766db67b051c56ccdaeabbda992bd642d",
+   "title": "Joy Division discography",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E9",
+    "P156",
+    "E24"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 24
+    },
+    "k_bound": null,
+    "n_ents": 20
+   },
+   "n_ents": 20,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "18 May 1980",
+    "1976",
+    "1979",
+    "American",
+    "Bernard Sumner",
+    "Closer",
+    "English",
+    "Factory",
+    "Ian Curtis",
+    "Joy Division",
+    "New Order",
+    "Peter Hook",
+    "Stephen Morris",
+    "Unknown Pleasures",
+    "five",
+    "four",
+    "three",
+    "twelve",
+    "two",
+    "two months"
+   ],
+   "raw": "Relations: E9 -> P1001 -> E0; E9 -> P102 -> E2; E9 -> P1056 -> E3; E9 -> P108 -> E4; E9 -> P112 -> E5; E9 -> P118 -> E6; E9 -> P1198 -> E7; E9 -> P123 -> E8; E9 -> P127 -> E10; E9 -> P131 -> E11; E9 -> P1336 -> E12; E9 -> P1344 -> E13; E9 -> P136 -> E14; E9 -> P1365 -> E15; E9 -> P1366 -> E16; E9 -> P137 -> E17; E9 -> P1376 -> E18; E9 -> P140 -> E19; E9 -> P1412 -> E20; E9 -> P1441 -> E21; E9 -> P150 -> E22; E9 -> P155 -> E23; E9 -> P156 -> E24; E9 -> P159 -> E25; E9 -> P161 -> E26; E9 -> P162 -> E27; E9 -> P166 -> E28; E9 -> P17 -> E29; E9 -> P170 -> E30; E9 -> P171 -> E31; E9 -> P172 -> E32; E9 -> P175 -> E33; E9 -> P178 -> E34; E9 -> P179 -> E35; E9 -> P19 -> E36; E9 -> P190 -> E37; E9 -> P194 -> E38; E9 -> P20 -> E39; E9 -> P205 -> E40; E9 -> P206 -> E41; E9 -> P22 -> E42; E9 -> P241 -> E43; E9 -> P25 -> E44; E9 -> P26 -> E45; E9 -> P264 -> E46; E9 -> P27 -> E47; E9 -> P272 -> E48; E9 -> P276 -> E49; E9 -> P279 -> E50; E9 -> P30 -> E51; E9 -> P31 -> E52; E9 -> P3373 -> E53; E9 -> P35 -> E54; E9 -> P355 -> E55; E9 -> P36 -> E56; E9 -> P361 -> E57; E9 -> P364 -> E58; E9 -> P37 -> E59; E9 -> P39 -> E60; E9 -> P40 -> E61; E9 -> P400 -> E62; E9 -> P403 -> E63; E9 -> P449 -> E64; E9 -> P463 -> E65; E9 -> P488 ->"
+  },
+  {
+   "样本ID": "V027",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 180,
+   "did": "f6ebeab259f9376a818ff1a8b6e08423dea2aa9e72ed4783a6b37820155f9678",
+   "title": "National Turkey Federation",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E20",
+    "P1412",
+    "E0"
+   ],
+   "detail": {
+    "bad": {
+     "head": 20,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 14
+   },
+   "n_ents": 14,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "1989",
+    "Bush I",
+    "EatTurkey.com",
+    "Harry Truman",
+    "NTF",
+    "National Thanksgiving Turkey",
+    "National Thanksgiving Turkey Presentation",
+    "Thanksgiving Day",
+    "Two",
+    "U.S. Congress",
+    "U.S. Department of Agriculture's Food Safety and Inspection Service",
+    "United States",
+    "Washington",
+    "White House"
+   ],
+   "raw": "'Relations: E4 -> P1001 -> E0; E5 -> P102 -> E0; E6 -> P108 -> E0; E7 -> P112 -> E0; E8 -> P118 -> E0; E9 -> P1198 -> E0; E10 -> P123 -> E0; E11 -> P127 -> E0; E12 -> P131 -> E0; E13 -> P1336 -> E0; E14 -> P136 -> E0; E15 -> P1365 -> E0; E16 -> P1366 -> E0; E17 -> P137 -> E0; E18 -> P1376 -> E0; E19 -> P140 -> E0; E20 -> P1412 -> E0; E21 -> P1441 -> E0; E22 -> P150 -> E0; E23 -> P155 -> E0; E24 -> P156 -> E0; E25 -> P159 -> E0; E26 -> P161 -> E0; E27 -> P162 -> E0; E28 -> P166 -> E0; E29 -> P17 -> E1; E30 -> P17 -> E1; E5 -> P20 -> E0; E6 -> P205 -> E0; E6 -> P206 -> E0; E8 -> P22 -> E0; E10 -> P241 -> E0; E13 -> P25 -> E0; E13 -> P26 -> E0; E13 -> P27 -> E0; E13 -> P272 -> E0; E13 -> P276 -> E0; E13 -> P279 -> E0; E13 -> P30 -> E0; E13 -> P31 -> E0; E13 -> P3373 -> E0; E13 -> P35 -> E0; E13 -> P355 -> E0; E13 -> P36 -> E0; E13 -> P361 -> E0; E13 -> P364 -> E0; E13 -> P37 -> E0; E13 -> P39 -> E0; E13 -> P40 -> E0; E13 -> P400 -> E0; E13 -> P403 -> E0; E13 -> P449 -> E0; E13 -> P463 -> E0; E13 -> P488 -> E0; E13 -> P495 -> E0; E13 -> P50 -> E0; E13 -> P527 -> E0; E13 -> P54 -> E0; E13 -> P551 -> E0; E13 -> P569 -> E0; E13 -> P57 -> E0; E13 -> P570 -> E0; E13 -> P571 -> E0; E13 -> P576 -> E0; E13 -> P577 -> E0; E1"
+  },
+  {
+   "样本ID": "V028",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 188,
+   "did": "03c9fdb18159e0ab0563d40c9492c598e65d074249142831c0d00af4c18ee09d",
+   "title": "X-Men Legends II: Rise of Apocalypse",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E16",
+    "P30",
+    "E47"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 47
+    },
+    "k_bound": null,
+    "n_ents": 18
+   },
+   "n_ents": 18,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "2004",
+    "Activision",
+    "Apocalypse",
+    "Blur Studio",
+    "Brotherhood of Mutants",
+    "GameCube",
+    "Greatest Hits",
+    "Microsoft",
+    "N-Gage",
+    "PlayStation 2",
+    "PlayStation Portable",
+    "Raven Software",
+    "September 2005",
+    "Windows",
+    "X - Men",
+    "X - Men Legends",
+    "X - Men Legends II : Rise of Apocalypse",
+    "Xbox"
+   ],
+   "raw": "Relations: E16 -> P1001 -> E0; E16 -> P102 -> E1; E16 -> P108 -> E2; E16 -> P112 -> E3; E16 -> P118 -> E4; E16 -> P1198 -> E5; E16 -> P123 -> E6; E16 -> P127 -> E7; E16 -> P131 -> E8; E16 -> P1336 -> E9; E16 -> P1344 -> E10; E16 -> P136 -> E11; E16 -> P1365 -> E12; E16 -> P1366 -> E13; E16 -> P137 -> E14; E16 -> P1376 -> E15; E16 -> P140 -> E16; E16 -> P1412 -> E17; E16 -> P150 -> E18; E16 -> P155 -> E19; E16 -> P156 -> E20; E16 -> P159 -> E21; E16 -> P161 -> E22; E16 -> P162 -> E23; E16 -> P166 -> E24; E16 -> P17 -> E25; E16 -> P170 -> E26; E16 -> P171 -> E27; E16 -> P172 -> E28; E16 -> P175 -> E29; E16 -> P176 -> E30; E16 -> P178 -> E31; E16 -> P179 -> E32; E16 -> P19 -> E33; E16 -> P190 -> E34; E16 -> P20 -> E35; E16 -> P205 -> E36; E16 -> P206 -> E37; E16 -> P22 -> E38; E16 -> P241 -> E39; E16 -> P25 -> E40; E16 -> P26 -> E41; E16 -> P264 -> E42; E16 -> P27 -> E43; E16 -> P272 -> E44; E16 -> P276 -> E45; E16 -> P279 -> E46; E16 -> P30 -> E47; E16 -> P31 -> E48; E16 -> P3373 -> E49; E16 -> P35 -> E50; E16 -> P355 -> E51; E16 -> P36 -> E52; E16 -> P361 -> E53; E16 -> P364 -> E54; E16 -> P37 -> E55; E16 -> P39 -> E56; E16 -> P40 -> E57; E16 -> P400 -> E58; E16 -> P403 -> E59;"
+  },
+  {
+   "样本ID": "V029",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 267,
+   "did": "865bace0dad0329c3a666c8558f0a555911f22bb9759dff21e8ed6f6d4779654",
+   "title": "Cy Becker, Edmonton",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E18",
+    "P25",
+    "E5"
+   ],
+   "detail": {
+    "bad": {
+     "head": 18,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 17
+   },
+   "n_ents": 17,
+   "k_bound": null,
+   "ents_context": [
+    [
+     16,
+     "Pilot Sound"
+    ]
+   ],
+   "ents": [
+    "1972",
+    "ASP",
+    "Alberta",
+    "Anthony Henday Drive",
+    "Brintnell",
+    "Canada",
+    "City of Edmonton",
+    "Cy Becker",
+    "Cy Becker Neighbourhood Structure Plan",
+    "Edmonton",
+    "Edmonton City Council",
+    "Gorman",
+    "Hollick - Kenyon",
+    "Horse Hill Community League",
+    "McConachie",
+    "Neighbourhood 5",
+    "Pilot Sound"
+   ],
+   "raw": "Relations: E7 -> P1001 -> E5; E6 -> P108 -> E5; E11 -> P112 -> E5; E14 -> P118 -> E5; E12 -> P1198 -> E5; E13 -> P123 -> E5; E10 -> P131 -> E5; E15 -> P1336 -> E5; E0 -> P1344 -> E5; E3 -> P136 -> E5; E4 -> P1365 -> E5; E8 -> P1366 -> E5; E9 -> P137 -> E5; E16 -> P1376 -> E5; E1 -> P140 -> E5; E17 -> P1412 -> E5; E18 -> P1441 -> E5; E19 -> P150 -> E5; E10 -> P155 -> E5; E11 -> P156 -> E5; E12 -> P159 -> E5; E13 -> P161 -> E5; E14 -> P162 -> E5; E15 -> P166 -> E5; E16 -> P17 -> E5; E17 -> P170 -> E5; E18 -> P171 -> E5; E19 -> P172 -> E5; E1 -> P175 -> E5; E2 -> P178 -> E5; E3 -> P179 -> E5; E11 -> P19 -> E5; E12 -> P190 -> E5; E13 -> P194 -> E5; E14 -> P20 -> E5; E15 -> P205 -> E5; E16 -> P22 -> E5; E17 -> P241 -> E5; E18 -> P25 -> E5; E19 -> P26 -> E5; E1 -> P264 -> E5; E11 -> P27 -> E5; E12 -> P272 -> E5; E13 -> P276 -> E5; E14 -> P279 -> E5; E15 -> P30 -> E5; E16 -> P31 -> E5; E17 -> P3373 -> E5; E18 -> P35 -> E5; E19 -> P355 -> E5; E1 -> P36 -> E5; E11 -> P361 -> E5; E12 -> P364 -> E5; E13 -> P37 -> E5; E14 -> P39 -> E5; E15 -> P40 -> E5; E16 -> P400 -> E5; E17 -> P403 -> E5; E18 -> P449 -> E5; E19 -> P488 -> E5; E1 -> P495 -> E5; E11 -> P50 -> E5; E12 -> P54 -> E5; E13 -> P551 -> E5; E14 -> P569 -> E5; E15 -> P"
+  },
+  {
+   "样本ID": "V030",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 349,
+   "did": "7d1d2dd1810cba42aba077522aabd9a107842127de07d06b2d24bdb0452213e9",
+   "title": "Michael Imperioli",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E17",
+    "P22",
+    "E57"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 57
+    },
+    "k_bound": null,
+    "n_ents": 26
+   },
+   "n_ents": 26,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "2004",
+    "2008",
+    "2009",
+    "2015",
+    "ABC",
+    "Amazon",
+    "Amazon Prime subscription service",
+    "American",
+    "Canada",
+    "Christopher Moltisanti",
+    "Detective Ray Carling",
+    "Detroit 1 - 8 - 7",
+    "Law & Order",
+    "Life on Mars",
+    "Louis Fitch",
+    "Mad Dogs",
+    "March 26, 1966",
+    "Michael Imperioli",
+    "NYPD",
+    "Nick Falco",
+    "Primetime Emmy Award for Outstanding Supporting Actor",
+    "Shomi",
+    "Sopranos",
+    "The Hungry Ghosts",
+    "U.S",
+    "US"
+   ],
+   "raw": "Relations: E17 -> P155 -> E24; E17 -> P155 -> E25; E17 -> P20 -> E20; E17 -> P17 -> E7; E17 -> P17 -> E24; E17 -> P17 -> E25; E17 -> P22 -> E12; E17 -> P22 -> E21; E17 -> P22 -> E23; E17 -> P22 -> E25; E17 -> P22 -> E26; E17 -> P22 -> E28; E17 -> P22 -> E30; E17 -> P22 -> E31; E17 -> P22 -> E3373; E17 -> P22 -> E35; E17 -> P22 -> E36; E17 -> P22 -> E361; E17 -> P22 -> E364; E17 -> P22 -> E37; E17 -> P22 -> E39; E17 -> P22 -> E40; E17 -> P22 -> E400; E17 -> P22 -> E403; E17 -> P22 -> E449; E17 -> P22 -> E463; E17 -> P22 -> E488; E17 -> P22 -> E495; E17 -> P22 -> E50; E17 -> P22 -> E527; E17 -> P22 -> E54; E17 -> P22 -> E551; E17 -> P22 -> E569; E17 -> P22 -> E57; E17 -> P22 -> E570; E17 -> P22 -> E571; E17 -> P22 -> E576; E17 -> P22 -> E577; E17 -> P22 -> E58; E17 -> P22 -> E580; E17 -> P22 -> E582; E17 -> P22 -> E585; E17 -> P22 -> E6; E17 -> P22 -> E674; E17 -> P22 -> E676; E17 -> P22 -> E706; E17 -> P22 -> E710; E17 -> P22 -> E737; E17 -> P22 -> E740; E17 -> P22 -> E749; E17 -> P22 -> E800; E17 -> P22 -> E807; E17 -> P22 -> E840; E17 -> P22 -> E86; E17 -> P22 -> E937; E17 -> P22 -> E10; E17 -> P22 -> E11; E17 -> P22 -> E13; E17 -> P22 -> E14; E17 -> P22 -> E15; E17 -> P22 -> E16; E1"
+  },
+  {
+   "样本ID": "V031",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 437,
+   "did": "d46ca3ab6629fe57bf6a7704cc98ab1b2c4ef4c38a13297755a17dcf3f920acd",
+   "title": "Bill DeMott",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E14",
+    "P150",
+    "E19"
+   ],
+   "detail": {
+    "bad": {
+     "head": null,
+     "tail": 19
+    },
+    "k_bound": null,
+    "n_ents": 16
+   },
+   "n_ents": 16,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "2000",
+    "2001",
+    "2015",
+    "American",
+    "Crash the Terminator",
+    "Deep South Wrestling",
+    "Extreme Championship Wrestling",
+    "Florida Championship Wrestling",
+    "Japan",
+    "NXT",
+    "November 10, 1966",
+    "Tough Enough",
+    "WCW United States Heavyweight Championship",
+    "WWE",
+    "William Charles DeMott II",
+    "World Championship Wrestling"
+   ],
+   "raw": "Relations: E14 -> P1001 -> E0; E14 -> P102 -> E1; E14 -> P1056 -> E2; E14 -> P108 -> E3; E14 -> P112 -> E4; E14 -> P118 -> E5; E14 -> P1198 -> E6; E14 -> P123 -> E7; E14 -> P127 -> E8; E14 -> P131 -> E9; E14 -> P1336 -> E10; E14 -> P1344 -> E11; E14 -> P136 -> E12; E14 -> P1365 -> E13; E14 -> P1366 -> E15; E14 -> P137 -> E14; E14 -> P1376 -> E15; E14 -> P140 -> E16; E14 -> P1412 -> E17; E14 -> P1441 -> E18; E14 -> P150 -> E19; E14 -> P155 -> E20; E14 -> P156 -> E21; E14 -> P159 -> E22; E14 -> P161 -> E23; E14 -> P162 -> E24; E14 -> P166 -> E25; E14 -> P17 -> E26; E14 -> P170 -> E27; E14 -> P171 -> E28; E14 -> P172 -> E29; E14 -> P175 -> E30; E14 -> P179 -> E31; E14 -> P19 -> E32; E14 -> P190 -> E33; E14 -> P194 -> E34; E14 -> P20 -> E35; E14 -> P205 -> E36; E14 -> P22 -> E37; E14 -> P241 -> E38; E14 -> P25 -> E39; E14 -> P26 -> E40; E14 -> P264 -> E41; E14 -> P27 -> E42; E14 -> P272 -> E43; E14 -> P276 -> E44; E14 -> P279 -> E45; E14 -> P30 -> E46; E14 -> P31 -> E47; E14 -> P3373 -> E48; E14 -> P35 -> E49; E14 -> P355 -> E50; E14 -> P36 -> E51; E14 -> P361 -> E52; E14 -> P364 -> E53; E14 -> P37 -> E54; E14 -> P39 -> E55; E14 -> P40 -> E56; E14 -> P400 -> E57; E14 -> P403 -> E5"
+  },
+  {
+   "样本ID": "V032",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 488,
+   "did": "8e54d025bd14f76a1ab8b76fc526ba48bdb48d14eb03415f6040389af4584f6a",
+   "title": "Młociny metro station",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E14",
+    "P17",
+    "E5"
+   ],
+   "detail": {
+    "bad": {
+     "head": 14,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 8
+   },
+   "n_ents": 8,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "25 October 2008",
+    "ArcelorMittal",
+    "Bielany",
+    "Line M1",
+    "Młociny",
+    "Warsaw",
+    "Warsaw Metro",
+    "ZTM"
+   ],
+   "raw": "'Relations: E16 -> P17 -> E5; E16 -> P131 -> E5; E4 -> P264 -> E6; E4 -> P175 -> E16; E5 -> P150 -> E10; E5 -> P17 -> E10; E5 -> P527 -> E17; E5 -> P527 -> E11; E14 -> P131 -> E5; E14 -> P17 -> E5; E14 -> P131 -> E13; E13 -> P131 -> E5'"
+  },
+  {
+   "样本ID": "V033",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "oob_index",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 498,
+   "did": "437e19e65586b84cc2bab74a98e1bda6bda6d92a5dc0ab2ad620799393c1cd24",
+   "title": "Frederick Chiluba",
+   "triple": [
+    "<<VIOLATION>>",
+    "<<VIOLATION>>",
+    "<<VIOLATION>>"
+   ],
+   "raw_item": [
+    "E30",
+    "P22",
+    "E5"
+   ],
+   "detail": {
+    "bad": {
+     "head": 30,
+     "tail": null
+    },
+    "k_bound": null,
+    "n_ents": 12
+   },
+   "n_ents": 12,
+   "k_bound": null,
+   "ents_context": [],
+   "ents": [
+    "1991",
+    "1996",
+    "2001",
+    "2002",
+    "2009",
+    "April 30 , 1943",
+    "Frederick Jacob Titus Chiluba",
+    "June 18 , 2011",
+    "Kenneth Kaunda",
+    "Levy Mwanawasa",
+    "Movement for Multi - party Democracy",
+    "Zambian"
+   ],
+   "raw": "Relations: E0 -> P1001 -> E5; E1 -> P102 -> E5; E2 -> P1056 -> E5; E3 -> P108 -> E5; E4 -> P112 -> E5; E5 -> P118 -> E5; E6 -> P1198 -> E5; E7 -> P123 -> E5; E8 -> P127 -> E5; E9 -> P131 -> E5; E10 -> P1336 -> E5; E11 -> P1344 -> E5; E13 -> P136 -> E5; E14 -> P1365 -> E5; E15 -> P1366 -> E5; E16 -> P137 -> E5; E17 -> P1376 -> E5; E18 -> P140 -> E5; E19 -> P1412 -> E5; E20 -> P1441 -> E5; E21 -> P150 -> E5; E22 -> P155 -> E5; E23 -> P156 -> E5; E24 -> P159 -> E5; E25 -> P161 -> E5; E26 -> P162 -> E5; E27 -> P166 -> E5; E28 -> P17 -> E5; E29 -> P20 -> E5; E30 -> P22 -> E5"
+  },
+  {
+   "样本ID": "V034",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "rel_unmapped",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 421,
+   "did": "93a0ddd3554d240edf79fe1e0140fdb33eadd630aff86a2385f651b96fb82982",
+   "title": "TY.O",
+   "triple": [
+    "TY.O",
+    "P177",
+    "Taio Cruz"
+   ],
+   "raw_item": null,
+   "detail": {
+    "note": "关系名不在 96 关系契约表内"
+   },
+   "n_ents": 18,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "16 December 2012",
+    "American",
+    "December 2011",
+    "Fast Car",
+    "Flo Rida",
+    "Germany",
+    "Hangover",
+    "Pitbull",
+    "Switzerland",
+    "TY.O",
+    "Taio Cruz",
+    "The Fast Hits",
+    "There She Goes",
+    "Troublemaker",
+    "UK",
+    "Universal Island Records",
+    "World in Our Hands",
+    "a year"
+   ],
+   "raw": "{\"triples\":[[\"E9\",\"P175\",\"E10\"],[\"E9\",\"P176\",\"E15\"],[\"E9\",\"P178\",\"E14\"],[\"E9\",\"P179\",\"E5\"],[\"E9\",\"P170\",\"E13\"],[\"E9\",\"P171\",\"E12\"],[\"E9\",\"P172\",\"E11\"],[\"E9\",\"P173\",\"E16\"],[\"E9\",\"P174\",\"E6\"],[\"E9\",\"P175\",\"E3\"],[\"E9\",\"P176\",\"E15\"],[\"E9\",\"P177\",\"E10\"],[\"E9\",\"P178\",\"E14\"],[\"E9\",\"P179\",\"E5\"],[\"E9\",\"P180\",\"E13\"],[\"E9\",\"P181\",\"E12\"],[\"E9\",\"P182\",\"E11\"],[\"E9\",\"P183\",\"E16\"],[\"E9\",\"P184\",\"E6\"],[\"E9\",\"P185\",\"E10\"],[\"E9\",\"P186\",\"E14\"],[\"E9\",\"P187\",\"E5\"],[\"E9\",\"P188\",\"E13\"],[\"E9\",\"P189\",\"E12\"],[\"E9\",\"P190\",\"E11\"],[\"E9\",\"P191\",\"E16\"],[\"E9\",\"P192\",\"E6\"],[\"E9\",\"P193\",\"E10\"],[\"E9\",\"P194\",\"E14\"],[\"E9\",\"P195\",\"E5\"],[\"E9\",\"P196\",\"E13\"],[\"E9\",\"P197\",\"E12\"],[\"E9\",\"P198\",\"E11\"],[\"E9\",\"P199\",\"E16\"],[\"E9\",\"P200\",\"E6\"]]}"
+  },
+  {
+   "样本ID": "V035",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "rel_unmapped",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 324,
+   "did": "abbf95a1ed44c051afd86bbf19e3e41d8d3534656ff2533556933e5a1f217756",
+   "title": "Flag of Prussia",
+   "triple": [
+    "Elector Frederick III",
+    "P177",
+    "Brandenburg-Prussia"
+   ],
+   "raw_item": null,
+   "detail": {
+    "note": "关系名不在 96 关系契约表内"
+   },
+   "n_ents": 26,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1415",
+    "1525",
+    "1618",
+    "18 January 1701",
+    "1918",
+    "1947",
+    "Albert of Brandenburg - Ansbach",
+    "Allied Control Council",
+    "Brandenburg",
+    "Brandenburg-Prussia",
+    "Duchy of Prussia",
+    "Elector Frederick III",
+    "Frederick I",
+    "German Empire",
+    "Hohenzollern",
+    "Hohenzollerns",
+    "Holy Roman Empire",
+    "House of Hohenzollern",
+    "John Sigismund",
+    "Kingdom of Prussia",
+    "Margraviate of Brandenburg",
+    "Northern March",
+    "Polish",
+    "Teutonic Knights",
+    "World War I",
+    "World War II"
+   ],
+   "raw": "Relations: E14 -> P175 -> E3; E11 -> P175 -> E3; E10 -> P175 -> E3; E11 -> P178 -> E9; E11 -> P179 -> E9; E11 -> P176 -> E9; E11 -> P177 -> E9; E11 -> P178 -> E10; E11 -> P179 -> E10; E11 -> P176 -> E10; E11 -> P177 -> E10; E11 -> P178 -> E11; E11 -> P179 -> E11; E11 -> P176 -> E11; E11 -> P177 -> E11; E11 -> P178 -> E12; E11 -> P179 -> E12; E11 -> P176 -> E12; E11 -> P177 -> E12; E11 -> P178 -> E13; E11 -> P179 -> E13; E11 -> P176 -> E13; E11 -> P177 -> E13; E11 -> P178 -> E14; E11 -> P179 -> E14; E11 -> P176 -> E14; E11 -> P177 -> E14; E11 -> P178 -> E15; E11 -> P179 -> E15; E11 -> P176 -> E15; E11 -> P177 -> E15; E11 -> P178 -> E16; E11 -> P179 -> E16; E11 -> P176 -> E16; E11 -> P177 -> E16; E11 -> P178 -> E17; E11 -> P179 -> E17; E11 -> P176 -> E17; E11 -> P177 -> E17; E11 -> P178 -> E18; E11 -> P179 -> E18; E11 -> P176 -> E18; E11 -> P177 -> E18; E11 -> P178 -> E19; E11 -> P179 -> E19; E11 -> P176 -> E19; E11 -> P177 -> E19; E11 -> P178 -> E20; E11 -> P179 -> E20; E11 -> P176 -> E20; E11 -> P177 -> E20; E11 -> P178 -> E21; E11 -> P179 -> E21; E11 -> P176 -> E21; E11 -> P177 -> E21; E11 -> P178 -> E22; E11 -> P179 -> E22; E11 -> P176 -> E22; E11 -> P177 -> E22; E11 -> P1"
+  },
+  {
+   "样本ID": "V036",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "rel_unmapped",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 380,
+   "did": "ed158485530939938dedfa851040425e57dd7c090d3301414ec4ec4506dcb600",
+   "title": "CBBC",
+   "triple": [
+    "CBBC",
+    "P186",
+    "Scotland"
+   ],
+   "raw_item": null,
+   "detail": {
+    "note": "关系名不在 96 关系契约表内"
+   },
+   "n_ents": 22,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "10 December 2013",
+    "12",
+    "2012",
+    "2013",
+    "26 March 2013",
+    "6",
+    "7   am",
+    "9   pm",
+    "BBC",
+    "BBC Alba",
+    "BBC HD",
+    "BBC One",
+    "BBC Two",
+    "CBBC",
+    "CBBC HD",
+    "CBeebies",
+    "Delivering Quality First",
+    "S4C",
+    "Scotland",
+    "UK",
+    "Wales",
+    "six year old"
+   ],
+   "raw": "Relations: E13 -> P361 -> E8; E13 -> P17 -> E8; E13 -> P170 -> E19; E13 -> P171 -> E19; E13 -> P172 -> E20; E13 -> P173 -> E18; E13 -> P174 -> E18; E13 -> P175 -> E19; E13 -> P176 -> E20; E13 -> P177 -> E18; E13 -> P178 -> E19; E13 -> P179 -> E20; E13 -> P180 -> E18; E13 -> P181 -> E19; E13 -> P182 -> E20; E13 -> P183 -> E18; E13 -> P184 -> E19; E13 -> P185 -> E20; E13 -> P186 -> E18; E13 -> P187 -> E19; E13 -> P188 -> E20; E13 -> P189 -> E18; E13 -> P190 -> E19; E13 -> P191 -> E20; E13 -> P192 -> E18; E13 -> P193 -> E19; E13 -> P194 -> E20; E13 -> P195 -> E18; E13 -> P196 -> E19; E13 -> P197 -> E20; E13 -> P198 -> E18; E13 -> P199 -> E19; E13 -> P200 -> E20; E13 -> P201 -> E18; E13 -> P202 -> E19; E13 -> P203 -> E20; E13 -> P204 -> E18; E13 -> P205 -> E19; E13 -> P206 -> E20; E13 -> P207 -> E18; E13 -> P208 -> E19; E13 -> P209 -> E20; E13 -> P210 -> E18; E13 -> P211 -> E19; E13 -> P212 -> E20; E13 -> P213 -> E18; E13 -> P214 -> E19; E13 -> P215 -> E20; E13 -> P216 -> E18; E13 -> P217 -> E19; E13 -> P218 -> E20; E13 -> P219 -> E18; E13 -> P220 -> E19; E13 -> P221 -> E20; E13 -> P222 -> E18; E13 -> P223 -> E19; E13 -> P224 -> E20; E13 -> P225 -> E18; E13 -> P226 -> E19; E1"
+  },
+  {
+   "样本ID": "V037",
+   "model": "mistral-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "rel_unmapped",
+   "src_file": "preds_mistral-7b-instruct_json.jsonl",
+   "line_no": 147,
+   "did": "fee3fedfc1512cf85f27300ffe4d126cc2ef37d253c25d565e05d18f9baa8ef0",
+   "title": "Rob James (singer)",
+   "triple": [
+    "Rob James",
+    "rel",
+    "Canadian"
+   ],
+   "raw_item": null,
+   "detail": {
+    "note": "关系名不在 96 关系契约表内"
+   },
+   "n_ents": 33,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "' N Sync",
+    "10",
+    "1997",
+    "2000",
+    "2006",
+    "2006 season",
+    "7",
+    "Canadian",
+    "Canadian Idol",
+    "Chris Perry",
+    "Christina Aguilera",
+    "Fresh I.E.",
+    "Grammy",
+    "I Understand",
+    "Jeremy Ruzumna",
+    "Jess Cates",
+    "Jesse Labelle",
+    "Juno",
+    "Justin Gray",
+    "Love Wins Everytime",
+    "Luke McMaster",
+    "M.B.C.I",
+    "Manitoba",
+    "McMaster & James",
+    "N Sync",
+    "October 30, 1977",
+    "Randy Bachman",
+    "Rob James",
+    "Ryan Malcolm",
+    "Simon Perry",
+    "Sweet Sensation",
+    "Thank You",
+    "Winnipeg"
+   ],
+   "raw": "[{\"triples\":[[\"E27\",\"rel\",\"E25\"],[\"E27\",\"rel\",\"E30\"],[\"E27\",\"rel\",\"E1\"],[\"E27\",\"rel\",\"E24\"],[\"E27\",\"rel\",\"E28\"],[\"E27\",\"rel\",\"E29\"],[\"E27\",\"rel\",\"E3\"],[\"E27\",\"rel\",\"E10\"],[\"E27\",\"rel\",\"E19\"],[\"E27\",\"rel\",\"E17\"],[\"E27\",\"rel\",\"E18\"],[\"E27\",\"rel\",\"E23\"],[\"E27\",\"rel\",\"E22\"],[\"E27\",\"rel\",\"E26\"],[\"E27\",\"rel\",\"E2\"],[\"E27\",\"rel\",\"E7\"],[\"E27\",\"rel\",\"E6\"],[\"E27\",\"rel\",\"E8\"],[\"E27\",\"rel\",\"E9\"],[\"E27\",\"rel\",\"E11\"],[\"E27\",\"rel\",\"E12\"],[\"E27\",\"rel\",\"E13\"],[\"E27\",\"rel\",\"E14\"],[\"E27\",\"rel\",\"E15\"],[\"E27\",\"rel\",\"E16\"],[\"E27\",\"rel\",\"E20\"],[\"E27\",\"rel\",\"E21\"]]}"
+  },
+  {
+   "样本ID": "V038",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "rel_unmapped",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 112,
+   "did": "e5a0cd01193cafe2cdaa2f867c9c42fae3a5334e5be71e70a956b7e905aa01b3",
+   "title": "Loopline Bridge",
+   "triple": [
+    "Connolly Station",
+    "rel",
+    "Dublin"
+   ],
+   "raw_item": null,
+   "detail": {
+    "note": "关系名不在 96 关系契约表内"
+   },
+   "n_ents": 20,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1889",
+    "1891",
+    "19th century",
+    "7.\n100 years",
+    "An Bord Pleanála",
+    "Connolly Station",
+    "Dublin",
+    "Dublin , Wicklow and Wexford Railway",
+    "Dublin City Council",
+    "Iarnród Éireann",
+    "Ireland",
+    "John Chaloner Smith",
+    "Kingstown",
+    "Liffey Viaduct",
+    "Queenstown",
+    "River Liffey",
+    "The Custom House",
+    "five",
+    "six metres",
+    "two"
+   ],
+   "raw": "Relations: E6 -> P17 -> E10; E0 -> rel -> E5; E1 -> rel -> E7; E5 -> rel -> E6; E15 -> rel -> E6; E14 -> rel -> E6; E13 -> rel -> E6; E12 -> rel -> E6; E11 -> rel -> E6; E10 -> rel -> E6; E8 -> rel -> E6; E4 -> rel -> E6; E3 -> rel -> E6; E7 -> rel -> E10; E2 -> rel -> E10; E1 -> rel -> E10; E17 -> rel -> E6; E18 -> rel -> E6; E19 -> rel -> E6"
+  },
+  {
+   "样本ID": "V039",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "self_pair",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 73,
+   "did": "c7892c8423c2cced53f1103e80d23b7132881018366b37dc3569d90015e7c2a7",
+   "title": "War of the Quadruple Alliance",
+   "triple": [
+    "Habsburgs",
+    "P17",
+    "Habsburgs"
+   ],
+   "raw_item": null,
+   "detail": {
+    "canon": 8,
+    "note": "头尾回连同一 canon 实体"
+   },
+   "n_ents": 19,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1717",
+    "1720",
+    "Austria",
+    "Britain",
+    "December 1718",
+    "Dutch Republic",
+    "Elisabeth Farnese",
+    "France",
+    "French",
+    "Giulio Alberoni",
+    "Habsburgs",
+    "Holy Roman Empire",
+    "Italy",
+    "Philip V of Spain",
+    "Savoy",
+    "Spain",
+    "Treaty of The Hague",
+    "Vienna",
+    "War of the Quadruple Alliance"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"P17\",\"E7\"],[\"E1\",\"P17\",\"E7\"],[\"E2\",\"P17\",\"E10\"],[\"E3\",\"P17\",\"E7\"],[\"E4\",\"P17\",\"E15\"],[\"E5\",\"P17\",\"E8\"],[\"E6\",\"P175\",\"E13\"],[\"E7\",\"P17\",\"E8\"],[\"E8\",\"P175\",\"E7\"],[\"E9\",\"P175\",\"E7\"],[\"E10\",\"P17\",\"E10\"],[\"E11\",\"P17\",\"E10\"],[\"E12\",\"P17\",\"E10\"],[\"E13\",\"P175\",\"E13\"],[\"E14\",\"P17\",\"E10\"],[\"E15\",\"P175\",\"E13\"],[\"E16\",\"P17\",\"E16\"],[\"E17\",\"P17\",\"E17\"],[\"E18\",\"P175\",\"E18\"]]}"
+  },
+  {
+   "样本ID": "V040",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "self_pair",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 221,
+   "did": "e7e6cf3c18bbbd94f02f57e5e9e8ee14f300f3662d6fd8c4c91220cc930dc53b",
+   "title": "Tomasz Bohdanowicz-Dworzecki",
+   "triple": [
+    "Cathedral of the Immaculate Conception of the Holy Virgin Mary",
+    "P175",
+    "Cathedral of the Immaculate Conception of the Holy Virgin Mary"
+   ],
+   "raw_item": null,
+   "detail": {
+    "canon": 14,
+    "note": "头尾回连同一 canon 实体"
+   },
+   "n_ents": 21,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1859",
+    "1893",
+    "1897",
+    "1899",
+    "1901",
+    "Academy of Fine Arts",
+    "Alexander Lednicki",
+    "Alexander Pomerantsev",
+    "April 1920",
+    "Byzantine",
+    "Cathedral of the Immaculate Conception of the Holy Virgin Mary",
+    "Gothic",
+    "Moscow",
+    "Moscow School of Painting, Sculpture and Architecture",
+    "Polish",
+    "Riga Central Railway Station",
+    "Russian Empire",
+    "Saint Petersburg",
+    "Stanislaw Nowakowski",
+    "Tomasz Bohdanowicz-Dworzecki",
+    "Vitebsk"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"P178\",\"E5\"], [\"E1\",\"P179\",\"E5\"], [\"E2\",\"P178\",\"E5\"], [\"E3\",\"P179\",\"E5\"], [\"E4\",\"P178\",\"E5\"], [\"E5\",\"P17\",\"E16\"], [\"E5\",\"P17\",\"E17\"], [\"E6\",\"P175\",\"E18\"], [\"E7\",\"P175\",\"E18\"], [\"E8\",\"P179\",\"E10\"], [\"E9\",\"P175\",\"E10\"], [\"E10\",\"P175\",\"E10\"], [\"E11\",\"P175\",\"E10\"], [\"E12\",\"P175\",\"E10\"], [\"E13\",\"P175\",\"E10\"], [\"E14\",\"P175\",\"E19\"], [\"E15\",\"P175\",\"E19\"], [\"E16\",\"P17\",\"E5\"], [\"E17\",\"P17\",\"E5\"], [\"E18\",\"P175\",\"E19\"], [\"E19\",\"P175\",\"E19\"], [\"E20\",\"P175\",\"E19\"]]}"
+  },
+  {
+   "样本ID": "V041",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "self_pair",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 473,
+   "did": "810ea20fe6cb6fed504a11db9e3726f88e27c906e66969337faa9c4ff1f8d9f3",
+   "title": "Hang Tuah station",
+   "triple": [
+    "Malaysia",
+    "P150",
+    "Malaysia"
+   ],
+   "raw_item": null,
+   "detail": {
+    "canon": 3,
+    "note": "头尾回连同一 canon 实体"
+   },
+   "n_ents": 15,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1 March 2012",
+    "2003",
+    "Ampang and Sri Petaling Lines",
+    "Hang Tuah police station",
+    "Hang Tuah station",
+    "KL Monorail",
+    "Kuala Lumpur",
+    "LRT",
+    "Malaysia",
+    "Methodist Boys School",
+    "National Stadium",
+    "Pudu",
+    "Pudu Prison",
+    "Victoria Institution",
+    "two"
+   ],
+   "raw": "{\"triples\":[[\"E4\",\"P17\",\"E8\"],[\"E4\",\"P131\",\"E6\"],[\"E5\",\"P17\",\"E8\"],[\"E5\",\"P172\",\"E7\"],[\"E6\",\"P17\",\"E8\"],[\"E7\",\"P17\",\"E8\"],[\"E8\",\"P150\",\"E8\"],[\"E9\",\"P131\",\"E6\"],[\"E9\",\"P17\",\"E8\"],[\"E10\",\"P131\",\"E6\"],[\"E10\",\"P17\",\"E8\"],[\"E11\",\"P131\",\"E6\"],[\"E11\",\"P17\",\"E8\"],[\"E12\",\"P131\",\"E6\"],[\"E12\",\"P17\",\"E8\"],[\"E13\",\"P131\",\"E6\"],[\"E13\",\"P17\",\"E8\"]]}"
+  },
+  {
+   "样本ID": "V042",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "self_pair",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 479,
+   "did": "f5a2331a9a936ae077932db1b9040e8cdf4c0be434e0afc11f0bc887888805f1",
+   "title": "Kerstin Thorborg",
+   "triple": [
+    "Kerstin Thorborg",
+    "P178",
+    "Kerstin Thorborg"
+   ],
+   "raw_item": null,
+   "detail": {
+    "canon": 0,
+    "note": "头尾回连同一 canon 实体"
+   },
+   "n_ents": 32,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1924",
+    "1930",
+    "1936",
+    "1938",
+    "1950",
+    "April 12 , 1970",
+    "Berlin",
+    "Brangäne",
+    "Bruno Walter",
+    "Charles Kullmann",
+    "Das Lied von der Erde",
+    "Eight years",
+    "Fricka",
+    "Kerstin Thorborg",
+    "Kundry",
+    "Lohengrin",
+    "Magdalena",
+    "Mahler",
+    "May 19 , 1896",
+    "Met",
+    "Nazis",
+    "Ortrud",
+    "Städtische Oper",
+    "Sweden",
+    "Thorborg",
+    "Venjan",
+    "Venus",
+    "Vienna Musikverein",
+    "Wagnerian",
+    "Waltraute",
+    "the United States",
+    "two decades"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"P18\",\"E5\"],[\"E1\",\"P178\",\"E13\"],[\"E2\",\"P178\",\"E13\"],[\"E3\",\"P178\",\"E13\"],[\"E4\",\"P178\",\"E13\"],[\"E5\",\"P577\",\"E18\"],[\"E6\",\"P178\",\"E13\"],[\"E7\",\"P178\",\"E13\"],[\"E8\",\"P178\",\"E13\"],[\"E9\",\"P178\",\"E13\"],[\"E10\",\"P178\",\"E13\"],[\"E11\",\"P178\",\"E13\"],[\"E12\",\"P178\",\"E13\"],[\"E13\",\"P178\",\"E13\"],[\"E14\",\"P178\",\"E13\"],[\"E15\",\"P178\",\"E13\"],[\"E16\",\"P178\",\"E13\"],[\"E17\",\"P178\",\"E13\"],[\"E18\",\"P178\",\"E13\"],[\"E19\",\"P178\",\"E13\"],[\"E20\",\"P178\",\"E13\"],[\"E21\",\"P178\",\"E13\"],[\"E22\",\"P178\",\"E13\"],[\"E23\",\"P178\",\"E13\"],[\"E24\",\"P178\",\"E13\"],[\"E25\",\"P178\",\"E13\"],[\"E26\",\"P178\",\"E13\"],[\"E27\",\"P178\",\"E13\"],[\"E28\",\"P178\",\"E13\"],[\"E29\",\"P178\",\"E13\"],[\"E30\",\"P178\",\"E13\"],[\"E31\",\"P178\",\"E13\"]]}"
+  },
+  {
+   "样本ID": "V043",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "self_pair",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 347,
+   "did": "6bc0ac323b4f5c1050f3b230286ad33491e92961565a7a32a919aa84ee80b6c9",
+   "title": "Józef Piłsudski Monument, Warsaw",
+   "triple": [
+    "Józef Piłsudski",
+    "P175",
+    "Józef Piłsudski"
+   ],
+   "raw_item": null,
+   "detail": {
+    "canon": 2,
+    "note": "头尾回连同一 canon 实体"
+   },
+   "n_ents": 20,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "14 August 1995",
+    "1990",
+    "Battle of Warsaw",
+    "Hotel Europejski",
+    "Jadwiga Piłsudska",
+    "Józef Piłsudski",
+    "Józef Piłsudski Monument",
+    "Lech Wałęsa",
+    "Marshal of Poland",
+    "Na Rozdrożu Square",
+    "Piłsudski 's Square",
+    "Poland",
+    "Polish",
+    "Polish Independence Day",
+    "Polish Navy Shipyards",
+    "Stanisław Wyganowski",
+    "Tokarzewski-Karaszewicz Street",
+    "Tomb of the Unknown Soldier",
+    "Warsaw",
+    "Łazienki"
+   ],
+   "raw": "Relations: E1 -> P17 -> E5; E2 -> P17 -> E5; E3 -> P17 -> E5; E4 -> P17 -> E5; E5 -> P175 -> E5; E6 -> P175 -> E5; E7 -> P17 -> E5; E8 -> P17 -> E5; E9 -> P17 -> E5; E10 -> P17 -> E5; E11 -> P17 -> E5; E12 -> P17 -> E5; E13 -> P17 -> E5; E14 -> P17 -> E5; E15 -> P17 -> E5; E16 -> P17 -> E5; E17 -> P17 -> E5; E18 -> P17 -> E5; E19 -> P17 -> E5"
+  },
+  {
+   "样本ID": "V044",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "self_pair",
+   "src_file": "preds_qwen2.5-7b-instruct_freetext.jsonl",
+   "line_no": 489,
+   "did": "677482ecce574e225eebc099dcc6300a074da30277d3bc629bf3b982bc585d02",
+   "title": "La prima notte di quiete",
+   "triple": [
+    "France",
+    "P17",
+    "France"
+   ],
+   "raw_item": null,
+   "detail": {
+    "canon": 9,
+    "note": "头尾回连同一 canon 实体"
+   },
+   "n_ents": 13,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1972",
+    "Alain Delon",
+    "France",
+    "French",
+    "Germany",
+    "Goethe",
+    "Indian Summer",
+    "Italian",
+    "La prima notte di quiete",
+    "Le Professeur",
+    "Oktober in Rimini",
+    "USA",
+    "Valerio Zurlini"
+   ],
+   "raw": "Relations: E0 -> P17 -> E2; E0 -> P17 -> E7; E1 -> P17 -> E3; E2 -> P17 -> E2; E2 -> P17 -> E7; E5 -> P17 -> E5; E6 -> P17 -> E7; E8 -> P17 -> E7; E9 -> P17 -> E7; E10 -> P17 -> E7; E11 -> P17 -> E2; E11 -> P17 -> E7; E12 -> P17 -> E7"
+  },
+  {
+   "样本ID": "V045",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "self_pair",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 72,
+   "did": "570e1c5152ba8b0b552e0600b938bd384294b8b2f3d568b9cd621b1c1fa75381",
+   "title": "Vase de Noces",
+   "triple": [
+    "Vase de Noces",
+    "P36",
+    "Vase de Noces"
+   ],
+   "raw_item": null,
+   "detail": {
+    "canon": 0,
+    "note": "头尾回连同一 canon 实体"
+   },
+   "n_ents": 14,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1970s",
+    "1974",
+    "April 1 , 1977",
+    "Australia",
+    "Australian",
+    "Australian Classification Board",
+    "Belgian",
+    "Dominique Garny",
+    "OFLC",
+    "The Pig Fucking Movie",
+    "Thierry Zéno",
+    "Vase de Noces",
+    "Wedding Trough",
+    "two"
+   ],
+   "raw": "'Relations: E11 -> P194 -> E3; E11 -> P190 -> E3; E11 -> P19 -> E3; E11 -> P17 -> E3; E11 -> P137 -> E3; E11 -> P136 -> E3; E11 -> P1366 -> E10; E11 -> P1365 -> E10; E11 -> P1376 -> E10; E11 -> P137 -> E10; E11 -> P1344 -> E7; E11 -> P1336 -> E7; E11 -> P131 -> E7; E11 -> P127 -> E7; E11 -> P123 -> E7; E11 -> P1198 -> E7; E11 -> P118 -> E7; E11 -> P112 -> E7; E11 -> P119 -> E7; E11 -> P115 -> E7; E11 -> P111 -> E7; E11 -> P108 -> E7; E11 -> P1056 -> E7; E11 -> P102 -> E7; E11 -> P1001 -> E7; E11 -> P807 -> E3; E11 -> P800 -> E3; E11 -> P749 -> E3; E11 -> P737 -> E3; E11 -> P710 -> E3; E11 -> P676 -> E3; E11 -> P674 -> E3; E11 -> P607 -> E3; E11 -> P582 -> E3; E11 -> P580 -> E3; E11 -> P577 -> E3; E11 -> P576 -> E3; E11 -> P571 -> E3; E11 -> P570 -> E3; E11 -> P569 -> E3; E11 -> P551 -> E3; E11 -> P54 -> E3; E11 -> P527 -> E11; E11 -> P50 -> E11; E11 -> P495 -> E11; E11 -> P488 -> E11; E11 -> P463 -> E11; E11 -> P449 -> E11; E11 -> P403 -> E11; E11 -> P40 -> E11; E11 -> P39 -> E11; E11 -> P37 -> E11; E11 -> P36 -> E11; E11 -> P364 -> E11; E11 -> P355 -> E11; E11 -> P35 -> E11; E11 -> P3373 -> E11; E11 -> P31 -> E11; E11 -> P30 -> E11; E11 -> P279 -> E11; E11 -> P276 -> E11; E11 -> P272 -> E1"
+  },
+  {
+   "样本ID": "V046",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "self_pair",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 144,
+   "did": "34b7780d3d1bfd2700434c9f5515ef4536cb223541435e89a6aae6fad4de4076",
+   "title": "Barry University School of Podiatric Medicine",
+   "triple": [
+    "Barry University School of Podiatric Medicine",
+    "P1441",
+    "Barry University School of Podiatric Medicine"
+   ],
+   "raw_item": null,
+   "detail": {
+    "canon": 0,
+    "note": "头尾回连同一 canon 实体"
+   },
+   "n_ents": 21,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1000",
+    "1985",
+    "2007",
+    "Albert Armstrong",
+    "Barry University",
+    "Barry University 's School of Podiatric",
+    "Barry University School of Podiatric Medicine",
+    "DPM",
+    "DVA Miami",
+    "Doctor in Podiatry",
+    "Florida",
+    "Jackson Memorial Hospital",
+    "Mercy Hospital",
+    "Miami",
+    "Miami Shores",
+    "Mount Sinai Medical Center & Miami Heart Institute",
+    "North Shore Medical Center",
+    "Physician Assistant Master",
+    "The Center for Community Health and Minority Medicine",
+    "United States",
+    "nine"
+   ],
+   "raw": "Relations: E0 -> P1001 -> E6; E1 -> P20 -> E6; E2 -> P205 -> E6; E3 -> P1336 -> E6; E4 -> P108 -> E4; E5 -> P102 -> E6; E6 -> P1056 -> E6; E6 -> P108 -> E4; E6 -> P112 -> E4; E6 -> P118 -> E4; E6 -> P1198 -> E6; E6 -> P123 -> E4; E6 -> P127 -> E4; E6 -> P131 -> E4; E6 -> P1344 -> E6; E6 -> P136 -> E4; E6 -> P1365 -> E6; E6 -> P1366 -> E6; E6 -> P137 -> E4; E6 -> P1376 -> E6; E6 -> P140 -> E4; E6 -> P1412 -> E6; E6 -> P1441 -> E6; E6 -> P150 -> E4; E6 -> P155 -> E4; E6 -> P156 -> E4; E6 -> P159 -> E4; E6 -> P161 -> E4; E6 -> P162 -> E4; E6 -> P166 -> E4; E6 -> P17 -> E10; E6 -> P50 -> E11; E6 -> P527 -> E17; E6 -> P54 -> E11; E6 -> P551 -> E11; E6 -> P569 -> E11; E6 -> P57 -> E11; E6 -> P570 -> E11; E6 -> P571 -> E11; E6 -> P576 -> E11; E6 -> P577 -> E2; E6 -> P58 -> E11; E6 -> P580 -> E11; E6 -> P582 -> E11; E6 -> P585 -> E11; E7 -> P674 -> E10; E7 -> P676 -> E10; E8 -> P706 -> E10; E8 -> P800 -> E10; E8 -> P807 -> E10; E8 -> P840 -> E10; E9 -> P710 -> E10; E9 -> P737 -> E10; E9 -> P740 -> E10; E9 -> P749 -> E10; E10 -> P86 -> E10; E11 -> P19 -> E10; E11 -> P190 -> E10; E11 -> P194 -> E10; E12 -> P20 -> E10; E12 -> P205 -> E10; E12 -> P22 -> E10; E12 -> P241 -> E10; E12 -> P25 -> E10; E12 -> P26 -> E10; E12 -> P264"
+  },
+  {
+   "样本ID": "V047",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "self_pair",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 426,
+   "did": "3ef99cb5acce6a1fddeac942eacb81b5b16dd609310ef48bcf960bb5ea3a1b29",
+   "title": "Admission to the Union",
+   "triple": [
+    "Constitution",
+    "P276",
+    "Constitution"
+   ],
+   "raw_item": null,
+   "detail": {
+    "canon": 4,
+    "note": "头尾回连同一 canon 实体"
+   },
+   "n_ents": 17,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "13",
+    "1784",
+    "1787",
+    "37",
+    "9",
+    "Admission to the Union Clause",
+    "Congress",
+    "Constitution",
+    "June 21, 1788",
+    "Land Ordinance",
+    "March 4, 1789",
+    "Northwest Ordinance",
+    "U.S.",
+    "Union",
+    "four",
+    "six",
+    "thirteen"
+   ],
+   "raw": "Relations: E16 -> P1001 -> E7; E13 -> P102 -> E7; E5 -> P1056 -> E7; E4 -> P108 -> E7; E0 -> P112 -> E7; E15 -> P118 -> E7; E14 -> P1198 -> E7; E12 -> P123 -> E7; E9 -> P127 -> E7; E3 -> P131 -> E7; E6 -> P1336 -> E7; E8 -> P1344 -> E7; E10 -> P136 -> E7; E11 -> P1365 -> E7; E11 -> P1366 -> E7; E7 -> P137 -> E7; E16 -> P1376 -> E7; E4 -> P140 -> E7; E14 -> P1412 -> E7; E15 -> P1441 -> E7; E5 -> P150 -> E7; E7 -> P155 -> E7; E7 -> P156 -> E7; E7 -> P159 -> E7; E7 -> P161 -> E7; E7 -> P162 -> E7; E7 -> P166 -> E7; E7 -> P17 -> E7; E7 -> P170 -> E7; E7 -> P171 -> E7; E7 -> P172 -> E7; E7 -> P175 -> E7; E7 -> P176 -> E7; E7 -> P178 -> E7; E7 -> P179 -> E7; E2 -> P19 -> E7; E7 -> P190 -> E7; E7 -> P194 -> E7; E7 -> P20 -> E7; E7 -> P205 -> E7; E7 -> P22 -> E7; E7 -> P241 -> E7; E7 -> P25 -> E7; E7 -> P26 -> E7; E7 -> P264 -> E7; E7 -> P27 -> E7; E7 -> P272 -> E7; E7 -> P276 -> E7; E7 -> P279 -> E7; E7 -> P30 -> E7; E7 -> P31 -> E7; E7 -> P3373 -> E7; E7 -> P35 -> E7; E7 -> P355 -> E7; E7 -> P36 -> E7; E7 -> P361 -> E7; E7 -> P364 -> E7; E7 -> P37 -> E7; E7 -> P39 -> E7; E7 -> P40 -> E7; E7 -> P400 -> E7; E7 -> P403 -> E7; E7 -> P449 -> E7; E7 -> P463 -> E7; E7 -> P488 -> E7; E7 -> P495 -> E7; E7 -> P50 -> E7; E7 -> P527 -> E7; E7 -> P54 -> E7;"
+  },
+  {
+   "样本ID": "V048",
+   "model": "qwen2.5-7b-instruct",
+   "fmt": "json",
+   "load": "4bit",
+   "violation_class": "ambiguous",
+   "src_file": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "line_no": 356,
+   "did": "444e65b8c5f7b7c37d22ba53e541531fedd5cc7e8770673c7628b12488969723",
+   "title": "Russification of Finland",
+   "triple": [
+    "Grand Duchy of Finland",
+    "P178",
+    "Finnish"
+   ],
+   "raw_item": null,
+   "detail": {
+    "h_cand": 1,
+    "t_cand": 2,
+    "note": "实体名对应多个 canon 候选"
+   },
+   "n_ents": 13,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1899",
+    "1905",
+    "1908",
+    "1917",
+    "Finland",
+    "Finnish",
+    "Grand Duchy of Finland",
+    "Russian",
+    "Russian Empire",
+    "Russification",
+    "Russification of Finland",
+    "late 19th–early 20th century",
+    "two"
+   ],
+   "raw": "{\"triples\":[[\"E0\",\"P178\",\"E5\"],[\"E1\",\"P178\",\"E5\"],[\"E2\",\"P178\",\"E5\"],[\"E3\",\"P178\",\"E5\"],[\"E4\",\"P178\",\"E5\"],[\"E5\",\"P178\",\"E7\"],[\"E6\",\"P178\",\"E5\"],[\"E7\",\"P178\",\"E5\"],[\"E8\",\"P178\",\"E5\"],[\"E9\",\"P178\",\"E5\"],[\"E10\",\"P178\",\"E5\"],[\"E11\",\"P178\",\"E5\"]]}"
+  },
+  {
+   "样本ID": "V049",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "ambiguous",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 154,
+   "did": "f2028937b7861d17f4f7cc3b8bb00c8f754c47440fc31d89d2e32032ad50c8d5",
+   "title": "Die Haut",
+   "triple": [
+    "Die Haut",
+    "P162",
+    "German"
+   ],
+   "raw_item": null,
+   "detail": {
+    "h_cand": 1,
+    "t_cand": 2,
+    "note": "实体名对应多个 canon 候选"
+   },
+   "n_ents": 16,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1980s",
+    "1990s",
+    "1997",
+    "1998",
+    "Berlin",
+    "Burnin ' the Ice",
+    "Christoph Dreher",
+    "Die Haut",
+    "Einstürzende Neubauten",
+    "German",
+    "Jochen Arbeit",
+    "Nick Cave",
+    "Remo Park",
+    "Rudi Moser",
+    "Spring",
+    "Springer"
+   ],
+   "raw": "Relations: E7 -> P17 -> E9; E7 -> P175 -> E3; E7 -> P136 -> E9; E7 -> P1365 -> E8; E7 -> P137 -> E9; E7 -> P1376 -> E6; E7 -> P140 -> E9; E7 -> P1412 -> E11; E7 -> P150 -> E10; E7 -> P155 -> E9; E7 -> P156 -> E9; E7 -> P159 -> E9; E7 -> P161 -> E9; E7 -> P162 -> E9; E7 -> P166 -> E9; E7 -> P17 -> E10; E7 -> P170 -> E9; E7 -> P171 -> E9; E7 -> P172 -> E9; E7 -> P175 -> E3; E7 -> P176 -> E9; E7 -> P178 -> E9; E7 -> P179 -> E9; E7 -> P19 -> E10; E7 -> P190 -> E10; E7 -> P194 -> E10; E7 -> P20 -> E10; E7 -> P205 -> E10; E7 -> P22 -> E10; E7 -> P241 -> E10; E7 -> P25 -> E10; E7 -> P26 -> E10; E7 -> P264 -> E10; E7 -> P27 -> E10; E7 -> P272 -> E10; E7 -> P276 -> E10; E7 -> P279 -> E10; E7 -> P30 -> E10; E7 -> P31 -> E10; E7 -> P3373 -> E10; E7 -> P35 -> E10; E7 -> P355 -> E10; E7 -> P36 -> E10; E7 -> P361 -> E10; E7 -> P364 -> E10; E7 -> P37 -> E10; E7 -> P39 -> E10; E7 -> P40 -> E10; E7 -> P400 -> E10; E7 -> P403 -> E10; E7 -> P449 -> E10; E7 -> P463 -> E10; E7 -> P488 -> E10; E7 -> P495 -> E10; E7 -> P50 -> E10; E7 -> P527 -> E10; E7 -> P54 -> E10; E7 -> P551 -> E10; E7 -> P569 -> E10; E7 -> P57 -> E10; E7 -> P570 -> E10; E7 -> P571 -> E10; E7 -> P576 -> E10; E7 -> P577 -> E2; E7 -> P58 -> E10; E7 -> P580 -> E10; E7 -> P582 -> E"
+  },
+  {
+   "样本ID": "V050",
+   "model": "mistral-7b-instruct",
+   "fmt": "freetext",
+   "load": "4bit",
+   "violation_class": "ambiguous",
+   "src_file": "preds_mistral-7b-instruct_freetext.jsonl",
+   "line_no": 179,
+   "did": "22973c88d95c59557243d95b4218d111bcdac8ad4f115a31c5abf2848a29f470",
+   "title": "List of songs recorded by Rage Against the Machine",
+   "triple": [
+    "Rage Against the Machine",
+    "P36",
+    "1999"
+   ],
+   "raw_item": null,
+   "detail": {
+    "h_cand": 2,
+    "t_cand": 1,
+    "note": "实体名对应多个 canon 候选"
+   },
+   "n_ents": 27,
+   "k_bound": null,
+   "ents_context": null,
+   "ents": [
+    "1991",
+    "1992",
+    "1995",
+    "1996",
+    "1997",
+    "1999",
+    "American",
+    "Brad Wilk",
+    "Bruce Springsteen",
+    "California",
+    "December 2000",
+    "Epic Records",
+    "Evil Empire",
+    "Godzilla",
+    "Higher Learning soundtrack",
+    "Los Angeles",
+    "No Shelter",
+    "October 2000",
+    "Rage Against the Machine",
+    "Renegades",
+    "The Battle of Los Angeles",
+    "The Ghost of Tom Joad",
+    "Tim Commerford",
+    "Tom Morello",
+    "Year of tha Boomerang",
+    "Zack de la Rocha",
+    "four"
+   ],
+   "raw": "Relations: E18 -> P17 -> E6; E18 -> P17 -> E5; E18 -> P170 -> E5; E18 -> P171 -> E5; E18 -> P172 -> E5; E18 -> P175 -> E5; E18 -> P176 -> E5; E18 -> P178 -> E5; E18 -> P179 -> E5; E18 -> P19 -> E5; E18 -> P20 -> E5; E18 -> P22 -> E5; E18 -> P241 -> E5; E18 -> P25 -> E5; E18 -> P26 -> E5; E18 -> P264 -> E5; E18 -> P27 -> E5; E18 -> P272 -> E5; E18 -> P276 -> E5; E18 -> P279 -> E5; E18 -> P30 -> E5; E18 -> P31 -> E5; E18 -> P3373 -> E5; E18 -> P35 -> E5; E18 -> P355 -> E5; E18 -> P36 -> E5; E18 -> P361 -> E5; E18 -> P364 -> E5; E18 -> P37 -> E5; E18 -> P39 -> E5; E18 -> P40 -> E5; E18 -> P400 -> E5; E18 -> P403 -> E5; E18 -> P449 -> E5; E18 -> P463 -> E5; E18 -> P488 -> E5; E18 -> P495 -> E5; E18 -> P50 -> E5; E18 -> P527 -> E5; E18 -> P54 -> E5; E18 -> P551 -> E5; E18 -> P569 -> E5; E18 -> P57 -> E5; E18 -> P570 -> E5; E18 -> P571 -> E5; E18 -> P576 -> E5; E18 -> P577 -> E5; E18 -> P58 -> E5; E18 -> P580 -> E5; E18 -> P582 -> E5; E18 -> P585 -> E5; E18 -> P6 -> E5; E18 -> P607 -> E5; E18 -> P674 -> E5; E18 -> P676 -> E5; E18 -> P69 -> E5; E18 -> P706 -> E5; E18 -> P710 -> E5; E18 -> P737 -> E5; E18 -> P740 -> E5; E18 -> P749 -> E5; E18 -> P800 -> E5; E18 -> P807 -> E5; E18 -> P840 -> E5; E18 -> P86 -> E5; E18 -> P93"
+  }
+ ]
+}

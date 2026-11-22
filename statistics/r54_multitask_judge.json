@@ -1,0 +1,206 @@
+{
+ "prereg": "PREREG_J1",
+ "hj1_judge_leverage": {
+  "verdict": "PASS",
+  "arms": {
+   "Qwen2.5-7B|R1json-en vs Llama-3.1-8B|R1json-en": {
+    "median_abs_zgap": 0.11562130683322257,
+    "ci_excl_pairs": 12
+   },
+   "Qwen2.5-7B|R1json-en vs Mistral-7B-v0.3|R1json-en": {
+    "median_abs_zgap": 0.05541952853305754,
+    "ci_excl_pairs": 10
+   },
+   "Llama-3.1-8B|R1json-en vs Mistral-7B-v0.3|R1json-en": {
+    "median_abs_zgap": 0.053400043694856895,
+    "ci_excl_pairs": 8
+   }
+  }
+ },
+ "hj2_ladder": {
+  "verdict": "PASS",
+  "ladder": {
+   "Qwen2.5-7B": {
+    "single_sample_segSD": 0.07245277094902498,
+    "five_vote_residual_vs_greedy": 0.058325000000000016,
+    "monotone": true
+   },
+   "Llama-3.1-8B": {
+    "single_sample_segSD": 0.3456644239551274,
+    "five_vote_residual_vs_greedy": 0.27412500000000006,
+    "monotone": true
+   },
+   "Mistral-7B-v0.3": {
+    "single_sample_segSD": 0.12097536440882471,
+    "five_vote_residual_vs_greedy": 0.08207384186694532,
+    "monotone": true
+   }
+  }
+ },
+ "hj3_flip_suppression": {
+  "verdict": "PASS",
+  "system_level_flips_across_judges": 8,
+  "flips_single_judges": [
+   "JHU.6809|NEU.6801",
+   "JHU.6809|dfki-nmt.6478",
+   "MLLP-UPV.6899|RWTH_Aachen_System.6818",
+   "MLLP-UPV.6899|UCAM.6461",
+   "RWTH_Aachen_System.6818|UCAM.6461",
+   "TartuNLP-c.6502|online-G.0",
+   "dfki-nmt.6478|online-B.0",
+   "dfki-nmt.6478|online-Y.0"
+  ],
+  "unstable_pairs_bootstrap": {
+   "single": {
+    "Qwen2.5-7B|R1json-en": 15,
+    "Llama-3.1-8B|R1json-en": 14,
+    "Mistral-7B-v0.3|R1json-en": 13
+   },
+   "aer": 0
+  },
+  "ties_declared": 0,
+  "covered_by_ties": 0
+ },
+ "hj4_mqm_agreement": {
+  "verdict": "FAIL",
+  "single_taus": {
+   "Qwen2.5-7B|R1json-en": 0.7166666666666667,
+   "Llama-3.1-8B|R1json-en": 0.7166666666666667,
+   "Mistral-7B-v0.3|R1json-en": 0.6833333333333333
+  },
+  "aer_tau": 0.6999999999999998,
+  "aer_tau_ci95": [
+   0.7,
+   0.7
+  ]
+ },
+ "hj5_violation_gate": {
+  "rates": {
+   "Qwen2.5-7B": {
+    "base": 0.0,
+    "R3json-en": 0.0,
+    "R1json-zh": 0.0,
+    "R1text-en": 0.0001875
+   },
+   "Llama-3.1-8B": {
+    "base": 0.0,
+    "R3json-en": 0.000625,
+    "R1json-zh": 0.0018125,
+    "R1text-en": 0.0001875
+   },
+   "Mistral-7B-v0.3": {
+    "base": 0.00196875,
+    "R3json-en": 0.000125,
+    "R1json-zh": 0.0470625,
+    "R1text-en": 0.028875
+   }
+  }
+ },
+ "systems": [
+  "Facebook_FAIR.6750",
+  "JHU.6809",
+  "MLLP-UPV.6899",
+  "MSRA.MADL.6910",
+  "NEU.6801",
+  "PROMT_NMT_DE-EN.6683",
+  "RWTH_Aachen_System.6818",
+  "TartuNLP-c.6502",
+  "UCAM.6461",
+  "dfki-nmt.6478",
+  "online-A.0",
+  "online-B.0",
+  "online-G.0",
+  "online-X.0",
+  "online-Y.0",
+  "uedin.6749"
+ ],
+ "l2_baselines": {
+  "judge_panel": {
+   "single_taus": {
+    "Qwen2.5-7B|R1json-en": 0.7166666666666667,
+    "Llama-3.1-8B|R1json-en": 0.7166666666666667,
+    "Mistral-7B-v0.3|R1json-en": 0.6833333333333333
+   },
+   "best_single": 0.7166666666666667,
+   "worst_single": 0.6833333333333333,
+   "aer_zmean_tau": 0.7,
+   "borda_tau": -0.6833333333333333,
+   "median_tau": 0.7166666666666667
+  }
+ },
+ "l2_baselines_note": "AER z-mean vs Borda/median ensembles and single-contract bounds; judge panel = 4 judges as contracts (PoLL analogue has no tie declaration/prescription/gate)",
+ "e3_axis_variance": {
+  "judge_model_axis": {
+   "median_zgap": 0.05541952853305754,
+   "n_pairs": 3
+  },
+  "rubric_axis_R1vsR3": {
+   "median_zgap": 0.06683334756930917,
+   "n_judges": 3
+  },
+  "format_axis_jsonVsText": {
+   "median_zgap": 0.04650089587591977,
+   "n_judges": 3
+  },
+  "language_axis_enVsZh": {
+   "median_zgap": 0.028384728654952007,
+   "n_judges": 3
+  }
+ },
+ "r2_metaeval": {
+  "Qwen2.5-7B": {
+   "kappa": 0.0644,
+   "po": 0.534,
+   "n_pairs_scored": 2850,
+   "verdict_marginals": {
+    "A": 1808,
+    "B": 1042
+   },
+   "verbosity_probe_near_tie_longer_rate": 0.4551,
+   "near_tie_n": 769,
+   "near_tie_thr_abs": 6.0,
+   "human_A_rate": 0.5074,
+   "position_bias": {
+    "swapped_n": 3000,
+    "inconsistency_rate": 0.4653,
+    "literature_reference": 0.147
+   }
+  },
+  "Llama-3.1-8B": {
+   "kappa": 0.0472,
+   "po": 0.5263,
+   "n_pairs_scored": 2850,
+   "verdict_marginals": {
+    "A": 1976,
+    "B": 874
+   },
+   "verbosity_probe_near_tie_longer_rate": 0.4694,
+   "near_tie_n": 769,
+   "near_tie_thr_abs": 6.0,
+   "human_A_rate": 0.5074,
+   "position_bias": {
+    "swapped_n": 3000,
+    "inconsistency_rate": 0.5837,
+    "literature_reference": 0.147
+   }
+  },
+  "Mistral-7B-v0.3": {
+   "kappa": 0.0592,
+   "po": 0.533,
+   "n_pairs_scored": 2850,
+   "verdict_marginals": {
+    "A": 2125,
+    "B": 725
+   },
+   "verbosity_probe_near_tie_longer_rate": 0.4252,
+   "near_tie_n": 769,
+   "near_tie_thr_abs": 6.0,
+   "human_A_rate": 0.5074,
+   "position_bias": {
+    "swapped_n": 3000,
+    "inconsistency_rate": 0.6327,
+    "literature_reference": 0.147
+   }
+  }
+ }
+}

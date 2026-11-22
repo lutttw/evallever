@@ -1,0 +1,29 @@
+{
+ "experiment": "E1 paraphrase-refs (r59_e1_para_refs.json)",
+ "source": "Freitag, Grangier, Caswell (EMNLP 2020), wmt19-paraphrased-references-master repo (frozen at out/expansion/para/)",
+ "sets_for_newstest2019_ende": {
+  "ar": {
+   "file": "wmt19/ende/wmt19-ende-ar.ref",
+   "provenance": "additional high-quality HUMAN reference translation"
+  },
+  "arp": {
+   "file": "wmt19/ende/wmt19-ende-arp.ref",
+   "provenance": "HUMAN paraphrase (as-much-as-possible) of AR"
+  },
+  "wmtp": {
+   "file": "wmt19/ende/wmt19-ende-wmtp.ref",
+   "provenance": "HUMAN paraphrase (as-much-as-possible) of original WMT reference"
+  },
+  "hqr": {
+   "file": "wmt19/ende/wmt19-ende-hqr.ref",
+   "provenance": "HUMAN selection per sentence: original WMT vs AR"
+  },
+  "hqp": {
+   "file": "wmt19/ende/wmt19-ende-hqp.ref",
+   "provenance": "HUMAN selection per sentence: WMT.p vs AR.p"
+  }
+ },
+ "all_human": true,
+ "bawden_automatic_sets_used_in_E1": false,
+ "repo_quote": "produced through human translation or human paraphrasing"
+}

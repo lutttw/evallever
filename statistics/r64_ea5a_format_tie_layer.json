@@ -1,0 +1,85 @@
+{
+ "meta": {
+  "experiment": "C2(1) partial: CI tie layer on the format axis (D5, English DocRED)",
+  "cells": [
+   "qwen2.5-7b-instruct|json",
+   "qwen2.5-7b-instruct|freetext",
+   "mistral-7b-instruct|json",
+   "mistral-7b-instruct|freetext"
+  ],
+  "bootstrap": {
+   "reps": 2000,
+   "unit": "document",
+   "seed": 20260926,
+   "ci": "percentile95"
+  },
+  "infeasible_tonight": [
+   "am.19b constrained decoding: Mistral-7B weights absent locally, HF unreachable (pipeline exists; SMOKE artifact preds_qwen2.5-7b-instruct_json_CONSTRAINED_SMOKE.jsonl.bak)",
+   "ℓ-axis (HacRED zh/en prompts) tie layer: per-doc outputs not in local bundle (aggregates only)"
+  ],
+  "tier": "exploratory, post-review round 12"
+ },
+ "validation": {
+  "qwen2.5-7b-instruct|json": "0.0258 vs 0.0258 ok",
+  "qwen2.5-7b-instruct|freetext": "0.0274 vs 0.0274 ok",
+  "mistral-7b-instruct|json": "0.0080 vs 0.0080 ok",
+  "mistral-7b-instruct|freetext": "0.0151 vs 0.0151 ok"
+ },
+ "cells": {
+  "qwen2.5-7b-instruct|json": {
+   "gamma": 0.0258,
+   "ci95": [
+    0.0106,
+    0.0409
+   ]
+  },
+  "qwen2.5-7b-instruct|freetext": {
+   "gamma": 0.0274,
+   "ci95": [
+    0.0141,
+    0.04
+   ]
+  },
+  "mistral-7b-instruct|json": {
+   "gamma": 0.008,
+   "ci95": [
+    -0.0074,
+    0.023
+   ]
+  },
+  "mistral-7b-instruct|freetext": {
+   "gamma": 0.0151,
+   "ci95": [
+    0.0096,
+    0.0204
+   ]
+  }
+ },
+ "pair_layer": {
+  "pair": "qwen2.5-7b | mistral-7b",
+  "per_format": {
+   "json": {
+    "gap_q_minus_m": 0.0178,
+    "tie": true,
+    "ci95": [
+     -0.0006,
+     0.0371
+    ]
+   },
+   "freetext": {
+    "gap_q_minus_m": 0.0123,
+    "tie": true,
+    "ci95": [
+     -0.0014,
+     0.0257
+    ]
+   }
+  },
+  "format_induced_flip": false,
+  "covered_by_either_format_tie": null,
+  "ensemble_reading": {
+   "qwen2.5-7b-instruct": 0.7071,
+   "mistral-7b-instruct": -0.7071
+  }
+ }
+}

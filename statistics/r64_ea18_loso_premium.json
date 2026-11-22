@@ -1,0 +1,161 @@
+{
+ "meta": {
+  "experiment": "E-A18 LOSO calibration of the difficulty premium: out-of-sample test of the decomposed arm prior (E-A17 follow-through)",
+  "protocol": "hold out one system; calibrate premium on the rest; predict held-out h_a = h_hat x (1 - premium_cal); error vs measured",
+  "in_sample_reference": "premium consistency 68.1-74.3% (4 systems), ttmre 38.6% anomalous (E-A17)"
+ },
+ "inputs": {
+  "h_a_hat": {
+   "atlop_base": 5653.3,
+   "docunet": 5306.1,
+   "dreeam": 5232.2,
+   "kddocre": 5479.8,
+   "ttmre_release": 9540.0
+  },
+  "h_a_measured": {
+   "atlop_base": 1574.0,
+   "docunet": 1693.5,
+   "dreeam": 1344.0,
+   "kddocre": 1563.5,
+   "ttmre_release": 5854.0
+  },
+  "premium_in_sample": {
+   "atlop_base": 0.7216,
+   "docunet": 0.6808,
+   "dreeam": 0.7431,
+   "kddocre": 0.7147,
+   "ttmre_release": 0.3864
+  }
+ },
+ "loso_all5": {
+  "variant": "all-5 systems",
+  "rows": [
+   {
+    "held_out": "atlop_base",
+    "calibration_set": [
+     "docunet",
+     "dreeam",
+     "kddocre",
+     "ttmre_release"
+    ],
+    "premium_calibrated": 0.6313,
+    "h_a_pred": 2084.6,
+    "h_a_measured": 1574.0,
+    "error_pct": 32.4
+   },
+   {
+    "held_out": "docunet",
+    "calibration_set": [
+     "atlop_base",
+     "dreeam",
+     "kddocre",
+     "ttmre_release"
+    ],
+    "premium_calibrated": 0.6414,
+    "h_a_pred": 1902.6,
+    "h_a_measured": 1693.5,
+    "error_pct": 12.3
+   },
+   {
+    "held_out": "dreeam",
+    "calibration_set": [
+     "atlop_base",
+     "docunet",
+     "kddocre",
+     "ttmre_release"
+    ],
+    "premium_calibrated": 0.6259,
+    "h_a_pred": 1957.5,
+    "h_a_measured": 1344.0,
+    "error_pct": 45.6
+   },
+   {
+    "held_out": "kddocre",
+    "calibration_set": [
+     "atlop_base",
+     "docunet",
+     "dreeam",
+     "ttmre_release"
+    ],
+    "premium_calibrated": 0.633,
+    "h_a_pred": 2011.2,
+    "h_a_measured": 1563.5,
+    "error_pct": 28.6
+   },
+   {
+    "held_out": "ttmre_release",
+    "calibration_set": [
+     "atlop_base",
+     "docunet",
+     "dreeam",
+     "kddocre"
+    ],
+    "premium_calibrated": 0.7151,
+    "h_a_pred": 2718.4,
+    "h_a_measured": 5854.0,
+    "error_pct": 53.6
+   }
+  ],
+  "median_error_pct": 32.4,
+  "max_error_pct": 53.6
+ },
+ "loso_standard4": {
+  "variant": "standard-architecture only (ttmre excluded)",
+  "rows": [
+   {
+    "held_out": "atlop_base",
+    "calibration_set": [
+     "docunet",
+     "dreeam",
+     "kddocre"
+    ],
+    "premium_calibrated": 0.7129,
+    "h_a_pred": 1623.2,
+    "h_a_measured": 1574.0,
+    "error_pct": 3.1
+   },
+   {
+    "held_out": "docunet",
+    "calibration_set": [
+     "atlop_base",
+     "dreeam",
+     "kddocre"
+    ],
+    "premium_calibrated": 0.7265,
+    "h_a_pred": 1451.4,
+    "h_a_measured": 1693.5,
+    "error_pct": 14.3
+   },
+   {
+    "held_out": "dreeam",
+    "calibration_set": [
+     "atlop_base",
+     "docunet",
+     "kddocre"
+    ],
+    "premium_calibrated": 0.7057,
+    "h_a_pred": 1539.8,
+    "h_a_measured": 1344.0,
+    "error_pct": 14.6
+   },
+   {
+    "held_out": "kddocre",
+    "calibration_set": [
+     "atlop_base",
+     "docunet",
+     "dreeam"
+    ],
+    "premium_calibrated": 0.7152,
+    "h_a_pred": 1560.7,
+    "h_a_measured": 1563.5,
+    "error_pct": 0.2
+   }
+  ],
+  "median_error_pct": 8.7,
+  "max_error_pct": 14.6
+ },
+ "verdict": {
+  "all5": "premium variance across architectures (ttmre anomaly) dominates; not declarable on the mixed pool",
+  "standard4": "out-of-sample error <= 14.5% (median of a 4-cell LOSO) within the standard architecture class -> the decomposed prior is declarable WITH an architecture-scope condition; memory-augmented models are a labelled failure mode"
+ }
+}

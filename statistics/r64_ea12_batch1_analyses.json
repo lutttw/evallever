@@ -1,0 +1,188 @@
+{
+ "meta": {
+  "experiment": "E-A12 batch-1 frozen-artifact analyses (r6 revision items R-02/R-03/R-05/R-06/R-14; DA C2/M3/M4)",
+  "tier": "exploratory, post-review r6",
+  "inputs": [
+   "r60_canonical_aer.json",
+   "r54_multitask_judge.json",
+   "r64_ea3_holdout_coverage.json",
+   "judge/runs/{qwen7b,llama,mistral}/base.jsonl"
+  ]
+ },
+ "E1_floor_power": {
+  "meta": {
+   "source": "r60_canonical_aer.json (CI90 stored; draws not needed: TOST at eps <=> CI90 within +/-eps)",
+   "power": "analytic normal approximation, sigma from CI90 half-width / 1.645; mu at stored point delta"
+  },
+  "grids": {
+   "de-en": {
+    "delta_point": 0.0167,
+    "ci90_stored": [
+     -0.05,
+     0.0167
+    ],
+    "sigma_hat_from_ci90": 0.0203,
+    "anchor_split_half_floor": 0.033,
+    "verdicts": {
+     "eps=0.033": {
+      "tost_pass_ci_in_band": false,
+      "analytic_tost_power_at_point": 0.0
+     },
+     "eps=0.050": {
+      "tost_pass_ci_in_band": true,
+      "analytic_tost_power_at_point": 0.449
+     },
+     "eps=0.100": {
+      "tost_pass_ci_in_band": true,
+      "analytic_tost_power_at_point": 0.9931
+     }
+    },
+    "tau_b_lattice_step": 0.01667,
+    "lattice_note": "n=16 systems, no-tie tau_b grid step 2/C(n,2); differences below it are not representable"
+   },
+   "zh-en": {
+    "delta_point": -0.019,
+    "ci90_stored": [
+     -0.019,
+     0.019
+    ],
+    "sigma_hat_from_ci90": 0.0116,
+    "anchor_split_half_floor": 0.026,
+    "verdicts": {
+     "eps=0.026": {
+      "tost_pass_ci_in_band": true,
+      "analytic_tost_power_at_point": 0.1372
+     },
+     "eps=0.050": {
+      "tost_pass_ci_in_band": true,
+      "analytic_tost_power_at_point": 0.8506
+     },
+     "eps=0.100": {
+      "tost_pass_ci_in_band": true,
+      "analytic_tost_power_at_point": 1.0
+     }
+    },
+    "tau_b_lattice_step": 0.01905,
+    "lattice_note": "n=15 systems, no-tie tau_b grid step 2/C(n,2); differences below it are not representable"
+   }
+  }
+ },
+ "E2_holm2": {
+  "family": "C1, C2 (C3 removed; Holm over the remaining two)",
+  "raw_p": {
+   "C1": 0.0006,
+   "C2": 0.0016
+  },
+  "holm_adjusted_p": {
+   "C1": 0.0012,
+   "C2": 0.0016
+  },
+  "reject_both_at_alpha_05": true,
+  "note": "mechanical recomputation; C3 removel does not change C1/C2 conclusions"
+ },
+ "E3_unstable_recount": {
+  "meta": {
+   "mechanism_diagnosis": "published aer_seg rows are the system z broadcast to every segment (E-C2 E1), so every bootstrap draw returns identical system means -> sign set size 1 -> 0 unstable BY CONSTRUCTION; the recount replaces the broadcast layer with the repaired per-segment ensemble (E-C2 E2), B=200 seed=5 as in score_judge.unstable_pairs",
+   "inputs": "judge/runs/{qwen7b,llama,mistral}/base.jsonl (frozen)"
+  },
+  "validation_single_recount": {
+   "Qwen2.5-7B|R1json-en": 15,
+   "Llama-3.1-8B|R1json-en": 14,
+   "Mistral-7B-v0.3|R1json-en": 13
+  },
+  "stored_single_counts": {
+   "Qwen2.5-7B|R1json-en": 15,
+   "Llama-3.1-8B|R1json-en": 14,
+   "Mistral-7B-v0.3|R1json-en": 13
+  },
+  "validation_match": true,
+  "repaired_ensemble_unstable": 9,
+  "repaired_unstable_pairs": [
+   "JHU.6809|NEU.6801",
+   "JHU.6809|RWTH_Aachen_System.6818",
+   "MLLP-UPV.6899|RWTH_Aachen_System.6818",
+   "MLLP-UPV.6899|UCAM.6461",
+   "NEU.6801|dfki-nmt.6478",
+   "RWTH_Aachen_System.6818|UCAM.6461",
+   "TartuNLP-c.6502|online-G.0",
+   "online-A.0|uedin.6749",
+   "online-B.0|online-Y.0"
+  ],
+  "stored_aer_count_degenerate_layer": 0,
+  "hj3_verdict_after_repair": {
+   "still_suppresses_min_single": true,
+   "min_single": 13
+  }
+ },
+ "E4_aer_false_tie": {
+  "meta": {
+   "definition": "false tie = pair the rule declares tied while some single contract CI-excludes; identical convention and scope as the stored single-contract rates (flip pairs only)"
+  },
+  "grids": {
+   "newstest2021-de-en": {
+    "scope": "114 contract-induced flip pairs (of 171)",
+    "aer_ensemble_false_tie": "56/88",
+    "aer_rate_pct": 63.6,
+    "single_contract_recount": {
+     "bleu13a": "36/68",
+     "chrf": "50/82",
+     "bertscore": "34/66"
+    },
+    "stored_single_rates": {
+     "bleu13a": "48/67",
+     "chrf": "47/66",
+     "bertscore": "27/46"
+    },
+    "recount_matches_stored": false
+   },
+   "newstest2021-zh-en": {
+    "scope": "66 contract-induced flip pairs (of 210)",
+    "aer_ensemble_false_tie": "38/44",
+    "aer_rate_pct": 86.4,
+    "single_contract_recount": {
+     "bleu13a": "36/42",
+     "chrf": "28/34",
+     "bertscore": "24/30"
+    },
+    "stored_single_rates": {
+     "bleu13a": "32/35",
+     "chrf": "26/29",
+     "bertscore": "19/22"
+    },
+    "recount_matches_stored": false
+   }
+  }
+ },
+ "E5_gate_calibration": {
+  "meta": {
+   "rule": "CI-form gate passes iff the 95% Wilson upper bound of the violation rate is below the 5% threshold",
+   "note": "cells with n below ~1000 cannot pass at any rate >= 0 unless the upper bound clears 5%; zero-event cells pass for n >= 500"
+  },
+  "by_n": {
+   "500": {
+    "max_violations_passing": 15,
+    "max_rate_passing_pct": 3.0
+   },
+   "998": {
+    "max_violations_passing": 36,
+    "max_rate_passing_pct": 3.61
+   },
+   "1000": {
+    "max_violations_passing": 36,
+    "max_rate_passing_pct": 3.6
+   },
+   "1500": {
+    "max_violations_passing": 58,
+    "max_rate_passing_pct": 3.87
+   },
+   "1701": {
+    "max_violations_passing": 67,
+    "max_rate_passing_pct": 3.94
+   },
+   "2507": {
+    "max_violations_passing": 103,
+    "max_rate_passing_pct": 4.11
+   }
+  }
+ }
+}

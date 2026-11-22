@@ -1,0 +1,129 @@
+{
+ "pred": "out/p15_hacred_icl/preds_mistral-ms_en_json.jsonl",
+ "n_pred_recs": 1500,
+ "seed": "20260926",
+ "bootstrap_reps": 10000,
+ "stats": {
+  "n_triples": 8201,
+  "parse_fail": 868,
+  "oob_index": 444,
+  "hallucinated": 0,
+  "ambiguous": 62,
+  "self_pair": 154,
+  "rel_unmapped": 11,
+  "mapped": 6662
+ },
+ "violation_rate": 0.18766004145835874,
+ "violation_gate": {
+  "threshold": 0.05,
+  "unverifiable": true,
+  "rule": "违规率 >5% 该设置带旗(修订 2/17 同纪律,不调门槛)"
+ },
+ "n_candidates_char": 253732,
+ "n_candidates_word": 253732,
+ "char_gold": {
+  "metrics": {
+   "intra": {
+    "F1": 0.015322076297686053,
+    "R": 0.01133996760009257,
+    "A": 0.011494252873563218,
+    "pair_F1": 0.016230539913878766,
+    "tp": 49,
+    "fp": 2026,
+    "fn": 4272
+   },
+   "inter": {
+    "F1": 0.008325214772827915,
+    "R": 0.007010739856801909,
+    "A": 0.007235221674876847,
+    "pair_F1": 0.008795733133713858,
+    "tp": 47,
+    "fp": 4540,
+    "fn": 6657
+   },
+   "gap_F1": 0.006996861524858138,
+   "gap_R": 0.004329227743290661,
+   "gap_A": 0.004259031198686371,
+   "gap_pair_F1": 0.007434806780164909
+  },
+  "L1_signs": {
+   "signs": {
+    "gap_F1": 1,
+    "gap_R": 1,
+    "gap_A": 1
+   },
+   "consistent": true
+  }
+ },
+ "word_gold": {
+  "metrics": {
+   "intra": {
+    "F1": 0.015322076297686053,
+    "R": 0.01133996760009257,
+    "A": 0.011494252873563218,
+    "pair_F1": 0.016230539913878766,
+    "tp": 49,
+    "fp": 2026,
+    "fn": 4272
+   },
+   "inter": {
+    "F1": 0.008325214772827915,
+    "R": 0.007010739856801909,
+    "A": 0.007235221674876847,
+    "pair_F1": 0.008795733133713858,
+    "tp": 47,
+    "fp": 4540,
+    "fn": 6657
+   },
+   "gap_F1": 0.006996861524858138,
+   "gap_R": 0.004329227743290661,
+   "gap_A": 0.004259031198686371,
+   "gap_pair_F1": 0.007434806780164909
+  },
+  "L1_signs": {
+   "signs": {
+    "gap_F1": 1,
+    "gap_R": 1,
+    "gap_A": 1
+   },
+   "consistent": true
+  }
+ },
+ "H_XL1": {
+  "claim": "同一批中文预测在 A/R/F1 三计分下差距读数符号不一致(预期成立)",
+  "char_consistent": true,
+  "word_consistent": true,
+  "held_char": false
+ },
+ "H_XL2": {
+  "claim": "词层 vs 字层金标切换使 F1 差距移动 |Δ|>0(方向/量级开放;若 ≈0,如实报告为切分粒度契约不构成有效杠杆——边界发现)",
+  "delta_gap_F1": {
+   "point": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  },
+  "gap_F1_char": 0.006996861524858138,
+  "gap_F1_word": 0.006996861524858138,
+  "gold_delta_word_vs_char": {
+   "char_only": [],
+   "word_only": []
+  }
+ },
+ "H_XL3": {
+  "claim": "中文提示违规率与英文 D5 量级可比(探索)",
+  "zh_violation_rate": 0.18766004145835874,
+  "en_d5_reference": {
+   "qwen2.5-14b-instruct_json": 0.0457,
+   "qwen2.5-7b-instruct_freetext": 0.1164,
+   "mistral-7b-instruct_json": 0.1884,
+   "mistral-7b-instruct_freetext": 0.0705
+  }
+ },
+ "frozen_contract_crosscheck": {
+  "frozen_candidates": 253732,
+  "frozen_intra": 69892,
+  "recomputed_intra_char": 69892
+ }
+}

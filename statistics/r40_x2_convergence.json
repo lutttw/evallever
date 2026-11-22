@@ -1,0 +1,105 @@
+{
+ "experiment": "X2 contrast seed-convergence: surfacing + verification + sigma-convention sensitivity (M3)",
+ "registered_source": "r2_seed_convergence.json (headline.trackB, frozen)",
+ "generated_at": "2026-10-18T23:33:31",
+ "series": {
+  "x2_r025": {
+   "n_seeds": 10,
+   "deltas": [
+    -0.00207,
+    -0.00284,
+    -0.00807,
+    0.01945,
+    0.01009,
+    0.00589,
+    0.02819,
+    0.01004,
+    0.0047,
+    0.00384
+   ],
+   "mean": 0.00692,
+   "registered_trackB_curve": {
+    "2": 0.2889,
+    "3": 0.275,
+    "5": 0.2302,
+    "8": 0.1111,
+    "10": 0.0
+   },
+   "registered_min_n_95pct": null,
+   "sensitivity_per_seed_sigma": {
+    "2": 0.3333,
+    "3": 0.4417,
+    "4": 0.5381,
+    "5": 0.619,
+    "6": 0.7,
+    "7": 0.775,
+    "8": 0.8889,
+    "9": 1.0,
+    "10": 1.0
+   },
+   "sensitivity_seed_level": {
+    "2": 0.5333,
+    "3": 0.3,
+    "4": 0.3762,
+    "5": 0.381,
+    "6": 0.3952,
+    "7": 0.4333,
+    "8": 0.5556,
+    "9": 0.7,
+    "10": 1.0
+   }
+  },
+  "x2_r100": {
+   "n_seeds": 10,
+   "deltas": [
+    0.00576,
+    -0.00284,
+    0.02124,
+    0.02391,
+    -0.00262,
+    0.0754,
+    0.0808,
+    0.05114,
+    0.06916,
+    0.083
+   ],
+   "mean": 0.04049,
+   "registered_trackB_curve": {
+    "2": 0.8444,
+    "3": 0.9417,
+    "5": 0.996,
+    "8": 1.0,
+    "10": 1.0
+   },
+   "registered_min_n_95pct": 5,
+   "sensitivity_per_seed_sigma": {
+    "2": 0.8667,
+    "3": 0.9583,
+    "4": 0.9905,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0
+   },
+   "sensitivity_seed_level": {
+    "2": 0.6444,
+    "3": 0.4667,
+    "4": 0.8667,
+    "5": 0.9167,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0
+   }
+  }
+ },
+ "verdict": {
+  "replication": "machinery replicated on a second contrast family: the rho=1.0 X2 contrast (arm 0.040) reaches the 0.99 criterion at n=5 under the registered conservative track; the rho=0.25 contrast (arm 0.007) stays undetermined at every n<=10",
+  "sensitivity": "under raw per-seed exact sigmas (no cross-seed-correlation inflation) the rho=0.25 contrast would decide at n=9; the undetermined verdict therefore depends on the registered conservative SE convention -- recorded, not hidden",
+  "paper_claim_unchanged": true
+ },
+ "status": "FROZEN"
+}

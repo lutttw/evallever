@@ -1,0 +1,7 @@
+{
+ "experiment": "E-AppE: ATLOP official-entrypoint rerun (full dev 998 docs, official train.py eval-only, env-compat patches documented: apex guard + strict=False + WANDB offline; venv tf450)",
+ "published_f1": 63.18,
+ "rerun_dev_f1_official_entrypoint": 59.557,
+ "delta": -3.62,
+ "note": "NOT collapsed through the official entrypoint; the near-random 0.0-0.2% was specific to our harness (harness-ckpt interaction, unresolved). Predictions file = official result.json on dev."
+}

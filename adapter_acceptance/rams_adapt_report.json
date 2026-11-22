@@ -1,0 +1,77 @@
+{
+ "dataset": "rams",
+ "version": "RAMS_1.0c",
+ "official_scorer": "data\\rams\\RAMS_1.0c\\scorer\\scorer.py",
+ "acceptance_split": "dev",
+ "splits": {
+  "train": {
+   "n_docs": 7329,
+   "n_candidates": 16077,
+   "n_intra": 13209,
+   "n_inter": 2868,
+   "inter_ratio": 0.17839149094980405,
+   "n_gold_links": 17026,
+   "n_gold_pairs": 16077,
+   "n_multi_role_pairs": 896
+  },
+  "dev": {
+   "n_docs": 924,
+   "n_candidates": 2045,
+   "n_intra": 1683,
+   "n_inter": 362,
+   "inter_ratio": 0.17701711491442543,
+   "n_gold_links": 2188,
+   "n_gold_pairs": 2045,
+   "n_multi_role_pairs": 133
+  },
+  "test": {
+   "n_docs": 871,
+   "n_candidates": 1897,
+   "n_intra": 1558,
+   "n_inter": 339,
+   "inter_ratio": 0.1787032156035846,
+   "n_gold_links": 2023,
+   "n_gold_pairs": 1897,
+   "n_multi_role_pairs": 119
+  }
+ },
+ "acceptance": {
+  "A_gold_vs_gold": {
+   "official": {
+    "precision": 100.0,
+    "recall": 100.0,
+    "f1": 100.0
+   },
+   "mirror": {
+    "precision": 100.0,
+    "recall": 100.0,
+    "f1": 100.0
+   },
+   "distance_buckets_match": true,
+   "pass": true
+  },
+  "B_deterministic_corruption": {
+   "n_links_dropped": 922,
+   "n_roles_flipped": 740,
+   "gold_total": 2188,
+   "pred_total": 1266,
+   "official": {
+    "precision": 41.5482,
+    "recall": 24.0402,
+    "f1": 30.4574
+   },
+   "mirror": {
+    "precision": 41.54818325434439,
+    "recall": 24.04021937842779,
+    "f1": 30.45744064852345,
+    "correct": 526,
+    "missing": 1662,
+    "overpred": 740
+   },
+   "distance_buckets_match": true,
+   "pass": true
+  },
+  "pass": true,
+  "failures": []
+ }
+}

@@ -1,0 +1,8780 @@
+{
+ "provenance": {
+  "what": "TOST-style equivalence bounds for the zero-flip null instances (retrieval 66-switch grid; code gold switch), review R1-W1",
+  "retrieval": {
+   "script": "out/multi_task/retrieval/tost_null.py",
+   "data": "frozen runs + 2019 qrels (r49 machinery, score_retrieval.py)",
+   "B": 20000,
+   "seed": 11,
+   "alpha": 90
+  },
+  "code": {
+   "script": "out/multi_task/codegen/tost_null_code.py",
+   "data": "r52_multitask_code.json per_problem (frozen)",
+   "B": 20000,
+   "seed": 12,
+   "alpha": 90
+  },
+  "date": "2026-10-26"
+ },
+ "retrieval": {
+  "B": 20000,
+  "seed": 11,
+  "alpha": 90,
+  "units": "per-measure own units",
+  "pairs": {},
+  "switches": {
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.09222,
+    "ci90_c2": [
+     -0.11345,
+     -0.07188
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.08459,
+    "ci90_c2": [
+     -0.10444,
+     -0.06523
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.09509,
+    "ci90_c2": [
+     -0.11762,
+     -0.07323
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.06236,
+    "ci90_c2": [
+     -0.08438,
+     -0.04066
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00763,
+    "ci90_c2": [
+     0.00122,
+     0.01422
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00288,
+    "ci90_c2": [
+     -0.00933,
+     0.00333
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.02986,
+    "ci90_c2": [
+     0.01787,
+     0.0439
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.0105,
+    "ci90_c2": [
+     -0.01766,
+     -0.00422
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.02223,
+    "ci90_c2": [
+     0.0086,
+     0.03725
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'map_cut_100')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.03274,
+    "ci90_c2": [
+     0.0182,
+     0.04863
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'bpref')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.08247,
+    "ci90_c2": [
+     -0.09947,
+     -0.06631
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.07955,
+    "ci90_c2": [
+     -0.09648,
+     -0.06339
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.08433,
+    "ci90_c2": [
+     -0.10155,
+     -0.06804
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.05847,
+    "ci90_c2": [
+     -0.07673,
+     -0.04075
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.00211,
+     0.00789
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00186,
+    "ci90_c2": [
+     -0.00618,
+     0.00228
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.024,
+    "ci90_c2": [
+     0.01601,
+     0.03239
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.00478,
+    "ci90_c2": [
+     -0.00912,
+     -0.00071
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.02108,
+    "ci90_c2": [
+     0.01243,
+     0.0304
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.02585,
+    "ci90_c2": [
+     0.01648,
+     0.03579
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.26085,
+    "ci90_c2": [
+     -0.3246,
+     -0.1994
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.25778,
+    "ci90_c2": [
+     -0.3174,
+     -0.20021
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.2712,
+    "ci90_c2": [
+     -0.33525,
+     -0.20995
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.18665,
+    "ci90_c2": [
+     -0.25271,
+     -0.12182
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00307,
+    "ci90_c2": [
+     -0.01767,
+     0.02355
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.01035,
+    "ci90_c2": [
+     -0.02606,
+     0.00522
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.0742,
+    "ci90_c2": [
+     0.03941,
+     0.11247
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.01342,
+    "ci90_c2": [
+     -0.03432,
+     0.00733
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.07113,
+    "ci90_c2": [
+     0.03421,
+     0.11205
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.08455,
+    "ci90_c2": [
+     0.04638,
+     0.12602
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.23643,
+    "ci90_c2": [
+     -0.29502,
+     -0.18033
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.2339,
+    "ci90_c2": [
+     -0.28852,
+     -0.18104
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.24065,
+    "ci90_c2": [
+     -0.29688,
+     -0.18669
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.1587,
+    "ci90_c2": [
+     -0.21703,
+     -0.10203
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00253,
+    "ci90_c2": [
+     -0.01775,
+     0.02219
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00422,
+    "ci90_c2": [
+     -0.01993,
+     0.01093
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.07773,
+    "ci90_c2": [
+     0.04269,
+     0.11668
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.00675,
+    "ci90_c2": [
+     -0.02452,
+     0.01113
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.0752,
+    "ci90_c2": [
+     0.03916,
+     0.11397
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.08194,
+    "ci90_c2": [
+     0.04864,
+     0.11757
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.09222,
+    "ci90_c2": [
+     -0.11345,
+     -0.07188
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.08459,
+    "ci90_c2": [
+     -0.10444,
+     -0.06523
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.09509,
+    "ci90_c2": [
+     -0.11762,
+     -0.07323
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.06236,
+    "ci90_c2": [
+     -0.08438,
+     -0.04066
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00763,
+    "ci90_c2": [
+     0.00122,
+     0.01422
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00288,
+    "ci90_c2": [
+     -0.00933,
+     0.00333
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.02986,
+    "ci90_c2": [
+     0.01787,
+     0.0439
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.0105,
+    "ci90_c2": [
+     -0.01766,
+     -0.00422
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.02223,
+    "ci90_c2": [
+     0.0086,
+     0.03725
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.03274,
+    "ci90_c2": [
+     0.0182,
+     0.04863
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.06592,
+    "ci90_c2": [
+     -0.08304,
+     -0.05038
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.06301,
+    "ci90_c2": [
+     -0.07926,
+     -0.04837
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.06798,
+    "ci90_c2": [
+     -0.08475,
+     -0.05247
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.0473,
+    "ci90_c2": [
+     -0.06533,
+     -0.03049
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.001,
+     0.00682
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00205,
+    "ci90_c2": [
+     -0.00576,
+     0.00136
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.01862,
+    "ci90_c2": [
+     0.01106,
+     0.02706
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.00497,
+    "ci90_c2": [
+     -0.00845,
+     -0.00178
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.01571,
+    "ci90_c2": [
+     0.00693,
+     0.02529
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.02067,
+    "ci90_c2": [
+     0.0116,
+     0.03066
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.25531,
+    "ci90_c1": [
+     -0.30756,
+     -0.20552
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.25443,
+    "ci90_c1": [
+     -0.30435,
+     -0.20607
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.2603,
+    "ci90_c1": [
+     -0.3121,
+     -0.21026
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.17204,
+    "ci90_c1": [
+     -0.22518,
+     -0.12033
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00088,
+    "ci90_c1": [
+     -0.01703,
+     0.0185
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.005,
+    "ci90_c1": [
+     -0.01914,
+     0.00918
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.08327,
+    "ci90_c1": [
+     0.05423,
+     0.1144
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00587,
+    "ci90_c1": [
+     -0.02295,
+     0.01047
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.08239,
+    "ci90_c1": [
+     0.05137,
+     0.11563
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.08826,
+    "ci90_c1": [
+     0.05809,
+     0.12029
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('graded', 'bpref')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.08247,
+    "ci90_c2": [
+     -0.09947,
+     -0.06631
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.07955,
+    "ci90_c2": [
+     -0.09648,
+     -0.06339
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.08433,
+    "ci90_c2": [
+     -0.10155,
+     -0.06804
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.05847,
+    "ci90_c2": [
+     -0.07673,
+     -0.04075
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.00211,
+     0.00789
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00186,
+    "ci90_c2": [
+     -0.00618,
+     0.00228
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.024,
+    "ci90_c2": [
+     0.01601,
+     0.03239
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.00478,
+    "ci90_c2": [
+     -0.00912,
+     -0.00071
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.02108,
+    "ci90_c2": [
+     0.01243,
+     0.0304
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.02585,
+    "ci90_c2": [
+     0.01648,
+     0.03579
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.26085,
+    "ci90_c2": [
+     -0.3246,
+     -0.1994
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.25778,
+    "ci90_c2": [
+     -0.3174,
+     -0.20021
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.2712,
+    "ci90_c2": [
+     -0.33525,
+     -0.20995
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.18665,
+    "ci90_c2": [
+     -0.25271,
+     -0.12182
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00307,
+    "ci90_c2": [
+     -0.01767,
+     0.02355
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.01035,
+    "ci90_c2": [
+     -0.02606,
+     0.00522
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.0742,
+    "ci90_c2": [
+     0.03941,
+     0.11247
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.01342,
+    "ci90_c2": [
+     -0.03432,
+     0.00733
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.07113,
+    "ci90_c2": [
+     0.03421,
+     0.11205
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.08455,
+    "ci90_c2": [
+     0.04638,
+     0.12602
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.23643,
+    "ci90_c2": [
+     -0.29502,
+     -0.18033
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.2339,
+    "ci90_c2": [
+     -0.28852,
+     -0.18104
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.24065,
+    "ci90_c2": [
+     -0.29688,
+     -0.18669
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.1587,
+    "ci90_c2": [
+     -0.21703,
+     -0.10203
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00253,
+    "ci90_c2": [
+     -0.01775,
+     0.02219
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00422,
+    "ci90_c2": [
+     -0.01993,
+     0.01093
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.07773,
+    "ci90_c2": [
+     0.04269,
+     0.11668
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.00675,
+    "ci90_c2": [
+     -0.02452,
+     0.01113
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.0752,
+    "ci90_c2": [
+     0.03916,
+     0.11397
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.08194,
+    "ci90_c2": [
+     0.04864,
+     0.11757
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.09222,
+    "ci90_c2": [
+     -0.11345,
+     -0.07188
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.08459,
+    "ci90_c2": [
+     -0.10444,
+     -0.06523
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.09509,
+    "ci90_c2": [
+     -0.11762,
+     -0.07323
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.06236,
+    "ci90_c2": [
+     -0.08438,
+     -0.04066
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00763,
+    "ci90_c2": [
+     0.00122,
+     0.01422
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00288,
+    "ci90_c2": [
+     -0.00933,
+     0.00333
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.02986,
+    "ci90_c2": [
+     0.01787,
+     0.0439
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.0105,
+    "ci90_c2": [
+     -0.01766,
+     -0.00422
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.02223,
+    "ci90_c2": [
+     0.0086,
+     0.03725
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.03274,
+    "ci90_c2": [
+     0.0182,
+     0.04863
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.06592,
+    "ci90_c2": [
+     -0.08304,
+     -0.05038
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.06301,
+    "ci90_c2": [
+     -0.07926,
+     -0.04837
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.06798,
+    "ci90_c2": [
+     -0.08475,
+     -0.05247
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.0473,
+    "ci90_c2": [
+     -0.06533,
+     -0.03049
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.001,
+     0.00682
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00205,
+    "ci90_c2": [
+     -0.00576,
+     0.00136
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.01862,
+    "ci90_c2": [
+     0.01106,
+     0.02706
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.00497,
+    "ci90_c2": [
+     -0.00845,
+     -0.00178
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.01571,
+    "ci90_c2": [
+     0.00693,
+     0.02529
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.02067,
+    "ci90_c2": [
+     0.0116,
+     0.03066
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.08247,
+    "ci90_c2": [
+     -0.09947,
+     -0.06631
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.07955,
+    "ci90_c2": [
+     -0.09648,
+     -0.06339
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.08433,
+    "ci90_c2": [
+     -0.10155,
+     -0.06804
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.05847,
+    "ci90_c2": [
+     -0.07673,
+     -0.04075
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.00211,
+     0.00789
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00186,
+    "ci90_c2": [
+     -0.00618,
+     0.00228
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.024,
+    "ci90_c2": [
+     0.01601,
+     0.03239
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.00478,
+    "ci90_c2": [
+     -0.00912,
+     -0.00071
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.02108,
+    "ci90_c2": [
+     0.01243,
+     0.0304
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'bpref') -> ('graded', 'ndcg_cut_100')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.02585,
+    "ci90_c2": [
+     0.01648,
+     0.03579
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'bpref') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.26085,
+    "ci90_c2": [
+     -0.3246,
+     -0.1994
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.25778,
+    "ci90_c2": [
+     -0.3174,
+     -0.20021
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.2712,
+    "ci90_c2": [
+     -0.33525,
+     -0.20995
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.18665,
+    "ci90_c2": [
+     -0.25271,
+     -0.12182
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00307,
+    "ci90_c2": [
+     -0.01767,
+     0.02355
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.01035,
+    "ci90_c2": [
+     -0.02606,
+     0.00522
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.0742,
+    "ci90_c2": [
+     0.03941,
+     0.11247
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.01342,
+    "ci90_c2": [
+     -0.03432,
+     0.00733
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.07113,
+    "ci90_c2": [
+     0.03421,
+     0.11205
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'bpref') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.08455,
+    "ci90_c2": [
+     0.04638,
+     0.12602
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.23643,
+    "ci90_c2": [
+     -0.29502,
+     -0.18033
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.2339,
+    "ci90_c2": [
+     -0.28852,
+     -0.18104
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.24065,
+    "ci90_c2": [
+     -0.29688,
+     -0.18669
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.1587,
+    "ci90_c2": [
+     -0.21703,
+     -0.10203
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00253,
+    "ci90_c2": [
+     -0.01775,
+     0.02219
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00422,
+    "ci90_c2": [
+     -0.01993,
+     0.01093
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.07773,
+    "ci90_c2": [
+     0.04269,
+     0.11668
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.00675,
+    "ci90_c2": [
+     -0.02452,
+     0.01113
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.0752,
+    "ci90_c2": [
+     0.03916,
+     0.11397
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.08194,
+    "ci90_c2": [
+     0.04864,
+     0.11757
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.09222,
+    "ci90_c2": [
+     -0.11345,
+     -0.07188
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.08459,
+    "ci90_c2": [
+     -0.10444,
+     -0.06523
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.09509,
+    "ci90_c2": [
+     -0.11762,
+     -0.07323
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.06236,
+    "ci90_c2": [
+     -0.08438,
+     -0.04066
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00763,
+    "ci90_c2": [
+     0.00122,
+     0.01422
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00288,
+    "ci90_c2": [
+     -0.00933,
+     0.00333
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.02986,
+    "ci90_c2": [
+     0.01787,
+     0.0439
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.0105,
+    "ci90_c2": [
+     -0.01766,
+     -0.00422
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.02223,
+    "ci90_c2": [
+     0.0086,
+     0.03725
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'bpref') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.03274,
+    "ci90_c2": [
+     0.0182,
+     0.04863
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|biencoder: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'bpref') -> ('binary', 'bpref')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.06592,
+    "ci90_c2": [
+     -0.08304,
+     -0.05038
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.06301,
+    "ci90_c2": [
+     -0.07926,
+     -0.04837
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.06798,
+    "ci90_c2": [
+     -0.08475,
+     -0.05247
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.0473,
+    "ci90_c2": [
+     -0.06533,
+     -0.03049
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.001,
+     0.00682
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00205,
+    "ci90_c2": [
+     -0.00576,
+     0.00136
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.01862,
+    "ci90_c2": [
+     0.01106,
+     0.02706
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.00497,
+    "ci90_c2": [
+     -0.00845,
+     -0.00178
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.01571,
+    "ci90_c2": [
+     0.00693,
+     0.02529
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.02067,
+    "ci90_c2": [
+     0.0116,
+     0.03066
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.08247,
+    "ci90_c1": [
+     -0.09947,
+     -0.06631
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.07955,
+    "ci90_c1": [
+     -0.09648,
+     -0.06339
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.08433,
+    "ci90_c1": [
+     -0.10155,
+     -0.06804
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.05847,
+    "ci90_c1": [
+     -0.07673,
+     -0.04075
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.00211,
+     0.00789
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.00186,
+    "ci90_c1": [
+     -0.00618,
+     0.00228
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.024,
+    "ci90_c1": [
+     0.01601,
+     0.03239
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": -0.00478,
+    "ci90_c1": [
+     -0.00912,
+     -0.00071
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.02108,
+    "ci90_c1": [
+     0.01243,
+     0.0304
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_100') -> ('graded', 'recip_rank')": {
+    "margin_c1": 0.02585,
+    "ci90_c1": [
+     0.01648,
+     0.03579
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.08247,
+    "ci90_c1": [
+     -0.09947,
+     -0.06631
+    ],
+    "margin_c2": -0.26085,
+    "ci90_c2": [
+     -0.3246,
+     -0.1994
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.07955,
+    "ci90_c1": [
+     -0.09648,
+     -0.06339
+    ],
+    "margin_c2": -0.25778,
+    "ci90_c2": [
+     -0.3174,
+     -0.20021
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.08433,
+    "ci90_c1": [
+     -0.10155,
+     -0.06804
+    ],
+    "margin_c2": -0.2712,
+    "ci90_c2": [
+     -0.33525,
+     -0.20995
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.05847,
+    "ci90_c1": [
+     -0.07673,
+     -0.04075
+    ],
+    "margin_c2": -0.18665,
+    "ci90_c2": [
+     -0.25271,
+     -0.12182
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.00211,
+     0.00789
+    ],
+    "margin_c2": 0.00307,
+    "ci90_c2": [
+     -0.01767,
+     0.02355
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.00186,
+    "ci90_c1": [
+     -0.00618,
+     0.00228
+    ],
+    "margin_c2": -0.01035,
+    "ci90_c2": [
+     -0.02606,
+     0.00522
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.024,
+    "ci90_c1": [
+     0.01601,
+     0.03239
+    ],
+    "margin_c2": 0.0742,
+    "ci90_c2": [
+     0.03941,
+     0.11247
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.00478,
+    "ci90_c1": [
+     -0.00912,
+     -0.00071
+    ],
+    "margin_c2": -0.01342,
+    "ci90_c2": [
+     -0.03432,
+     0.00733
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.02108,
+    "ci90_c1": [
+     0.01243,
+     0.0304
+    ],
+    "margin_c2": 0.07113,
+    "ci90_c2": [
+     0.03421,
+     0.11205
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_100') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.02585,
+    "ci90_c1": [
+     0.01648,
+     0.03579
+    ],
+    "margin_c2": 0.08455,
+    "ci90_c2": [
+     0.04638,
+     0.12602
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.08247,
+    "ci90_c1": [
+     -0.09947,
+     -0.06631
+    ],
+    "margin_c2": -0.23643,
+    "ci90_c2": [
+     -0.29502,
+     -0.18033
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.07955,
+    "ci90_c1": [
+     -0.09648,
+     -0.06339
+    ],
+    "margin_c2": -0.2339,
+    "ci90_c2": [
+     -0.28852,
+     -0.18104
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.08433,
+    "ci90_c1": [
+     -0.10155,
+     -0.06804
+    ],
+    "margin_c2": -0.24065,
+    "ci90_c2": [
+     -0.29688,
+     -0.18669
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.05847,
+    "ci90_c1": [
+     -0.07673,
+     -0.04075
+    ],
+    "margin_c2": -0.1587,
+    "ci90_c2": [
+     -0.21703,
+     -0.10203
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.00211,
+     0.00789
+    ],
+    "margin_c2": 0.00253,
+    "ci90_c2": [
+     -0.01775,
+     0.02219
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.00186,
+    "ci90_c1": [
+     -0.00618,
+     0.00228
+    ],
+    "margin_c2": -0.00422,
+    "ci90_c2": [
+     -0.01993,
+     0.01093
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.024,
+    "ci90_c1": [
+     0.01601,
+     0.03239
+    ],
+    "margin_c2": 0.07773,
+    "ci90_c2": [
+     0.04269,
+     0.11668
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.00478,
+    "ci90_c1": [
+     -0.00912,
+     -0.00071
+    ],
+    "margin_c2": -0.00675,
+    "ci90_c2": [
+     -0.02452,
+     0.01113
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.02108,
+    "ci90_c1": [
+     0.01243,
+     0.0304
+    ],
+    "margin_c2": 0.0752,
+    "ci90_c2": [
+     0.03916,
+     0.11397
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.02585,
+    "ci90_c1": [
+     0.01648,
+     0.03579
+    ],
+    "margin_c2": 0.08194,
+    "ci90_c2": [
+     0.04864,
+     0.11757
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.08247,
+    "ci90_c1": [
+     -0.09947,
+     -0.06631
+    ],
+    "margin_c2": -0.09222,
+    "ci90_c2": [
+     -0.11345,
+     -0.07188
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.07955,
+    "ci90_c1": [
+     -0.09648,
+     -0.06339
+    ],
+    "margin_c2": -0.08459,
+    "ci90_c2": [
+     -0.10444,
+     -0.06523
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.08433,
+    "ci90_c1": [
+     -0.10155,
+     -0.06804
+    ],
+    "margin_c2": -0.09509,
+    "ci90_c2": [
+     -0.11762,
+     -0.07323
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.05847,
+    "ci90_c1": [
+     -0.07673,
+     -0.04075
+    ],
+    "margin_c2": -0.06236,
+    "ci90_c2": [
+     -0.08438,
+     -0.04066
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.00211,
+     0.00789
+    ],
+    "margin_c2": 0.00763,
+    "ci90_c2": [
+     0.00122,
+     0.01422
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.00186,
+    "ci90_c1": [
+     -0.00618,
+     0.00228
+    ],
+    "margin_c2": -0.00288,
+    "ci90_c2": [
+     -0.00933,
+     0.00333
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.024,
+    "ci90_c1": [
+     0.01601,
+     0.03239
+    ],
+    "margin_c2": 0.02986,
+    "ci90_c2": [
+     0.01787,
+     0.0439
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.00478,
+    "ci90_c1": [
+     -0.00912,
+     -0.00071
+    ],
+    "margin_c2": -0.0105,
+    "ci90_c2": [
+     -0.01766,
+     -0.00422
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.02108,
+    "ci90_c1": [
+     0.01243,
+     0.0304
+    ],
+    "margin_c2": 0.02223,
+    "ci90_c2": [
+     0.0086,
+     0.03725
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.02585,
+    "ci90_c1": [
+     0.01648,
+     0.03579
+    ],
+    "margin_c2": 0.03274,
+    "ci90_c2": [
+     0.0182,
+     0.04863
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.08247,
+    "ci90_c1": [
+     -0.09947,
+     -0.06631
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.07955,
+    "ci90_c1": [
+     -0.09648,
+     -0.06339
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.08433,
+    "ci90_c1": [
+     -0.10155,
+     -0.06804
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.05847,
+    "ci90_c1": [
+     -0.07673,
+     -0.04075
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.00211,
+     0.00789
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00186,
+    "ci90_c1": [
+     -0.00618,
+     0.00228
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.024,
+    "ci90_c1": [
+     0.01601,
+     0.03239
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00478,
+    "ci90_c1": [
+     -0.00912,
+     -0.00071
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.02108,
+    "ci90_c1": [
+     0.01243,
+     0.0304
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.02585,
+    "ci90_c1": [
+     0.01648,
+     0.03579
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.08247,
+    "ci90_c1": [
+     -0.09947,
+     -0.06631
+    ],
+    "margin_c2": -0.06592,
+    "ci90_c2": [
+     -0.08304,
+     -0.05038
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.07955,
+    "ci90_c1": [
+     -0.09648,
+     -0.06339
+    ],
+    "margin_c2": -0.06301,
+    "ci90_c2": [
+     -0.07926,
+     -0.04837
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.08433,
+    "ci90_c1": [
+     -0.10155,
+     -0.06804
+    ],
+    "margin_c2": -0.06798,
+    "ci90_c2": [
+     -0.08475,
+     -0.05247
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.05847,
+    "ci90_c1": [
+     -0.07673,
+     -0.04075
+    ],
+    "margin_c2": -0.0473,
+    "ci90_c2": [
+     -0.06533,
+     -0.03049
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.00211,
+     0.00789
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.001,
+     0.00682
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00186,
+    "ci90_c1": [
+     -0.00618,
+     0.00228
+    ],
+    "margin_c2": -0.00205,
+    "ci90_c2": [
+     -0.00576,
+     0.00136
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.024,
+    "ci90_c1": [
+     0.01601,
+     0.03239
+    ],
+    "margin_c2": 0.01862,
+    "ci90_c2": [
+     0.01106,
+     0.02706
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00478,
+    "ci90_c1": [
+     -0.00912,
+     -0.00071
+    ],
+    "margin_c2": -0.00497,
+    "ci90_c2": [
+     -0.00845,
+     -0.00178
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.02108,
+    "ci90_c1": [
+     0.01243,
+     0.0304
+    ],
+    "margin_c2": 0.01571,
+    "ci90_c2": [
+     0.00693,
+     0.02529
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.02585,
+    "ci90_c1": [
+     0.01648,
+     0.03579
+    ],
+    "margin_c2": 0.02067,
+    "ci90_c2": [
+     0.0116,
+     0.03066
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.08247,
+    "ci90_c1": [
+     -0.09947,
+     -0.06631
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.07955,
+    "ci90_c1": [
+     -0.09648,
+     -0.06339
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.08433,
+    "ci90_c1": [
+     -0.10155,
+     -0.06804
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.05847,
+    "ci90_c1": [
+     -0.07673,
+     -0.04075
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.00211,
+     0.00789
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00186,
+    "ci90_c1": [
+     -0.00618,
+     0.00228
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.024,
+    "ci90_c1": [
+     0.01601,
+     0.03239
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00478,
+    "ci90_c1": [
+     -0.00912,
+     -0.00071
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.02108,
+    "ci90_c1": [
+     0.01243,
+     0.0304
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.02585,
+    "ci90_c1": [
+     0.01648,
+     0.03579
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.08247,
+    "ci90_c1": [
+     -0.09947,
+     -0.06631
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.07955,
+    "ci90_c1": [
+     -0.09648,
+     -0.06339
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.08433,
+    "ci90_c1": [
+     -0.10155,
+     -0.06804
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.05847,
+    "ci90_c1": [
+     -0.07673,
+     -0.04075
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.00211,
+     0.00789
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00186,
+    "ci90_c1": [
+     -0.00618,
+     0.00228
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.024,
+    "ci90_c1": [
+     0.01601,
+     0.03239
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00478,
+    "ci90_c1": [
+     -0.00912,
+     -0.00071
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.02108,
+    "ci90_c1": [
+     0.01243,
+     0.0304
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.02585,
+    "ci90_c1": [
+     0.01648,
+     0.03579
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.13697,
+    "ci90_c1": [
+     -0.21757,
+     -0.06382
+    ],
+    "margin_c2": -0.26085,
+    "ci90_c2": [
+     -0.3246,
+     -0.1994
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.12922,
+    "ci90_c1": [
+     -0.21203,
+     -0.05349
+    ],
+    "margin_c2": -0.25778,
+    "ci90_c2": [
+     -0.3174,
+     -0.20021
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.14085,
+    "ci90_c1": [
+     -0.22097,
+     -0.06899
+    ],
+    "margin_c2": -0.2712,
+    "ci90_c2": [
+     -0.33525,
+     -0.20995
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.08154,
+    "ci90_c1": [
+     -0.16759,
+     -0.00284
+    ],
+    "margin_c2": -0.18665,
+    "ci90_c2": [
+     -0.25271,
+     -0.12182
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.00775,
+    "ci90_c1": [
+     -0.00775,
+     0.03101
+    ],
+    "margin_c2": 0.00307,
+    "ci90_c2": [
+     -0.01767,
+     0.02355
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.00388,
+    "ci90_c1": [
+     -0.01163,
+     0.0
+    ],
+    "margin_c2": -0.01035,
+    "ci90_c2": [
+     -0.02606,
+     0.00522
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.05543,
+    "ci90_c1": [
+     0.01473,
+     0.10194
+    ],
+    "margin_c2": 0.0742,
+    "ci90_c2": [
+     0.03941,
+     0.11247
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": -0.01163,
+    "ci90_c1": [
+     -0.03488,
+     0.0
+    ],
+    "margin_c2": -0.01342,
+    "ci90_c2": [
+     -0.03432,
+     0.00733
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.04767,
+    "ci90_c1": [
+     0.00116,
+     0.09884
+    ],
+    "margin_c2": 0.07113,
+    "ci90_c2": [
+     0.03421,
+     0.11205
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'recip_rank') -> ('graded', 'ndcg_cut_5')": {
+    "margin_c1": 0.0593,
+    "ci90_c1": [
+     0.0186,
+     0.10581
+    ],
+    "margin_c2": 0.08455,
+    "ci90_c2": [
+     0.04638,
+     0.12602
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.13697,
+    "ci90_c1": [
+     -0.21757,
+     -0.06382
+    ],
+    "margin_c2": -0.23643,
+    "ci90_c2": [
+     -0.29502,
+     -0.18033
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.12922,
+    "ci90_c1": [
+     -0.21203,
+     -0.05349
+    ],
+    "margin_c2": -0.2339,
+    "ci90_c2": [
+     -0.28852,
+     -0.18104
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.14085,
+    "ci90_c1": [
+     -0.22097,
+     -0.06899
+    ],
+    "margin_c2": -0.24065,
+    "ci90_c2": [
+     -0.29688,
+     -0.18669
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.08154,
+    "ci90_c1": [
+     -0.16759,
+     -0.00284
+    ],
+    "margin_c2": -0.1587,
+    "ci90_c2": [
+     -0.21703,
+     -0.10203
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.00775,
+    "ci90_c1": [
+     -0.00775,
+     0.03101
+    ],
+    "margin_c2": 0.00253,
+    "ci90_c2": [
+     -0.01775,
+     0.02219
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.00388,
+    "ci90_c1": [
+     -0.01163,
+     0.0
+    ],
+    "margin_c2": -0.00422,
+    "ci90_c2": [
+     -0.01993,
+     0.01093
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.05543,
+    "ci90_c1": [
+     0.01473,
+     0.10194
+    ],
+    "margin_c2": 0.07773,
+    "ci90_c2": [
+     0.04269,
+     0.11668
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.01163,
+    "ci90_c1": [
+     -0.03488,
+     0.0
+    ],
+    "margin_c2": -0.00675,
+    "ci90_c2": [
+     -0.02452,
+     0.01113
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.04767,
+    "ci90_c1": [
+     0.00116,
+     0.09884
+    ],
+    "margin_c2": 0.0752,
+    "ci90_c2": [
+     0.03916,
+     0.11397
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.0593,
+    "ci90_c1": [
+     0.0186,
+     0.10581
+    ],
+    "margin_c2": 0.08194,
+    "ci90_c2": [
+     0.04864,
+     0.11757
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.13697,
+    "ci90_c1": [
+     -0.21757,
+     -0.06382
+    ],
+    "margin_c2": -0.09222,
+    "ci90_c2": [
+     -0.11345,
+     -0.07188
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.12922,
+    "ci90_c1": [
+     -0.21203,
+     -0.05349
+    ],
+    "margin_c2": -0.08459,
+    "ci90_c2": [
+     -0.10444,
+     -0.06523
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.14085,
+    "ci90_c1": [
+     -0.22097,
+     -0.06899
+    ],
+    "margin_c2": -0.09509,
+    "ci90_c2": [
+     -0.11762,
+     -0.07323
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.08154,
+    "ci90_c1": [
+     -0.16759,
+     -0.00284
+    ],
+    "margin_c2": -0.06236,
+    "ci90_c2": [
+     -0.08438,
+     -0.04066
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.00775,
+    "ci90_c1": [
+     -0.00775,
+     0.03101
+    ],
+    "margin_c2": 0.00763,
+    "ci90_c2": [
+     0.00122,
+     0.01422
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.00388,
+    "ci90_c1": [
+     -0.01163,
+     0.0
+    ],
+    "margin_c2": -0.00288,
+    "ci90_c2": [
+     -0.00933,
+     0.00333
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.05543,
+    "ci90_c1": [
+     0.01473,
+     0.10194
+    ],
+    "margin_c2": 0.02986,
+    "ci90_c2": [
+     0.01787,
+     0.0439
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.01163,
+    "ci90_c1": [
+     -0.03488,
+     0.0
+    ],
+    "margin_c2": -0.0105,
+    "ci90_c2": [
+     -0.01766,
+     -0.00422
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.04767,
+    "ci90_c1": [
+     0.00116,
+     0.09884
+    ],
+    "margin_c2": 0.02223,
+    "ci90_c2": [
+     0.0086,
+     0.03725
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'recip_rank') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.0593,
+    "ci90_c1": [
+     0.0186,
+     0.10581
+    ],
+    "margin_c2": 0.03274,
+    "ci90_c2": [
+     0.0182,
+     0.04863
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": -0.13697,
+    "ci90_c1": [
+     -0.21757,
+     -0.06382
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": -0.12922,
+    "ci90_c1": [
+     -0.21203,
+     -0.05349
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": -0.14085,
+    "ci90_c1": [
+     -0.22097,
+     -0.06899
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": -0.08154,
+    "ci90_c1": [
+     -0.16759,
+     -0.00284
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": 0.00775,
+    "ci90_c1": [
+     -0.00775,
+     0.03101
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00388,
+    "ci90_c1": [
+     -0.01163,
+     0.0
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": 0.05543,
+    "ci90_c1": [
+     0.01473,
+     0.10194
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": -0.01163,
+    "ci90_c1": [
+     -0.03488,
+     0.0
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": 0.04767,
+    "ci90_c1": [
+     0.00116,
+     0.09884
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'recip_rank') -> ('binary', 'bpref')": {
+    "margin_c1": 0.0593,
+    "ci90_c1": [
+     0.0186,
+     0.10581
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.13697,
+    "ci90_c1": [
+     -0.21757,
+     -0.06382
+    ],
+    "margin_c2": -0.06592,
+    "ci90_c2": [
+     -0.08304,
+     -0.05038
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.12922,
+    "ci90_c1": [
+     -0.21203,
+     -0.05349
+    ],
+    "margin_c2": -0.06301,
+    "ci90_c2": [
+     -0.07926,
+     -0.04837
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.14085,
+    "ci90_c1": [
+     -0.22097,
+     -0.06899
+    ],
+    "margin_c2": -0.06798,
+    "ci90_c2": [
+     -0.08475,
+     -0.05247
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.08154,
+    "ci90_c1": [
+     -0.16759,
+     -0.00284
+    ],
+    "margin_c2": -0.0473,
+    "ci90_c2": [
+     -0.06533,
+     -0.03049
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.00775,
+    "ci90_c1": [
+     -0.00775,
+     0.03101
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.001,
+     0.00682
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00388,
+    "ci90_c1": [
+     -0.01163,
+     0.0
+    ],
+    "margin_c2": -0.00205,
+    "ci90_c2": [
+     -0.00576,
+     0.00136
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.05543,
+    "ci90_c1": [
+     0.01473,
+     0.10194
+    ],
+    "margin_c2": 0.01862,
+    "ci90_c2": [
+     0.01106,
+     0.02706
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.01163,
+    "ci90_c1": [
+     -0.03488,
+     0.0
+    ],
+    "margin_c2": -0.00497,
+    "ci90_c2": [
+     -0.00845,
+     -0.00178
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.04767,
+    "ci90_c1": [
+     0.00116,
+     0.09884
+    ],
+    "margin_c2": 0.01571,
+    "ci90_c2": [
+     0.00693,
+     0.02529
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.0593,
+    "ci90_c1": [
+     0.0186,
+     0.10581
+    ],
+    "margin_c2": 0.02067,
+    "ci90_c2": [
+     0.0116,
+     0.03066
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.13697,
+    "ci90_c1": [
+     -0.21757,
+     -0.06382
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.12922,
+    "ci90_c1": [
+     -0.21203,
+     -0.05349
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.14085,
+    "ci90_c1": [
+     -0.22097,
+     -0.06899
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.08154,
+    "ci90_c1": [
+     -0.16759,
+     -0.00284
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00775,
+    "ci90_c1": [
+     -0.00775,
+     0.03101
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00388,
+    "ci90_c1": [
+     -0.01163,
+     0.0
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.05543,
+    "ci90_c1": [
+     0.01473,
+     0.10194
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.01163,
+    "ci90_c1": [
+     -0.03488,
+     0.0
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.04767,
+    "ci90_c1": [
+     0.00116,
+     0.09884
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'recip_rank') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.0593,
+    "ci90_c1": [
+     0.0186,
+     0.10581
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.13697,
+    "ci90_c1": [
+     -0.21757,
+     -0.06382
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.12922,
+    "ci90_c1": [
+     -0.21203,
+     -0.05349
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.14085,
+    "ci90_c1": [
+     -0.22097,
+     -0.06899
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.08154,
+    "ci90_c1": [
+     -0.16759,
+     -0.00284
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00775,
+    "ci90_c1": [
+     -0.00775,
+     0.03101
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00388,
+    "ci90_c1": [
+     -0.01163,
+     0.0
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.05543,
+    "ci90_c1": [
+     0.01473,
+     0.10194
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.01163,
+    "ci90_c1": [
+     -0.03488,
+     0.0
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.04767,
+    "ci90_c1": [
+     0.00116,
+     0.09884
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.0593,
+    "ci90_c1": [
+     0.0186,
+     0.10581
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.26085,
+    "ci90_c1": [
+     -0.3246,
+     -0.1994
+    ],
+    "margin_c2": -0.23643,
+    "ci90_c2": [
+     -0.29502,
+     -0.18033
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.25778,
+    "ci90_c1": [
+     -0.3174,
+     -0.20021
+    ],
+    "margin_c2": -0.2339,
+    "ci90_c2": [
+     -0.28852,
+     -0.18104
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.2712,
+    "ci90_c1": [
+     -0.33525,
+     -0.20995
+    ],
+    "margin_c2": -0.24065,
+    "ci90_c2": [
+     -0.29688,
+     -0.18669
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.18665,
+    "ci90_c1": [
+     -0.25271,
+     -0.12182
+    ],
+    "margin_c2": -0.1587,
+    "ci90_c2": [
+     -0.21703,
+     -0.10203
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.00307,
+    "ci90_c1": [
+     -0.01767,
+     0.02355
+    ],
+    "margin_c2": 0.00253,
+    "ci90_c2": [
+     -0.01775,
+     0.02219
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.01035,
+    "ci90_c1": [
+     -0.02606,
+     0.00522
+    ],
+    "margin_c2": -0.00422,
+    "ci90_c2": [
+     -0.01993,
+     0.01093
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.0742,
+    "ci90_c1": [
+     0.03941,
+     0.11247
+    ],
+    "margin_c2": 0.07773,
+    "ci90_c2": [
+     0.04269,
+     0.11668
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": -0.01342,
+    "ci90_c1": [
+     -0.03432,
+     0.00733
+    ],
+    "margin_c2": -0.00675,
+    "ci90_c2": [
+     -0.02452,
+     0.01113
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.07113,
+    "ci90_c1": [
+     0.03421,
+     0.11205
+    ],
+    "margin_c2": 0.0752,
+    "ci90_c2": [
+     0.03916,
+     0.11397
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_10')": {
+    "margin_c1": 0.08455,
+    "ci90_c1": [
+     0.04638,
+     0.12602
+    ],
+    "margin_c2": 0.08194,
+    "ci90_c2": [
+     0.04864,
+     0.11757
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.26085,
+    "ci90_c1": [
+     -0.3246,
+     -0.1994
+    ],
+    "margin_c2": -0.09222,
+    "ci90_c2": [
+     -0.11345,
+     -0.07188
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.25778,
+    "ci90_c1": [
+     -0.3174,
+     -0.20021
+    ],
+    "margin_c2": -0.08459,
+    "ci90_c2": [
+     -0.10444,
+     -0.06523
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.2712,
+    "ci90_c1": [
+     -0.33525,
+     -0.20995
+    ],
+    "margin_c2": -0.09509,
+    "ci90_c2": [
+     -0.11762,
+     -0.07323
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.18665,
+    "ci90_c1": [
+     -0.25271,
+     -0.12182
+    ],
+    "margin_c2": -0.06236,
+    "ci90_c2": [
+     -0.08438,
+     -0.04066
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.00307,
+    "ci90_c1": [
+     -0.01767,
+     0.02355
+    ],
+    "margin_c2": 0.00763,
+    "ci90_c2": [
+     0.00122,
+     0.01422
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.01035,
+    "ci90_c1": [
+     -0.02606,
+     0.00522
+    ],
+    "margin_c2": -0.00288,
+    "ci90_c2": [
+     -0.00933,
+     0.00333
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.0742,
+    "ci90_c1": [
+     0.03941,
+     0.11247
+    ],
+    "margin_c2": 0.02986,
+    "ci90_c2": [
+     0.01787,
+     0.0439
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.01342,
+    "ci90_c1": [
+     -0.03432,
+     0.00733
+    ],
+    "margin_c2": -0.0105,
+    "ci90_c2": [
+     -0.01766,
+     -0.00422
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.07113,
+    "ci90_c1": [
+     0.03421,
+     0.11205
+    ],
+    "margin_c2": 0.02223,
+    "ci90_c2": [
+     0.0086,
+     0.03725
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.08455,
+    "ci90_c1": [
+     0.04638,
+     0.12602
+    ],
+    "margin_c2": 0.03274,
+    "ci90_c2": [
+     0.0182,
+     0.04863
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": -0.26085,
+    "ci90_c1": [
+     -0.3246,
+     -0.1994
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": -0.25778,
+    "ci90_c1": [
+     -0.3174,
+     -0.20021
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": -0.2712,
+    "ci90_c1": [
+     -0.33525,
+     -0.20995
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": -0.18665,
+    "ci90_c1": [
+     -0.25271,
+     -0.12182
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": 0.00307,
+    "ci90_c1": [
+     -0.01767,
+     0.02355
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": -0.01035,
+    "ci90_c1": [
+     -0.02606,
+     0.00522
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": 0.0742,
+    "ci90_c1": [
+     0.03941,
+     0.11247
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": -0.01342,
+    "ci90_c1": [
+     -0.03432,
+     0.00733
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": 0.07113,
+    "ci90_c1": [
+     0.03421,
+     0.11205
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'bpref')": {
+    "margin_c1": 0.08455,
+    "ci90_c1": [
+     0.04638,
+     0.12602
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.26085,
+    "ci90_c1": [
+     -0.3246,
+     -0.1994
+    ],
+    "margin_c2": -0.06592,
+    "ci90_c2": [
+     -0.08304,
+     -0.05038
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.25778,
+    "ci90_c1": [
+     -0.3174,
+     -0.20021
+    ],
+    "margin_c2": -0.06301,
+    "ci90_c2": [
+     -0.07926,
+     -0.04837
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.2712,
+    "ci90_c1": [
+     -0.33525,
+     -0.20995
+    ],
+    "margin_c2": -0.06798,
+    "ci90_c2": [
+     -0.08475,
+     -0.05247
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.18665,
+    "ci90_c1": [
+     -0.25271,
+     -0.12182
+    ],
+    "margin_c2": -0.0473,
+    "ci90_c2": [
+     -0.06533,
+     -0.03049
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.00307,
+    "ci90_c1": [
+     -0.01767,
+     0.02355
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.001,
+     0.00682
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.01035,
+    "ci90_c1": [
+     -0.02606,
+     0.00522
+    ],
+    "margin_c2": -0.00205,
+    "ci90_c2": [
+     -0.00576,
+     0.00136
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.0742,
+    "ci90_c1": [
+     0.03941,
+     0.11247
+    ],
+    "margin_c2": 0.01862,
+    "ci90_c2": [
+     0.01106,
+     0.02706
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.01342,
+    "ci90_c1": [
+     -0.03432,
+     0.00733
+    ],
+    "margin_c2": -0.00497,
+    "ci90_c2": [
+     -0.00845,
+     -0.00178
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.07113,
+    "ci90_c1": [
+     0.03421,
+     0.11205
+    ],
+    "margin_c2": 0.01571,
+    "ci90_c2": [
+     0.00693,
+     0.02529
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.08455,
+    "ci90_c1": [
+     0.04638,
+     0.12602
+    ],
+    "margin_c2": 0.02067,
+    "ci90_c2": [
+     0.0116,
+     0.03066
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.26085,
+    "ci90_c1": [
+     -0.3246,
+     -0.1994
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.25778,
+    "ci90_c1": [
+     -0.3174,
+     -0.20021
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.2712,
+    "ci90_c1": [
+     -0.33525,
+     -0.20995
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.18665,
+    "ci90_c1": [
+     -0.25271,
+     -0.12182
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00307,
+    "ci90_c1": [
+     -0.01767,
+     0.02355
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.01035,
+    "ci90_c1": [
+     -0.02606,
+     0.00522
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.0742,
+    "ci90_c1": [
+     0.03941,
+     0.11247
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.01342,
+    "ci90_c1": [
+     -0.03432,
+     0.00733
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.07113,
+    "ci90_c1": [
+     0.03421,
+     0.11205
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.08455,
+    "ci90_c1": [
+     0.04638,
+     0.12602
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.26085,
+    "ci90_c1": [
+     -0.3246,
+     -0.1994
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.25778,
+    "ci90_c1": [
+     -0.3174,
+     -0.20021
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.2712,
+    "ci90_c1": [
+     -0.33525,
+     -0.20995
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.18665,
+    "ci90_c1": [
+     -0.25271,
+     -0.12182
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00307,
+    "ci90_c1": [
+     -0.01767,
+     0.02355
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.01035,
+    "ci90_c1": [
+     -0.02606,
+     0.00522
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.0742,
+    "ci90_c1": [
+     0.03941,
+     0.11247
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.01342,
+    "ci90_c1": [
+     -0.03432,
+     0.00733
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.07113,
+    "ci90_c1": [
+     0.03421,
+     0.11205
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('graded', 'ndcg_cut_5') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.08455,
+    "ci90_c1": [
+     0.04638,
+     0.12602
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.23643,
+    "ci90_c1": [
+     -0.29502,
+     -0.18033
+    ],
+    "margin_c2": -0.09222,
+    "ci90_c2": [
+     -0.11345,
+     -0.07188
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.2339,
+    "ci90_c1": [
+     -0.28852,
+     -0.18104
+    ],
+    "margin_c2": -0.08459,
+    "ci90_c2": [
+     -0.10444,
+     -0.06523
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.24065,
+    "ci90_c1": [
+     -0.29688,
+     -0.18669
+    ],
+    "margin_c2": -0.09509,
+    "ci90_c2": [
+     -0.11762,
+     -0.07323
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.1587,
+    "ci90_c1": [
+     -0.21703,
+     -0.10203
+    ],
+    "margin_c2": -0.06236,
+    "ci90_c2": [
+     -0.08438,
+     -0.04066
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.00253,
+    "ci90_c1": [
+     -0.01775,
+     0.02219
+    ],
+    "margin_c2": 0.00763,
+    "ci90_c2": [
+     0.00122,
+     0.01422
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.00422,
+    "ci90_c1": [
+     -0.01993,
+     0.01093
+    ],
+    "margin_c2": -0.00288,
+    "ci90_c2": [
+     -0.00933,
+     0.00333
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.07773,
+    "ci90_c1": [
+     0.04269,
+     0.11668
+    ],
+    "margin_c2": 0.02986,
+    "ci90_c2": [
+     0.01787,
+     0.0439
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": -0.00675,
+    "ci90_c1": [
+     -0.02452,
+     0.01113
+    ],
+    "margin_c2": -0.0105,
+    "ci90_c2": [
+     -0.01766,
+     -0.00422
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.0752,
+    "ci90_c1": [
+     0.03916,
+     0.11397
+    ],
+    "margin_c2": 0.02223,
+    "ci90_c2": [
+     0.0086,
+     0.03725
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'map_cut_100')": {
+    "margin_c1": 0.08194,
+    "ci90_c1": [
+     0.04864,
+     0.11757
+    ],
+    "margin_c2": 0.03274,
+    "ci90_c2": [
+     0.0182,
+     0.04863
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.23643,
+    "ci90_c1": [
+     -0.29502,
+     -0.18033
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.2339,
+    "ci90_c1": [
+     -0.28852,
+     -0.18104
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.24065,
+    "ci90_c1": [
+     -0.29688,
+     -0.18669
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.1587,
+    "ci90_c1": [
+     -0.21703,
+     -0.10203
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": 0.00253,
+    "ci90_c1": [
+     -0.01775,
+     0.02219
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00422,
+    "ci90_c1": [
+     -0.01993,
+     0.01093
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": 0.07773,
+    "ci90_c1": [
+     0.04269,
+     0.11668
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00675,
+    "ci90_c1": [
+     -0.02452,
+     0.01113
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": 0.0752,
+    "ci90_c1": [
+     0.03916,
+     0.11397
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'bpref')": {
+    "margin_c1": 0.08194,
+    "ci90_c1": [
+     0.04864,
+     0.11757
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.23643,
+    "ci90_c1": [
+     -0.29502,
+     -0.18033
+    ],
+    "margin_c2": -0.06592,
+    "ci90_c2": [
+     -0.08304,
+     -0.05038
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.2339,
+    "ci90_c1": [
+     -0.28852,
+     -0.18104
+    ],
+    "margin_c2": -0.06301,
+    "ci90_c2": [
+     -0.07926,
+     -0.04837
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.24065,
+    "ci90_c1": [
+     -0.29688,
+     -0.18669
+    ],
+    "margin_c2": -0.06798,
+    "ci90_c2": [
+     -0.08475,
+     -0.05247
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.1587,
+    "ci90_c1": [
+     -0.21703,
+     -0.10203
+    ],
+    "margin_c2": -0.0473,
+    "ci90_c2": [
+     -0.06533,
+     -0.03049
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.00253,
+    "ci90_c1": [
+     -0.01775,
+     0.02219
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.001,
+     0.00682
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00422,
+    "ci90_c1": [
+     -0.01993,
+     0.01093
+    ],
+    "margin_c2": -0.00205,
+    "ci90_c2": [
+     -0.00576,
+     0.00136
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.07773,
+    "ci90_c1": [
+     0.04269,
+     0.11668
+    ],
+    "margin_c2": 0.01862,
+    "ci90_c2": [
+     0.01106,
+     0.02706
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00675,
+    "ci90_c1": [
+     -0.02452,
+     0.01113
+    ],
+    "margin_c2": -0.00497,
+    "ci90_c2": [
+     -0.00845,
+     -0.00178
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.0752,
+    "ci90_c1": [
+     0.03916,
+     0.11397
+    ],
+    "margin_c2": 0.01571,
+    "ci90_c2": [
+     0.00693,
+     0.02529
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.08194,
+    "ci90_c1": [
+     0.04864,
+     0.11757
+    ],
+    "margin_c2": 0.02067,
+    "ci90_c2": [
+     0.0116,
+     0.03066
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.23643,
+    "ci90_c1": [
+     -0.29502,
+     -0.18033
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.2339,
+    "ci90_c1": [
+     -0.28852,
+     -0.18104
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.24065,
+    "ci90_c1": [
+     -0.29688,
+     -0.18669
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.1587,
+    "ci90_c1": [
+     -0.21703,
+     -0.10203
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00253,
+    "ci90_c1": [
+     -0.01775,
+     0.02219
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00422,
+    "ci90_c1": [
+     -0.01993,
+     0.01093
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.07773,
+    "ci90_c1": [
+     0.04269,
+     0.11668
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00675,
+    "ci90_c1": [
+     -0.02452,
+     0.01113
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.0752,
+    "ci90_c1": [
+     0.03916,
+     0.11397
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.08194,
+    "ci90_c1": [
+     0.04864,
+     0.11757
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.23643,
+    "ci90_c1": [
+     -0.29502,
+     -0.18033
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.2339,
+    "ci90_c1": [
+     -0.28852,
+     -0.18104
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.24065,
+    "ci90_c1": [
+     -0.29688,
+     -0.18669
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.1587,
+    "ci90_c1": [
+     -0.21703,
+     -0.10203
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00253,
+    "ci90_c1": [
+     -0.01775,
+     0.02219
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00422,
+    "ci90_c1": [
+     -0.01993,
+     0.01093
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.07773,
+    "ci90_c1": [
+     0.04269,
+     0.11668
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00675,
+    "ci90_c1": [
+     -0.02452,
+     0.01113
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.0752,
+    "ci90_c1": [
+     0.03916,
+     0.11397
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'ndcg_cut_10') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.08194,
+    "ci90_c1": [
+     0.04864,
+     0.11757
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.05404,
+    "ci90_c2": [
+     -0.07207,
+     -0.03746
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.05178,
+    "ci90_c2": [
+     -0.06895,
+     -0.03582
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.05895,
+    "ci90_c2": [
+     -0.07805,
+     -0.04122
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.04174,
+    "ci90_c2": [
+     -0.05817,
+     -0.02647
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00226,
+    "ci90_c2": [
+     -0.00279,
+     0.00752
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00491,
+    "ci90_c2": [
+     -0.01002,
+     -0.00035
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.01231,
+    "ci90_c2": [
+     0.00524,
+     0.02033
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.00717,
+    "ci90_c2": [
+     -0.01351,
+     -0.00158
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.01004,
+    "ci90_c2": [
+     0.00208,
+     0.01873
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'map_cut_100') -> ('binary', 'bpref')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.01722,
+    "ci90_c2": [
+     0.00736,
+     0.02832
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.06592,
+    "ci90_c2": [
+     -0.08304,
+     -0.05038
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.06301,
+    "ci90_c2": [
+     -0.07926,
+     -0.04837
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.06798,
+    "ci90_c2": [
+     -0.08475,
+     -0.05247
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.0473,
+    "ci90_c2": [
+     -0.06533,
+     -0.03049
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.001,
+     0.00682
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00205,
+    "ci90_c2": [
+     -0.00576,
+     0.00136
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.01862,
+    "ci90_c2": [
+     0.01106,
+     0.02706
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.00497,
+    "ci90_c2": [
+     -0.00845,
+     -0.00178
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.01571,
+    "ci90_c2": [
+     0.00693,
+     0.02529
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.02067,
+    "ci90_c2": [
+     0.0116,
+     0.03066
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'map_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.09222,
+    "ci90_c1": [
+     -0.11345,
+     -0.07188
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.08459,
+    "ci90_c1": [
+     -0.10444,
+     -0.06523
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.09509,
+    "ci90_c1": [
+     -0.11762,
+     -0.07323
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.06236,
+    "ci90_c1": [
+     -0.08438,
+     -0.04066
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00763,
+    "ci90_c1": [
+     0.00122,
+     0.01422
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00288,
+    "ci90_c1": [
+     -0.00933,
+     0.00333
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.02986,
+    "ci90_c1": [
+     0.01787,
+     0.0439
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.0105,
+    "ci90_c1": [
+     -0.01766,
+     -0.00422
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.02223,
+    "ci90_c1": [
+     0.0086,
+     0.03725
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'map_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.03274,
+    "ci90_c1": [
+     0.0182,
+     0.04863
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.06592,
+    "ci90_c2": [
+     -0.08304,
+     -0.05038
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.06301,
+    "ci90_c2": [
+     -0.07926,
+     -0.04837
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.06798,
+    "ci90_c2": [
+     -0.08475,
+     -0.05247
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.0473,
+    "ci90_c2": [
+     -0.06533,
+     -0.03049
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00292,
+    "ci90_c2": [
+     -0.001,
+     0.00682
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00205,
+    "ci90_c2": [
+     -0.00576,
+     0.00136
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.01862,
+    "ci90_c2": [
+     0.01106,
+     0.02706
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.00497,
+    "ci90_c2": [
+     -0.00845,
+     -0.00178
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|biencoder: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.01571,
+    "ci90_c2": [
+     0.00693,
+     0.02529
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'bpref') -> ('binary', 'ndcg_cut_100')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.02067,
+    "ci90_c2": [
+     0.0116,
+     0.03066
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'bpref') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.05404,
+    "ci90_c1": [
+     -0.07207,
+     -0.03746
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.05178,
+    "ci90_c1": [
+     -0.06895,
+     -0.03582
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.05895,
+    "ci90_c1": [
+     -0.07805,
+     -0.04122
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.04174,
+    "ci90_c1": [
+     -0.05817,
+     -0.02647
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00226,
+    "ci90_c1": [
+     -0.00279,
+     0.00752
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00491,
+    "ci90_c1": [
+     -0.01002,
+     -0.00035
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.01231,
+    "ci90_c1": [
+     0.00524,
+     0.02033
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00717,
+    "ci90_c1": [
+     -0.01351,
+     -0.00158
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.01004,
+    "ci90_c1": [
+     0.00208,
+     0.01873
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'bpref') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.01722,
+    "ci90_c1": [
+     0.00736,
+     0.02832
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.06592,
+    "ci90_c1": [
+     -0.08304,
+     -0.05038
+    ],
+    "margin_c2": -0.13697,
+    "ci90_c2": [
+     -0.21757,
+     -0.06382
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.06301,
+    "ci90_c1": [
+     -0.07926,
+     -0.04837
+    ],
+    "margin_c2": -0.12922,
+    "ci90_c2": [
+     -0.21203,
+     -0.05349
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.06798,
+    "ci90_c1": [
+     -0.08475,
+     -0.05247
+    ],
+    "margin_c2": -0.14085,
+    "ci90_c2": [
+     -0.22097,
+     -0.06899
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.0473,
+    "ci90_c1": [
+     -0.06533,
+     -0.03049
+    ],
+    "margin_c2": -0.08154,
+    "ci90_c2": [
+     -0.16759,
+     -0.00284
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.001,
+     0.00682
+    ],
+    "margin_c2": 0.00775,
+    "ci90_c2": [
+     -0.00775,
+     0.03101
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00205,
+    "ci90_c1": [
+     -0.00576,
+     0.00136
+    ],
+    "margin_c2": -0.00388,
+    "ci90_c2": [
+     -0.01163,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.01862,
+    "ci90_c1": [
+     0.01106,
+     0.02706
+    ],
+    "margin_c2": 0.05543,
+    "ci90_c2": [
+     0.01473,
+     0.10194
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": -0.00497,
+    "ci90_c1": [
+     -0.00845,
+     -0.00178
+    ],
+    "margin_c2": -0.01163,
+    "ci90_c2": [
+     -0.03488,
+     0.0
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.01571,
+    "ci90_c1": [
+     0.00693,
+     0.02529
+    ],
+    "margin_c2": 0.04767,
+    "ci90_c2": [
+     0.00116,
+     0.09884
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'ndcg_cut_100') -> ('binary', 'recip_rank')": {
+    "margin_c1": 0.02067,
+    "ci90_c1": [
+     0.0116,
+     0.03066
+    ],
+    "margin_c2": 0.0593,
+    "ci90_c2": [
+     0.0186,
+     0.10581
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.06592,
+    "ci90_c1": [
+     -0.08304,
+     -0.05038
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.06301,
+    "ci90_c1": [
+     -0.07926,
+     -0.04837
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.06798,
+    "ci90_c1": [
+     -0.08475,
+     -0.05247
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.0473,
+    "ci90_c1": [
+     -0.06533,
+     -0.03049
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00292,
+    "ci90_c1": [
+     -0.001,
+     0.00682
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00205,
+    "ci90_c1": [
+     -0.00576,
+     0.00136
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.01862,
+    "ci90_c1": [
+     0.01106,
+     0.02706
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00497,
+    "ci90_c1": [
+     -0.00845,
+     -0.00178
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.01571,
+    "ci90_c1": [
+     0.00693,
+     0.02529
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'ndcg_cut_100') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.02067,
+    "ci90_c1": [
+     0.0116,
+     0.03066
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|minilm: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.13697,
+    "ci90_c1": [
+     -0.21757,
+     -0.06382
+    ],
+    "margin_c2": -0.24379,
+    "ci90_c2": [
+     -0.3176,
+     -0.17562
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bge: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.12922,
+    "ci90_c1": [
+     -0.21203,
+     -0.05349
+    ],
+    "margin_c2": -0.24299,
+    "ci90_c2": [
+     -0.31003,
+     -0.18011
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|bgelarge: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.14085,
+    "ci90_c1": [
+     -0.22097,
+     -0.06899
+    ],
+    "margin_c2": -0.2528,
+    "ci90_c2": [
+     -0.32254,
+     -0.18866
+    ],
+    "flip_excluded_90": true
+   },
+   "bm25|biencoder: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.08154,
+    "ci90_c1": [
+     -0.16759,
+     -0.00284
+    ],
+    "margin_c2": -0.18407,
+    "ci90_c2": [
+     -0.26081,
+     -0.10956
+    ],
+    "flip_excluded_90": true
+   },
+   "minilm|bge: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.00775,
+    "ci90_c1": [
+     -0.00775,
+     0.03101
+    ],
+    "margin_c2": 0.0008,
+    "ci90_c2": [
+     -0.02643,
+     0.02725
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|bgelarge: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.00388,
+    "ci90_c1": [
+     -0.01163,
+     0.0
+    ],
+    "margin_c2": -0.00901,
+    "ci90_c2": [
+     -0.02396,
+     0.00556
+    ],
+    "flip_excluded_90": false
+   },
+   "minilm|biencoder: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.05543,
+    "ci90_c1": [
+     0.01473,
+     0.10194
+    ],
+    "margin_c2": 0.05972,
+    "ci90_c2": [
+     0.01922,
+     0.10457
+    ],
+    "flip_excluded_90": true
+   },
+   "bge|bgelarge: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": -0.01163,
+    "ci90_c1": [
+     -0.03488,
+     0.0
+    ],
+    "margin_c2": -0.00981,
+    "ci90_c2": [
+     -0.03072,
+     0.01166
+    ],
+    "flip_excluded_90": false
+   },
+   "bge|biencoder: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.04767,
+    "ci90_c1": [
+     0.00116,
+     0.09884
+    ],
+    "margin_c2": 0.05892,
+    "ci90_c2": [
+     0.01428,
+     0.1081
+    ],
+    "flip_excluded_90": true
+   },
+   "bgelarge|biencoder: ('binary', 'recip_rank') -> ('binary', 'ndcg_cut_5')": {
+    "margin_c1": 0.0593,
+    "ci90_c1": [
+     0.0186,
+     0.10581
+    ],
+    "margin_c2": 0.06873,
+    "ci90_c2": [
+     0.02794,
+     0.1137
+    ],
+    "flip_excluded_90": true
+   }
+  },
+  "flip_excluded_pairs": 479,
+  "straddling_pairs": 181,
+  "epsilon_max_by_measure": {
+   "bpref": 0.01351,
+   "map_cut_100": 0.01766,
+   "ndcg_cut_10": 0.02452,
+   "ndcg_cut_100": 0.00912,
+   "ndcg_cut_5": 0.03432,
+   "recip_rank": 0.03488
+  },
+  "headline_ndcg10_trio": {
+   "minilm|bge/graded": {
+    "margin": 0.00088,
+    "ci90": [
+     -0.01703,
+     0.0185
+    ]
+   },
+   "minilm|bgelarge/graded": {
+    "margin": -0.005,
+    "ci90": [
+     -0.01914,
+     0.00918
+    ]
+   },
+   "bge|bgelarge/graded": {
+    "margin": -0.00587,
+    "ci90": [
+     -0.02295,
+     0.01047
+    ]
+   },
+   "minilm|bge/binary": {
+    "margin": 0.00253,
+    "ci90": [
+     -0.01775,
+     0.02219
+    ]
+   },
+   "minilm|bgelarge/binary": {
+    "margin": -0.00422,
+    "ci90": [
+     -0.01993,
+     0.01093
+    ]
+   },
+   "bge|bgelarge/binary": {
+    "margin": -0.00675,
+    "ci90": [
+     -0.02452,
+     0.01113
+    ]
+   }
+  }
+ },
+ "code": {
+  "B": 20000,
+  "seed": 12,
+  "alpha": 90,
+  "contract": "pass@1|fenced|sampled",
+  "pairs": [
+   {
+    "dataset": "humaneval",
+    "pair": "qwen7b|qwen3b",
+    "gold": "base",
+    "margin": 0.1646,
+    "ci90": [
+     0.1098,
+     0.2256
+    ],
+    "n_problems": 164,
+    "flip_excluded_90": true
+   },
+   {
+    "dataset": "humaneval",
+    "pair": "qwen7b|qwen3b",
+    "gold": "base+plus",
+    "margin": 0.1341,
+    "ci90": [
+     0.0732,
+     0.1951
+    ],
+    "n_problems": 164,
+    "flip_excluded_90": true
+   },
+   {
+    "dataset": "humaneval",
+    "pair": "qwen7b|deepseek6_7b",
+    "gold": "base",
+    "margin": 0.1098,
+    "ci90": [
+     0.0488,
+     0.1707
+    ],
+    "n_problems": 164,
+    "flip_excluded_90": true
+   },
+   {
+    "dataset": "humaneval",
+    "pair": "qwen7b|deepseek6_7b",
+    "gold": "base+plus",
+    "margin": 0.0854,
+    "ci90": [
+     0.0244,
+     0.1524
+    ],
+    "n_problems": 164,
+    "flip_excluded_90": true
+   },
+   {
+    "dataset": "humaneval",
+    "pair": "qwen3b|deepseek6_7b",
+    "gold": "base",
+    "margin": -0.0549,
+    "ci90": [
+     -0.122,
+     0.0122
+    ],
+    "n_problems": 164,
+    "flip_excluded_90": false
+   },
+   {
+    "dataset": "humaneval",
+    "pair": "qwen3b|deepseek6_7b",
+    "gold": "base+plus",
+    "margin": -0.0488,
+    "ci90": [
+     -0.1159,
+     0.0183
+    ],
+    "n_problems": 164,
+    "flip_excluded_90": false
+   },
+   {
+    "dataset": "mbpp",
+    "pair": "qwen7b|qwen3b",
+    "gold": "base",
+    "margin": 0.082,
+    "ci90": [
+     0.045,
+     0.119
+    ],
+    "n_problems": 378,
+    "flip_excluded_90": true
+   },
+   {
+    "dataset": "mbpp",
+    "pair": "qwen7b|qwen3b",
+    "gold": "base+plus",
+    "margin": 0.0635,
+    "ci90": [
+     0.0265,
+     0.1005
+    ],
+    "n_problems": 378,
+    "flip_excluded_90": true
+   }
+  ],
+  "all_pairs_separated_90": false,
+  "smallest_plus_margin": {
+   "dataset": "humaneval",
+   "pair": "qwen3b|deepseek6_7b",
+   "gold": "base+plus",
+   "margin": -0.0488,
+   "ci90": [
+    -0.1159,
+    0.0183
+   ],
+   "n_problems": 164,
+   "flip_excluded_90": false
+  }
+ }
+}

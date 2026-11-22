@@ -1,0 +1,98 @@
+{
+ "frozen_at": "2026-10-06T12:17:57",
+ "seed": 20260926,
+ "dataset": {
+  "name": "facebook/xnli",
+  "split": "validation",
+  "langs": [
+   "en",
+   "zh",
+   "fr"
+  ],
+  "n_per_lang": 1000,
+  "subset_rule": "验证集原始顺序前 1000 条(确定性截取)"
+ },
+ "labels_xnli_order": [
+  "entailment",
+  "neutral",
+  "contradiction"
+ ],
+ "contracts": [
+  "accuracy",
+  "macro_f1"
+ ],
+ "models": [
+  {
+   "id": "joeddav/xlm-roberta-large-xnli",
+   "family": "XLM-R large",
+   "params_approx": "560M",
+   "source": "XNLI 微调(xnli 全 14 语言)",
+   "dtype": "float16"
+  },
+  {
+   "id": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2.0",
+   "family": "mDeBERTa-v3 base",
+   "params_approx": "86M(隐藏 768,解耦注意力)",
+   "source": "multilingual NLI(xnli+mnli 合成扩展)",
+   "dtype": "float16"
+  }
+ ],
+ "vram_plan": {
+  "dtype": "float16",
+  "batch_start": 16,
+  "oom_fallback": "batch 16→8→4;再失败则按序回退模型并在 deviations 留痕"
+ },
+ "leverage_definitions": {
+  "error_set": "{i: pred_i != gold_i}(两契约的逐样本罚分集合按定义相同,契约差异在聚合方式——如实记录,不虚构逐样本差异)",
+  "arm_jaccard_distance": "1 − |E_A∩E_B| / |E_A∪E_B|(逐语言,逐契约)",
+  "rank_volatility": "|gap_A − gap_B|,gap_m = acc_m − macroF1_m(契约切换)",
+  "flip": "(acc_A>acc_B) != (mf1_A>mf1_B)(逐语言)"
+ },
+ "env": {
+  "HF_ENDPOINT": "https://hf-mirror.com",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.11.0",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU"
+ },
+ "amendments": [
+  {
+   "tag": "repo-id-fix",
+   "change": "原登记 MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2.0 于 hf-mirror 404(仓库更名/下架,2026-10-06 实测;未产生任何指标即失败)。按修订 14 登记纪律替换为同作者官方后继版 MoritzLaurer/mDeBERTa-v3-base-mnli-xnli;候选 …-xnli-multilingual-nli-2mil7 经评估为扩训练变体,未采用。",
+   "at": "2026-10-06T12:34:54"
+  },
+  {
+   "tag": "supplementary-uncontaminated-arm",
+   "change": "增补 typeform/distilbert-base-uncased-mnli:主登记两模型(XNLI 微调系)经本机实测对 XNLI 验证/测试拆分 acc≈0.99(文献微调上限≈0.82-0.91),评测集污染证据确凿,误差集近空、力臂退化;增补无 XNLI 接触的英文 MNLI 模型作为非退化对照臂(zh/fr 零样本跨语言),保证 X-B 最小验证可解释。主登记两模型结果照常全部报告并带污染旗。",
+   "at": "2026-10-06T12:34:54"
+  }
+ ],
+ "models_current": [
+  {
+   "id": "joeddav/xlm-roberta-large-xnli",
+   "family": "XLM-R large",
+   "params_approx": "560M",
+   "source": "XNLI 微调(xnli 全 14 语言)",
+   "dtype": "float16",
+   "status": "primary",
+   "contamination_note": "本机实测 zh 验证/测试 acc≈0.99(文献 XNLI 微调上限≈0.82-0.91),疑似社区 checkpoint 训练含评测集——污染诊断见 test 拆分对照;"
+  },
+  {
+   "id": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+   "family": "mDeBERTa-v3 base",
+   "params_approx": "86M 主干(解耦注意力)",
+   "source": "multilingual NLI(mnli+xnli 微调;同作者官方后继版)",
+   "dtype": "float16",
+   "status": "primary",
+   "contamination_note": "XNLI 微调系,污染风险与 xlm-r 臂同类;"
+  },
+  {
+   "id": "typeform/distilbert-base-uncased-mnli",
+   "family": "DistilBERT(英文)",
+   "params_approx": "66M",
+   "source": "仅英文 MNLI(未接触 XNLI)——zh/fr 为零样本跨语言迁移",
+   "dtype": "float16",
+   "status": "supplementary_uncontaminated_arm",
+   "contamination_note": "无 XNLI 接触,提供非退化误差信号;入池元分析时单列并注明跨语言零样本设定(修订 17'下载量 Top 异构'条款)。"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "meta": {
+  "experiment": "E-A4: COMET-22 wmt22-comet-da (learned; trained on WMT17-19 DA — overlap footnote applies) added to the registered contract set; r60 canonical protocol re-run",
+  "contracts": [
+   "bleu13a",
+   "chrf",
+   "bertscore",
+   "comet22"
+  ],
+  "bootstrap": {
+   "reps": 1000,
+   "unit": "segment",
+   "seed": 7,
+   "ci": "percentile",
+   "note": "R=1000 exploratory (r60 used 2000); corpus bleu13a/chrf recomputed per resample; bertscore+metricx = mean of cached segment scores; comet: standard src-mt-ref input"
+  },
+  "tier": "exploratory, post-review round 12"
+ },
+ "grids": {
+  "de-en": {
+   "n_systems": 16,
+   "tau_single": {
+    "bleu13a": 0.6833,
+    "chrf": 0.6667,
+    "bertscore": 0.65,
+    "comet22": 0.7167
+   },
+   "best_single_3contract": "bleu13a",
+   "best_single_4contract": "comet22",
+   "tau_ens4": 0.7,
+   "delta_ens4_vs_best4_ci90": [
+    -0.0833,
+    0.0167
+   ],
+   "tost_ens4_vs_best4": {
+    "eps=0.05": false,
+    "eps=0.1": true
+   },
+   "flip_coverage": {
+    "ens4": 5,
+    "median4": 11,
+    "n": 11,
+    "bleu13a": 8,
+    "chrf": 9,
+    "bertscore": 10,
+    "comet22": 2
+   },
+   "note": "compare with r60 3-contract canonical: does best-single identity or TOST verdict change when the learned metric enters the set?"
+  },
+  "zh-en": {
+   "n_systems": 15,
+   "tau_single": {
+    "bleu13a": 0.7333,
+    "chrf": 0.7524,
+    "bertscore": 0.7714,
+    "comet22": 0.9619
+   },
+   "best_single_3contract": "bertscore",
+   "best_single_4contract": "comet22",
+   "tau_ens4": 0.7714,
+   "delta_ens4_vs_best4_ci90": [
+    -0.2095,
+    -0.1333
+   ],
+   "tost_ens4_vs_best4": {
+    "eps=0.05": false,
+    "eps=0.1": false
+   },
+   "flip_coverage": {
+    "ens4": 2,
+    "median4": 2,
+    "n": 3,
+    "bleu13a": 2,
+    "chrf": 0,
+    "bertscore": 0,
+    "comet22": 1
+   },
+   "note": "compare with r60 3-contract canonical: does best-single identity or TOST verdict change when the learned metric enters the set?"
+  }
+ }
+}

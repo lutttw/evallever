@@ -1,0 +1,227 @@
+{
+  "experiment": "P1_cross_task_validation",
+  "preregistration": "修订14(冻结设计)",
+  "written_at_utc": "2026-10-06T04:42:15Z",
+  "selection_rule": "候选按HF下载热度先验排序; 逐个下载并在CPU上前向验证; 每任务选取前3个可用的异构family(每family至多1个)checkpoint; 本登记表在任何指标计算之前落盘冻结。",
+  "seed": 20260926,
+  "environment": {
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "LAPTOP-3NEH48E9",
+    "hf_endpoint": "https://hf-mirror.com",
+    "hf_home": "E:\\WorkBuddy\\参考文献解读\\04_文档级IE\\.hf_cache",
+    "seed": 20260926,
+    "torch": "2.11.0+cu128",
+    "transformers": "5.11.0",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "vram_total_gb": 7.96,
+    "cuda_smoketest": "ok",
+    "datasets": "5.0.0",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "pyarrow": "24.0.0",
+    "disk_free_gb": {
+      "C": 568.4,
+      "E": 1078.1
+    }
+  },
+  "data_manifest": {
+    "written_at_utc": "2026-10-06T04:42:14Z",
+    "datasets": {
+      "sst2": {
+        "task": "sst2",
+        "split": "validation",
+        "n": 872,
+        "source": "cached",
+        "sha256": "d8da9a1a759b05f411a1ff463b36e3f2f7accfa67d417a5e11bb0c97bc2282a1",
+        "fetched_at_utc": "2026-10-06T04:42:14Z",
+        "file": "E:\\WorkBuddy\\参考文献解读\\04_文档级IE\\out\\revision_v5_experiments\\data\\p1_sst2_dev.jsonl",
+        "note": "reuse existing"
+      },
+      "ner": {
+        "task": "ner",
+        "split": "test",
+        "n_sentences": 3453,
+        "n_tokens": 46435,
+        "source": "cached",
+        "sha256": "ab565757a119b16045c900e41a87042ba530546de9a8a24f3c675dd99e10ee52",
+        "fetched_at_utc": "2026-10-06T04:42:14Z",
+        "file": "E:\\WorkBuddy\\参考文献解读\\04_文档级IE\\out\\revision_v5_experiments\\data\\p1_conll03_test.jsonl",
+        "note": "reuse existing"
+      }
+    }
+  },
+  "tasks": {
+    "sst2": {
+      "contracts": [
+        "accuracy",
+        "macro_f1"
+      ],
+      "candidates_in_priority_order": [
+        {
+          "model_id": "distilbert-base-uncased-finetuned-sst-2-english",
+          "family": "distilbert",
+          "note": "HF官方蒸馏checkpoint, SST-2下载量最高的公开模型之一",
+          "hf_downloads_at_registration": 2893660,
+          "checked_at_utc": "2026-10-06T04:42:16Z",
+          "status": "registered",
+          "label_names": [
+            "NEGATIVE",
+            "POSITIVE"
+          ],
+          "config_commit": "714eb0fa89d2f80546fda750413ed43d93601a13",
+          "params": 66955010,
+          "verified": "cpu前向通过"
+        },
+        {
+          "model_id": "textattack/bert-base-uncased-SST-2",
+          "family": "bert",
+          "note": "TextAttack GLUE基准, bert-base, 下载量高",
+          "hf_downloads_at_registration": 71756,
+          "checked_at_utc": "2026-10-06T04:42:19Z",
+          "status": "registered",
+          "label_names": [
+            "LABEL_0",
+            "LABEL_1"
+          ],
+          "config_commit": "95f0f6f859b35c8ff0863ae3cd4e2dbc702c0ae2",
+          "params": 109483778,
+          "verified": "cpu前向通过"
+        },
+        {
+          "model_id": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+          "family": "roberta",
+          "note": "roberta-base(TweetEval跨域), 异构架构",
+          "hf_downloads_at_registration": 2641201,
+          "checked_at_utc": "2026-10-06T04:42:22Z",
+          "status": "registered",
+          "label_names": [
+            "negative",
+            "neutral",
+            "positive"
+          ],
+          "config_commit": "3216a57f2a0d9c45a2e6c20157c20c49fb4bf9c7",
+          "params": 124647939,
+          "verified": "cpu前向通过"
+        },
+        {
+          "model_id": "textattack/roberta-base-SST-2",
+          "family": "roberta",
+          "note": "备选(仅当cardiffnlp不可用时)",
+          "hf_downloads_at_registration": 1365,
+          "checked_at_utc": "2026-10-06T04:42:26Z",
+          "status": "not_attempted(已选满3个)"
+        }
+      ],
+      "selected_models": [
+        "distilbert-base-uncased-finetuned-sst-2-english",
+        "textattack/bert-base-uncased-SST-2",
+        "cardiffnlp/twitter-roberta-base-sentiment-latest"
+      ],
+      "selected_families": [
+        "distilbert",
+        "bert",
+        "roberta"
+      ],
+      "n_selected": 3
+    },
+    "ner": {
+      "contracts": [
+        "strict_span_f1",
+        "relaxed_span_f1"
+      ],
+      "candidates_in_priority_order": [
+        {
+          "model_id": "dslim/bert-base-NER",
+          "family": "bert-base",
+          "note": "CoNLL03下载量最高的NER checkpoint之一",
+          "hf_downloads_at_registration": 1444179,
+          "checked_at_utc": "2026-10-06T04:42:26Z",
+          "status": "registered",
+          "label_names": [
+            "O",
+            "B-MISC",
+            "I-MISC",
+            "B-PER",
+            "I-PER",
+            "B-ORG",
+            "I-ORG",
+            "B-LOC",
+            "I-LOC"
+          ],
+          "config_commit": "d1a3e8f13f8c3566299d95fcfc9a8d2382a9affc",
+          "params": 107726601,
+          "verified": "cpu前向通过"
+        },
+        {
+          "model_id": "Jean-Baptiste/roberta-large-ner-english",
+          "family": "roberta-large",
+          "note": "roberta-large, 英文NER(含CoNLL03)",
+          "hf_downloads_at_registration": 43307,
+          "checked_at_utc": "2026-10-06T04:42:30Z",
+          "status": "registered",
+          "label_names": [
+            "O",
+            "PER",
+            "ORG",
+            "LOC",
+            "MISC"
+          ],
+          "config_commit": "8f3abc1ef81ffbbb0e80568d4fed1dd10d459548",
+          "params": 354315269,
+          "verified": "cpu前向通过"
+        },
+        {
+          "model_id": "elastic/distilbert-base-cased-finetuned-conll03-english",
+          "family": "distilbert",
+          "note": "distilbert, CoNLL03",
+          "hf_downloads_at_registration": 1510,
+          "checked_at_utc": "2026-10-06T04:42:35Z",
+          "status": "registered",
+          "label_names": [
+            "O",
+            "B-PER",
+            "I-PER",
+            "B-ORG",
+            "I-ORG",
+            "B-LOC",
+            "I-LOC",
+            "B-MISC",
+            "I-MISC"
+          ],
+          "config_commit": "ac68e05b23b29ba32563ab18b633bb1423d859f8",
+          "params": 65197833,
+          "verified": "cpu前向通过"
+        },
+        {
+          "model_id": "dbmdz/bert-large-cased-finetuned-conll03-english",
+          "family": "bert-large",
+          "note": "备选(仅当上述family不足3个时)",
+          "hf_downloads_at_registration": 736505,
+          "checked_at_utc": "2026-10-06T04:42:39Z",
+          "status": "not_attempted(已选满3个)"
+        },
+        {
+          "model_id": "Davlan/xlm-roberta-base-ner-hrl",
+          "family": "xlm-roberta",
+          "note": "末位备选(多语)",
+          "hf_downloads_at_registration": 191769,
+          "checked_at_utc": "2026-10-06T04:42:40Z",
+          "status": "not_attempted(已选满3个)"
+        }
+      ],
+      "selected_models": [
+        "dslim/bert-base-NER",
+        "Jean-Baptiste/roberta-large-ner-english",
+        "elastic/distilbert-base-cased-finetuned-conll03-english"
+      ],
+      "selected_families": [
+        "bert-base",
+        "roberta-large",
+        "distilbert"
+      ],
+      "n_selected": 3
+    }
+  }
+}

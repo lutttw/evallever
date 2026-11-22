@@ -1,0 +1,76 @@
+{
+ "meta": {
+  "experiment": "E-A12b ensemble false-tie rate, all-pairs scope, replicating E-A3 (R=1000 seed=7; corpus metrics recomputed per resample; cached bertscore segment means)",
+  "tie_rule": "95% percentile CI of resample-level paired diff contains 0 (inclusive), identical to E-A3",
+  "definition": "false tie for rule X = X declares tied while some other rule CI-excludes (either direction); scope = all pairs",
+  "parallel": "pre-generated draws (single (R,n) call, probe-asserted equal to sequential draws), Pool(8) over resamples; \u672b\u7aef gate = stored singles/coverage must reproduce exactly"
+ },
+ "grids": {
+  "newstest2021-de-en": {
+   "n_pairs_total": 171,
+   "n_contract_induced_flips": 114,
+   "validation": {
+    "singles_false_tie_recount": {
+     "bleu13a": "48/67",
+     "chrf": "47/66",
+     "bertscore": "27/46"
+    },
+    "singles_stored": {
+     "bleu13a": "48/67",
+     "chrf": "47/66",
+     "bertscore": "27/46"
+    },
+    "singles_match": true,
+    "flip_coverage_ensemble_recount": 88,
+    "flip_coverage_ensemble_stored": 88,
+    "flip_coverage_match": true,
+    "flip_entries_match": true,
+    "flip_entries_recount": 114,
+    "flip_entries_stored": 114,
+    "flip_coverage_median_recount": 82,
+    "flip_coverage_median_stored": 82
+   },
+   "ensemble_false_tie_allpairs": "37/56",
+   "ensemble_false_tie_pct": 66.1,
+   "median_false_tie_allpairs": "44/63",
+   "singles_false_tie_allpairs": {
+    "bleu13a": "48/67",
+    "chrf": "47/66",
+    "bertscore": "27/46"
+   }
+  },
+  "newstest2021-zh-en": {
+   "n_pairs_total": 210,
+   "n_contract_induced_flips": 66,
+   "validation": {
+    "singles_false_tie_recount": {
+     "bleu13a": "32/35",
+     "chrf": "26/29",
+     "bertscore": "19/22"
+    },
+    "singles_stored": {
+     "bleu13a": "32/35",
+     "chrf": "26/29",
+     "bertscore": "19/22"
+    },
+    "singles_match": true,
+    "flip_coverage_ensemble_recount": 44,
+    "flip_coverage_ensemble_stored": 44,
+    "flip_coverage_match": true,
+    "flip_entries_match": true,
+    "flip_entries_recount": 66,
+    "flip_entries_stored": 66,
+    "flip_coverage_median_recount": 50,
+    "flip_coverage_median_stored": 50
+   },
+   "ensemble_false_tie_allpairs": "22/25",
+   "ensemble_false_tie_pct": 88.0,
+   "median_false_tie_allpairs": "25/28",
+   "singles_false_tie_allpairs": {
+    "bleu13a": "32/35",
+    "chrf": "26/29",
+    "bertscore": "19/22"
+   }
+  }
+ }
+}

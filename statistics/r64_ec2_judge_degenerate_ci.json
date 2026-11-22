@@ -1,0 +1,91 @@
+{
+ "meta": {
+  "experiment": "E-C2/N7: judge-grid degenerate CI [0.70,0.70] diagnosis+repair",
+  "tier": "exploratory, post-review R14",
+  "inputs": {
+   "judge_runs": "E:\\WorkBuddy\\参考文献解读\\04_文档级IE\\out\\multi_task\\judge/runs/{qwen7b,llama,mistral}/base.jsonl",
+   "anchor": "metrics_task_de-en.csv wmt-raw (wmt19)"
+  },
+  "bootstrap": {
+   "B": 2000,
+   "seed": 7
+  }
+ },
+ "E1_mechanism": {
+  "aer_seg_row_constant_within_system": true,
+  "bootstrap_distinct_taus_500_draws": 1,
+  "reproduced_aer_tau": 0.7,
+  "reproduced_single_taus": {
+   "Qwen2.5-7B": 0.7167,
+   "Llama-3.1-8B": 0.7167,
+   "Mistral-7B-v0.3": 0.6833
+  },
+  "note": "published aer_seg[(i,s)] holds one system-level z per system; segment bootstrap cannot move system means -> point mass; degeneracy is structural (ensemble layer), not tau_b discreteness alone"
+ },
+ "E2_per_segment_ensemble": {
+  "point_tau": 0.7,
+  "ci95_percentile": [
+   0.6833,
+   0.75
+  ],
+  "B": 2000,
+  "seed": 7,
+  "distinct_taus": 7,
+  "systems_without_ensemble_coverage": 0
+ },
+ "E3_bca": {
+  "0.025": 0.6666666666666666,
+  "0.975": 0.7166666666666667,
+  "z0": -0.7892,
+  "acceleration": 0.0252
+ },
+ "E4_jackknife_over_systems": {
+  "point_tau": 0.7,
+  "loo_taus": [
+   0.6571,
+   0.7143,
+   0.7143,
+   0.7333,
+   0.7143,
+   0.6571,
+   0.7143,
+   0.6571,
+   0.7714,
+   0.7524,
+   0.6762,
+   0.7714,
+   0.6571,
+   0.6571,
+   0.6762,
+   0.6762
+  ],
+  "jackknife_se": 0.1605,
+  "ci95_jackknife": [
+   0.3854,
+   1.0146
+  ],
+  "range_loo": [
+   0.6571,
+   0.7714
+  ]
+ },
+ "E5_judge_composition": {
+  "n_compositions": 10,
+  "tau_min": 0.6833,
+  "tau_max": 0.7167,
+  "tau_sd": 0.0123,
+  "note": "judge-composition variability of the system-level ensemble reading"
+ },
+ "E6_discreteness": {
+  "n_systems": 16,
+  "n_pairs": 120,
+  "lattice_step_no_ties": 0.01667,
+  "realized_distinct_boots2_taus": 7,
+  "note": "tau_b is lattice-valued at n=16; any CI on it is grid-constrained"
+ },
+ "validation_gates": {
+  "published_aer_tau_07000": true,
+  "published_ci_point_mass": true,
+  "single_taus_match_r54": true
+ }
+}

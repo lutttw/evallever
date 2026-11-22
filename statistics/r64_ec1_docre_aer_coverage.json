@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "experiment": "E-C1: DocRE registry tie coverage (AER-analog per-family ensemble vs union-of-ties vs single-contract ties)",
+  "n_checks": 57,
+  "n_flips": 13,
+  "n_flip_ci_excl": 11,
+  "tie_rule": "CI-based percentile 95%, touching counts as tied; floor cross-check at preregistered +/-0.0039",
+  "ensemble_note": "per-axis-family mean of the two contract readings (2-contract marginalization); cross-family union reported separately",
+  "bootstrap": {
+   "reps": 10000,
+   "seed": 20260926
+  },
+  "tier": "exploratory, post-review (E-C1)"
+ },
+ "coverage": {
+  "ens_per_family": "3/13",
+  "union_of_ties": "5/13",
+  "setting1_only": "3/13",
+  "setting2_only": "4/13",
+  "floor": "4/13",
+  "ens_per_family_holm_survivors": "1/10",
+  "union_of_ties_holm_survivors": "2/10"
+ },
+ "false_tie": {
+  "ens_per_family": "5/8",
+  "union_of_ties": "15/20",
+  "setting1_only": "13/16",
+  "setting2_only": "6/10",
+  "floor": "9/13"
+ },
+ "detail": {},
+ "summary": {
+  "ens_per_family": "5/8",
+  "union_of_ties": "15/20",
+  "setting1_only": "13/16",
+  "setting2_only": "6/10",
+  "floor": "9/13",
+  "ens_per_family_holm_survivors": "1/10",
+  "union_of_ties_holm_survivors": "2/10"
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "de-en": {
+  "tau_point": {
+   "aer": 0.7167,
+   "bleu13a": 0.6833,
+   "chrf": 0.6833,
+   "bertscore": 0.65,
+   "best_single": "bleu13a"
+  },
+  "delta_aer_vs_best_single": {
+   "mean": -0.0123,
+   "ci90": [
+    -0.05,
+    0.0333
+   ],
+   "tost": {
+    "eps=0.05": false,
+    "eps=0.1": true,
+    "eps=0.15": true
+   }
+  },
+  "flip_coverage": {
+   "coverage": {
+    "aer": {
+     "covered": 11,
+     "n": 11
+    },
+    "bleu13a": {
+     "covered": 10,
+     "n": 11
+    },
+    "chrf": {
+     "covered": 10,
+     "n": 11
+    },
+    "bertscore": {
+     "covered": 10,
+     "n": 11
+    }
+   },
+   "mcnemar_vs_aer": {
+    "bleu13a": {
+     "aer_covers_single_misses": 1,
+     "single_covers_aer_misses": 0,
+     "exact_p": 1.0
+    },
+    "chrf": {
+     "aer_covers_single_misses": 1,
+     "single_covers_aer_misses": 0,
+     "exact_p": 1.0
+    },
+    "bertscore": {
+     "aer_covers_single_misses": 1,
+     "single_covers_aer_misses": 0,
+     "exact_p": 1.0
+    }
+   }
+  }
+ },
+ "zh-en": {
+  "tau_point": {
+   "aer": 0.7714,
+   "bleu13a": 0.7524,
+   "chrf": 0.7524,
+   "bertscore": 0.7714,
+   "best_single": "bertscore"
+  },
+  "delta_aer_vs_best_single": {
+   "mean": -0.0029,
+   "ci90": [
+    -0.019,
+    0.019
+   ],
+   "tost": {
+    "eps=0.05": true,
+    "eps=0.1": true,
+    "eps=0.15": true
+   }
+  },
+  "flip_coverage": {
+   "coverage": {
+    "aer": {
+     "covered": 3,
+     "n": 3
+    },
+    "bleu13a": {
+     "covered": 1,
+     "n": 3
+    },
+    "chrf": {
+     "covered": 3,
+     "n": 3
+    },
+    "bertscore": {
+     "covered": 0,
+     "n": 3
+    }
+   },
+   "mcnemar_vs_aer": {
+    "bleu13a": {
+     "aer_covers_single_misses": 2,
+     "single_covers_aer_misses": 0,
+     "exact_p": 0.5
+    },
+    "chrf": {
+     "aer_covers_single_misses": 0,
+     "single_covers_aer_misses": 0,
+     "exact_p": null
+    },
+    "bertscore": {
+     "aer_covers_single_misses": 3,
+     "single_covers_aer_misses": 0,
+     "exact_p": 0.25
+    }
+   }
+  }
+ }
+}

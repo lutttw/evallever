@@ -1,0 +1,86 @@
+{
+ "meta": {
+  "experiment": "E-A11 out-of-sample margin confirmation (DA-m3): TOST of AER vs best single contract on newstest2021 en-de",
+  "out_of_sample_axes": [
+   "translation direction (en->de vs WMT19 de-en/zh-en calibration)",
+   "year (2021 vs 2019)"
+  ],
+  "anchor": "WMT21 regular human DA (engdeu rows, src=eng tgt=deu verified); official make_rankings parsing: TGT only, segment-level only, z per annotator, system score = mean over the system own judged segments (sparse coverage per WMT design)",
+  "aer_reading": "z-ensemble (per-segment z across systems, mean z per system) over the full 1002-segment grid",
+  "alignment": "(doc id, seg-in-doc, 0-based) -> global line via official WMT21 test XML (test.tgz); line order validated 1002/1002 against shipped txt sources",
+  "contracts": [
+   "bleu13a",
+   "chrf",
+   "bertscore"
+  ],
+  "bertscore": "bert-base-multilingual-cased, lang=de, GPU",
+  "systems": 20,
+  "system_names": [
+   "BUPT_rush",
+   "Facebook-AI",
+   "HuaweiTSC",
+   "ICL",
+   "Manifold",
+   "NVIDIA-NeMo",
+   "Online-A",
+   "Online-B",
+   "Online-G",
+   "Online-W",
+   "Online-Y",
+   "P3AI",
+   "UEdin",
+   "UF",
+   "VolcTrans-AT",
+   "VolcTrans-GLAT",
+   "WeChat-AI",
+   "eTranslation",
+   "happypoet",
+   "nuclear_trans"
+  ],
+  "da_coverage_per_system": {
+   "BUPT_rush": 555,
+   "Facebook-AI": 632,
+   "HuaweiTSC": 709,
+   "ICL": 684,
+   "Manifold": 709,
+   "NVIDIA-NeMo": 726,
+   "Online-A": 656,
+   "Online-B": 701,
+   "Online-G": 629,
+   "Online-W": 727,
+   "Online-Y": 592,
+   "P3AI": 568,
+   "UEdin": 737,
+   "UF": 578,
+   "VolcTrans-AT": 703,
+   "VolcTrans-GLAT": 640,
+   "WeChat-AI": 609,
+   "eTranslation": 620,
+   "happypoet": 645,
+   "nuclear_trans": 568
+  },
+  "annotators": 135,
+  "z_judgments": 20960,
+  "R": 2000,
+  "seed": 20260926,
+  "bootstrap": "auto side: resample 1002 segments; anchor side: resample annotators; independent per iteration",
+  "tost_rule": "CI90(delta tau) within (-eps, +eps)"
+ },
+ "tau_aer": 0.5053,
+ "tau_single": {
+  "bleu13a": 0.5158,
+  "chrf": 0.5158,
+  "bertscore": 0.5053
+ },
+ "best_single": "bleu13a",
+ "delta_full": -0.0105,
+ "bootstrap_delta_ci90": [
+  -0.0632,
+  0.0105
+ ],
+ "bootstrap_delta_mean": -0.0242,
+ "tost_pass_by_eps": {
+  "0.05": false,
+  "0.10": true
+ }
+}

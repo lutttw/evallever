@@ -1,0 +1,18 @@
+{
+ "meta": {
+  "amendment": 71,
+  "design": "R3-W2 leave-one-out test of Proposition 2: does arm length (max of the two generators' arms on the switched axis, from frozen r1 gaps) predict flip locations among the 57 checks? Single-threshold classifier trained on 56, predicts the held-out check. Permutation baseline 500 reps, seed 20260926. No new inference."
+ },
+ "data": {
+  "n_checks": 57,
+  "n_flips": 13,
+  "arm_def": "max(arm_A, arm_B) on the switched axis per check"
+ },
+ "results": {
+  "loo_accuracy": 0.8596,
+  "majority_baseline": 0.7719,
+  "permutation_p": 0.0,
+  "auc_descriptive": 0.8628
+ },
+ "verdict": "arm length carries flip-location information beyond class frequency: LOO accuracy 0.860 vs majority 0.772, permutation p=0.000, AUC 0.863 — the condition is not pure post-hoc description"
+}

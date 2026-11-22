@@ -1,0 +1,81 @@
+{
+ "meta": {
+  "experiment": "E-A4: MetricX-23-Large (learned, MQM-trained) added to the registered contract set; r60 canonical protocol re-run",
+  "contracts": [
+   "bleu13a",
+   "chrf",
+   "bertscore",
+   "metricx23"
+  ],
+  "bootstrap": {
+   "reps": 1000,
+   "unit": "segment",
+   "seed": 7,
+   "ci": "percentile",
+   "note": "R=1000 exploratory (r60 used 2000); corpus bleu13a/chrf recomputed per resample; bertscore+metricx = mean of cached segment scores; metricx quality = -predicted MQM"
+  },
+  "tier": "exploratory, post-review round 12"
+ },
+ "grids": {
+  "de-en": {
+   "n_systems": 16,
+   "tau_single": {
+    "bleu13a": 0.6833,
+    "chrf": 0.6667,
+    "bertscore": 0.65,
+    "metricx23": 0.6833
+   },
+   "best_single_3contract": "bleu13a",
+   "best_single_4contract": "bleu13a",
+   "tau_ens4": 0.6833,
+   "delta_ens4_vs_best4_ci90": [
+    -0.05,
+    0.0333
+   ],
+   "tost_ens4_vs_best4": {
+    "eps=0.05": false,
+    "eps=0.1": true
+   },
+   "flip_coverage": {
+    "ens4": 11,
+    "median4": 11,
+    "n": 11,
+    "bleu13a": 8,
+    "chrf": 9,
+    "bertscore": 10,
+    "metricx23": 11
+   },
+   "note": "compare with r60 3-contract canonical: does best-single identity or TOST verdict change when the learned metric enters the set?"
+  },
+  "zh-en": {
+   "n_systems": 15,
+   "tau_single": {
+    "bleu13a": 0.7333,
+    "chrf": 0.7524,
+    "bertscore": 0.7714,
+    "metricx23": 0.7333
+   },
+   "best_single_3contract": "bertscore",
+   "best_single_4contract": "bertscore",
+   "tau_ens4": 0.7714,
+   "delta_ens4_vs_best4_ci90": [
+    -0.019,
+    0.019
+   ],
+   "tost_ens4_vs_best4": {
+    "eps=0.05": true,
+    "eps=0.1": true
+   },
+   "flip_coverage": {
+    "ens4": 1,
+    "median4": 2,
+    "n": 3,
+    "bleu13a": 2,
+    "chrf": 0,
+    "bertscore": 0,
+    "metricx23": 0
+   },
+   "note": "compare with r60 3-contract canonical: does best-single identity or TOST verdict change when the learned metric enters the set?"
+  }
+ }
+}

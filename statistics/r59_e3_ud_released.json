@@ -1,0 +1,39 @@
+{
+ "config": {
+  "parsers": "released UDPipe 1.2 checkpoints (english-ewt, english-gum; UD 2.5)",
+  "data": "English EWT test r1.2 vs r2.18, 2070 equal-token aligned pairs",
+  "gauges": "G2 = r2.18 gold; G1p = r1.2 gold projected by official v1->v2 deprel renames",
+  "rename_table": {
+   "dobj": "obj",
+   "nmod": "obl",
+   "neg": "advmod",
+   "auxpass": "aux:pass",
+   "nsubjpass": "nsubj:pass",
+   "nmod:tmod": "obl:tmod",
+   "mwe": "fixed",
+   "nmod:npmod": "obl:npmod",
+   "name": "flat"
+  }
+ },
+ "positions": {
+  "identical": 20314,
+  "differ_beyond_rename_or_head": 4052
+ },
+ "parsers": {
+  "ewt": {
+   "LAS_G2": 0.7762,
+   "LAS_G1proj": 0.7316,
+   "arm": 0.0446
+  },
+  "gum": {
+   "LAS_G2": 0.7091,
+   "LAS_G1proj": 0.6276,
+   "arm": 0.0816
+  }
+ },
+ "pair_flip_ewt_vs_gum": {
+  "flip": false,
+  "order_G2": "ewt>gum",
+  "order_G1p": "ewt>gum"
+ }
+}

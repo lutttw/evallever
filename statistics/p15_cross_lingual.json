@@ -1,0 +1,1235 @@
+{
+ "preregistration": {
+  "doc": "docs\\ACL_主会执行方案_20261003\\预注册_v1_20261003.md",
+  "revision": "修订 17(2026-10-06,X-A/X-B 设计冻结)",
+  "hypotheses": {
+   "H_XL1": "同一批中文预测在 A/R/F1 三计分下差距读数符号不一致(预期成立)",
+   "H_XL2": "词层 vs 字层金标切换使 F1 差距移动 |Δ|>0(方向/量级开放;≈0 则为边界发现)",
+   "H_XL3": "中文提示违规率与英文 D5 量级可比(探索)"
+  }
+ },
+ "seed": 20260926,
+ "X_A": {
+  "data": {
+   "dataset": "HacRED 评测拆分(test_revised.json)",
+   "n_docs": 1500,
+   "n_candidates_frozen": 253732,
+   "infra": "out/jcip_audit_v1/hacred_prepared(与 15 种子同源冻结契约)"
+  },
+  "build": {
+   "demo_ids": [
+    4983,
+    3814,
+    1162,
+    3412
+   ],
+   "demo_rule": "sha256(train_title|dev_title) 最小的 2x2(评测前 2 篇;与 D5 同一冻结规则)",
+   "demo_titles": [
+    "16190",
+    "20852",
+    "3192",
+    "10440"
+   ],
+   "doc_chars": {
+    "max": 682,
+    "mean": 231.33333333333334
+   },
+   "docs": 3000,
+   "n_relations": 26,
+   "note_title": "HacRED 无标题字段,运行时契约以 id 串为 title(hacred_adapt 口径)",
+   "output_format": "entity-index (E{i}),修订 8 索引化",
+   "relations": [
+    "主持人",
+    "主演",
+    "主要人物",
+    "作者",
+    "儿子",
+    "出版/发行时间",
+    "出版机构",
+    "创始人",
+    "制片人",
+    "嘉宾",
+    "女儿",
+    "妻子",
+    "导演",
+    "成立时间",
+    "所处时代",
+    "所属机构",
+    "改编自",
+    "母亲",
+    "毕业院校",
+    "法人",
+    "演唱者",
+    "父亲",
+    "编剧",
+    "音乐创作者",
+    "饰演者",
+    "首播时间"
+   ],
+   "smoke_n": 40
+  },
+  "smoke_subset_n": 40,
+  "mock_audit_selfcheck": {
+   "char": {
+    "metrics": {
+     "gap_A": -0.025246305418719195,
+     "gap_F1": -0.014016409125777618,
+     "gap_R": -0.025698301959846348,
+     "gap_pair_F1": -0.013782151592076075,
+     "inter": {
+      "A": 0.9267241379310345,
+      "F1": 0.9625502940266172,
+      "R": 0.9278042959427207,
+      "fn": 484,
+      "fp": 0,
+      "pair_F1": 0.9619686800894854,
+      "tp": 6220
+     },
+     "intra": {
+      "A": 0.9014778325123153,
+      "F1": 0.9485338849008396,
+      "R": 0.9021059939828744,
+      "fn": 423,
+      "fp": 0,
+      "pair_F1": 0.9481865284974094,
+      "tp": 3898
+     }
+    },
+    "stats": {
+     "ambiguous": 750,
+     "hallucinated": 0,
+     "mapped": 10118,
+     "n_triples": 10868,
+     "oob_index": 0,
+     "parse_fail": 0,
+     "rel_unmapped": 0,
+     "self_pair": 0
+    }
+   },
+   "n_docs_with_dup_names": 106
+  },
+  "audits": {
+   "audit_preds_qwen2.5-7b-instruct_freetext.json": {
+    "pred": "out/p15_hacred_icl/preds_qwen2.5-7b-instruct_freetext.jsonl",
+    "n_pred_recs": 40,
+    "seed": "20260926",
+    "bootstrap_reps": 10000,
+    "stats": {
+     "n_triples": 189,
+     "parse_fail": 8,
+     "oob_index": 32,
+     "hallucinated": 0,
+     "ambiguous": 5,
+     "self_pair": 4,
+     "rel_unmapped": 11,
+     "mapped": 129
+    },
+    "violation_rate": 0.31746031746031744,
+    "violation_gate": {
+     "threshold": 0.05,
+     "unverifiable": true,
+     "rule": "违规率 >5% 该设置带旗(修订 2/17 同纪律,不调门槛)"
+    },
+    "n_candidates_char": 253732,
+    "n_candidates_word": 253732,
+    "char_gold": {
+     "metrics": {
+      "intra": {
+       "F1": 0.00045599635202918376,
+       "R": 0.00023142791020597085,
+       "A": 0.0002345765892563922,
+       "pair_F1": 0.00046242774566473987,
+       "tp": 1,
+       "fp": 64,
+       "fn": 4320
+      },
+      "inter": {
+       "F1": 0.001182033096926714,
+       "R": 0.0005966587112171838,
+       "A": 0.0006157635467980296,
+       "pair_F1": 0.001220070154033857,
+       "tp": 4,
+       "fp": 60,
+       "fn": 6700
+      },
+      "gap_F1": -0.0007260367448975302,
+      "gap_R": -0.00036523080101121295,
+      "gap_A": -0.0003811869575416374,
+      "gap_pair_F1": -0.0007576424083691172
+     },
+     "L1_signs": {
+      "signs": {
+       "gap_F1": -1,
+       "gap_R": -1,
+       "gap_A": -1
+      },
+      "consistent": true
+     }
+    },
+    "word_gold": {
+     "metrics": {
+      "intra": {
+       "F1": 0.00045599635202918376,
+       "R": 0.00023142791020597085,
+       "A": 0.0002345765892563922,
+       "pair_F1": 0.00046242774566473987,
+       "tp": 1,
+       "fp": 64,
+       "fn": 4320
+      },
+      "inter": {
+       "F1": 0.001182033096926714,
+       "R": 0.0005966587112171838,
+       "A": 0.0006157635467980296,
+       "pair_F1": 0.001220070154033857,
+       "tp": 4,
+       "fp": 60,
+       "fn": 6700
+      },
+      "gap_F1": -0.0007260367448975302,
+      "gap_R": -0.00036523080101121295,
+      "gap_A": -0.0003811869575416374,
+      "gap_pair_F1": -0.0007576424083691172
+     },
+     "L1_signs": {
+      "signs": {
+       "gap_F1": -1,
+       "gap_R": -1,
+       "gap_A": -1
+      },
+      "consistent": true
+     }
+    },
+    "H_XL1": {
+     "claim": "同一批中文预测在 A/R/F1 三计分下差距读数符号不一致(预期成立)",
+     "char_consistent": true,
+     "word_consistent": true,
+     "held_char": false
+    },
+    "H_XL2": {
+     "claim": "词层 vs 字层金标切换使 F1 差距移动 |Δ|>0(方向/量级开放;若 ≈0,如实报告为切分粒度契约不构成有效杠杆——边界发现)",
+     "delta_gap_F1": {
+      "point": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ]
+     },
+     "gap_F1_char": -0.0007260367448975302,
+     "gap_F1_word": -0.0007260367448975302,
+     "gold_delta_word_vs_char": {
+      "char_only": [],
+      "word_only": []
+     }
+    },
+    "H_XL3": {
+     "claim": "中文提示违规率与英文 D5 量级可比(探索)",
+     "zh_violation_rate": 0.31746031746031744,
+     "en_d5_reference": {
+      "qwen2.5-14b-instruct_json": 0.0457,
+      "qwen2.5-7b-instruct_freetext": 0.1164,
+      "mistral-7b-instruct_json": 0.1884,
+      "mistral-7b-instruct_freetext": 0.0705
+     }
+    },
+    "frozen_contract_crosscheck": {
+     "frozen_candidates": 253732,
+     "frozen_intra": 69892,
+     "recomputed_intra_char": 69892
+    },
+    "_scope": "smoke(40 篇)"
+   },
+   "audit_preds_qwen2.5-7b-instruct_json.json": {
+    "pred": "out/p15_hacred_icl/preds_qwen2.5-7b-instruct_json.jsonl",
+    "n_pred_recs": 40,
+    "seed": "20260926",
+    "bootstrap_reps": 10000,
+    "stats": {
+     "n_triples": 269,
+     "parse_fail": 0,
+     "oob_index": 7,
+     "hallucinated": 0,
+     "ambiguous": 1,
+     "self_pair": 2,
+     "rel_unmapped": 15,
+     "mapped": 244
+    },
+    "violation_rate": 0.09293680297397769,
+    "violation_gate": {
+     "threshold": 0.05,
+     "unverifiable": true,
+     "rule": "违规率 >5% 该设置带旗(修订 2/17 同纪律,不调门槛)"
+    },
+    "n_candidates_char": 253732,
+    "n_candidates_word": 253732,
+    "char_gold": {
+     "metrics": {
+      "intra": {
+       "F1": 0.0036011703803736214,
+       "R": 0.0018514232816477668,
+       "A": 0.0018766127140511376,
+       "pair_F1": 0.003656307129798903,
+       "tp": 8,
+       "fp": 114,
+       "fn": 4313
+      },
+      "inter": {
+       "F1": 0.004101963082332259,
+       "R": 0.002088305489260143,
+       "A": 0.0021551724137931034,
+       "pair_F1": 0.004241139048773099,
+       "tp": 14,
+       "fp": 108,
+       "fn": 6690
+      },
+      "gap_F1": -0.0005007927019586378,
+      "gap_R": -0.0002368822076123764,
+      "gap_A": -0.0002785596997419658,
+      "gap_pair_F1": -0.0005848319189741959
+     },
+     "L1_signs": {
+      "signs": {
+       "gap_F1": -1,
+       "gap_R": -1,
+       "gap_A": -1
+      },
+      "consistent": true
+     }
+    },
+    "word_gold": {
+     "metrics": {
+      "intra": {
+       "F1": 0.0036011703803736214,
+       "R": 0.0018514232816477668,
+       "A": 0.0018766127140511376,
+       "pair_F1": 0.003656307129798903,
+       "tp": 8,
+       "fp": 114,
+       "fn": 4313
+      },
+      "inter": {
+       "F1": 0.004101963082332259,
+       "R": 0.002088305489260143,
+       "A": 0.0021551724137931034,
+       "pair_F1": 0.004241139048773099,
+       "tp": 14,
+       "fp": 108,
+       "fn": 6690
+      },
+      "gap_F1": -0.0005007927019586378,
+      "gap_R": -0.0002368822076123764,
+      "gap_A": -0.0002785596997419658,
+      "gap_pair_F1": -0.0005848319189741959
+     },
+     "L1_signs": {
+      "signs": {
+       "gap_F1": -1,
+       "gap_R": -1,
+       "gap_A": -1
+      },
+      "consistent": true
+     }
+    },
+    "H_XL1": {
+     "claim": "同一批中文预测在 A/R/F1 三计分下差距读数符号不一致(预期成立)",
+     "char_consistent": true,
+     "word_consistent": true,
+     "held_char": false
+    },
+    "H_XL2": {
+     "claim": "词层 vs 字层金标切换使 F1 差距移动 |Δ|>0(方向/量级开放;若 ≈0,如实报告为切分粒度契约不构成有效杠杆——边界发现)",
+     "delta_gap_F1": {
+      "point": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ]
+     },
+     "gap_F1_char": -0.0005007927019586378,
+     "gap_F1_word": -0.0005007927019586378,
+     "gold_delta_word_vs_char": {
+      "char_only": [],
+      "word_only": []
+     }
+    },
+    "H_XL3": {
+     "claim": "中文提示违规率与英文 D5 量级可比(探索)",
+     "zh_violation_rate": 0.09293680297397769,
+     "en_d5_reference": {
+      "qwen2.5-14b-instruct_json": 0.0457,
+      "qwen2.5-7b-instruct_freetext": 0.1164,
+      "mistral-7b-instruct_json": 0.1884,
+      "mistral-7b-instruct_freetext": 0.0705
+     }
+    },
+    "frozen_contract_crosscheck": {
+     "frozen_candidates": 253732,
+     "frozen_intra": 69892,
+     "recomputed_intra_char": 69892
+    },
+    "_scope": "smoke(40 篇)"
+   }
+  },
+  "hypotheses": {
+   "audit_source": "preds_qwen2.5-7b-instruct_json.jsonl",
+   "scope": "smoke(40 篇)",
+   "H_XL1": {
+    "claim": "同一批中文预测在 A/R/F1 三计分下差距读数符号不一致(预期成立)",
+    "held": false,
+    "signs": {
+     "gap_F1": -1,
+     "gap_R": -1,
+     "gap_A": -1
+    },
+    "gaps": {
+     "gap_F1": -0.0005007927019586378,
+     "gap_R": -0.0002368822076123764,
+     "gap_A": -0.0002785596997419658
+    }
+   },
+   "H_XL2": {
+    "claim": "词层 vs 字层金标切换使 F1 差距移动 |Δ|>0(方向/量级开放;若 ≈0,如实报告为切分粒度契约不构成有效杠杆——边界发现)",
+    "delta_gap_F1": {
+     "point": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ]
+    },
+    "moved": false,
+    "reading": "切分粒度契约在中文词/字双层下不构成有效杠杆(|Δ|≈0;与 E6 零差异发现一致)——边界发现,如实报告",
+    "gold_delta_word_vs_char": {
+     "char_only": [],
+     "word_only": []
+    }
+   },
+   "H_XL3": {
+    "claim": "中文提示违规率与英文 D5 量级可比(探索)",
+    "zh_violation_rate": 0.09293680297397769,
+    "en_d5_band": [
+     0.0457,
+     0.1884
+    ],
+    "comparable_in_band": true,
+    "unverifiable_flag": true
+   }
+  }
+ },
+ "X_B": {
+  "registry": {
+   "frozen_at": "2026-10-06T12:17:57",
+   "seed": 20260926,
+   "dataset": {
+    "name": "facebook/xnli",
+    "split": "validation",
+    "langs": [
+     "en",
+     "zh",
+     "fr"
+    ],
+    "n_per_lang": 1000,
+    "subset_rule": "验证集原始顺序前 1000 条(确定性截取)"
+   },
+   "labels_xnli_order": [
+    "entailment",
+    "neutral",
+    "contradiction"
+   ],
+   "contracts": [
+    "accuracy",
+    "macro_f1"
+   ],
+   "models": [
+    {
+     "id": "joeddav/xlm-roberta-large-xnli",
+     "family": "XLM-R large",
+     "params_approx": "560M",
+     "source": "XNLI 微调(xnli 全 14 语言)",
+     "dtype": "float16"
+    },
+    {
+     "id": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2.0",
+     "family": "mDeBERTa-v3 base",
+     "params_approx": "86M(隐藏 768,解耦注意力)",
+     "source": "multilingual NLI(xnli+mnli 合成扩展)",
+     "dtype": "float16"
+    }
+   ],
+   "vram_plan": {
+    "dtype": "float16",
+    "batch_start": 16,
+    "oom_fallback": "batch 16→8→4;再失败则按序回退模型并在 deviations 留痕"
+   },
+   "leverage_definitions": {
+    "error_set": "{i: pred_i != gold_i}(两契约的逐样本罚分集合按定义相同,契约差异在聚合方式——如实记录,不虚构逐样本差异)",
+    "arm_jaccard_distance": "1 − |E_A∩E_B| / |E_A∪E_B|(逐语言,逐契约)",
+    "rank_volatility": "|gap_A − gap_B|,gap_m = acc_m − macroF1_m(契约切换)",
+    "flip": "(acc_A>acc_B) != (mf1_A>mf1_B)(逐语言)"
+   },
+   "env": {
+    "HF_ENDPOINT": "https://hf-mirror.com",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.11.0",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU"
+   },
+   "amendments": [
+    {
+     "tag": "repo-id-fix",
+     "change": "原登记 MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2.0 于 hf-mirror 404(仓库更名/下架,2026-10-06 实测;未产生任何指标即失败)。按修订 14 登记纪律替换为同作者官方后继版 MoritzLaurer/mDeBERTa-v3-base-mnli-xnli;候选 …-xnli-multilingual-nli-2mil7 经评估为扩训练变体,未采用。",
+     "at": "2026-10-06T12:34:54"
+    },
+    {
+     "tag": "supplementary-uncontaminated-arm",
+     "change": "增补 typeform/distilbert-base-uncased-mnli:主登记两模型(XNLI 微调系)经本机实测对 XNLI 验证/测试拆分 acc≈0.99(文献微调上限≈0.82-0.91),评测集污染证据确凿,误差集近空、力臂退化;增补无 XNLI 接触的英文 MNLI 模型作为非退化对照臂(zh/fr 零样本跨语言),保证 X-B 最小验证可解释。主登记两模型结果照常全部报告并带污染旗。",
+     "at": "2026-10-06T12:34:54"
+    }
+   ],
+   "models_current": [
+    {
+     "id": "joeddav/xlm-roberta-large-xnli",
+     "family": "XLM-R large",
+     "params_approx": "560M",
+     "source": "XNLI 微调(xnli 全 14 语言)",
+     "dtype": "float16",
+     "status": "primary",
+     "contamination_note": "本机实测 zh 验证/测试 acc≈0.99(文献 XNLI 微调上限≈0.82-0.91),疑似社区 checkpoint 训练含评测集——污染诊断见 test 拆分对照;"
+    },
+    {
+     "id": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+     "family": "mDeBERTa-v3 base",
+     "params_approx": "86M 主干(解耦注意力)",
+     "source": "multilingual NLI(mnli+xnli 微调;同作者官方后继版)",
+     "dtype": "float16",
+     "status": "primary",
+     "contamination_note": "XNLI 微调系,污染风险与 xlm-r 臂同类;"
+    },
+    {
+     "id": "typeform/distilbert-base-uncased-mnli",
+     "family": "DistilBERT(英文)",
+     "params_approx": "66M",
+     "source": "仅英文 MNLI(未接触 XNLI)——zh/fr 为零样本跨语言迁移",
+     "dtype": "float16",
+     "status": "supplementary_uncontaminated_arm",
+     "contamination_note": "无 XNLI 接触,提供非退化误差信号;入池元分析时单列并注明跨语言零样本设定(修订 17'下载量 Top 异构'条款)。"
+    }
+   ]
+  },
+  "results_validation_primary": {
+   "seed": 20260926,
+   "n_per_lang": 1000,
+   "langs": [
+    "en",
+    "zh",
+    "fr"
+   ],
+   "split": "validation",
+   "split_purpose": "primary(修订 17:验证集前 1000)",
+   "models": {
+    "joeddav/xlm-roberta-large-xnli": {
+     "en": {
+      "accuracy": 0.999,
+      "macro_f1": 0.999000499750125,
+      "gap_acc_minus_mf1": -4.997501249492942e-07,
+      "pred_label_counts": [
+       334,
+       333,
+       333
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "contradiction",
+        "1": "neutral",
+        "2": "entailment"
+       }
+      }
+     },
+     "zh": {
+      "accuracy": 0.991,
+      "macro_f1": 0.9910027794244557,
+      "gap_acc_minus_mf1": -2.7794244557011183e-06,
+      "pred_label_counts": [
+       338,
+       330,
+       332
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "contradiction",
+        "1": "neutral",
+        "2": "entailment"
+       }
+      }
+     },
+     "fr": {
+      "accuracy": 0.996,
+      "macro_f1": 0.9960034885083234,
+      "gap_acc_minus_mf1": -3.4885083234348357e-06,
+      "pred_label_counts": [
+       334,
+       334,
+       332
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "contradiction",
+        "1": "neutral",
+        "2": "entailment"
+       }
+      }
+     }
+    },
+    "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli": {
+     "en": {
+      "accuracy": 0.995,
+      "macro_f1": 0.9949964799690111,
+      "gap_acc_minus_mf1": 3.520030988912737e-06,
+      "pred_label_counts": [
+       334,
+       331,
+       335
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     },
+     "zh": {
+      "accuracy": 0.99,
+      "macro_f1": 0.99000197802593,
+      "gap_acc_minus_mf1": -1.9780259300494762e-06,
+      "pred_label_counts": [
+       335,
+       332,
+       333
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     },
+     "fr": {
+      "accuracy": 0.998,
+      "macro_f1": 0.9979994987491239,
+      "gap_acc_minus_mf1": 5.012508761392809e-07,
+      "pred_label_counts": [
+       334,
+       332,
+       334
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     }
+    },
+    "typeform/distilbert-base-uncased-mnli": {
+     "en": {
+      "accuracy": 0.828,
+      "macro_f1": 0.8279638916707731,
+      "gap_acc_minus_mf1": 3.610832922684715e-05,
+      "pred_label_counts": [
+       298,
+       348,
+       354
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     },
+     "zh": {
+      "accuracy": 0.355,
+      "macro_f1": 0.2365087761279245,
+      "gap_acc_minus_mf1": 0.11849122387207547,
+      "pred_label_counts": [
+       65,
+       8,
+       927
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     },
+     "fr": {
+      "accuracy": 0.378,
+      "macro_f1": 0.31191240374111007,
+      "gap_acc_minus_mf1": 0.06608759625888994,
+      "pred_label_counts": [
+       504,
+       9,
+       487
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     }
+    }
+   },
+   "pairs": {
+    "xlm-roberta-large-xnli__vs__mDeBERTa-v3-base-mnli-xnli": {
+     "en": {
+      "err_n_model_a": 1,
+      "err_n_model_b": 5,
+      "err_intersection": 0,
+      "err_union": 6,
+      "jaccard_distance_accuracy": 1.0,
+      "jaccard_distance_macro_f1": 1.0,
+      "rank_volatility": 4.019781113862031e-06,
+      "gap_a": -4.997501249492942e-07,
+      "gap_b": 3.520030988912737e-06,
+      "flip": false,
+      "acc_margin": 0.0040000000000000036,
+      "mf1_margin": 0.004004019781113866,
+      "pred_agreement": 0.994
+     },
+     "zh": {
+      "err_n_model_a": 9,
+      "err_n_model_b": 10,
+      "err_intersection": 3,
+      "err_union": 16,
+      "jaccard_distance_accuracy": 0.8125,
+      "jaccard_distance_macro_f1": 0.8125,
+      "rank_volatility": 8.01398525651642e-07,
+      "gap_a": -2.7794244557011183e-06,
+      "gap_b": -1.9780259300494762e-06,
+      "flip": false,
+      "acc_margin": 0.0010000000000000009,
+      "mf1_margin": 0.0010008013985256525,
+      "pred_agreement": 0.987
+     },
+     "fr": {
+      "err_n_model_a": 4,
+      "err_n_model_b": 2,
+      "err_intersection": 0,
+      "err_union": 6,
+      "jaccard_distance_accuracy": 1.0,
+      "jaccard_distance_macro_f1": 1.0,
+      "rank_volatility": 3.989759199574117e-06,
+      "gap_a": -3.4885083234348357e-06,
+      "gap_b": 5.012508761392809e-07,
+      "flip": false,
+      "acc_margin": -0.0020000000000000018,
+      "mf1_margin": -0.0019960102408004277,
+      "pred_agreement": 0.994
+     }
+    },
+    "xlm-roberta-large-xnli__vs__distilbert-base-uncased-mnli": {
+     "en": {
+      "err_n_model_a": 1,
+      "err_n_model_b": 172,
+      "err_intersection": 0,
+      "err_union": 173,
+      "jaccard_distance_accuracy": 1.0,
+      "jaccard_distance_macro_f1": 1.0,
+      "rank_volatility": 3.660807935179644e-05,
+      "gap_a": -4.997501249492942e-07,
+      "gap_b": 3.610832922684715e-05,
+      "flip": false,
+      "acc_margin": 0.17100000000000004,
+      "mf1_margin": 0.17103660807935184,
+      "pred_agreement": 0.827
+     },
+     "zh": {
+      "err_n_model_a": 9,
+      "err_n_model_b": 645,
+      "err_intersection": 7,
+      "err_union": 647,
+      "jaccard_distance_accuracy": 0.9891808346213292,
+      "jaccard_distance_macro_f1": 0.9891808346213292,
+      "rank_volatility": 0.11849400329653118,
+      "gap_a": -2.7794244557011183e-06,
+      "gap_b": 0.11849122387207547,
+      "flip": false,
+      "acc_margin": 0.636,
+      "mf1_margin": 0.7544940032965312,
+      "pred_agreement": 0.354
+     },
+     "fr": {
+      "err_n_model_a": 4,
+      "err_n_model_b": 622,
+      "err_intersection": 4,
+      "err_union": 622,
+      "jaccard_distance_accuracy": 0.9935691318327974,
+      "jaccard_distance_macro_f1": 0.9935691318327974,
+      "rank_volatility": 0.06609108476721337,
+      "gap_a": -3.4885083234348357e-06,
+      "gap_b": 0.06608759625888994,
+      "flip": false,
+      "acc_margin": 0.618,
+      "mf1_margin": 0.6840910847672134,
+      "pred_agreement": 0.379
+     }
+    },
+    "mDeBERTa-v3-base-mnli-xnli__vs__distilbert-base-uncased-mnli": {
+     "en": {
+      "err_n_model_a": 5,
+      "err_n_model_b": 172,
+      "err_intersection": 4,
+      "err_union": 173,
+      "jaccard_distance_accuracy": 0.976878612716763,
+      "jaccard_distance_macro_f1": 0.976878612716763,
+      "rank_volatility": 3.258829823793441e-05,
+      "gap_a": 3.520030988912737e-06,
+      "gap_b": 3.610832922684715e-05,
+      "flip": false,
+      "acc_margin": 0.16700000000000004,
+      "mf1_margin": 0.16703258829823797,
+      "pred_agreement": 0.83
+     },
+     "zh": {
+      "err_n_model_a": 10,
+      "err_n_model_b": 645,
+      "err_intersection": 6,
+      "err_union": 649,
+      "jaccard_distance_accuracy": 0.9907550077041603,
+      "jaccard_distance_macro_f1": 0.9907550077041603,
+      "rank_volatility": 0.11849320189800552,
+      "gap_a": -1.9780259300494762e-06,
+      "gap_b": 0.11849122387207547,
+      "flip": false,
+      "acc_margin": 0.635,
+      "mf1_margin": 0.7534932018980055,
+      "pred_agreement": 0.354
+     },
+     "fr": {
+      "err_n_model_a": 2,
+      "err_n_model_b": 622,
+      "err_intersection": 2,
+      "err_union": 622,
+      "jaccard_distance_accuracy": 0.9967845659163987,
+      "jaccard_distance_macro_f1": 0.9967845659163987,
+      "rank_volatility": 0.0660870950080138,
+      "gap_a": 5.012508761392809e-07,
+      "gap_b": 0.06608759625888994,
+      "flip": false,
+      "acc_margin": 0.62,
+      "mf1_margin": 0.6860870950080138,
+      "pred_agreement": 0.378
+     }
+    }
+   },
+   "deviations": [],
+   "contracts_note": "accuracy 与 macro-F1 的逐样本误差集合按定义恒同(均以预测≠金标为罚),契约差异体现于聚合(micro 命中 vs 类对称调和平均);因此力臂的逐样本 Jaccard 两契约相同,排名波动与翻转才是本设计的契约敏感量。"
+  },
+  "results_test_contamination_diagnostic": {
+   "seed": 20260926,
+   "n_per_lang": 1000,
+   "langs": [
+    "en",
+    "zh",
+    "fr"
+   ],
+   "split": "test",
+   "split_purpose": "contamination_diagnostic(非主结果;评测集污染对照)",
+   "models": {
+    "joeddav/xlm-roberta-large-xnli": {
+     "en": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "gap_acc_minus_mf1": 0.0,
+      "pred_label_counts": [
+       333,
+       334,
+       333
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "contradiction",
+        "1": "neutral",
+        "2": "entailment"
+       }
+      }
+     },
+     "zh": {
+      "accuracy": 0.992,
+      "macro_f1": 0.9920038902416173,
+      "gap_acc_minus_mf1": -3.890241617288126e-06,
+      "pred_label_counts": [
+       331,
+       336,
+       333
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "contradiction",
+        "1": "neutral",
+        "2": "entailment"
+       }
+      }
+     },
+     "fr": {
+      "accuracy": 0.995,
+      "macro_f1": 0.995000989012965,
+      "gap_acc_minus_mf1": -9.89012964969227e-07,
+      "pred_label_counts": [
+       333,
+       334,
+       333
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "contradiction",
+        "1": "neutral",
+        "2": "entailment"
+       }
+      }
+     }
+    },
+    "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli": {
+     "en": {
+      "accuracy": 0.888,
+      "macro_f1": 0.8882496744451264,
+      "gap_acc_minus_mf1": -0.0002496744451263577,
+      "pred_label_counts": [
+       300,
+       359,
+       341
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     },
+     "zh": {
+      "accuracy": 0.81,
+      "macro_f1": 0.8102290511346238,
+      "gap_acc_minus_mf1": -0.00022905113462379223,
+      "pred_label_counts": [
+       332,
+       338,
+       330
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     },
+     "fr": {
+      "accuracy": 0.844,
+      "macro_f1": 0.8439374195865224,
+      "gap_acc_minus_mf1": 6.258041347761978e-05,
+      "pred_label_counts": [
+       338,
+       328,
+       334
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     }
+    },
+    "typeform/distilbert-base-uncased-mnli": {
+     "en": {
+      "accuracy": 0.824,
+      "macro_f1": 0.824678755332576,
+      "gap_acc_minus_mf1": -0.0006787553325759976,
+      "pred_label_counts": [
+       281,
+       382,
+       337
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     },
+     "zh": {
+      "accuracy": 0.363,
+      "macro_f1": 0.24931933673268325,
+      "gap_acc_minus_mf1": 0.11368066326731674,
+      "pred_label_counts": [
+       80,
+       8,
+       912
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     },
+     "fr": {
+      "accuracy": 0.428,
+      "macro_f1": 0.3602872821450427,
+      "gap_acc_minus_mf1": 0.0677127178549573,
+      "pred_label_counts": [
+       522,
+       19,
+       459
+      ],
+      "infer_meta": {
+       "effective_batch": 16,
+       "oom_retries": 0,
+       "id2label": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+       }
+      }
+     }
+    }
+   },
+   "pairs": {
+    "xlm-roberta-large-xnli__vs__mDeBERTa-v3-base-mnli-xnli": {
+     "en": {
+      "err_n_model_a": 0,
+      "err_n_model_b": 112,
+      "err_intersection": 0,
+      "err_union": 112,
+      "jaccard_distance_accuracy": 1.0,
+      "jaccard_distance_macro_f1": 1.0,
+      "rank_volatility": 0.0002496744451263577,
+      "gap_a": 0.0,
+      "gap_b": -0.0002496744451263577,
+      "flip": false,
+      "acc_margin": 0.11199999999999999,
+      "mf1_margin": 0.11175032555487363,
+      "pred_agreement": 0.888
+     },
+     "zh": {
+      "err_n_model_a": 8,
+      "err_n_model_b": 190,
+      "err_intersection": 6,
+      "err_union": 192,
+      "jaccard_distance_accuracy": 0.96875,
+      "jaccard_distance_macro_f1": 0.96875,
+      "rank_volatility": 0.0002251608930065041,
+      "gap_a": -3.890241617288126e-06,
+      "gap_b": -0.00022905113462379223,
+      "flip": false,
+      "acc_margin": 0.18199999999999994,
+      "mf1_margin": 0.18177483910699344,
+      "pred_agreement": 0.813
+     },
+     "fr": {
+      "err_n_model_a": 5,
+      "err_n_model_b": 156,
+      "err_intersection": 2,
+      "err_union": 159,
+      "jaccard_distance_accuracy": 0.9874213836477987,
+      "jaccard_distance_macro_f1": 0.9874213836477987,
+      "rank_volatility": 6.3569426442589e-05,
+      "gap_a": -9.89012964969227e-07,
+      "gap_b": 6.258041347761978e-05,
+      "flip": false,
+      "acc_margin": 0.15100000000000002,
+      "mf1_margin": 0.1510635694264426,
+      "pred_agreement": 0.843
+     }
+    },
+    "xlm-roberta-large-xnli__vs__distilbert-base-uncased-mnli": {
+     "en": {
+      "err_n_model_a": 0,
+      "err_n_model_b": 176,
+      "err_intersection": 0,
+      "err_union": 176,
+      "jaccard_distance_accuracy": 1.0,
+      "jaccard_distance_macro_f1": 1.0,
+      "rank_volatility": 0.0006787553325759976,
+      "gap_a": 0.0,
+      "gap_b": -0.0006787553325759976,
+      "flip": false,
+      "acc_margin": 0.17600000000000005,
+      "mf1_margin": 0.17532124466742405,
+      "pred_agreement": 0.824
+     },
+     "zh": {
+      "err_n_model_a": 8,
+      "err_n_model_b": 637,
+      "err_intersection": 5,
+      "err_union": 640,
+      "jaccard_distance_accuracy": 0.9921875,
+      "jaccard_distance_macro_f1": 0.9921875,
+      "rank_volatility": 0.11368455350893403,
+      "gap_a": -3.890241617288126e-06,
+      "gap_b": 0.11368066326731674,
+      "flip": false,
+      "acc_margin": 0.629,
+      "mf1_margin": 0.742684553508934,
+      "pred_agreement": 0.364
+     },
+     "fr": {
+      "err_n_model_a": 5,
+      "err_n_model_b": 572,
+      "err_intersection": 3,
+      "err_union": 574,
+      "jaccard_distance_accuracy": 0.9947735191637631,
+      "jaccard_distance_macro_f1": 0.9947735191637631,
+      "rank_volatility": 0.06771370686792227,
+      "gap_a": -9.89012964969227e-07,
+      "gap_b": 0.0677127178549573,
+      "flip": false,
+      "acc_margin": 0.567,
+      "mf1_margin": 0.6347137068679223,
+      "pred_agreement": 0.429
+     }
+    },
+    "mDeBERTa-v3-base-mnli-xnli__vs__distilbert-base-uncased-mnli": {
+     "en": {
+      "err_n_model_a": 112,
+      "err_n_model_b": 176,
+      "err_intersection": 77,
+      "err_union": 211,
+      "jaccard_distance_accuracy": 0.6350710900473934,
+      "jaccard_distance_macro_f1": 0.6350710900473934,
+      "rank_volatility": 0.0004290808874496399,
+      "gap_a": -0.0002496744451263577,
+      "gap_b": -0.0006787553325759976,
+      "flip": false,
+      "acc_margin": 0.06400000000000006,
+      "mf1_margin": 0.06357091911255042,
+      "pred_agreement": 0.857
+     },
+     "zh": {
+      "err_n_model_a": 190,
+      "err_n_model_b": 637,
+      "err_intersection": 139,
+      "err_union": 688,
+      "jaccard_distance_accuracy": 0.7979651162790697,
+      "jaccard_distance_macro_f1": 0.7979651162790697,
+      "rank_volatility": 0.11390971440194053,
+      "gap_a": -0.00022905113462379223,
+      "gap_b": 0.11368066326731674,
+      "flip": false,
+      "acc_margin": 0.44700000000000006,
+      "mf1_margin": 0.5609097144019406,
+      "pred_agreement": 0.361
+     },
+     "fr": {
+      "err_n_model_a": 156,
+      "err_n_model_b": 572,
+      "err_intersection": 108,
+      "err_union": 620,
+      "jaccard_distance_accuracy": 0.8258064516129032,
+      "jaccard_distance_macro_f1": 0.8258064516129032,
+      "rank_volatility": 0.06765013744147969,
+      "gap_a": 6.258041347761978e-05,
+      "gap_b": 0.0677127178549573,
+      "flip": false,
+      "acc_margin": 0.416,
+      "mf1_margin": 0.48365013744147967,
+      "pred_agreement": 0.43
+     }
+    }
+   },
+   "deviations": [],
+   "contracts_note": "accuracy 与 macro-F1 的逐样本误差集合按定义恒同(均以预测≠金标为罚),契约差异体现于聚合(micro 命中 vs 类对称调和平均);因此力臂的逐样本 Jaccard 两契约相同,排名波动与翻转才是本设计的契约敏感量。"
+  }
+ },
+ "deviations_and_notes": [
+  {
+   "kind": "design_note",
+   "text": "HacRED 无标题字段:hacred_adapt 运行时契约以 id 串为 title,提示标题沿用 id 串(与 15 种子微调运行同源);sha256 演示选择规则不受影响(确定性不变)。"
+  },
+  {
+   "kind": "design_note",
+   "text": "中文模板将文档句子按字符直接拼接(英文 D5 为空格拼接)——修订 17 授权'中文模板重写';实体表/索引化输出/演示选择/解析纪律与 D5 逐字一致。"
+  },
+  {
+   "kind": "design_note",
+   "text": "L2 词字金标杠杆的提示文本固定为字层(修订 17:'HacRED(字符层冻结契约)'),金标切换在审计侧完成;词层空间从官方 labels_word/vertex_word 独立重建。"
+  },
+  {
+   "kind": "deviation",
+   "text": "英文系模型 Mistral-7B-Instruct-v0.3 的'提示语言×模型家族'交互对照臂:由 run_p15_cloud.sh 承载;本地 8GB 时段预算内优先执行 Qwen(中文系)主检验(H-XL1/2/3 均可在 Qwen 臂上检验),Mistral 臂未随本地会话执行时记为待云端执行。"
+  },
+  {
+   "kind": "deviation",
+   "text": "freetext 输出格式(L3 探索臂)冒烟违规率 31.7%(40 篇,远超 5% 旗线),按 D5 同纪律带旗;其全量推断不占用本地时段预算,保留在 run_p15_cloud.sh 云端清单(与 Mistral 交互臂同批)。json 主设置冒烟 9.3% 带旗后仍执行全量(修订 17:带旗不停机,不调门槛)。"
+  },
+  {
+   "kind": "deviation",
+   "text": "H-XL3 英文参照:out/d5_llm_hook/audit_preds_qwen2.5-7b-instruct_json.json 为旧提示版遗留产物(0 条三元组,不可用),英文参照改用其余四个已审计设置(qwen2.5-14b json 0.0457 / qwen2.5-7b freetext 0.1164 / mistral json 0.1884 / mistral freetext 0.0705);见 audit JSON 的 en_d5_reference 字段。"
+  },
+  {
+   "kind": "deviation",
+   "text": "X-B 模型登记修正案(首算前留痕,见 p15_xnli_registry.json amendments):(1)原登记 MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2.0 镜像 404,替换为同作者后继版 MoritzLaurer/mDeBERTa-v3-base-mnli-xnli(未产生任何指标);(2)主登记两模型(XNLI 微调系)经本机实测对 XNLI 验证/测试拆分 acc≈0.99(文献微调上限≈0.82-0.91),评测集污染证据确凿→误差集近空、力臂退化;增补无 XNLI 接触的 typeform/distilbert-base-uncased-mnli(英文 MNLI,zh/fr 零样本)为非退化对照臂;主登记两模型结果照常全报并带污染旗,另跑 test 拆分作污染诊断(p15_xnli_results_testdiag.json)。"
+  },
+  {
+   "kind": "design_note",
+   "text": "X-B 两契约(accuracy/macro-F1)的逐样本误差集合按定义恒同,误差集 Jaccard 两契约相同;契约敏感性由排名波动 |gap_A−gap_B| 与翻转承载——如实记录,不虚构逐样本契约差异。"
+  },
+  {
+   "kind": "design_note",
+   "text": "冒烟子集 40 篇 = 文档字符长度五分位 × 各 8 篇(sha256(seed|doc_id) 层内最小),落在修订 17 的 20–50 篇区间;先于任何全量推断执行(修订 8 教训)。"
+  },
+  {
+   "kind": "design_note",
+   "text": "本地执行实测吞吐:NF4 均速 14.7s/篇(json 冒烟 40 篇)→ 全量 1500 篇约 6.1h。2026-10-06 作者决策:X-A 全量推断改走云端 4090D(本地 8GB 时段让渡),本地只保留冒烟门(40 篇 × 双格式,已通过并带旗)与审计管线自检;云端发射包见 run_p15_cloud.sh 头注释与交付报告(最小上传文件集 + 启动命令)。"
+  },
+  {
+   "kind": "design_note",
+   "text": "X-B 内部对照(强效管线验证):mDeBERTa-mnli-xnli 在 test 拆分 acc 0.81-0.88,与 XNLI 文献微调上限吻合(标签映射与推断管线正确的独立证据);而同一模型在验证集 acc≈0.99 → 其训练混入 dev;xlm-r-large-xnli 验证/test 均 ≥0.99 → 训练含 test。污染为 checkpoint 层面,非本管线伪影。"
+  }
+ ],
+ "negative_results_policy": "全部负面/零效应结果(如 H-XL2 |Δ|≈0)如实收录,不剔除"
+}

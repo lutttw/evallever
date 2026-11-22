@@ -1,0 +1,100 @@
+{
+ "meta": {
+  "experiment": "C2(1) ℓ-axis tie layer (HacRED H-zh vs H-en prompts)",
+  "model": "qwen2.5-7b-instruct",
+  "cells": [
+   "zh|json",
+   "zh|freetext",
+   "en|json",
+   "en|freetext"
+  ],
+  "bootstrap": {
+   "reps": 2000,
+   "unit": "document",
+   "seed": 20260926,
+   "ci": "percentile95"
+  },
+  "tier": "exploratory, post-review round 12"
+ },
+ "validation": {
+  "zh|json": "audit structure differs (see json)",
+  "zh|freetext": "audit structure differs (see json)",
+  "en|json": "audit structure differs (see json)",
+  "en|freetext": "audit structure differs (see json)"
+ },
+ "cells": {
+  "zh|json": {
+   "gamma": -0.0005,
+   "ci95": [
+    -0.0054,
+    0.0048
+   ]
+  },
+  "zh|freetext": {
+   "gamma": -0.0007,
+   "ci95": [
+    -0.003,
+    0.0009
+   ]
+  },
+  "en|json": {
+   "gamma": 0.0057,
+   "ci95": [
+    -0.0054,
+    0.0159
+   ]
+  },
+  "en|freetext": {
+   "gamma": 0.0091,
+   "ci95": [
+    -0.0004,
+    0.0193
+   ]
+  }
+ },
+ "arms": {
+  "zh_format_arm_json_minus_freetext": {
+   "point": 0.0002,
+   "ci95": [
+    -0.0043,
+    0.0057
+   ],
+   "tie": true
+  },
+  "en_format_arm_json_minus_freetext": {
+   "point": -0.0034,
+   "ci95": [
+    -0.0166,
+    0.0101
+   ],
+   "tie": true
+  },
+  "json_language_arm_zh_minus_en": {
+   "point": -0.0062,
+   "ci95": [
+    -0.0181,
+    0.0049
+   ],
+   "tie": true
+  },
+  "freetext_language_arm_zh_minus_en": {
+   "point": -0.0099,
+   "ci95": [
+    -0.0199,
+    -0.0002
+   ],
+   "tie": false
+  }
+ },
+ "summary": {
+  "gamma_map": {
+   "zh|json": -0.0005,
+   "zh|freetext": -0.0007,
+   "en|json": 0.0057,
+   "en|freetext": 0.0091
+  },
+  "format_arm_sign_stable": false,
+  "language_arm_sign_stable": true,
+  "all_arms_tied": false
+ }
+}

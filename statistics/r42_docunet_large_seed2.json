@@ -1,0 +1,75 @@
+{
+ "meta": {
+  "arm": "docunet_large (official published config: RoBERTa-large, trained on cloud RTX 24GB GPU 24GB, seed 20260917, dev F1 0.6219 on 998-doc PE8 protocol; amendment 61 Exp-B)",
+  "decode": "atlop_native; grouping per registered rules",
+  "boot": 10000,
+  "seed": 20260926,
+  "amendment": 61
+ },
+ "docunet_large": {
+  "gamma_gD": 0.0,
+  "gamma_gR": 0.0,
+  "arm_gold": 0.0,
+  "arm_gold_ci95": [
+   0.0,
+   0.0
+  ],
+  "gamma_ess_gR": 0.0,
+  "gamma_ass_gR": 0.0,
+  "arm_grouping": 0.0,
+  "arm_grouping_ci95": [
+   0.0,
+   0.0
+  ],
+  "gamma_sig05_gR": 0.0,
+  "arm_threshold_native_vs_sig": 0.0,
+  "density_mean_rels_per_pair": 0.0
+ },
+ "confound_check": {
+  "docunet_bert_threshold_arm": 0.088,
+  "docunetL_threshold_arm": 0.0,
+  "reading": "published-config threshold (calibration) arm vs docunet_bert 0.088 decides B-W-b weak-training confound"
+ },
+ "flips_vs_7": {
+  "x2": {
+   "delta_gen": 0.0217,
+   "delta_L": 0.0,
+   "flip": false
+  },
+  "atlop_pe8": {
+   "delta_gen": 0.0626,
+   "delta_L": 0.0,
+   "flip": false
+  },
+  "atlop_full": {
+   "delta_gen": 0.0429,
+   "delta_L": 0.0,
+   "flip": false
+  },
+  "dreeam": {
+   "delta_gen": 0.0008,
+   "delta_L": 0.0,
+   "flip": false
+  },
+  "p3m": {
+   "delta_gen": 0.0262,
+   "delta_L": 0.0,
+   "flip": false
+  },
+  "docunet": {
+   "delta_gen": -0.0159,
+   "delta_L": 0.0,
+   "flip": false
+  },
+  "kddocre": {
+   "delta_gen": 0.0128,
+   "delta_L": 0.0,
+   "flip": false
+  }
+ },
+ "summary": {
+  "n_flip_goldswap": 0,
+  "arm_gold_excl0": false,
+  "arm_grouping_excl0": false
+ }
+}

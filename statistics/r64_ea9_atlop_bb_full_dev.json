@@ -1,0 +1,8 @@
+{
+ "experiment": "E-AppE: ATLOP BERT-base official-entrypoint rerun (full dev 998; the published-configuration checkpoint behind the CL1 comparison DREEAM>ATLOP)",
+ "published_f1": 61.09,
+ "rerun_dev_f1_official_entrypoint": 52.686,
+ "delta": -8.4,
+ "cl1_inversion": "both published-config sides degrade comparably (DREEAM teacher -10.1, ATLOP bert-base -8.4); the published ordering (DREEAM above by 0.33) inverts at the rerun level (ATLOP 52.7 > DREEAM teacher 51.3)",
+ "ign_note": "test_rel_ign excluded (doc-key join)"
+}

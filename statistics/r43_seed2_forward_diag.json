@@ -1,0 +1,30 @@
+{
+ "meta": {
+  "amendment": 77,
+  "purpose": "decisive A/B forward diagnostic for docunetL seed2",
+  "ts": "2026-10-15T09:13:47",
+  "last_updated": "2026-10-15T09:21:22"
+ },
+ "carrier": "docunetL_pe8_s20260918/best.ckpt (471 tensors, strict load OK)",
+ "A_side_training_forward": {
+  "rule": "DocREModel.forward -> ATLoss.get_label(logits, num_labels=4): threshold = ZERO (logit > 0) + top-4 mask; NA column set only when no positive",
+  "predictions_8_dev_docs": 2402,
+  "note": "training-time dev evaluation used exactly this rule (dev F1 0.4489)"
+ },
+ "B_side_registered_pipeline": {
+  "rule": "atlop_native decode: logit > NA_logit(col 0) AND top-4",
+  "predictions_8_dev_docs": 0,
+  "observation": "max logit == max NA logit in every doc (NA-dominant calibration)"
+ },
+ "verdict": "the two forwards/decodes are NOT equivalent: ATLoss trains with a zero threshold and never calibrates relation-vs-NA ordering, so a seed that drifts NA-heavy is unreadable under the shared ATLOP-style native decode while fully functional under its own training decode. Mechanism is decode-contract family incompatibility, not seed degeneracy.",
+ "consequence": "seed2 arms undefined under the registered decode; disclosed in the paper; r42 zero arms retained as evidence",
+ "followup_20261014": {
+  "eval_split_direct_measurement": {
+   "s20260918": "relation-column logits > 0: 0 of 18,386,932 (189,556 x 96); max relation logit = -2.48; NA column positive for 189,540/189,556 candidates",
+   "s20260917": "relation logits > 0: 5,568; max 12.99 (sanity)"
+  },
+  "unresolved_confound": "the earlier A/B differed in BOTH forward rule AND input split/pipeline (dev x train-features vs eval x infer-features); s2 predicts on dev under the train pipeline but emits zero positive relation logits on the whole eval split under the inference pipeline; the two variables are not yet isolated",
+  "decision": "no retraining: even a rescued s2 is 17 F1 points below s1 and cannot strengthen pooling; current disclosure (A7 single-seed + NA-dominance mechanism) stands; attempt recorded for reviewer response",
+  "invalidated": "exploratory r44 (zero-threshold pooling) removed: gold-lookup bug made its s1 numbers invalid, and its premise is moot since s2 has zero positive relation logits on eval under any threshold decode"
+ }
+}

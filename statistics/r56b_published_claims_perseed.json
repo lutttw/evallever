@@ -1,0 +1,177 @@
+[
+ {
+  "claim_id": "C1",
+  "claim": "DREEAM > ATLOP(BERT-base)",
+  "source": "Ma et al. 2023 (EACL)",
+  "per_seed": [
+   {
+    "F1_gD_A": 0.6108,
+    "F1_gD_B": 0.6044,
+    "delta_gD": 0.0064,
+    "ci_gD": [
+     -0.0007,
+     0.0133
+    ],
+    "F1_gR_A": 0.4301,
+    "F1_gR_B": 0.4519,
+    "delta_gR": -0.0218,
+    "ci_gR": [
+     -0.0279,
+     -0.0158
+    ],
+    "gR_behavior": "REVERSES",
+    "replicates_under_gD": false,
+    "seed_index": [
+     0,
+     0
+    ]
+   },
+   {
+    "F1_gD_A": 0.6137,
+    "F1_gD_B": 0.6044,
+    "delta_gD": 0.0093,
+    "ci_gD": [
+     0.0024,
+     0.0159
+    ],
+    "F1_gR_A": 0.4338,
+    "F1_gR_B": 0.4519,
+    "delta_gR": -0.0182,
+    "ci_gR": [
+     -0.0236,
+     -0.0127
+    ],
+    "gR_behavior": "REVERSES",
+    "replicates_under_gD": true,
+    "seed_index": [
+     1,
+     0
+    ]
+   },
+   {
+    "F1_gD_A": 0.6068,
+    "F1_gD_B": 0.6044,
+    "delta_gD": 0.0024,
+    "ci_gD": [
+     -0.0049,
+     0.0099
+    ],
+    "F1_gR_A": 0.4272,
+    "F1_gR_B": 0.4519,
+    "delta_gR": -0.0248,
+    "ci_gR": [
+     -0.0304,
+     -0.0192
+    ],
+    "gR_behavior": "REVERSES",
+    "replicates_under_gD": false,
+    "seed_index": [
+     2,
+     0
+    ]
+   }
+  ]
+ },
+ {
+  "claim_id": "C2",
+  "claim": "KD-DocRE > DocuNet",
+  "source": "Tan et al. 2022a (Findings)",
+  "per_seed": [
+   {
+    "F1_gD_A": 0.6121,
+    "F1_gD_B": 0.4657,
+    "delta_gD": 0.1464,
+    "ci_gD": [
+     0.137,
+     0.1555
+    ],
+    "F1_gR_A": 0.4484,
+    "F1_gR_B": 0.3988,
+    "delta_gR": 0.0496,
+    "ci_gR": [
+     0.0425,
+     0.0566
+    ],
+    "gR_behavior": "HOLDS",
+    "replicates_under_gD": true,
+    "seed_index": [
+     0,
+     0
+    ]
+   },
+   {
+    "F1_gD_A": 0.5793,
+    "F1_gD_B": 0.4831,
+    "delta_gD": 0.0961,
+    "ci_gD": [
+     0.0858,
+     0.1065
+    ],
+    "F1_gR_A": 0.4453,
+    "F1_gR_B": 0.4064,
+    "delta_gR": 0.0389,
+    "ci_gR": [
+     0.0301,
+     0.0475
+    ],
+    "gR_behavior": "HOLDS",
+    "replicates_under_gD": true,
+    "seed_index": [
+     1,
+     1
+    ]
+   }
+  ]
+ },
+ {
+  "claim_id": "C3",
+  "claim": "TTM-RE > KD-DocRE",
+  "source": "Xu et al. 2025 (Findings)",
+  "per_seed": [
+   {
+    "F1_gD_A": 0.5474,
+    "F1_gD_B": 0.6121,
+    "delta_gD": -0.0647,
+    "ci_gD": [
+     -0.0776,
+     -0.0517
+    ],
+    "F1_gR_A": 0.7385,
+    "F1_gR_B": 0.4484,
+    "delta_gR": 0.2902,
+    "ci_gR": [
+     0.2796,
+     0.3008
+    ],
+    "gR_behavior": "HOLDS",
+    "replicates_under_gD": false,
+    "seed_index": [
+     0,
+     0
+    ]
+   },
+   {
+    "F1_gD_A": 0.5474,
+    "F1_gD_B": 0.5793,
+    "delta_gD": -0.0318,
+    "ci_gD": [
+     -0.0458,
+     -0.0176
+    ],
+    "F1_gR_A": 0.7385,
+    "F1_gR_B": 0.4453,
+    "delta_gR": 0.2932,
+    "ci_gR": [
+     0.2826,
+     0.3042
+    ],
+    "gR_behavior": "HOLDS",
+    "replicates_under_gD": false,
+    "seed_index": [
+     0,
+     1
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,6 @@
+{
+ "config": "N1 CI-excluding subset: instance bootstrap (B=2000, seed 20261027) of the destination-gauge micro-F1 difference per point-estimate G0->G1 flip; id-level units",
+ "n_point_flips": 88,
+ "ci_excluding_flips": 88,
+ "tie_under_tolerance": 0
+}

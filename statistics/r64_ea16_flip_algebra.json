@@ -1,0 +1,144 @@
+{
+ "meta": {
+  "experiment": "E-A16 algebraic flip propagation (L1 upgrade of the mechanism paragraph)",
+  "rule": "TP_R=TP_D+h_a-h_r; FP_R=FP_D-h_a+h_r; FN_R=FN_D+(|added_d|-h_a)-(|removed_d|-h_r) per doc; h_a=|pred n added_d|, h_r=|pred n removed_d|",
+  "gold_diff": {
+   "added": 10887,
+   "removed": 26
+  },
+  "identity_all_systems": true,
+  "break_semantics": "flip_shift_A_hits = added-region hits side A must gain (gR) or lose (gD) to flip the audited sign; deterministic analogue of the bootstrap CI"
+ },
+ "systems": {
+  "dreeam": {
+   "per_seed": [
+    {
+     "seed": 0,
+     "h_a": 1341,
+     "h_r": 3,
+     "identity_ok": true
+    },
+    {
+     "seed": 1,
+     "h_a": 1359,
+     "h_r": 3,
+     "identity_ok": true
+    },
+    {
+     "seed": 2,
+     "h_a": 1332,
+     "h_r": 3,
+     "identity_ok": true
+    }
+   ],
+   "identity_all": true,
+   "h_a_mean": 1344.0,
+   "h_r_mean": 3.0
+  },
+  "docunet": {
+   "per_seed": [
+    {
+     "seed": 0,
+     "h_a": 1685,
+     "h_r": 5,
+     "identity_ok": true
+    },
+    {
+     "seed": 1,
+     "h_a": 1702,
+     "h_r": 9,
+     "identity_ok": true
+    }
+   ],
+   "identity_all": true,
+   "h_a_mean": 1693.5,
+   "h_r_mean": 7.0
+  },
+  "kddocre": {
+   "per_seed": [
+    {
+     "seed": 0,
+     "h_a": 1501,
+     "h_r": 3,
+     "identity_ok": true
+    },
+    {
+     "seed": 1,
+     "h_a": 1626,
+     "h_r": 2,
+     "identity_ok": true
+    }
+   ],
+   "identity_all": true,
+   "h_a_mean": 1563.5,
+   "h_r_mean": 2.5
+  },
+  "ttmre_release": {
+   "per_seed": [
+    {
+     "seed": 0,
+     "h_a": 5854,
+     "h_r": 3,
+     "identity_ok": true
+    }
+   ],
+   "identity_all": true,
+   "h_a_mean": 5854.0,
+   "h_r_mean": 3.0
+  },
+  "atlop_base": {
+   "per_seed": [
+    {
+     "seed": 0,
+     "h_a": 1574,
+     "h_r": 2,
+     "identity_ok": true
+    }
+   ],
+   "identity_all": true,
+   "h_a_mean": 1574.0,
+   "h_r_mean": 2.0
+  }
+ },
+ "claims": {
+  "C1": {
+   "sysA": "dreeam",
+   "sysB": "atlop_base",
+   "n_common": 498,
+   "gD": {
+    "delta": 0.006,
+    "flip_shift_A_hits": 34
+   },
+   "gR": {
+    "delta": -0.0216,
+    "flip_shift_A_hits": 237
+   }
+  },
+  "C2": {
+   "sysA": "kddocre",
+   "sysB": "docunet",
+   "n_common": 498,
+   "gD": {
+    "delta": 0.1213,
+    "flip_shift_A_hits": 707
+   },
+   "gR": {
+    "delta": 0.0443,
+    "flip_shift_A_hits": null
+   }
+  },
+  "C3": {
+   "sysA": "ttmre_release",
+   "sysB": "kddocre",
+   "n_common": 498,
+   "gD": {
+    "delta": -0.048,
+    "flip_shift_A_hits": null
+   },
+   "gR": {
+    "delta": 0.2917,
+    "flip_shift_A_hits": null
+   }
+  }
+ }
+}

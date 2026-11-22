@@ -1,0 +1,1 @@
+PASS 2026-10-28: de-en 0.7000 11/11, zh-en 0.7524 3/3 @ R=2000; TOST eps={.05,.10} all pass; flip sets identical to R=200.

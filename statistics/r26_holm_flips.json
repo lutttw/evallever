@@ -1,0 +1,210 @@
+{
+ "n_tests": 57,
+ "holm_survivors": 34,
+ "survivor_list": [
+  {
+   "pair": "x2|atlop_pe8",
+   "dim": "gold(gD_vs_gR)",
+   "est": -0.04082606806151116,
+   "p": 1.1644257880139008e-06
+  },
+  {
+   "pair": "x2|atlop_pe8",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": -0.09452728558559231,
+   "p": 0.0
+  },
+  {
+   "pair": "x2|atlop_full",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": -0.09422768845729691,
+   "p": 0.0
+  },
+  {
+   "pair": "x2|dreeam",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.010071363595609483,
+   "p": 0.00058311252455856
+  },
+  {
+   "pair": "x2|dreeam",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": -0.142088496049198,
+   "p": 0.0
+  },
+  {
+   "pair": "x2|docunet",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.013079217300132234,
+   "p": 0.00016495337046418257
+  },
+  {
+   "pair": "x2|docunet",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.037780478831166725,
+   "p": 0.0011872608099128268
+  },
+  {
+   "pair": "x2|docunet",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": 0.09612975447984916,
+   "p": 0.0
+  },
+  {
+   "pair": "x2|kddocre",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": -0.16323174561563994,
+   "p": 0.0
+  },
+  {
+   "pair": "atlop_pe8|atlop_full",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.01974029842879321,
+   "p": 2.6221682247751232e-06
+  },
+  {
+   "pair": "atlop_pe8|dreeam",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.014379344329955421,
+   "p": 2.1417396589562543e-07
+  },
+  {
+   "pair": "atlop_pe8|dreeam",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.06196847701231685,
+   "p": 5.1302961878718634e-11
+  },
+  {
+   "pair": "atlop_pe8|dreeam",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": -0.047561210463605674,
+   "p": 6.7795116187596705e-09
+  },
+  {
+   "pair": "atlop_pe8|p3m",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.012567649558342713,
+   "p": 0.00014113202288257298
+  },
+  {
+   "pair": "atlop_pe8|p3m",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.03628016425361743,
+   "p": 1.2178036048693386e-05
+  },
+  {
+   "pair": "atlop_pe8|docunet",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.017387198034478173,
+   "p": 3.3253289011270226e-08
+  },
+  {
+   "pair": "atlop_pe8|docunet",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.0786065468926779,
+   "p": 0.0
+  },
+  {
+   "pair": "atlop_pe8|docunet",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": 0.1906570400654415,
+   "p": 0.0
+  },
+  {
+   "pair": "atlop_pe8|kddocre",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.013298601546035013,
+   "p": 1.033983809461958e-05
+  },
+  {
+   "pair": "atlop_pe8|kddocre",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.05006286616879601,
+   "p": 1.4031076078779847e-07
+  },
+  {
+   "pair": "atlop_pe8|kddocre",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": -0.06870446003004761,
+   "p": 7.993605777301127e-15
+  },
+  {
+   "pair": "atlop_full|dreeam",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.013672794698760074,
+   "p": 1.9535614050880667e-06
+  },
+  {
+   "pair": "atlop_full|dreeam",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.04222817858352365,
+   "p": 8.304700980232838e-07
+  },
+  {
+   "pair": "atlop_full|dreeam",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": -0.04786080759190108,
+   "p": 3.4596392417540756e-09
+  },
+  {
+   "pair": "atlop_full|p3m",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.011861099927147364,
+   "p": 0.00023936622145726005
+  },
+  {
+   "pair": "atlop_full|docunet",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.016680648403282827,
+   "p": 5.2322134846960466e-08
+  },
+  {
+   "pair": "atlop_full|docunet",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.05886624846388468,
+   "p": 4.815703391614079e-11
+  },
+  {
+   "pair": "atlop_full|docunet",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": 0.19035744293714607,
+   "p": 0.0
+  },
+  {
+   "pair": "atlop_full|kddocre",
+   "dim": "scoring(A_vs_R)",
+   "est": 0.012592051914839666,
+   "p": 1.2930699317958982e-05
+  },
+  {
+   "pair": "atlop_full|kddocre",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.030322567740002797,
+   "p": 0.000606863601514851
+  },
+  {
+   "pair": "atlop_full|kddocre",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": -0.06900405715834303,
+   "p": 1.7763568394002505e-15
+  },
+  {
+   "pair": "dreeam|docunet",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": 0.23821825052904713,
+   "p": 0.0
+  },
+  {
+   "pair": "p3m|docunet",
+   "dim": "gold(gD_vs_gR)",
+   "est": 0.04232638263906045,
+   "p": 0.00028719949335753725
+  },
+  {
+   "pair": "docunet|kddocre",
+   "dim": "threshold(fixed_vs_cal)",
+   "est": -0.2593615000954891,
+   "p": 0.0
+  }
+ ]
+}

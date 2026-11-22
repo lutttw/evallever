@@ -1,0 +1,65 @@
+[
+ {
+  "claim_id": "C1",
+  "claim": "DREEAM > ATLOP(BERT-base)",
+  "source": "Ma et al. 2023 (EACL)",
+  "F1_gD_A": 0.6105,
+  "F1_gD_B": 0.6044,
+  "F1_gR_A": 0.6105,
+  "F1_gR_B": 0.6044,
+  "delta_gD": 0.0061,
+  "delta_gR": 0.0061,
+  "ci_gD": [
+   0.0,
+   0.012
+  ],
+  "ci_gR": [
+   -0.0001,
+   0.0119
+  ],
+  "replicates_under_gD": false,
+  "gR_behavior": "TIE"
+ },
+ {
+  "claim_id": "C2",
+  "claim": "KD-DocRE > DocuNet",
+  "source": "Tan et al. 2022a (Findings)",
+  "F1_gD_A": 0.5954,
+  "F1_gD_B": 0.4741,
+  "F1_gR_A": 0.5954,
+  "F1_gR_B": 0.4741,
+  "delta_gD": 0.1213,
+  "delta_gR": 0.1213,
+  "ci_gD": [
+   0.1136,
+   0.1293
+  ],
+  "ci_gR": [
+   0.1131,
+   0.1293
+  ],
+  "replicates_under_gD": true,
+  "gR_behavior": "HOLDS"
+ },
+ {
+  "claim_id": "C3",
+  "claim": "TTM-RE > KD-DocRE",
+  "source": "Xu et al. 2025 (Findings)",
+  "F1_gD_A": 0.5474,
+  "F1_gD_B": 0.5954,
+  "F1_gR_A": 0.5474,
+  "F1_gR_B": 0.5954,
+  "delta_gD": -0.048,
+  "delta_gR": -0.048,
+  "ci_gD": [
+   -0.0609,
+   -0.0351
+  ],
+  "ci_gR": [
+   -0.0611,
+   -0.035
+  ],
+  "replicates_under_gD": false,
+  "gR_behavior": "REVERSES"
+ }
+]

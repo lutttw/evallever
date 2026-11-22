@@ -1,0 +1,96 @@
+{
+ "spec": "tie-mask baseline: single contracts scored on r60 point layer; AER flip pairs tie-masked (|point delta| on the flip pair < threshold => treated as tied, not ranked); threshold swept over flip deltas",
+ "grids": {
+  "de-en": {
+   "n_systems": 16,
+   "n_pairs": 120,
+   "n_flips": 11,
+   "readers": {
+    "aer": {
+     "full_coverage_eps": 0.0917,
+     "full_coverage": 11,
+     "orderings_lost_at_full": 1,
+     "partial_coverage_eps": 0.0874,
+     "partial_coverage": 10,
+     "orderings_lost_at_partial": 1,
+     "nonflip_pairs": 109
+    },
+    "bleu13a": {
+     "full_coverage_eps": 0.9469,
+     "full_coverage": 11,
+     "orderings_lost_at_full": 6,
+     "partial_coverage_eps": 0.7938,
+     "partial_coverage": 10,
+     "orderings_lost_at_partial": 4,
+     "nonflip_pairs": 109
+    },
+    "chrf": {
+     "full_coverage_eps": 0.4646,
+     "full_coverage": 11,
+     "orderings_lost_at_full": 4,
+     "partial_coverage_eps": 0.4199,
+     "partial_coverage": 10,
+     "orderings_lost_at_partial": 3,
+     "nonflip_pairs": 109
+    },
+    "bertscore": {
+     "full_coverage_eps": 0.0002,
+     "full_coverage": 11,
+     "orderings_lost_at_full": 4,
+     "partial_coverage_eps": 0.0001,
+     "partial_coverage": 10,
+     "orderings_lost_at_partial": 2,
+     "nonflip_pairs": 109
+    }
+   },
+   "note": "full_coverage_eps = |point delta| on the largest flip pair; orderings_lost = non-flip pairs with |delta| <= same threshold (these true orderings are destroyed by the tie mask)"
+  },
+  "zh-en": {
+   "n_systems": 15,
+   "n_pairs": 105,
+   "n_flips": 3,
+   "readers": {
+    "aer": {
+     "full_coverage_eps": 0.0633,
+     "full_coverage": 3,
+     "orderings_lost_at_full": 1,
+     "partial_coverage_eps": 0.0519,
+     "partial_coverage": 2,
+     "orderings_lost_at_partial": 1,
+     "nonflip_pairs": 102
+    },
+    "bleu13a": {
+     "full_coverage_eps": 2.2832,
+     "full_coverage": 3,
+     "orderings_lost_at_full": 11,
+     "partial_coverage_eps": 0.3228,
+     "partial_coverage": 2,
+     "orderings_lost_at_partial": 0,
+     "nonflip_pairs": 102
+    },
+    "chrf": {
+     "full_coverage_eps": 0.6075,
+     "full_coverage": 3,
+     "orderings_lost_at_full": 6,
+     "partial_coverage_eps": 0.6004,
+     "partial_coverage": 2,
+     "orderings_lost_at_partial": 5,
+     "nonflip_pairs": 102
+    },
+    "bertscore": {
+     "full_coverage_eps": 0.0008,
+     "full_coverage": 3,
+     "orderings_lost_at_full": 15,
+     "partial_coverage_eps": 0.0007,
+     "partial_coverage": 2,
+     "orderings_lost_at_partial": 15,
+     "nonflip_pairs": 102
+    }
+   },
+   "note": "full_coverage_eps = |point delta| on the largest flip pair; orderings_lost = non-flip pairs with |delta| <= same threshold (these true orderings are destroyed by the tie mask)"
+  }
+ },
+ "headline": {
+  "finding": "AER with bootstrap ties: 14/14 coverage, 0 non-flip orderings lost. Single contracts with fixed-band ties: see per-grid results \u2014 the key comparison is coverage-per-ordering-lost ratio."
+ }
+}

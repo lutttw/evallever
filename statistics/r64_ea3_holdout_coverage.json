@@ -1,0 +1,1894 @@
+{
+ "meta": {
+  "experiment": "E-A3 hold-out tie coverage (DA-C3/R2 minimum evidence)",
+  "grids": [
+   "newstest2021-de-en",
+   "newstest2021-zh-en"
+  ],
+  "contracts": [
+   "bleu13a",
+   "chrf",
+   "bertscore"
+  ],
+  "tie_rule": "WMT19-calibrated CI rule: 95% percentile CI of resample-level paired diff contains 0",
+  "bootstrap": {
+   "reps": 1000,
+   "unit": "segment",
+   "seed": 7,
+   "ci": "percentile95",
+   "note": "R=1000 exploratory (registered WMT19 used 2000); corpus bleu13a/chrf recomputed per resample; bertscore = mean of cached roberta-large segment scores (rescale off)"
+  },
+  "tier": "exploratory, post-review round 12",
+  "chrf_note": "plain sacrebleu chrF (default), matching the r59/N3 hold-out census protocol; the WMT19 registered set used chrf++ (word_order=2) — the transferred object is the CI-based tie rule"
+ },
+ "validation": {
+  "de-en_point_vs_r59_n3": "ok",
+  "zh-en_point_vs_r59_n3": "ok"
+ },
+ "grids": {
+  "newstest2021-de-en": {
+   "n_systems": 19,
+   "n_segments": 1000,
+   "n_pairs": 171,
+   "n_contract_induced_flips": 114,
+   "flip_rate_wilson95": [
+    59.3,
+    73.3
+   ],
+   "coverage": {
+    "aer_ensemble": 88,
+    "median_of_z": 82,
+    "best_single": 82,
+    "either_of_flipping_contracts": 102,
+    "n": 114,
+    "aer_wilson95": [
+     68.7,
+     83.9
+    ],
+    "median_wilson95": [
+     63.1,
+     79.4
+    ]
+   },
+   "false_tie_rate": {
+    "bleu13a": "48/67",
+    "chrf": "47/66",
+    "bertscore": "27/46"
+   },
+   "flips_detail": [
+    {
+     "pair": "Borderline|Facebook-AI",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Borderline|Facebook-AI",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|HuaweiTSC",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|HuaweiTSC",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|NVIDIA-NeMo",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|NVIDIA-NeMo",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-A",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Borderline|Online-A",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-B",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-B",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-W",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|Online-W",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|UEdin",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|UEdin",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|UF",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|UF",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|VolcTrans-GLAT",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|VolcTrans-GLAT",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|HuaweiTSC",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|HuaweiTSC",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Online-A",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Online-A",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|VolcTrans-AT",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Facebook-AI|VolcTrans-GLAT",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Watermelon",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Watermelon",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|Online-A",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|Online-A",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|VolcTrans-GLAT",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|Manifold",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|Manifold",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|P3AI",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|P3AI",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "ICL|SMU",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Manifold|Online-W",
+     "between": "bleu13a|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|Online-W",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|Online-Y",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|Online-Y",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Manifold|SMU",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-B",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-B",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-G",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-G",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-W",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Online-W",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|SMU",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "NVIDIA-NeMo|UEdin",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|UEdin",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|UF",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|UF",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "NVIDIA-NeMo|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "NVIDIA-NeMo|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|VolcTrans-GLAT",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Watermelon",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NVIDIA-NeMo|Watermelon",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|VolcTrans-AT",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|VolcTrans-GLAT",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|Watermelon",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|Watermelon",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|Online-W",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|Online-W",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|SMU",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|SMU",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|UEdin",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|UEdin",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|Watermelon",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|Watermelon",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-G|Online-W",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-G|Online-W",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-G|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-G|SMU",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|P3AI",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|P3AI",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Online-W|SMU",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|UEdin",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|UEdin",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|UF",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|UF",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|VolcTrans-GLAT",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|VolcTrans-GLAT",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|Watermelon",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-W|Watermelon",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-Y|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Online-Y|SMU",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "P3AI|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|SMU",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "SMU|UEdin",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "SMU|UEdin",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "SMU|UF",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "SMU|UF",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|UF",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|UF",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|Watermelon",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UEdin|Watermelon",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|VolcTrans-AT",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|VolcTrans-AT",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|Watermelon",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|Watermelon",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    }
+   ]
+  },
+  "newstest2021-zh-en": {
+   "n_systems": 21,
+   "n_segments": 1948,
+   "n_pairs": 210,
+   "n_contract_induced_flips": 66,
+   "flip_rate_wilson95": [
+    25.5,
+    38.0
+   ],
+   "coverage": {
+    "aer_ensemble": 44,
+    "median_of_z": 50,
+    "best_single": 42,
+    "either_of_flipping_contracts": 58,
+    "n": 66,
+    "aer_wilson95": [
+     54.7,
+     76.8
+    ],
+    "median_wilson95": [
+     64.2,
+     84.5
+    ]
+   },
+   "false_tie_rate": {
+    "bleu13a": "32/35",
+    "chrf": "26/29",
+    "bertscore": "19/22"
+   },
+   "flips_detail": [
+    {
+     "pair": "Borderline|DIDI-NLP",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Borderline|DIDI-NLP",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|MiSS",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|MiSS",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|yyds",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Borderline|yyds",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "DIDI-NLP|MiSS",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "DIDI-NLP|MiSS",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "DIDI-NLP|yyds",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "DIDI-NLP|yyds",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|IIE-MT",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|IIE-MT",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "Facebook-AI|NiuTrans",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|NiuTrans",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Online-B",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|Online-B",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Facebook-AI|SMU",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HappyNewYear|HuaweiTSC",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HappyNewYear|HuaweiTSC",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HappyNewYear|NJUSC_TSC",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HappyNewYear|NJUSC_TSC",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HuaweiTSC|ICL",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|ICL",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|Machine_Translation",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HuaweiTSC|Machine_Translation",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "HuaweiTSC|P3AI",
+     "between": "bleu13a|chrf",
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "HuaweiTSC|P3AI",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|Machine_Translation",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|Machine_Translation",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|P3AI",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "ICL|P3AI",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "IIE-MT|SMU",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "IIE-MT|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "IIE-MT|XMU",
+     "between": "bleu13a|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "IIE-MT|XMU",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|NiuTrans",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|NiuTrans",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|Online-B",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|Online-B",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": false
+    },
+    {
+     "pair": "KwaiNLP|SMU",
+     "between": "bleu13a|chrf",
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "KwaiNLP|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Machine_Translation|NJUSC_TSC",
+     "between": "bleu13a|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Machine_Translation|NJUSC_TSC",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Machine_Translation|P3AI",
+     "between": "bleu13a|chrf",
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Machine_Translation|P3AI",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": true,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "MiSS|Online-B",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "MiSS|Online-B",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "MiSS|yyds",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "MiSS|yyds",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|Online-B",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|Online-B",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|SMU",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|SMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|XMU",
+     "between": "bleu13a|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "NiuTrans|XMU",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": true,
+     "chrf": false,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|Online-Y",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-A|Online-Y",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|yyds",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "Online-B|yyds",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": true,
+     "chrf": true,
+     "bertscore": false,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|UF",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|UF",
+     "between": "bertscore|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|XMU",
+     "between": "bertscore|bleu13a",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "P3AI|XMU",
+     "between": "bertscore|chrf",
+     "aer": false,
+     "median": false,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|XMU",
+     "between": "bleu13a|chrf",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    },
+    {
+     "pair": "UF|XMU",
+     "between": "bertscore|bleu13a",
+     "aer": true,
+     "median": true,
+     "bleu13a": false,
+     "chrf": true,
+     "bertscore": true,
+     "either_contract": true
+    }
+   ]
+  }
+ }
+}
