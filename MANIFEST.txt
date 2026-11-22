@@ -253,6 +253,7 @@ a07d782c3510f755184b0ef5914ab6be33bd3c111ee5544227499ce85b2fd747         3,028  
 1e34c352e5f3f77d1146665627d72d3cc701454bba69d53d9ab6c858f85d8d84        35,734  statistics/r64_ea1_symmetric_flips.json
 52dc7934298232148d75fc70aed8f4e845d9ff73aa032f405d021398a3c0bcfa        17,791  statistics/r64_ea20_threshold_prior.json
 6d497e72aedf6ae3ce448b04becca01e1af8d9438f245abb2749683f9f57697e         4,108  statistics/r64_ea21_registry_space.json
+ec6291ed92e5e764931a6fa174acd8f68fd409d78ab9c382facbf9850d9cf2d2         5,726  statistics/r64_ea22_standin_battery.json
 f7e111007ef7b483189a2e61f13c0513b77d3d7d1bc91956bb24f45670ba7911        70,961  statistics/r64_ea2_dose_response.json
 bd28b2d5a31be5be481036e79cdbc7647e46ea88ade859e6e0e44d4399c39c31        42,851  statistics/r64_ea3_holdout_coverage.json
 776dbf83a77ce64f0b1531d2edc98c26dd7d1fb9457c39d8a69d3245d4f6a3ff        73,943  statistics/r64_ea3b_basic_tie.json
