@@ -1,0 +1,359 @@
+{
+ "meta": {
+  "experiment": "E-A22 stand-in perturbation battery (FP-injection + error-redistribution)",
+  "baseline_check": {
+   "gD": {
+    "kd_f1": 0.5954,
+    "dn_f1": 0.4741,
+    "delta": 0.1213,
+    "r56_reference": {
+     "gD": 0.1213,
+     "gR": 0.0443
+    }
+   },
+   "gR": {
+    "kd_f1": 0.4468,
+    "dn_f1": 0.4025,
+    "delta": 0.0443,
+    "r56_reference": {
+     "gD": 0.1213,
+     "gR": 0.0443
+    }
+   }
+  }
+ },
+ "fp_injection": [
+  {
+   "claim": "CL2",
+   "side": "KD-DocRE",
+   "gold": "gD",
+   "k": 0.01,
+   "delta_point": 0.1213,
+   "ci95": [
+    0.1094,
+    0.1314
+   ],
+   "gD_ci_excludes_zero": true,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "KD-DocRE",
+   "gold": "gD",
+   "k": 0.02,
+   "delta_point": 0.1213,
+   "ci95": [
+    0.1094,
+    0.1314
+   ],
+   "gD_ci_excludes_zero": true,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "KD-DocRE",
+   "gold": "gD",
+   "k": 0.04,
+   "delta_point": 0.1204,
+   "ci95": [
+    0.1084,
+    0.1303
+   ],
+   "gD_ci_excludes_zero": true,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "KD-DocRE",
+   "gold": "gD",
+   "k": 0.08,
+   "delta_point": 0.1131,
+   "ci95": [
+    0.1016,
+    0.1229
+   ],
+   "gD_ci_excludes_zero": true,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "KD-DocRE",
+   "gold": "gR",
+   "k": 0.01,
+   "delta_point": 0.0443,
+   "ci95": [
+    0.0363,
+    0.0531
+   ],
+   "gD_ci_excludes_zero": true,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "KD-DocRE",
+   "gold": "gR",
+   "k": 0.02,
+   "delta_point": 0.0443,
+   "ci95": [
+    0.0362,
+    0.0531
+   ],
+   "gD_ci_excludes_zero": true,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "KD-DocRE",
+   "gold": "gR",
+   "k": 0.04,
+   "delta_point": 0.0431,
+   "ci95": [
+    0.0351,
+    0.0521
+   ],
+   "gD_ci_excludes_zero": true,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "KD-DocRE",
+   "gold": "gR",
+   "k": 0.08,
+   "delta_point": 0.0384,
+   "ci95": [
+    0.0307,
+    0.0471
+   ],
+   "gD_ci_excludes_zero": true,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "DocuNet",
+   "gold": "gD",
+   "k": 0.01,
+   "delta_point": -0.1213,
+   "ci95": [
+    -0.1311,
+    -0.1091
+   ],
+   "gD_ci_excludes_zero": false,
+   "verdict_survives": false
+  },
+  {
+   "claim": "CL2",
+   "side": "DocuNet",
+   "gold": "gD",
+   "k": 0.02,
+   "delta_point": -0.1213,
+   "ci95": [
+    -0.1311,
+    -0.1091
+   ],
+   "gD_ci_excludes_zero": false,
+   "verdict_survives": false
+  },
+  {
+   "claim": "CL2",
+   "side": "DocuNet",
+   "gold": "gD",
+   "k": 0.04,
+   "delta_point": -0.122,
+   "ci95": [
+    -0.1317,
+    -0.1097
+   ],
+   "gD_ci_excludes_zero": false,
+   "verdict_survives": false
+  },
+  {
+   "claim": "CL2",
+   "side": "DocuNet",
+   "gold": "gD",
+   "k": 0.08,
+   "delta_point": -0.1263,
+   "ci95": [
+    -0.1362,
+    -0.1139
+   ],
+   "gD_ci_excludes_zero": false,
+   "verdict_survives": false
+  },
+  {
+   "claim": "CL2",
+   "side": "DocuNet",
+   "gold": "gR",
+   "k": 0.01,
+   "delta_point": -0.0443,
+   "ci95": [
+    -0.0531,
+    -0.0359
+   ],
+   "gD_ci_excludes_zero": false,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "DocuNet",
+   "gold": "gR",
+   "k": 0.02,
+   "delta_point": -0.0443,
+   "ci95": [
+    -0.0531,
+    -0.036
+   ],
+   "gD_ci_excludes_zero": false,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "DocuNet",
+   "gold": "gR",
+   "k": 0.04,
+   "delta_point": -0.0453,
+   "ci95": [
+    -0.054,
+    -0.0372
+   ],
+   "gD_ci_excludes_zero": false,
+   "verdict_survives": true
+  },
+  {
+   "claim": "CL2",
+   "side": "DocuNet",
+   "gold": "gR",
+   "k": 0.08,
+   "delta_point": -0.0492,
+   "ci95": [
+    -0.0578,
+    -0.041
+   ],
+   "gD_ci_excludes_zero": false,
+   "verdict_survives": true
+  }
+ ],
+ "redistribution": [
+  {
+   "rep": 0,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  },
+  {
+   "rep": 1,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  },
+  {
+   "rep": 2,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  },
+  {
+   "rep": 3,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  },
+  {
+   "rep": 4,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  },
+  {
+   "rep": 5,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  },
+  {
+   "rep": 6,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  },
+  {
+   "rep": 7,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  },
+  {
+   "rep": 8,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  },
+  {
+   "rep": 9,
+   "gD": 0.1213,
+   "gR": 0.0443,
+   "verdict_survives": true
+  }
+ ],
+ "cl1_single_side": [
+  {
+   "gold": "gD",
+   "k": 0.0,
+   "dreeam_f1": 0.6105,
+   "margin_vs_frozen_atlop": 0.0061
+  },
+  {
+   "gold": "gD",
+   "k": 0.01,
+   "dreeam_f1": 0.6105,
+   "margin_vs_frozen_atlop": 0.0061
+  },
+  {
+   "gold": "gD",
+   "k": 0.02,
+   "dreeam_f1": 0.6105,
+   "margin_vs_frozen_atlop": 0.0061
+  },
+  {
+   "gold": "gD",
+   "k": 0.04,
+   "dreeam_f1": 0.6093,
+   "margin_vs_frozen_atlop": 0.0049
+  },
+  {
+   "gold": "gD",
+   "k": 0.08,
+   "dreeam_f1": 0.6022,
+   "margin_vs_frozen_atlop": -0.0022
+  },
+  {
+   "gold": "gR",
+   "k": 0.0,
+   "dreeam_f1": 0.4304,
+   "margin_vs_frozen_atlop": -0.0215
+  },
+  {
+   "gold": "gR",
+   "k": 0.01,
+   "dreeam_f1": 0.4304,
+   "margin_vs_frozen_atlop": -0.0215
+  },
+  {
+   "gold": "gR",
+   "k": 0.02,
+   "dreeam_f1": 0.4303,
+   "margin_vs_frozen_atlop": -0.0216
+  },
+  {
+   "gold": "gR",
+   "k": 0.04,
+   "dreeam_f1": 0.4293,
+   "margin_vs_frozen_atlop": -0.0226
+  },
+  {
+   "gold": "gR",
+   "k": 0.08,
+   "dreeam_f1": 0.4252,
+   "margin_vs_frozen_atlop": -0.0267
+  }
+ ]
+}
