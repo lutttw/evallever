@@ -255,6 +255,7 @@ a07d782c3510f755184b0ef5914ab6be33bd3c111ee5544227499ce85b2fd747         3,028  
 6d497e72aedf6ae3ce448b04becca01e1af8d9438f245abb2749683f9f57697e         4,108  statistics/r64_ea21_registry_space.json
 ec6291ed92e5e764931a6fa174acd8f68fd409d78ab9c382facbf9850d9cf2d2         5,726  statistics/r64_ea22_standin_battery.json
 a752f28c0ab4ad8d3aa76cd1752d0a44ec842372bcc15267bc5c751fd3cdd7ce         6,647  statistics/r64_ea23_external_coder.json
+a2359b6ba2ee9693b849150385d110ec34dcfb27bd3df883e1b3a96210f34e8d         2,118  statistics/r64_ea24_retrained_spotcheck.json
 f7e111007ef7b483189a2e61f13c0513b77d3d7d1bc91956bb24f45670ba7911        70,961  statistics/r64_ea2_dose_response.json
 bd28b2d5a31be5be481036e79cdbc7647e46ea88ade859e6e0e44d4399c39c31        42,851  statistics/r64_ea3_holdout_coverage.json
 776dbf83a77ce64f0b1531d2edc98c26dd7d1fb9457c39d8a69d3245d4f6a3ff        73,943  statistics/r64_ea3b_basic_tie.json

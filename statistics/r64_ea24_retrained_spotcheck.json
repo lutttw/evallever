@@ -1,0 +1,54 @@
+{
+ "meta": {
+  "experiment": "E-A24 retrained-gR spot-check (frozen-vs-retrained regime adjudication)",
+  "purpose": "R3-M1/R5: adjudicate the CL1 regime divergence (frozen gR reversal vs DREEAM Table 6 retrained preservation)",
+  "protocol": {
+   "train": "Re-DocRED train_revised, PE8-aligned exclusion (2748/3053 docs; the 305 calibration-shard docs removed, titles matched to train_annotated_pe8.json)",
+   "dev": "Re-DocRED dev_revised (498 docs = the audit evaluation set itself)",
+   "epochs": 30,
+   "train_batch_size": 2,
+   "grad_accum": 2,
+   "max_seq_length": 1024,
+   "seeds": [
+    20260917,
+    20260918,
+    20260919
+   ],
+   "atlop_code": "data/atlop_repo (official; patched for transformers 5.x, eager attention)",
+   "dreeam_code": "official YoumiMa-dreeam-476a700 (bundle tarball; same patch set + meta/rel2id + Windows colon-safe paths)",
+   "metric": "dev relational micro-F1 (best over epochs, per seed)"
+  }
+ },
+ "results": {
+  "atlop_gR_retrain_best_dev_F1": [
+   73.3,
+   73.97,
+   73.36
+  ],
+  "atlop_mean": 73.54,
+  "dreeam_gR_retrain_best_dev_F1": [
+   73.96,
+   74.23,
+   73.87
+  ],
+  "dreeam_mean": 74.02,
+  "retrained_margin_dreeam_minus_atlop": 0.48,
+  "reference_dreeam_table6_full_dev": {
+   "atlop": 77.56,
+   "docunet": 77.87,
+   "kddocre": 78.28,
+   "dreeam": 77.94,
+   "margin": 0.38
+  },
+  "frozen_audit_reference": {
+   "CL1_gR_margin": -0.0215,
+   "verdict": "REVERSED",
+   "source": "r56 v2"
+  }
+ },
+ "adjudication": {
+  "artifact_hypothesis": "REJECTED — if the frozen reversal were a gD-trained stand-in pipeline artifact, retraining on gR should reverse too; instead DREEAM>ATLOP is preserved (+0.48), same direction as the literature full-dev number (+0.38)",
+  "regime_divergence": "CONFIRMED as a genuine finding: a retrained comparison rebuilds the pipeline under the new gold and cannot show which published near-ties are gold-fragile at prediction level; the frozen audit measures exactly this",
+  "protocol_robustness": "quick-retrain absolute F1 (73.5-74.0) sits 4 points under the literature full protocol (77.5-78.3) without changing the margin direction"
+ }
+}
