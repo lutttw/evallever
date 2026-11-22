@@ -10,7 +10,7 @@ Excluded from this reviewer/git copy (deliberate, not verified here):
 d52b4beb6e33bd8df9bb3d78864eb2aad36888839edc3d96b9ac7a3252d56a3e            29  .gitignore
 458f4c04c0958010474e99c5c06aa30aab932e3314ebf4f38d682c04bd1b3f71         1,443  LICENSE
 23656c4b19f3aae59965b15c51bd21d20a3c5321cef4944c004b7134e358c1f8         4,481  PRACTITIONER_GUIDE.md
-d127fc013222f5182434f74dfe3395b380d4c46157da0bd0d49e55bf3a6bd527         9,393  README.md
+15dedd48ffa32f85a2c20502a9617f6ac0618a22d478cec0c8485918f50f19cc         9,376  README.md
 2dec2f8c06a1d3cf1b26eeddc4fd9e402564e7a5c6a08d351cefbf0e87b60a65         3,516  number_crosswalk.md
 495d8a3644ce3b71067b0d52c8da8d6ceb824374336430ba8a49fa1a47ab8f15         1,983  verify_bundle.py
 58e3a050efafeb8792f8449035014768f48dd3d9c943c84af7de4a414be2ece0         2,001  verify_counts.py

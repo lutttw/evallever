@@ -1,7 +1,7 @@
 # EvalLever — v1.0.2 (Neurocomputing submission; canonical git copy)
 
 > This repository is the canonical public copy of the evidence bundle.
-> A versioned DOI is minted via Zenodo on the v1.0.2 release/tag.
+> Archived snapshot DOI: 10.5281/zenodo.24442304
 > v1.0.2 changes vs v1.0.1 zip: 124 files LF-normalized to match MANIFEST
 > digests (CRLF packaging artifact; no content change), 2 post-manifest doc
 > rehashes (数字对照表.md, amendment_summary_en.csv), 5 entries moved to an
