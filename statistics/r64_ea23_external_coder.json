@@ -1,0 +1,325 @@
+{
+ "meta": {
+  "experiment": "E-A23 external second-coder reliability check (violation-class taxonomy)",
+  "coder": "GLM (Z.ai), blind: given only CODEBOOK.md (rules derived from the frozen parser logic) and the raw output lines; no true labels, no manuscript context; coded in a fresh context",
+  "note_on_role": "same model family as the disclosed writing assistant, different task role; disclosed in the manuscript sentence",
+  "sample": "stratified 70 instances (r16 50-instance D5 sample + r23 fresh-20 holdout), original texts resolved from the frozen prediction files by line number",
+  "classes": [
+   "parse_fail",
+   "oob_index",
+   "rel_unmapped",
+   "self_pair",
+   "ambiguous",
+   "mapped"
+  ]
+ },
+ "kappa": {
+  "n": 70,
+  "observed_agreement": 0.6,
+  "expected_agreement": 0.254,
+  "cohen_kappa_blind": 0.464,
+  "per_class_agreement": {
+   "oob_index": "30/31",
+   "self_pair": "10/11",
+   "parse_fail": "0/9",
+   "rel_unmapped": "2/14",
+   "ambiguous": "0/5"
+  }
+ },
+ "arbitration": {
+  "decision": "all 28 disagreements ACCEPT-ORIGINAL (author arbitration; every reverted to the original label)",
+  "causes": {
+   "codebook_wording_gaps": 9,
+   "registry_prior_absence": 12,
+   "line_level_information_unavailable": 5,
+   "instance_level": 2
+  },
+  "worksheet": "e23_arbitration_worksheet.md"
+ },
+ "blind_labels": {
+  "V001": "mapped",
+  "V002": "mapped",
+  "V003": "oob_index",
+  "V004": "mapped",
+  "V005": "oob_index",
+  "V006": "oob_index",
+  "V007": "oob_index",
+  "V008": "oob_index",
+  "V009": "oob_index",
+  "V010": "oob_index",
+  "V011": "oob_index",
+  "V012": "oob_index",
+  "V013": "oob_index",
+  "V014": "oob_index",
+  "V015": "oob_index",
+  "V016": "oob_index",
+  "V017": "oob_index",
+  "V018": "oob_index",
+  "V019": "oob_index",
+  "V020": "oob_index",
+  "V021": "oob_index",
+  "V022": "oob_index",
+  "V023": "oob_index",
+  "V024": "mapped",
+  "V025": "oob_index",
+  "V026": "oob_index",
+  "V027": "oob_index",
+  "V028": "oob_index",
+  "V029": "oob_index",
+  "V030": "oob_index",
+  "V031": "oob_index",
+  "V032": "oob_index",
+  "V033": "oob_index",
+  "V034": "mapped",
+  "V035": "self_pair",
+  "V036": "mapped",
+  "V037": "rel_unmapped",
+  "V038": "rel_unmapped",
+  "V039": "self_pair",
+  "V040": "self_pair",
+  "V041": "self_pair",
+  "V042": "self_pair",
+  "V043": "self_pair",
+  "V044": "self_pair",
+  "V045": "self_pair",
+  "V046": "self_pair",
+  "V047": "self_pair",
+  "V048": "mapped",
+  "V049": "mapped",
+  "V050": "mapped",
+  "F001": "oob_index",
+  "F002": "oob_index",
+  "F003": "mapped",
+  "F004": "mapped",
+  "F005": "oob_index",
+  "F006": "oob_index",
+  "F007": "oob_index",
+  "F008": "mapped",
+  "F009": "mapped",
+  "F010": "mapped",
+  "F011": "mapped",
+  "F012": "mapped",
+  "F013": "self_pair",
+  "F014": "mapped",
+  "F015": "mapped",
+  "F016": "mapped",
+  "F017": "self_pair",
+  "F018": "oob_index",
+  "F019": "mapped",
+  "F020": "mapped"
+ },
+ "true_labels": {
+  "V001": "parse_fail",
+  "V002": "parse_fail",
+  "V003": "parse_fail",
+  "V004": "parse_fail",
+  "V005": "oob_index",
+  "V006": "oob_index",
+  "V007": "oob_index",
+  "V008": "oob_index",
+  "V009": "oob_index",
+  "V010": "oob_index",
+  "V011": "oob_index",
+  "V012": "oob_index",
+  "V013": "oob_index",
+  "V014": "oob_index",
+  "V015": "oob_index",
+  "V016": "oob_index",
+  "V017": "oob_index",
+  "V018": "oob_index",
+  "V019": "oob_index",
+  "V020": "oob_index",
+  "V021": "oob_index",
+  "V022": "oob_index",
+  "V023": "oob_index",
+  "V024": "oob_index",
+  "V025": "oob_index",
+  "V026": "oob_index",
+  "V027": "oob_index",
+  "V028": "oob_index",
+  "V029": "oob_index",
+  "V030": "oob_index",
+  "V031": "oob_index",
+  "V032": "oob_index",
+  "V033": "oob_index",
+  "V034": "rel_unmapped",
+  "V035": "rel_unmapped",
+  "V036": "rel_unmapped",
+  "V037": "rel_unmapped",
+  "V038": "rel_unmapped",
+  "V039": "self_pair",
+  "V040": "self_pair",
+  "V041": "self_pair",
+  "V042": "self_pair",
+  "V043": "self_pair",
+  "V044": "self_pair",
+  "V045": "self_pair",
+  "V046": "self_pair",
+  "V047": "self_pair",
+  "V048": "ambiguous",
+  "V049": "ambiguous",
+  "V050": "ambiguous",
+  "F001": "parse_fail",
+  "F002": "parse_fail",
+  "F003": "parse_fail",
+  "F004": "parse_fail",
+  "F005": "parse_fail",
+  "F006": "oob_index",
+  "F007": "oob_index",
+  "F008": "rel_unmapped",
+  "F009": "rel_unmapped",
+  "F010": "rel_unmapped",
+  "F011": "rel_unmapped",
+  "F012": "rel_unmapped",
+  "F013": "rel_unmapped",
+  "F014": "rel_unmapped",
+  "F015": "rel_unmapped",
+  "F016": "rel_unmapped",
+  "F017": "self_pair",
+  "F018": "self_pair",
+  "F019": "ambiguous",
+  "F020": "ambiguous"
+ },
+ "disagreements": [
+  {
+   "id": "F001",
+   "true": "parse_fail",
+   "blind": "oob_index"
+  },
+  {
+   "id": "F002",
+   "true": "parse_fail",
+   "blind": "oob_index"
+  },
+  {
+   "id": "F003",
+   "true": "parse_fail",
+   "blind": "mapped"
+  },
+  {
+   "id": "F004",
+   "true": "parse_fail",
+   "blind": "mapped"
+  },
+  {
+   "id": "F005",
+   "true": "parse_fail",
+   "blind": "oob_index"
+  },
+  {
+   "id": "F008",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "F009",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "F010",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "F011",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "F012",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "F013",
+   "true": "rel_unmapped",
+   "blind": "self_pair"
+  },
+  {
+   "id": "F014",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "F015",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "F016",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "F018",
+   "true": "self_pair",
+   "blind": "oob_index"
+  },
+  {
+   "id": "F019",
+   "true": "ambiguous",
+   "blind": "mapped"
+  },
+  {
+   "id": "F020",
+   "true": "ambiguous",
+   "blind": "mapped"
+  },
+  {
+   "id": "V001",
+   "true": "parse_fail",
+   "blind": "mapped"
+  },
+  {
+   "id": "V002",
+   "true": "parse_fail",
+   "blind": "mapped"
+  },
+  {
+   "id": "V003",
+   "true": "parse_fail",
+   "blind": "oob_index"
+  },
+  {
+   "id": "V004",
+   "true": "parse_fail",
+   "blind": "mapped"
+  },
+  {
+   "id": "V024",
+   "true": "oob_index",
+   "blind": "mapped"
+  },
+  {
+   "id": "V034",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "V035",
+   "true": "rel_unmapped",
+   "blind": "self_pair"
+  },
+  {
+   "id": "V036",
+   "true": "rel_unmapped",
+   "blind": "mapped"
+  },
+  {
+   "id": "V048",
+   "true": "ambiguous",
+   "blind": "mapped"
+  },
+  {
+   "id": "V049",
+   "true": "ambiguous",
+   "blind": "mapped"
+  },
+  {
+   "id": "V050",
+   "true": "ambiguous",
+   "blind": "mapped"
+  }
+ ]
+}
