@@ -10,9 +10,10 @@ Excluded from this reviewer/git copy (deliberate, not verified here):
 d52b4beb6e33bd8df9bb3d78864eb2aad36888839edc3d96b9ac7a3252d56a3e            29  .gitignore
 458f4c04c0958010474e99c5c06aa30aab932e3314ebf4f38d682c04bd1b3f71         1,443  LICENSE
 23656c4b19f3aae59965b15c51bd21d20a3c5321cef4944c004b7134e358c1f8         4,481  PRACTITIONER_GUIDE.md
-ac9e0b11e9700c3a82396da275bd3a0578abcd008148bafe7c26d37c74208e63         8,688  README.md
+d127fc013222f5182434f74dfe3395b380d4c46157da0bd0d49e55bf3a6bd527         9,393  README.md
 2dec2f8c06a1d3cf1b26eeddc4fd9e402564e7a5c6a08d351cefbf0e87b60a65         3,516  number_crosswalk.md
 495d8a3644ce3b71067b0d52c8da8d6ceb824374336430ba8a49fa1a47ab8f15         1,983  verify_bundle.py
+58e3a050efafeb8792f8449035014768f48dd3d9c943c84af7de4a414be2ece0         2,001  verify_counts.py
 8c20dc0a1b40b53f985f490c015c02ee340ca725e2c829ac372b1d7645e86907         1,809  verify_gauge_synth.py
 78c099cdc87f008e84ac700d6159919b534a9f613b45f900d70520b4914be4a7           339  verify_gauge_synth_output.txt
 f1717e2feefc477d77d13ee5cd5c610dac9508dc5693641cdb3936fdcb853dcd         2,085  adapter_acceptance/bc5cdr_adapt_report.json
@@ -244,7 +245,7 @@ f57c2bad794164eb5cef5c396bf5cb7e9a221de10bcde71768b19aaef33569ca         1,738  
 6e99a44c50a96c924fe34cff5d0bad378e4bce57665f357397f0dbdd0f2dad6d         2,337  statistics/r64_ea11_ood_tost.json
 db7f827f470afd1375ea2563bfba12b3694fb68f906aae456a67ffe6bf253a51         5,601  statistics/r64_ea12_batch1_analyses.json
 daad219ed706dc127725178d0021b757eb26d06bbe512aed434021c9139fbc52         2,470  statistics/r64_ea12b_false_tie_allpairs.json
-73a0304f3a4fe17e81e246bd1e6f34c76fe870967618b03550794937533dd6e1        17,698  statistics/r64_ea13_threshold_practice.json
+47016aa0b66949c34cd376688755c2d545cd66dbac53b7293c4639c2ca71dd8d        17,962  statistics/r64_ea13_threshold_practice.json
 2acec6129cf98ac9ea2d2aecb5cdadf041d52531fe9797ebc69767083b12490b        14,393  statistics/r64_ea14_standin_sensitivity.json
 f419bb0a425e29a8347547f78796de8516c5b381305e24274b3df6c199d1e3a4         2,671  statistics/r64_ea16_flip_algebra.json
 9f688702107f1d030763ac7f6e6013048d57fd1d71569aab010b21bccf7fb5b7         3,629  statistics/r64_ea17_recall_profile_prior.json
@@ -253,9 +254,9 @@ a07d782c3510f755184b0ef5914ab6be33bd3c111ee5544227499ce85b2fd747         3,028  
 1e34c352e5f3f77d1146665627d72d3cc701454bba69d53d9ab6c858f85d8d84        35,734  statistics/r64_ea1_symmetric_flips.json
 52dc7934298232148d75fc70aed8f4e845d9ff73aa032f405d021398a3c0bcfa        17,791  statistics/r64_ea20_threshold_prior.json
 6d497e72aedf6ae3ce448b04becca01e1af8d9438f245abb2749683f9f57697e         4,108  statistics/r64_ea21_registry_space.json
-ec6291ed92e5e764931a6fa174acd8f68fd409d78ab9c382facbf9850d9cf2d2         5,726  statistics/r64_ea22_standin_battery.json
+dcc53c257f06d28aec597e6f04e170fb35667a7cc5bd666a772be15447829bbc         6,870  statistics/r64_ea22_standin_battery.json
 a752f28c0ab4ad8d3aa76cd1752d0a44ec842372bcc15267bc5c751fd3cdd7ce         6,647  statistics/r64_ea23_external_coder.json
-a2359b6ba2ee9693b849150385d110ec34dcfb27bd3df883e1b3a96210f34e8d         2,118  statistics/r64_ea24_retrained_spotcheck.json
+b15c11b0f79967bf29d5234fc76c62c3761805bc5f3d1f528f822abf2f7f5f2e         3,377  statistics/r64_ea24_retrained_spotcheck.json
 f7e111007ef7b483189a2e61f13c0513b77d3d7d1bc91956bb24f45670ba7911        70,961  statistics/r64_ea2_dose_response.json
 bd28b2d5a31be5be481036e79cdbc7647e46ea88ade859e6e0e44d4399c39c31        42,851  statistics/r64_ea3_holdout_coverage.json
 776dbf83a77ce64f0b1531d2edc98c26dd7d1fb9457c39d8a69d3245d4f6a3ff        73,943  statistics/r64_ea3b_basic_tie.json
@@ -279,7 +280,8 @@ ff8529e9080c2a53147187c3a3c679866eaae702c82024a70032fa5205164832        15,054  
 78c25776e8b5a1de720aa3b616fd1822a146df8846f6d6d760f8aa2b1c9043d5        10,423  statistics/r64_ea9_gate_full_atlop_bb.log
 e892925ea94eb74b5250ffe3fc95d610520386db3884dc362dbe69338f2599ec       699,501  statistics/r64_ea9_results_atlop_bb.json
 0fdbd031ecfca8d83434d6de27b0d5a4b7b3cbba2b8f62fa9c01b26c053cfc7f         1,225  statistics/r64_ec1_docre_aer_coverage.json
-38dbfd395598517c728471639a9ec1af4ca0d77bcc2a542645c541de3e126fe5         2,154  statistics/r64_ec2_judge_degenerate_ci.json
+67b3d381f6aa3186356720b50bda6f362e7873f8c68498c3d6a9791b80b40c5f         5,673  statistics/r64_ec2_broadcast_sweep.md
+6de33596f82bddda3d158288ad991ffb0e59b03d2084baea1621cfb58f54c3cc         2,085  statistics/r64_ec2_judge_degenerate_ci.json
 184b39c8355ddbaeaa7af7a09e2c916d7c9914e06eeb681c6505f64952046bce         4,726  statistics/r64_ec3_seed_variance.json
 f9c9efe5f88cd2b9769476bcd00ce034eb62852f0af577e834f85f315d61e311         7,610  statistics/rev78_arbitration.json
 12bc888e60e6d437a02a3acc61f68e0063fe5658ec02e1700bca32c8acce5dc8         8,229  statistics/rev78_kappa.json

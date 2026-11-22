@@ -7,7 +7,9 @@
    "paper-text level; released-code policies may differ (SSAN/SAIS silent in text, ATLOP-lineage codebases)",
    "adaptive-vs-fixed distinction maps onto the audit fixed-vs-decoded threshold axis",
    "SIRE excluded (download failed twice)"
-  ]
+  ],
+  "sample_note": "12 papers identified; 11 full texts retrieved and read (SIRE PDF download failed twice, retained as unverifiable); of the 10 classifiable: 7 adaptive/learned, 1 fixed (DocuNet), 2 silent in text",
+  "n_identified": 12
  },
  "tally": {
   "adaptive/learned": 7,
@@ -82,10 +84,10 @@
   {
    "tag": "DocuNet",
    "url": "https://www.ijcai.org/proceedings/2021/0551.pdf",
-   "policy": "adaptive/learned",
+   "policy": "fixed margin (sigmoid 0.5)",
    "flags": {
-    "adaptive": true,
-    "fixed05": false,
+    "adaptive": false,
+    "fixed05": true,
     "tuned": false
    },
    "snippets": [
@@ -93,7 +95,8 @@
     "s are all less than s0. formally, we have: l = log es0 + esi + log e-s0 + e-sj . ineg jpos (10) for simplicity, we set the threshold as zero and have the following: l = log 1 + esi +log 1 + e-sj . (11) ineg jpos 4 experiments 4.1 dataset we evaluate",
     "5259-5270, 2020. [zhou et al., 2021] wenxuan zhou, kevin huang, tengyu ma, and jing huang. document-level relation extraction with adaptive thresholding and localized context pooling. in aaai, 2021. 4006 "
    ],
-   "manual_policy": "fixed margin (zero-logit/sigmoid 0.5; adaptive mention = related work only)"
+   "manual_policy": "fixed margin (zero-logit/sigmoid 0.5; adaptive mention = related work only)",
+   "recoded": "2026-11-22: prior row mis-coded adaptive; re-coded against the written rule (DocuNet reports a fixed zero-margin sigmoid-0.5 decision rule), consistent with the tally block and the manuscript sentence"
   },
   {
    "tag": "TTM-RE",

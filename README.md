@@ -119,6 +119,19 @@ Zenodo concept DOI: *to be minted at public release* (see
 Corresponding author: Weixing Zhu ([email redacted]). First author: Hao Lu
 ([email redacted]).
 
+## Artifact field semantics (2026-11-22)
+
+- `statistics/r64_ea22_standin_battery.json`: per-cell booleans are
+  side-neutral — `ci_excludes_zero` = either tail excludes zero;
+  `kd_side_positive_significant` = CI above zero (the registered CL2
+  verdict is stated KD-side); `sign_consistent_with_baseline` = the
+  perturbed delta keeps the unperturbed cell's sign;
+  `cl2_verdict_summary` aggregates the verdict per side. An earlier
+  circulation of this file used `gD_ci_excludes_zero`/`verdict_survives`
+  with KD-perspective-only semantics; this version supersedes it.
+- `verify_counts.py`: single source of truth for every "N/N files"
+  claim quoted from MANIFEST.txt in the manuscript or letters.
+
 ## Language and redaction notes (public release)
 
 - The frozen evidence files (statistics JSONs, preregistration ledger and

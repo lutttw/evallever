@@ -16,7 +16,8 @@
    ],
    "atlop_code": "data/atlop_repo (official; patched for transformers 5.x, eager attention)",
    "dreeam_code": "official YoumiMa-dreeam-476a700 (bundle tarball; same patch set + meta/rel2id + Windows colon-safe paths)",
-   "metric": "dev relational micro-F1 (best over epochs, per seed)"
+   "metric": "dev relational micro-F1 (best over epochs, per seed)",
+   "encoder": "bert-base-uncased for both arms (identical conditions); literature Table-6 entries use RoBERTa-large, so cross-table comparisons are directional only"
   }
  },
  "results": {
@@ -28,27 +29,59 @@
   "atlop_mean": 73.54,
   "dreeam_gR_retrain_best_dev_F1": [
    73.96,
-   74.23,
-   73.87
+   73.87,
+   74.23
   ],
   "dreeam_mean": 74.02,
   "retrained_margin_dreeam_minus_atlop": 0.48,
-  "reference_dreeam_table6_full_dev": {
+  "frozen_audit_reference": {
+   "CL1_gR_margin": -0.0215,
+   "verdict": "REVERSED",
+   "source": "r56 v2"
+  },
+  "per_seed_margins_points_seed_aligned": [
+   0.66,
+   -0.1,
+   0.87
+  ],
+  "pooled_doc_paired_bootstrap": {
+   "basis": "per-doc triple counts (tp/fp/fn) from best-checkpoint inference on the 498-doc revised dev; seed-averaged per-doc counts; document-paired",
+   "B": 10000,
+   "seed": 20260926,
+   "margin_pt": 0.0048,
+   "ci95": [
+    0.0007,
+    0.0088
+   ],
+   "ci_excludes_zero": true,
+   "inference_f1_anchors": {
+    "atlop": [
+     0.733,
+     0.7397,
+     0.7336
+    ],
+    "dreeam": [
+     0.7396,
+     0.7387,
+     0.7423
+    ],
+    "note": "inference micro-F1 reproduces each run's best dev F1 to 4 decimals"
+   }
+  },
+  "reference_dreeam_table6": {
+   "split": "Re-DocRED test set (not dev)",
+   "encoders": "RoBERTa-large (literature); our E-A24 arms are BERT-base",
    "atlop": 77.56,
    "docunet": 77.87,
    "kddocre": 78.28,
    "dreeam": 77.94,
    "margin": 0.38
-  },
-  "frozen_audit_reference": {
-   "CL1_gR_margin": -0.0215,
-   "verdict": "REVERSED",
-   "source": "r56 v2"
   }
  },
  "adjudication": {
-  "artifact_hypothesis": "REJECTED — if the frozen reversal were a gD-trained stand-in pipeline artifact, retraining on gR should reverse too; instead DREEAM>ATLOP is preserved (+0.48), same direction as the literature full-dev number (+0.38)",
+  "artifact_hypothesis": "not supported: the pooled document-paired bootstrap margin is +0.48 points with 95% CI [+0.07, +0.88], excluding zero, though one of the three seed-aligned pairs is slightly negative (-0.10); the direction matches the literature test-set margin (+0.38). Earlier circulation of this file listed the DREEAM per-seed values in a non-seed order, which made the per-seed margins appear all-positive; corrected here (2026-11-22).",
   "regime_divergence": "CONFIRMED as a genuine finding: a retrained comparison rebuilds the pipeline under the new gold and cannot show which published near-ties are gold-fragile at prediction level; the frozen audit measures exactly this",
-  "protocol_robustness": "quick-retrain absolute F1 (73.5-74.0) sits 4 points under the literature full protocol (77.5-78.3) without changing the margin direction"
+  "protocol_robustness": "quick-retrain absolute F1 (73.5-74.0) sits 4 points under the literature full protocol (77.5-78.3) without changing the margin direction",
+  "wording_standard": "manuscript may claim: preserved with CI, positive in two of three seed pairs; not 'rejected' as a categorical verdict"
  }
 }

@@ -3,7 +3,7 @@
   "experiment": "E-C2/N7: judge-grid degenerate CI [0.70,0.70] diagnosis+repair",
   "tier": "exploratory, post-review R14",
   "inputs": {
-   "judge_runs": "E:\\WorkBuddy\\╡н©╪ндов╫Б╤а\\04_нд╣╣╪╤IE\\out\\multi_task\\judge/runs/{qwen7b,llama,mistral}/base.jsonl",
+   "judge_runs": "E:\\WorkBuddy\\О©╫н©О©╫О©╫О©╫О©╫в╫О©╫О©╫\\04_О©╫д╣О©╫О©╫О©╫IE\\out\\multi_task\\judge/runs/{qwen7b,llama,mistral}/base.jsonl",
    "anchor": "metrics_task_de-en.csv wmt-raw (wmt19)"
   },
   "bootstrap": {
